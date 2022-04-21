@@ -3,6 +3,7 @@
 
 # Production
 /build
+/revisar
 
 # Generated files
 .docusaurus
