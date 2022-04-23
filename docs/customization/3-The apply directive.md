@@ -18,7 +18,7 @@ You can `apply` a set of classes to create more complex classes, or when you fin
 
 ## Set any id, class or Ti Element
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 // ...
 theme: {
   '#carrousel': {
@@ -35,7 +35,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '#carrousel': { backgroundColor: '#99f6e4', height: Ti.UI.SIZE, layout: 'horizontal', right: 8, left: 8, top: 16, bottom: 16, width: Ti.UI.FILL }
 '.my-custom-class': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontFamily: 'SairaCondensed-Regular', fontWeight: 'bold' } }
 'Label': { color: '#3f3f46', font: { fontSize: 16, fontWeight: 'bold' } }
@@ -43,7 +43,7 @@ theme: {
 
 ## Use any of the default classes
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 // ...
 theme: {
   '.btn': {
@@ -57,7 +57,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7' }
 ```
@@ -66,7 +66,7 @@ theme: {
 You can use [**Arbitrary Values**](arbitrary-values) to define your custom classes.
 
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 // ...
 theme: {
   extend: {},
@@ -78,7 +78,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 // Custom Styles and Resets
 '.progress': { backgroundColor: '#e9ecef', borderRadius: 4, height: 16, layout: 'horizontal', font: { fontSize: 12 } }
 // ...
@@ -87,7 +87,7 @@ theme: {
 ## Use any newly defined class in config.js
 In the followind example we are creating a `corporate` color classes, so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100` and `border-corporate-200`.
 
-```javascript {5,15} title="./purgetss/config.js"
+```typescript {5,15} title="./purgetss/config.js"
 // ...
 theme: {
   extend: {
@@ -109,7 +109,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1' }
 // ...
@@ -123,7 +123,7 @@ theme: {
 
 ## You can set a string of classes or an array of classes
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 // ...
 theme: {
   // Use a string of classes
@@ -143,7 +143,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1' }
 // ...
@@ -151,7 +151,7 @@ theme: {
 
 ## Combine it with any platform, device or conditional-block properties
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 // ...
 theme: {
   '.btn': {
@@ -177,7 +177,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn[platform=ios]': { right: 16, left: 16, width: Ti.UI.FILL }
 '.btn[formFactor=handheld]': { height: 80 }
@@ -190,7 +190,7 @@ Several classes in `tailwind.tss` are platform specific to prevent polluting obj
 
 One example of this type of classes are the `shadow-*` classes.
 
-```css title="Platform specific classes"
+```scss title="Platform specific classes"
 // Component(s): Ti.UI.Android.CardView, Ti.UI.Animation, Ti.UI.View
 // Property(ies): elevation - Box Shadow Effect in Tailwind - Android Only
 '.shadow-xs[platform=android]': { elevation: 4 }
@@ -225,7 +225,7 @@ To properly apply these platform styles when creating custom rules, you must spe
 **Even if you are not targeting a specific platform, you must specify the platform variant.**
 :::
 
-```javascript {15} title="./purgetss/config.js"
+```typescript {15} title="./purgetss/config.js"
 module.exports = {
   theme: {
     '.my-button': {
@@ -247,7 +247,7 @@ module.exports = {
 };
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 '.my-button': { backgroundColor: '#22c55e', height: 128, width: 128 }
 '.my-button[platform=ios]': { viewShadowOffset: { x: 0, y: 4 }, viewShadowRadius: 8, viewShadowColor: '#80000000' }
 '.my-button[platform=android]': { elevation: 26 }
@@ -257,7 +257,7 @@ module.exports = {
 ### Omiting the platform variant
 If you omit the platform variant, **PurgeTSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
 
-```javascript {4} title="./purgetss/config.js"
+```typescript {4} title="./purgetss/config.js"
 module.exports = {
   theme: {
     '.my-view': {
@@ -268,7 +268,7 @@ module.exports = {
 };
 ```
 
-```css title="./purgetss/tailwind.tss"
+```scss title="./purgetss/tailwind.tss"
 // Ommiting the platform variant in `config.js` will not generate the corresponding property.
 // Missing any property related to `shadow-lg`.
 '.my-view': { backgroundColor: '#22c55e', height: 128, width: 128 }

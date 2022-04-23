@@ -138,7 +138,7 @@ And copy the following code:
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 // Both animations has the `rotate-90` set,

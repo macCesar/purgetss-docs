@@ -54,7 +54,7 @@ $ purgetss bf [-m]
 #### The `fonts.tss` file
 The `build-fonts` command will generate a custom `./purgetss/fonts.tss` file with all the unicode characters and style rules.
 
-```css title="./purgetss/fonts.tss"
+```scss title="./purgetss/fonts.tss"
 '.boxicons': { font: { fontFamily: 'boxicons' } }
 '.lineicons': { font: { fontFamily: 'LineIcons' } }
 
@@ -86,7 +86,7 @@ purgetss
 ```
 
 New style rule name: `'.bx'`
-```css title="./purgetss/fonts.tss"
+```scss title="./purgetss/fonts.tss"
 // new style rule name
 '.bx': { font: { fontFamily: 'boxicons' } }
 ```
@@ -105,7 +105,7 @@ app
 #### The `--modules` flag
 When using the `--modules` option, it will generate a `./app/lib/purgetss.fonts.js` CommonJS module file
 
-```javascript title="./app/lib/purgetss.fonts.js"
+```typescript title="./app/lib/purgetss.fonts.js"
 const icons = {
   // boxicons
   'boxicons': {
@@ -139,7 +139,7 @@ purgetss
 
 New group prefix: `bx`
 
-```javascript title="./app/lib/purgetss.fonts.js"
+```typescript title="./app/lib/purgetss.fonts.js"
 const icons = {
   // bx
   // New group prefix

@@ -15,7 +15,7 @@ Creates a `./purgetss/config.js` file at the root of your project.
 > purgetss i
 ```
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 module.exports = {
   purge: {
     mode: 'all',
@@ -290,7 +290,7 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
 </Alloy>
 ```
 
-```css title="app.tss"
+```scss title="app.tss"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -360,7 +360,7 @@ purgetss
    └─ DancingScript-SemiBold.ttf
 ```
 
-```css title="./purgetss/fonts.tss"
+```scss title="./purgetss/fonts.tss"
 // Fonts TSS file generated with PurgeTSS
 // https://github.com/macCesar/purgeTSS
 
@@ -412,7 +412,7 @@ purgetss
 
 After running `purgetss build-fonts` you will have all the unicode characters in `fonts.tss`.
 
-```css title="./purgetss/fonts.tss"
+```scss title="./purgetss/fonts.tss"
 // Fonts TSS file generated with PurgeTSS
 // https://github.com/macCesar/purgeTSS
 
@@ -452,7 +452,7 @@ To avoid any conflicts with other icon libraries that you may use, **PurgeTSS wi
 > purgetss bf -m
 ```
 
-```javascript title="./app/lib/purgetss.fonts.js"
+```typescript title="./app/lib/purgetss.fonts.js"
 const icons = {
   // map-icons
   'mapIcon': {

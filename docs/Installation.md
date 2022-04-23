@@ -63,7 +63,7 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 - Compile your app as usual.
 - **We recommend that you use `liveview` to speed up testing and development time**.
 
-```xml title="index.xml"
+```xml title="index.xml @@@"
 <Alloy>
   <Window class="bg-primary">
     <View class="w-10/12 h-auto bg-white rounded-lg">
@@ -92,7 +92,7 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 </Alloy>
 ```
 
-```css title="app.tss"
+```scss title="app.tss"
 '.bg-primary': {
   backgroundColor: '#002359'
 }
@@ -106,7 +106,7 @@ Your original `app.tss` file is backed up in `_app.tss`. Use this file if you ne
 Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss`.
 :::
 
-```css title="app.tss after purging"
+```scss title="app.tss after purging"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -170,19 +170,19 @@ After installing the extension, you'll need to add the `xml` language to the `"H
 ```json title="VS Code ‘settings.json’ file"
 {
   "html-css-class-completion.HTMLLanguages": [
-      "html",
-      "vue",
-      "razor",
-      "blade",
-      "handlebars",
-      "twig",
-      "django-html",
-      "php",
-      "markdown",
-      "erb",
-      "ejs",
-      "svelte",
-      "xml",
+    "html",
+    "vue",
+    "razor",
+    "blade",
+    "handlebars",
+    "twig",
+    "django-html",
+    "php",
+    "markdown",
+    "erb",
+    "ejs",
+    "svelte",
+    "xml",
   ],
   "html-css-class-completion.excludeGlobPattern": "**/node_modules/**,purgetss/fonts/**/*.{css,html}",
 }

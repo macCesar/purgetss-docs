@@ -15,7 +15,7 @@ You can add an **opacity modifier to ANY of the available color properties**, by
 <Label class="w-11/12 h-8 text-center bg-sky-500/50 text-purple-900/75">My Button</Label>
 ```
 
-```css
+```scss
 // Tailwind styles
 'Window': { backgroundColor: '#ffffff' }
 '.h-8': { height: 32 }
@@ -48,7 +48,7 @@ module.exports = {
 }
 ```
 
-```css title="Generated classes"
+```scss title="Generated classes"
 // Custom Styles and Resets
 '.main-banner': { backgroundColor: '#59ce10cc', borderColor: '#bfce10cc' }
 

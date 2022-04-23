@@ -27,7 +27,7 @@ Whether you want to style a Ti Element (also known as a markup element), a custo
   - `dp` For these values, the unit type will be removed and the value will remain intact.
 
 ## Example 'config.js' file
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 module.exports = {
   'theme': {
     '#mainBanner': {
@@ -74,7 +74,7 @@ module.exports = {
 };
 ```
 
-```css title="Custom ‘./purgetss/tailwind.tss’ file"
+```scss title="Custom ‘./purgetss/tailwind.tss’ file"
 // Custom Styles
 '#mainBanner': { width: '300px', height: '80px' }
 '#mainBanner[platform=ios]': { clipMode: Ti.UI.iOS.CLIP_MODE_DISABLED }

@@ -20,7 +20,7 @@ If you need to start with a fresh `config.js` file, you can delete the existing 
 
 It will create a minimal `./purgetss/config.js` file:
 
-```javascript title="./purgetss/config.js"
+```typescript title="./purgetss/config.js"
 module.exports = {
   purge: {
     mode: 'all',
@@ -47,7 +47,7 @@ The config file consists of three main sections: `purge`, `theme`, and `corePlug
 ### `purge` section
 To control how `purgetss` will remove unused classes. Or to keep the ones you want.
 
-```javascript title="The purge section"
+```typescript title="The purge section"
 module.exports = {
   purge: {
     mode: 'all',
@@ -88,7 +88,7 @@ module.exports = {
 
     If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
 
-    ```javascript title="External safelist"
+    ```typescript title="External safelist"
     module.exports = {
       purge: {
         mode: 'all',
@@ -104,7 +104,7 @@ module.exports = {
     ```
 
     You should put it inside `purgetss` to keep everything organized:
-    ```javascript title="./purgetss/safelist.js"
+    ```typescript title="./purgetss/safelist.js"
     // ./purgetss/safelist.js
     exports.safelist = [
       // A large list of classes to keep
@@ -130,7 +130,7 @@ module.exports = {
 ### `theme` section
 The `theme` section in `config.js`, is where you define AND extend your project's color palette, type scale, font stacks, border radius values, and many more properties.
 
-```javascript title="The theme section"
+```typescript title="The theme section"
 module.exports = {
   theme: {
     fontFamily: {
@@ -157,11 +157,11 @@ module.exports = {
 ```
 
 ### `corePlugins` section
-If you don’t want to generate classes for a certain core plugin, set it to false or add it to an array in `corePlugins` section, instead of setting empty objects in the `theme` section.
+The `corePlugins` section lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
 
-Setting false to a set of objects to disable core plugins:
+To disable specific core plugins, provide an object for `corePlugins` that sets those plugins to `false`:
 
-```javascript title="The corePlugins section"
+```typescript title="The corePlugins section"
 module.exports = {
   corePlugins: {
     opacity: false,
@@ -171,7 +171,8 @@ module.exports = {
 ```
 
 Using an array to disable several core plugins:
-```javascript title="An array of disabled core plugins"
+
+```typescript title="An array of disabled core plugins"
 module.exports = {
   corePlugins: [
     'opacity',
@@ -180,14 +181,13 @@ module.exports = {
 }
 ```
 
-
 ## Overriding and extending properties
 Out of the box, your project will automatically inherit the values from the default theme configuration. If you want to customize it, you have two different options depending on your goals.
 
 ### Overriding properties
 To override a default property, add it directly in `theme`.
 
-```javascript
+```typescript
 module.exports = {
   theme: {
     // Replaces all of the default `opacity` values
@@ -211,7 +211,7 @@ If you want to preserve the default values for a theme option but also add new v
 
 For example, if you want to add an extra color but preserve the existing ones, you could extend the `colors` section:
 
-```javascript
+```typescript
 module.exports = {
   theme: {
     extend: {
@@ -226,7 +226,7 @@ module.exports = {
 
 You can of course override some parts of the default theme and extend others within the same configuration:
 
-```javascript
+```typescript
 module.exports = {
   theme: {
     opacity: {
@@ -249,7 +249,7 @@ Customizing the default color palette for your project.
 
 **PurgeTSS** includes tailwind's default color palette. But when you do need to customize your palette, you can configure your colors under the `colors` key in the `theme` section of your `config.js` file:
 
-```javascript title="Customizing Colors"
+```typescript title="Customizing Colors"
 module.exports = {
   theme: {
     colors: {
@@ -262,7 +262,7 @@ module.exports = {
 ### Using custom colors
 If you’d like to completely replace the default color palette with your own custom colors, add your `colors` directly under the `theme.colors` section of your configuration file:
 
-```javascript title="Using custom colors"
+```typescript title="Using custom colors"
 module.exports = {
   theme: {
     colors: {
@@ -285,7 +285,7 @@ By default, these colors will be made available everywhere in the framework wher
 ### Color object syntax
 Colors are defined as a simple list of key-value pairs, or as nested object notation. The nested keys are added to the base color name as modifiers.
 
-```javascript title="Color object syntax"
+```typescript title="Color object syntax"
 module.exports = {
   theme: {
     colors: {
@@ -316,7 +316,7 @@ The nested keys will be combined with the parent key to form class names like `b
 If you want to override one of the default colors but preserve the rest, simply provide the new values in the `theme.extend.colors` section of your `config.js` file.
 
 For example, here we've replaced the default cool grays with a neutral gray palette:
-```javascript title="Overriding a default color"
+```typescript title="Overriding a default color"
 module.exports = {
   theme: {
     extend: {
@@ -340,7 +340,7 @@ module.exports = {
 
 ### Extending the default palette
 If you want to to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.js` file:
-```javascript title="Extending the default palette"
+```typescript title="Extending the default palette"
 module.exports = {
   theme: {
     extend: {
@@ -359,7 +359,7 @@ Customizing the default spacing and sizing scale for your project.
 
 The `spacing` section allows you to customize the global spacing and sizing scale values.
 
-```javascript title="Customizing Spacing"
+```typescript title="Customizing Spacing"
 module.exports = {
   theme: {
     spacing: {
@@ -380,7 +380,7 @@ The `spacing` section is shared by the `padding`, `margin`, `width`, and `height
 
 > **When you include the `spacing` section, `PurgeTSS` will automatically generate all spacing-related properties and merge them with any other spacing-related properties present in the configuration file.**
 
-```javascript title="Shared spacing"
+```typescript title="Shared spacing"
 module.exports = {
   theme: {
     spacing: {
@@ -398,7 +398,7 @@ module.exports = {
 };
 ```
 
-```css
+```scss
 // width Property
 '.w-banner': { width: 80 }
 '.w-tight': { width: 4 }
@@ -425,7 +425,7 @@ module.exports = {
 
 ### Overriding the default spacing scale
 If you want to override the default spacing scale, you can do so using the `theme.spacing` section of your `config.js` file:
-```javascript title="Overriding the default spacing scale"
+```typescript title="Overriding the default spacing scale"
 module.exports = {
   theme: {
     spacing: {
@@ -442,7 +442,7 @@ This will disable the default spacing scale and generate classes like `p-sm` for
 
 ### Extending the default spacing scale
 If you want to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `config.js` file:
-```javascript title="Extending the default spacing scale"
+```typescript title="Extending the default spacing scale"
 module.exports = {
   theme: {
     extend: {
@@ -482,7 +482,6 @@ You can customize any of the following properties individually by adding them in
 - currentPageIndicatorColor
 - dateTimeColor
 - disabledColor
-- shadowColor
 - highlightedColor
 - hintTextColor
 - imageTouchFeedbackColor
@@ -501,6 +500,7 @@ You can customize any of the following properties individually by adding them in
 - selectedSubtitleColor
 - selectedTextColor
 - separatorColor
+- shadowColor
 - subtitleColor
 - tabsBackgroundColor
 - tabsBackgroundSelectedColor
@@ -515,7 +515,7 @@ You can customize any of the following properties individually by adding them in
 - trackTintColor
 - viewShadowColor
 
-### Spacing properties
+### Configurable properties
 
 - activeTab
 - backgroundLeftCap
@@ -536,12 +536,12 @@ You can customize any of the following properties individually by adding them in
 - fontFamily
 - fontSize
 - fontWeight
+- gap
 - indentionLevel
 - keyboardToolbarHeight
 - leftButtonPadding
 - leftWidth
 - lines
-- margin
 - maxElevation
 - maxLines
 - maxRowHeight

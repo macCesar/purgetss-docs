@@ -25,7 +25,7 @@ You can set arbitrary color values **to ALL available color properties**, using 
 </Alloy>
 ```
 
-```css title="Generated classes"
+```scss title="Generated classes"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -107,7 +107,7 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 </Alloy>
 ```
 
-```css title="Generated classes"
+```scss title="Generated classes"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -286,7 +286,7 @@ You can use any supported units depending of the property you are generating, yo
 </Alloy>
 ```
 
-```css title="app.tss - Showing only the arbitraty values"
+```scss title="app.tss - Showing only the arbitraty values"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -352,7 +352,7 @@ Try this example in an iPad or tablet.
 </Alloy>
 ```
 
-```css title="app.tss"
+```scss title="app.tss"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
@@ -436,7 +436,7 @@ Try this example in an iPad or tablet.
 </Alloy>
 ```
 
-```css title="app.tss"
+```scss title="app.tss"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS

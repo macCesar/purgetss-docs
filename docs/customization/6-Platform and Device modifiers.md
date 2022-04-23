@@ -28,7 +28,7 @@ You can target them separately, and you can even combine them with arbitrary val
 </Alloy>
 ```
 
-```css title="app.tss"
+```scss title="app.tss"
 // PurgeTSS
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS

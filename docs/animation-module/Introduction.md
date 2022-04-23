@@ -40,7 +40,7 @@ You can set any sizing, positioning and color properties available in `tailwind.
 - Use the `play` method in your controller to reproduce the animation by passing the element that you want to animate.
 - You can call the method when opening the controller, after a click event, etc.
 
-```javascript
+```typescript
 $.myAnimation.play($.myView);
 ```
 
@@ -58,7 +58,7 @@ Create an animation element and set the desired properties.
 
 In the controller pass the element that you want to animate, in this case the `square` View.
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 $.myAnimation.play($.square);
 ```
@@ -112,7 +112,7 @@ You can create more complex animations by combining properties to different `sta
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 function doTransparency(e) {
   $.transparency.play($.square3);
 }
@@ -169,7 +169,7 @@ In this example the `open` animation will reduced the children of the `letters` 
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 function doAnimate() {
@@ -186,7 +186,7 @@ function doReset() {
 ## The `apply` method
 - Use `apply` when you need to immediately apply the properties and transformations to the view.
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.myAnimation.apply($.myView);
 ```
 
@@ -218,7 +218,7 @@ The method `apply` sets the properties instantly. In this example, the `Scrollab
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 $.rotate.apply($.scrollableView);
 $.counterRotate.apply($.scrollableView.views);
@@ -235,7 +235,7 @@ $.counterRotate.apply($.scrollableView.views);
 - You can `apply` or `animate` the animations either globally or locally with the `draggingType` property.
 - You can constraint any View with `horizontal-constraint` or `vertical-constraint` classes.
 
-```javascript Calling a draddable method
+```typescript Calling a draddable method
 $.draggableAnimation.draggable('A View or an array of Views');
 ```
 
@@ -261,7 +261,7 @@ $.draggableAnimation.draggable('A View or an array of Views');
 
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 $.draggableAnimation.draggable([$.red, $.green, $.blue]);
@@ -310,7 +310,7 @@ To simplify things... We are restricting the type of animations that can be appl
 ### `draggingType` property
 - For controlling how `drag:` and `drop:` modifiers are applied, either by animating: `drag-animate` ( *default* ) or by applying: `drag-apply` the properties.
 
-```css title="tailwind.tss"
+```scss title="tailwind.tss"
 // Component(s): For the Animation Component
 // Property(ies): draggingType
 '.drag-apply': { draggingType: 'apply' }
@@ -374,7 +374,7 @@ The `card` view has a boundary of `m-4` and a bottom boundary of `mb-16`.
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 $.draggableAnimation.draggable($.card);
@@ -435,7 +435,7 @@ Every card view will use the global values.
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 $.draggableAnimation.draggable([$.card, $.card2, $.card3]);
@@ -449,7 +449,7 @@ $.draggableAnimation.draggable([$.card, $.card2, $.card3]);
 ### `vertical` and `horizontal` constraints
 - Add a vertical and horizontal constraint to any `dragging` element by setting the `vertical-constraint` or `horizontal-constraint` classes to the View.
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): A custom property to use it with the Animation module
 '.horizontal-constraint': { constraint: 'horizontal' }
@@ -478,7 +478,7 @@ In this example the `card` View will move only from side to side.
 </Alloy>
 ```
 
-```javascript title="index.js"
+```typescript title="index.js"
 $.index.open();
 
 $.draggableAnimation.draggable($.card);

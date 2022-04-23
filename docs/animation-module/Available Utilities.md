@@ -13,7 +13,7 @@ Point to rotate around, specified as a dictionary object with x and y properties
 
 **Default:** `(0.5, 0.5)`
 
-```css
+```scss
 // Component(s): Ti.UI.Animation, Ti.UI.View
 // Property(ies): anchorPoint
 '.origin-center': { anchorPoint: { x: 0.5, y: 0.5 } }
@@ -32,7 +32,7 @@ Specifies if the animation should be replayed in reverse upon completion.
 
 **Default:** `false`
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): autoreverse
 '.autoreverse': { autoreverse: true }
@@ -44,7 +44,7 @@ Animation curve or easing function to apply to the animation.
 
 This API can be assigned the following constants:
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): curve
 '.ease-in': { curve: Ti.UI.ANIMATION_CURVE_EASE_IN }
@@ -56,7 +56,7 @@ This API can be assigned the following constants:
 ## delay
 Delay, in milliseconds before starting the animation
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): delay
 '.delay-0': { delay: 0 }
@@ -86,7 +86,7 @@ Delay, in milliseconds before starting the animation
 ## duration
 Duration of the animation, in milliseconds.
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): duration
 '.duration-0': { duration: 0 }
@@ -119,7 +119,7 @@ Number of times the animation should be performed.
 
 If `autoreverse` is true, then one repeat of the animation consists of the animation being played once forward, and once backward.
 
-```css
+```scss
 // Component(s): Ti.UI.Animation
 // Property(ies): repeat
 '.repeat-1': { repeat: 1 }
@@ -143,7 +143,7 @@ Rotation angle, in degrees. See the rotate method for a discussion of rotation.
 
 **Default:** `No rotation.`
 
-```css
+```scss
 // Component(s): For the Animation Component
 // Property(ies): rotate
 '.rotate-0': { rotate: 0 }
@@ -174,7 +174,7 @@ Scale the matrix by the specified scaling factor. The same scaling factor is use
 
 **Default:** `1`
 
-```css
+```scss
 // Component(s): Ti.UI.ScrollView
 // Property(ies): scale
 '.scale-0': { scale: '0' }
