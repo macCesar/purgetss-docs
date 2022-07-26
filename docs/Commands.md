@@ -40,7 +40,7 @@ Every section of the config file is optional, so you only have to specify whatev
 
 :::tip To learn more
 
-To learn more and view some examples see **[Customization Section](customization/the-config-file)**
+To learn more and view some examples see the **[Configuration Section](customization/the-config-file)**
 
 :::
 

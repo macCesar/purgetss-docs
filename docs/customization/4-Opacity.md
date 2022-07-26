@@ -16,7 +16,7 @@ You can add an **opacity modifier to ANY of the available color properties**, by
 ```
 
 ```scss
-// Tailwind styles
+// Main styles
 'Window': { backgroundColor: '#ffffff' }
 '.h-8': { height: 32 }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }

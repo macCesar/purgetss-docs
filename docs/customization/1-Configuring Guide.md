@@ -70,7 +70,7 @@ module.exports = {
 
 - **`mode.class`**
 
-  Use `class` to search only in `classes` and `ids` attributes in your XML files.
+  Use `class` to search only in `classes` and `id` attributes in your XML files.
 
 - **`options.widgets`**
 
@@ -80,7 +80,7 @@ module.exports = {
 
   Set it to `true` if you want to get a list of any missing or misspelled classes at the end of the `app.tss` file.
 
-  **Very useful if you want to check if you forgot to add a class definition or if you forgot to remove an unused class from your `views`.**
+  **Very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your `views`.**
 
 - **`options.safelist`**
 
@@ -260,7 +260,7 @@ module.exports = {
 ```
 
 ### Using custom colors
-If you’d like to completely replace the default color palette with your own custom colors, add your `colors` directly under the `theme.colors` section of your configuration file:
+If you’d like to completely replace the default color palette with your own custom colors, add them directly under the `theme.colors` section of your configuration file:
 
 ```typescript title="Using custom colors"
 module.exports = {
@@ -280,7 +280,7 @@ module.exports = {
 }
 ```
 
-By default, these colors will be made available everywhere in the framework where you use colors, like the text color utilities, border color utilities, background color utilities, and more.
+By default, these colors will be available everywhere in the framework where you use colors, like the text color, border color, background color utilities, and more.
 
 ### Color object syntax
 Colors are defined as a simple list of key-value pairs, or as nested object notation. The nested keys are added to the base color name as modifiers.
@@ -310,7 +310,7 @@ module.exports = {
   }
 };
 ```
-The nested keys will be combined with the parent key to form class names like `bg-tahiti-400`.
+The nested keys will be combined with the parent key to form class names like `bg-tahiti-400` or `text-tahiti-400`.
 
 ### Overriding a default color
 If you want to override one of the default colors but preserve the rest, simply provide the new values in the `theme.extend.colors` section of your `config.js` file.

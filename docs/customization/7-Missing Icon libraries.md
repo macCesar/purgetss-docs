@@ -4,8 +4,9 @@ slug: missing-icon-libraries
 ---
 
 # Missing Icon libraries
+
 :::info official icon fonts for PurgeTSS
-**We've decided to leave the following fonts as the official icon fonts for PurgeTSS**
+**Previous versions of PurgeTSS included several icon libraries like Bootstrap Icons, Boxicons, LineIcons and Tabler Icons. And adding more icons fonts was getting out of control. So we've decided to leave the following fonts as the official icon fonts for PurgeTSS:**
 
 - Font Awesome 6 Free
 - Material Design Icons
@@ -13,7 +14,9 @@ slug: missing-icon-libraries
 :::
 
 ## Recreating the deleted libraries
-Follow these steps to recreate the deleted libraries:
+The good news is that you can recreate the deleted libraries, and even combine them with other icon fonts with the `build-fonts` command!
+
+Follow these steps to recreate them:
 
 ### 1. Download the libraries
 Start by downloading the libraries from their official websites:
@@ -27,7 +30,7 @@ Start by downloading the libraries from their official websites:
 Put the desired libraries in `./purgetss/fonts` folder
 
 :::info
-You'll need to copy only the **TrueType** OR **OpenType** font files and the **`.css`** file.
+You just need to copy the **TrueType** OR **OpenType** font files and the **`.css`** file.
 :::
 
 ```bash title="./purgetss/fonts/"
@@ -42,7 +45,7 @@ purgetss
 ```
 
 ### 3. The `build-fonts` command
-Run the following command to create your custom `fonts.tss` file.
+Run the `build-fonts` command to create your custom `fonts.tss` file.
 
 ```bash
 $ purgetss build-fonts [--modules]
@@ -75,7 +78,7 @@ The `build-fonts` command will generate a custom `./purgetss/fonts.tss` file wit
 ```
 
 #### Renaming the style rule name
-**PurgeTSS** will use the font’s file name as the style rule name. You can change it by renaming the fonts file name.
+**PurgeTSS** will use the font’s file name as the style rule name. **You can change it by renaming the font file**.
 
 ```bash title="./purgetss/fonts/"
 # Root of the project
@@ -92,7 +95,7 @@ New style rule name: `'.bx'`
 ```
 
 #### The `assets/fonts` folder
-The `build-fonts` command will copy the font files to `./app/assets/fonts` folder and it will renaming them to their corresponding PostScript name to work on both iOS and Android Apps.
+The `build-fonts` command will copy the font files to `./app/assets/fonts` folder and it will renaming them to their corresponding **PostScript** name to work on both iOS and Android Apps.
 
 ```bash title="./app/assets/fonts/"
 app
@@ -126,9 +129,9 @@ exports.icons = icons;
 ```
 
 #### The icon’s `prefix`
-**PurgeTSS** will automatically try to guess the prefix for each icon family.
+**PurgeTSS** will try to guess the group’s prefix for each icon family.
 
-If it can't guess it or there is none, it will use the `.css` file name as the prefix. **You can change it by renaming the file**.
+If it can't guess it or there is none, it will use the `.css` file name as the prefix. **You can change it by renaming the styles file**.
 
 ```bash title="./purgetss/fonts/"
 purgetss

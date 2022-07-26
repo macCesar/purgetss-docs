@@ -51,7 +51,7 @@ When you run **PurgeTSS** for the first time, it will backup your `app.tss` file
 
 From this moment, add, delete or update your custom classes in `_app.tss`.
 
-**Or even better! Add your custom values in `config.js` to [Customization Section](customization/the-config-file)**.
+**Or even better! Add your custom values in `config.js`. See the [Configuration Section](customization/the-config-file)**.
 
 :::
 
@@ -116,7 +116,7 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
   backgroundColor: '#002359'
 }
 
-// Tailwind styles
+// Main styles
 'ImageView[platform=ios]': { hires: true }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 'Window': { backgroundColor: '#ffffff' }
