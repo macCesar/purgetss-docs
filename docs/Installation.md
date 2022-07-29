@@ -3,9 +3,13 @@ sidebar_position: 1
 slug: installation
 ---
 
-**PurgeTSS** scans all your XML files and creates a new `app.tss` file with only the classes used in your project.
-
 **Install it globally on your machine via [NPM](https://www.npmjs.com/).**
+
+:::caution Max Node version
+
+Please use up to V16.x of Node.js
+
+:::
 
 ```bash
 > [sudo] npm i -g purgetss
