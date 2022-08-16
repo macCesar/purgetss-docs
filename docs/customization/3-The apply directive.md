@@ -29,7 +29,6 @@ theme: {
   },
   'Label': {
     apply: 'text-base font-bold text-gray-700'
-    ]
   },
 }
 // ...
