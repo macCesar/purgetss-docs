@@ -300,7 +300,7 @@ When you run `purgetss create 'Name of the Project'` it will execute the followi
 - **`code .`**, **`subl .`** or **`open .`** It will use either one of these commands to open `VS Code`, `Sublime Text` or the project’s folder in that order.
 
 ## `fonts` command
-Use this command to copy the free versions of [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/fontawesome-free/webfonts), [**Material Design Icons**](https://github.com/google/material-design-icons) and [**Framework7 Icons**](https://framework7.io/icons/),  Fonts into your `app/assets/fonts` folder.
+Use this command to copy the free versions of [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/fontawesome-free/webfonts), [**Material Icons**](https://fonts.google.com/icons?icon.set=Material+Icons), [**Material Symbols**](https://fonts.google.com/icons?icon.set=Material+Symbols) and [**Framework7 Icons**](https://framework7.io/icons/), Fonts into your `app/assets/fonts` folder.
 
 ```bash
 > purgetss fonts
@@ -313,12 +313,15 @@ Use this command to copy the free versions of [**Font Awesome**](https://github.
 FontAwesome6Brands-Regular.ttf
 FontAwesome6Free-Regular.ttf
 FontAwesome6Free-Solid.ttf
+Framework7-Icons.ttf
 MaterialIcons-Regular.ttf
 MaterialIconsOutlined-Regular.otf
 MaterialIconsRound-Regular.otf
 MaterialIconsSharp-Regular.otf
 MaterialIconsTwoTone-Regular.otf
-Framework7-Icons.ttf
+MaterialSymbolsOutlined-Regular.ttf
+MaterialSymbolsRounded-Regular.ttf
+MaterialSymbolsSharp-Regular.ttf
 ```
 
 After copying the desired fonts, you can use them in Buttons and Labels, just set the Font Family like `fa` and the desired icon like `fa-home`.
@@ -327,40 +330,43 @@ After copying the desired fonts, you can use them in Buttons and Labels, just se
 - [**fontawesome.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/fontawesome.tss)
 - [**framework7icons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/framework7icons.tss)
 - [**materialdesignicons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/materialdesignicons.tss)
+- [**materialsymbols.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/materialsymbols.tss)
 
 ### Copying specific font vendors
 Use any of the following arguments to copy specific vendors:
 
 ```bash
-> purgetss fonts --vendor="fontawesome, materialdesign, framework7"
+> purgetss fonts --vendor="fontawesome, framework7, materialdesign, materialsymbols"
 
 # alias:
 > purgetss f -v=fa,md,f7
 ```
 
 Available names and aliases:
-- fa, fontawesome = Font Awesome Icons
-- md, materialdesign = Material Design Icons
 - f7, framework7 = Framework7 Icons
+- fa, fontawesome = Font Awesome Icons
+- md, materialdesign = Material Icons
+- ms, materialsymbol = Material Symbols
 
 ### CommonJS Modules
 You can use the `--modules` flag to copy the corresponding CommonJS modules into `./app/lib/` folder.
 
 ```bash
 > purgetss fonts --modules
-> purgetss fonts --modules --vendor="fontawesome, materialdesign, framework7"
+> purgetss fonts --modules --vendor="fontawesome, framework7, materialdesign, materialsymbols"
 
 # alias:
 > purgetss f -m
 > purgetss f -m -v=fa,md,f7
 ```
 
-Each library contains a CommonJS module exposing the UniCode strings for Font Awesome Icons, Material Design Icons and Framework7-Icons fonts.
+Each library contains a CommonJS module exposing the UniCode strings for Font Awesome Icons, Material Icons and Framework7-Icons fonts.
 
 All prefixes are stripped out from their class names and are camelCased, for example:
 
 - **Font Awesome**: `fa-flag` becomes `flag`
-- **Material Design Icons**: `md-flag` becomes `flag`
+- **Material Icons**: `md-flag` becomes `flag`
+- **Material Symbols**: `ms-flag` becomes `flag`
 - **Framework7 Icons** `f7-alarm_fill` becomes `alarmFill` or `f7-clock_fill` becomes `clockFill`.
 
 ### Font Awesome Pro
@@ -413,10 +419,17 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
       </View>
 
       <View class="grid-cols-2 mx-auto gap-y-2 vertical">
-        <!-- Material Design -->
-        <Label class="mt-2 text-gray-700" text="Material Design" />
-        <Button class="w-10 h-10 my-1 text-xl text-blue-500 md md-home" />
-        <Button class="w-10 h-10 my-1 text-xl text-white bg-blue-500 rounded md md-home" />
+        <!-- Material Icons -->
+        <Label class="mt-2 text-gray-700" text="Material Icons" />
+        <Button class="w-10 h-10 my-1 text-xl text-blue-500 mi mi-home" />
+        <Button class="w-10 h-10 my-1 text-xl text-white bg-blue-500 rounded mi mi-home" />
+      </View>
+
+      <View class="grid-cols-2 mx-auto gap-y-2 vertical">
+        <!-- Material Symbol -->
+        <Label class="mt-2 text-gray-700" text="Material Symbol" />
+        <Button class="w-10 h-10 my-1 text-xl text-blue-500 ms ms-home" />
+        <Button class="w-10 h-10 my-1 text-xl text-white bg-blue-500 rounded ms ms-home" />
       </View>
 
       <View class="grid-cols-2 mx-auto gap-y-2 vertical">
@@ -431,7 +444,7 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -460,16 +473,20 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
 '.fa':{ font: { fontFamily: 'FontAwesome6Free-Solid' } }
 '.fa-home': { text: '\uf015', title: '\uf015' }
 
-// Material Design Icons
-'.md': { font: { fontFamily: 'MaterialIcons-Regular' } }
-'.md-home': { text: '\ue88a', title: '\ue88a' }
+// Material Icons
+'.mi': { font: { fontFamily: 'MaterialIcons-Regular' } }
+'.mi-home': { text: '\ue88a', title: '\ue88a' }
+
+// Material Symbols
+'.ms': { font: { fontFamily: 'MaterialSymbolsOutlined-Regular' } }
+'.ms-home': { text: '\ue88a', title: '\ue88a' }
 
 // Framework7
 '.f7': { font: { fontFamily: 'Framework7-Icons' } }
 '.f7-house': { text: 'house', title: 'house' }
 ```
 
-![iOS Screen - Icon Fonts](images/font-example-file.png)
+![iOS Screen - Icon Fonts](images/font-example-file-material-symbols.png)
 
 
 ## `build-fonts` command

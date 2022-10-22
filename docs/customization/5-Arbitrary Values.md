@@ -26,7 +26,7 @@ You can set arbitrary color values **to ALL available color properties**, using 
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -109,7 +109,7 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -289,7 +289,7 @@ You can use any supported units depending of the property you are generating, yo
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -372,7 +372,7 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -459,7 +459,7 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 

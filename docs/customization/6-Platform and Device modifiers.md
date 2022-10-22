@@ -29,7 +29,7 @@ You can target them separately, and you can even combine them with arbitrary val
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 

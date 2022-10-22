@@ -111,7 +111,7 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
 :::
 
 ```scss title="app.tss after purging"
-// PurgeTSS v6.1.3
+// PurgeTSS v6.2.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
