@@ -1,6 +1,7 @@
 ```scss
+// Property: indicatorColor
+// Description: Color of the animated indicator.
 // Component(s): Ti.UI.ActivityIndicator
-// Property(ies): indicatorColor
 '.indicator-transparent': { indicatorColor: 'transparent' }
 '.indicator-black': { indicatorColor: '#000000' }
 '.indicator-white': { indicatorColor: '#ffffff' }

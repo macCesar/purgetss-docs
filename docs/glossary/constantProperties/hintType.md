@@ -1,6 +1,7 @@
 ```scss
+// Property: hintType
+// Description: Hint type to display on the text field.
 // Component(s): Ti.UI.TextArea, Ti.UI.TextField
-// Property(ies): hintType - Android Only
-'.hint-type-static[platform=android]': { hintType: Ti.UI.HINT_TYPE_STATIC }
-'.hint-type-animated[platform=android]': { hintType: Ti.UI.HINT_TYPE_ANIMATED }
+'.hint-type-static': { hintType: Ti.UI.HINT_TYPE_STATIC }
+'.hint-type-animated': { hintType: Ti.UI.HINT_TYPE_ANIMATED }
 ```

@@ -26,18 +26,19 @@ You can set arbitrary color values **to ALL available color properties**, using 
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
+// Ti Elements
 'Window': { backgroundColor: '#ffffff' }
-'ImageView[platform=ios]': { hires: true }
-'.h-8': { height: 32 }
-'.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
-'.rounded-4': { borderRadius: 8 }
 
-// Styles with arbitrary values
+// Main Styles
+'.h-8': { height: 32 }
+'.rounded-4': { borderRadius: 8 }
+'.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
+
+// Arbitrary Values
 '.bg-(rgba(100,200,50))': { backgroundColor: 'rgba(100,200,50)' }
 '.from-(#4C61E4)': { backgroundGradient: { colors: [ '#004C61E4', '#4C61E4' ] } }
 '.text-(#4C61E4)': { color: '#4C61E4', textColor: '#4C61E4' }
@@ -108,18 +109,19 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
+// Ti Elements
 'Window': { backgroundColor: '#ffffff' }
-'ImageView[platform=ios]': { hires: true }
+
+// Main Styles
+'.bg-blue-800': { backgroundColor: '#1e40af' }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 '.text-white': { color: '#ffffff', textColor: '#ffffff' }
 
-// Styles with arbitrary values
-'.bg-(#4C61E4)': { backgroundColor: '#4C61E4' }
+// Arbitrary Values
 '.h-(1.75rem)': { height: 28 }
 '.rounded-(5)': { borderRadius: 5 }
 '.text-(15)': { font: { fontSize: 15 } }
@@ -286,15 +288,31 @@ You can use any supported units depending of the property you are generating, yo
 </Alloy>
 ```
 
-```scss title="app.tss - Showing only the arbitraty values"
-// PurgeTSS
+```scss title="app.tss"
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
-...
+// Ti Elements
+'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
+'Window': { backgroundColor: '#ffffff' }
 
-// Styles with arbitrary values
+// Main Styles
+'.bg-white': { backgroundColor: '#ffffff' }
+'.font-bold': { font: { fontWeight: 'bold' } }
+'.h-16': { height: 64 }
+'.h-screen': { height: Ti.UI.FILL }
+'.horizontal': { layout: 'horizontal' }
+'.ml-0': { left: 0 }
+'.ml-2': { left: 8 }
+'.ml-2.5': { left: 10 }
+'.mt-0': { top: 0 }
+'.text-2xl': { font: { fontSize: 24 } }
+'.text-white': { color: '#ffffff', textColor: '#ffffff' }
+'.w-full': { width: '100%' }
+'.w-screen': { width: Ti.UI.FILL }
+
+// Arbitrary Values
 '.-ml-(20)': { left: -20 }
 '.bg-(#4C61E4)': { backgroundColor: '#4C61E4' }
 '.bg-(#53606b)': { backgroundColor: '#53606b' }
@@ -310,8 +328,9 @@ You can use any supported units depending of the property you are generating, yo
 '.w-(2in)': { width: '2in' }
 '.w-(3rem)': { width: 48 }
 
-// Default Font Awesome styles
-...
+// Default Font Awesome
+'.fa-apple': { text: '\uf179', title: '\uf179' }
+'.fab': { font: { fontFamily: 'FontAwesome6Brands-Regular' } }
 ```
 
 ![arbitrary-values](../images/arbitrary-values.png)
@@ -353,24 +372,27 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
-'Window': { backgroundColor: '#ffffff' }
+// Ti Elements
 'ImageView[platform=ios]': { hires: true }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'.mt-0': { top: 0 }
-'.ml-0': { left: 0 }
-'.horizontal': { layout: 'horizontal' }
-'.vertical': { layout: 'vertical' }
-'.font-normal': { font: { fontWeight: 'normal' } }
-'.font-bold': { font: { fontWeight: 'bold' } }
-'.bg-white': { backgroundColor: '#ffffff' }
-'.text-white': { color: '#ffffff', textColor: '#ffffff' }
+'Window': { backgroundColor: '#ffffff' }
 
-// Styles with arbitrary values
+// Main Styles
+'.bg-white': { backgroundColor: '#ffffff' }
+'.font-bold': { font: { fontWeight: 'bold' } }
+'.font-normal': { font: { fontWeight: 'normal' } }
+'.horizontal': { layout: 'horizontal' }
+'.ml-0': { left: 0 }
+'.mt-0': { top: 0 }
+'.running': { running: true }
+'.text-white': { color: '#ffffff', textColor: '#ffffff' }
+'.vertical': { layout: 'vertical' }
+
+// Arbitrary Values
 '.bg-(#0B4825)': { backgroundColor: '#0B4825' }
 '.bg-(#1B6F3F)': { backgroundColor: '#1B6F3F' }
 '.bg-(#25A25B)': { backgroundColor: '#25A25B' }
@@ -408,7 +430,7 @@ Try this example in an iPad or tablet.
 '.w-(400px)': { width: '400px' }
 '.w-(900px)': { width: '900px' }
 
-// Default Font Awesome styles
+// Default Font Awesome
 '.fa-cloud': { text: '\uf0c2', title: '\uf0c2' }
 '.fas': { font: { fontFamily: 'FontAwesome6Free-Solid' } }
 ```
@@ -437,26 +459,27 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
-'Window': { backgroundColor: '#ffffff' }
-'ImageView[platform=ios]': { hires: true }
+// Ti Elements
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
+'Window': { backgroundColor: '#ffffff' }
+
+// Main Styles
+'.bg-transparent': { backgroundColor: 'transparent' }
+'.font-bold': { font: { fontWeight: 'bold' } }
 '.h-screen': { height: Ti.UI.FILL }
-'.w-full': { width: '100%' }
-'.w-screen': { width: Ti.UI.FILL }
+'.horizontal': { layout: 'horizontal' }
 '.mt-0': { top: 0 }
 '.mt-1': { top: 4 }
-'.horizontal': { layout: 'horizontal' }
-'.vertical': { layout: 'vertical' }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
-'.font-bold': { font: { fontWeight: 'bold' } }
-'.bg-transparent': { backgroundColor: 'transparent' }
+'.vertical': { layout: 'vertical' }
+'.w-full': { width: '100%' }
+'.w-screen': { width: Ti.UI.FILL }
 
-// Styles with arbitrary values
+// Arbitrary Values
 '.-right-(10px)': { right: '-10px' }
 '.bg-(#53606b)': { backgroundColor: '#53606b' }
 '.bg-(#53A500)': { backgroundColor: '#53A500' }

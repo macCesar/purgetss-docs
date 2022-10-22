@@ -10,6 +10,13 @@ Whether you want to style a Ti Element (also known as a markup element), a custo
 
 ### Modifier Key
 - For **classes** or **ids** you can use any name or convention you want. For example: *'.my-custom-class-name'*, *'.myCustomClassName'* or *'#myIdName'*.
+
+:::caution PurgeTSS v6.x and above
+Keep in mind that **PurgeTSS v6.x and above** will convert your class names to **Kebab-Case** to match the auto-generated ones. For example: *'.myCustomClassName'* will be converted to *'.my-custom-class-name'*.
+
+For existing projects, please set the `missing` option to true in `config.js` to get a report of any missing classes so you can update them to the new naming convention.
+:::
+
 - For **Titanium Elements** use the exact name of the element, for example: `Label`, `Button` or `ScrollView`.
 
 ### Default, Platform, Device or Conditional-blocks
@@ -26,11 +33,11 @@ Whether you want to style a Ti Element (also known as a markup element), a custo
   - `em` or `rem` - Values in em or rem will be converted with this little formula: `value * 16`.
   - `dp` For these values, the unit type will be removed and the value will remain intact.
 
-## Example 'config.js' file
+## 'config.js' file example
 ```typescript title="./purgetss/config.js"
 module.exports = {
   'theme': {
-    '#mainBanner': {
+    '#main-banner': {
       'DEFAULT': {
         'width': '300px',
         'height': '80px'
@@ -75,18 +82,20 @@ module.exports = {
 ```
 
 ```scss title="Custom ‘./purgetss/tailwind.tss’ file"
-// Custom Styles
-'#mainBanner': { width: '300px', height: '80px' }
-'#mainBanner[platform=ios]': { clipMode: Ti.UI.iOS.CLIP_MODE_DISABLED }
+// Property: TextField
+// Description: A single line text field.
+'TextField': { top: 10, left: 20, right: 20, bottom: 0 }
+'TextField[if=Alloy.Globals.iPhoneX]': { bottom: Alloy.CFG.iPhoneXNotchSize }
+'TextField[platform=android]': { touchFeedback: true }
+
+// Custom Classes
+'#main-banner': { width: '300px', height: '80px' }
+'#main-banner[platform=ios]': { clipMode: Ti.UI.iOS.CLIP_MODE_DISABLED }
 
 '.gallery': { height: Ti.UI.SIZE }
 '.gallery[platform=ios]': { clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED }
 '.gallery[platform=android]': { hiddenBehavior: Ti.UI.HIDDEN_BEHAVIOR_GONE }
 '.gallery[formFactor=handheld]': { width: '250px' }
 '.gallery[formFactor=tablet]': { width: '500px' }
-
-'TextField': { top: 10, left: 20, right: 20, bottom: 0 }
-'TextField[if=Alloy.Globals.iPhoneX]': { bottom: Alloy.CFG.iPhoneXNotchSize }
-'TextField[platform=android]': { touchFeedback: true }
 ...
 ```

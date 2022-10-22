@@ -5,12 +5,15 @@ slug: missing-icon-libraries
 
 # Missing Icon libraries
 
-:::info official icon fonts for PurgeTSS
-**Previous versions of PurgeTSS included several icon libraries like Bootstrap Icons, Boxicons, LineIcons and Tabler Icons. And adding more icons fonts was getting out of control. So we've decided to leave the following fonts as the official icon fonts for PurgeTSS:**
+:::info official icon fonts for **PurgeTSS**
+Previous versions of **PurgeTSS** included several icon libraries like Bootstrap Icons, Boxicons, LineIcons and Tabler Icons. And adding more icons fonts was getting out of control.
 
-- Font Awesome 6 Free
-- Material Design Icons
-- Framework 7
+**So we've decided to leave the following fonts as the official icon fonts for PurgeTSS:**
+
+- [Font Awesome 6 Free](https://fontawesome.com)
+- [Framework 7](https://framework7.io/icons/)
+- [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
+- [Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)
 :::
 
 ## Recreating the deleted libraries

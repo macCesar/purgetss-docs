@@ -1,6 +1,7 @@
 ```scss
+// Property: pageIndicatorColor
+// Description: Color of the paging control, as a color name or hex triplet.
 // Component(s): Ti.UI.ScrollableView
-// Property(ies): pageIndicatorColor - iOS Only
 '.page-indicator-transparent': { pageIndicatorColor: 'transparent' }
 '.page-indicator-black': { pageIndicatorColor: '#000000' }
 '.page-indicator-white': { pageIndicatorColor: '#ffffff' }

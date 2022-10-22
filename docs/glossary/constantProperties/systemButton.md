@@ -1,6 +1,7 @@
 ```scss
-// Component(s): Ti.UI.ImageView. Ti.UI.WebView
-// Property(ies): systemButton - iOS Only
+// Property: systemButton
+// Description: Specifies an iOS system button appearance, as defined in Titanium.UI.iOS.SystemButton.
+// Component(s): Ti.UI.Button
 '.system-button-action[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ACTION }
 '.system-button-activity[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ACTIVITY }
 '.system-button-add[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ADD }
@@ -8,7 +9,7 @@
 '.system-button-camera[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.CAMERA }
 '.system-button-cancel[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.CANCEL }
 '.system-button-compose[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.COMPOSE }
-'.system-button-contact_add[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.CONTACT_ADD }
+'.system-button-contact-add[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.CONTACT_ADD }
 '.system-button-disclosure[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.DISCLOSURE }
 '.system-button-done[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.DONE }
 '.system-button-edit[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.EDIT }

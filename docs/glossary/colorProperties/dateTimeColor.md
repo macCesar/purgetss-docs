@@ -1,6 +1,7 @@
 ```scss
+// Property: dateTimeColor
+// Description: Sets the text color of date- and time-pickers.
 // Component(s): Ti.UI.Picker
-// Property(ies): dateTimeColor - iOS Only
 '.date-time-transparent': { dateTimeColor: 'transparent' }
 '.date-time-black': { dateTimeColor: '#000000' }
 '.date-time-white': { dateTimeColor: '#ffffff' }

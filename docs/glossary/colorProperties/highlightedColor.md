@@ -1,6 +1,7 @@
 ```scss
+// Property: highlightedColor
+// Description: Color of the label when in the highlighted state, as a color name or hex triplet.
 // Component(s): Ti.UI.Label
-// Property(ies): highlightedColor
 '.highlighted-transparent': { highlightedColor: 'transparent' }
 '.highlighted-black': { highlightedColor: '#000000' }
 '.highlighted-white': { highlightedColor: '#ffffff' }

@@ -5,22 +5,22 @@ slug: installation
 
 **Install it globally on your machine via [NPM](https://www.npmjs.com/).**
 
+```bash
+> [sudo] npm i -g purgetss
+```
+
 :::caution Max Node version
 
 Please use up to V16.x of Node.js
 
 :::
 
-```bash
-> [sudo] npm i -g purgetss
-```
-
 ## Running PurgeTSS for the first time
 
 :::info
 **You will need to run `purgetss` only once inside your project to automatically generate the necessary files and folders**.
 
-Subsequently, each time you build your application, **PurgeTSS** will `parse` all your XML files and generate a clean `app.tss` file with only the classes used in your project.
+Subsequently, each time you build your application, **PurgeTSS** will `parse` all your XML files and output a clean `app.tss` file with only the classes used in your project.
 :::
 
 When you run `purgetss` for the first time in your project it will do the following tasks for you.
@@ -41,7 +41,7 @@ It will create a `purgetss` folder at the root of your project with the followin
 
 - **definitions.css file**
 
-  Is a special `css` file that includes ALL the classes from `fonts.tss` and `tailwind.tss` files ( including the official icon fonts libraries ) to be used with [**“Intellisencse for CSS class names in HTML”**](#vscode-extension) VS Code extension.
+  Is a special `css` file that includes ALL the classes from `tailwind.tss`, `_app.tss`, any `.tss` left in your project, and `fonts.tss` files, including all the classes from the official icon fonts libraries to be used with [**“Intellisencse for CSS class names in HTML”**](#vscode-extension) VS Code extension.
 
 - **fonts folder**
 
@@ -121,20 +121,9 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
 }
 
 // Main styles
-'ImageView[platform=ios]': { hires: true }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
+'ImageView[platform=ios]': { hires: true }
 'Window': { backgroundColor: '#ffffff' }
-'.bg-white': { backgroundColor: '#ffffff' }
-'.rounded-16': { borderRadius: 32 }
-'.rounded-lg': { borderRadius: 8 }
-'.text-xs': { font: { fontSize: 12 } }
-'.text-sm': { font: { fontSize: 14 } }
-'.text-lg': { font: { fontSize: 18 } }
-'.font-semibold': { font: { fontWeight: 'semibold' } }
-'.h-16': { height: 64 }
-'.h-auto': { height: Ti.UI.SIZE }
-'.vertical': { layout: 'vertical' }
-'.horizontal': { layout: 'horizontal' }
 '.m-4': { top: 16, right: 16, bottom: 16, left: 16 }
 '.mx-auto': { right: null, left: null }
 '.mt-6': { top: 24 }
@@ -142,13 +131,24 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
 '.mr-0': { right: 0 }
 '.mr-1': { right: 4 }
 '.ml-0': { left: 0 }
-'.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
-'.text-purple-600': { color: '#9333ea' }
-'.text-gray-600': { color: '#52525b' }
-'.text-gray-900': { color: '#18181b' }
+'.rounded-16': { borderRadius: 32 }
+'.rounded-lg': { borderRadius: 8 }
+'.text-xs': { font: { fontSize: 12 } }
+'.text-sm': { font: { fontSize: 14 } }
+'.text-lg': { font: { fontSize: 18 } }
+'.font-semibold': { font: { fontWeight: 'semibold' } }
+'.text-gray-600': { color: '#4b5563', textColor: '#4b5563' }
+'.text-gray-900': { color: '#111827', textColor: '#111827' }
+'.text-purple-600': { color: '#9333ea', textColor: '#9333ea' }
+'.bg-white': { backgroundColor: '#ffffff' }
+'.h-16': { height: 64 }
+'.h-auto': { height: Ti.UI.SIZE }
+'.vertical': { layout: 'vertical' }
+'.horizontal': { layout: 'horizontal' }
 '.w-16': { width: 64 }
 '.w-10/12': { width: '83.333334%' }
 '.w-screen': { width: Ti.UI.FILL }
+'.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 
 // Default Font Awesome styles
 '.fa-envelope': { text: '\uf0e0', title: '\uf0e0' }

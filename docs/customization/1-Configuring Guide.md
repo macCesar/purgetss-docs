@@ -25,24 +25,25 @@ module.exports = {
   purge: {
     mode: 'all',
 
-    // These options are passed through directly to PurgeTSS
+    // These options are passed directly to PurgeTSS
     options: {
-      widgets: false, // Purge widgets
-      missing: false, // Report missing classes
+      legacy: false, // Generates & Purge tailwind.tss v5.x classes
+      missing: true, // Report missing classes
+      widgets: false, // Purge widgets too
       safelist: [] // Array of classes to keep
     }
   },
   theme: {
     extend: {}
   },
-  corePlugins: {}
+  plugins: {}
 };
 ```
 
 Every section of the config file is optional, so you only specify what you’d like to change. Any missing sections will fall back to the default configuration.
 
 ## Structure
-The config file consists of three main sections: `purge`, `theme`, and `corePlugins`.
+The config file consists of three main sections: `purge`, `theme`, and `plugins`.
 
 ### `purge` section
 To control how `purgetss` will remove unused classes. Or to keep the ones you want.
@@ -54,8 +55,9 @@ module.exports = {
 
     // These options are passed through directly to PurgeTSS
     options: {
-      widgets: false, // Purge widgets
-      missing: false, // Report missing classes
+      legacy: false, // Generates & Purge tailwind.tss v5.x classes
+      missing: true, // Report missing classes
+      widgets: false, // Purge widgets too
       safelist: [] // Array of classes to keep
     }
   },
@@ -72,15 +74,19 @@ module.exports = {
 
   Use `class` to search only in `classes` and `id` attributes in your XML files.
 
-- **`options.widgets`**
+- **`options.legacy`**
 
-  Set it to `true` to also parse all the XML files found in the `widgets` folder.
+  Set `legacy` to true to parse all your files as if you were using **PurgeTSS v5.x.x**. However, you will not get any of the new auto-generated classes.
 
 - **`options.missing`**
 
   Set it to `true` if you want to get a list of any missing or misspelled classes at the end of the `app.tss` file.
 
   **Very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your `views`.**
+
+- **`options.widgets`**
+
+  Set it to `true` to also parse all the XML files found in the `widgets` folder.
 
 - **`options.safelist`**
 
@@ -156,14 +162,14 @@ module.exports = {
 }
 ```
 
-### `corePlugins` section
-The `corePlugins` section lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
+### `plugins` section
+The `plugins` section lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
 
-To disable specific core plugins, provide an object for `corePlugins` that sets those plugins to `false`:
+To disable specific core plugins, provide an object for `plugins` that sets those plugins to `false`:
 
-```typescript title="The corePlugins section"
+```typescript title="The plugins section"
 module.exports = {
-  corePlugins: {
+  plugins: {
     opacity: false,
     borderRadius: false
   }
@@ -174,7 +180,7 @@ Using an array to disable several core plugins:
 
 ```typescript title="An array of disabled core plugins"
 module.exports = {
-  corePlugins: [
+  plugins: [
     'opacity',
     'borderRadius'
   ]
@@ -322,15 +328,16 @@ module.exports = {
     extend: {
       colors: {
         gray: {
-          100: '#f5f5f5',
-          200: '#eeeeee',
-          300: '#e0e0e0',
-          400: '#bdbdbd',
+          50: '#f7f7f7',
+          100: '#ededed',
+          200: '#dfdfdf',
+          300: '#c8c8c8',
+          400: '#adadad',
           500: '#9e9e9e',
-          600: '#757575',
-          700: '#616161',
-          800: '#424242',
-          900: '#212121',
+          600: '#888888',
+          700: '#7b7b7b',
+          800: '#676767',
+          900: '#545454'
         }
       }
     }
@@ -400,24 +407,28 @@ module.exports = {
 
 ```scss
 // width Property
-'.w-banner': { width: 80 }
 '.w-tight': { width: 4 }
 '.w-loose': { width: 16 }
+'.w-banner': { width: 80 }
 
 // height Property
-'.h-xl': { height: 48 }
-'.h-1/3': { height: '33.333333%' }
 '.h-tight': { height: 4 }
 '.h-loose': { height: 16 }
+'.h-xl': { height: 48 }
+'.h-1/3': { height: '33.333334%' }
 
 // Margin
 '.m-tight': { top: 4, right: 4, bottom: 4, left: 4 }
 '.m-loose': { top: 16, right: 16, bottom: 16, left: 16 }
+'.my-tight': { top: 4, bottom: 4 }
+'.my-loose': { top: 16, bottom: 16 }
     ...
 
 // padding Property
 '.p-tight': { padding: { top: 4, right: 4, bottom: 4, left: 4 } }
 '.p-loose': { padding: { top: 16, right: 16, bottom: 16, left: 16 } }
+'.py-tight': { padding: { top: 4, bottom: 4 } }
+'.py-loose': { padding: { top: 16, bottom: 16 } }
     ...
 
 // Rest of inherited properties
@@ -479,6 +490,9 @@ You can customize any of the following properties individually by adding them in
 - badgeColor
 - barColor
 - borderColor
+- color
+- color-alternative
+- colors
 - currentPageIndicatorColor
 - dateTimeColor
 - disabledColor
@@ -487,28 +501,29 @@ You can customize any of the following properties individually by adding them in
 - imageTouchFeedbackColor
 - indicatorColor
 - keyboardToolbarColor
+- lightColor
 - navTintColor
 - onTintColor
 - pageIndicatorColor
 - pagingControlColor
-- placeholder
 - pullBackgroundColor
 - resultsBackgroundColor
 - resultsSeparatorColor
+- selectedBackgroundColor
 - selectedButtonColor
 - selectedColor
 - selectedSubtitleColor
 - selectedTextColor
 - separatorColor
 - shadowColor
+- statusBarBackgroundColor
 - subtitleColor
+- subtitleTextColor
 - tabsBackgroundColor
 - tabsBackgroundSelectedColor
-- textColor
 - thumbTintColor
 - tintColor
-- titleAttributesColor
-- titleAttributesShadowColor
+- titleAttributes
 - titleColor
 - titleTextColor
 - touchFeedbackColor
@@ -526,49 +541,76 @@ You can customize any of the following properties individually by adding them in
 - backgroundTopCap
 - borderRadius
 - borderWidth
-- bottomNavigation
+- bottom
 - cacheSize
 - columnCount
 - contentHeight
 - contentWidth
 - countDownDuration
+- delay
+- duration
 - elevation
-- fontFamily
 - fontSize
-- fontWeight
-- gap
+- height
+- horizontalMargin
 - indentionLevel
 - keyboardToolbarHeight
+- left
 - leftButtonPadding
+- leftTrackLeftCap
+- leftTrackTopCap
 - leftWidth
+- lineHeightMultiple
 - lines
+- lineSpacing
 - maxElevation
+- maximumLineHeight
 - maxLines
 - maxRowHeight
 - maxZoomScale
 - minimumFontSize
+- minimumLineHeight
 - minRowHeight
 - minZoomScale
-- offsets
 - opacity
 - padding
+- paddingBottom
+- paddingLeft
+- paddingRight
+- paddingTop
+- pageHeight
+- pageWidth
 - pagingControlAlpha
 - pagingControlHeight
 - pagingControlTimeout
+- paragraphSpacingAfter
+- paragraphSpacingBefore
 - repeat
 - repeatCount
+- right
 - rightButtonPadding
+- rightTrackLeftCap
+- rightTrackTopCap
 - rightWidth
 - rotate
 - rowCount
 - rowHeight
 - scale
+- scalesPageToFit
+- scaleX
+- scaleY
 - sectionHeaderTopPadding
 - separatorHeight
 - shadowRadius
+- shiftMode
 - timeout
-- transitionDelay
-- transitionDuration
+- top
+- uprightHeight
+- uprightWidth
+- verticalMargin
+- width
+- xOffset
+- yOffset
 - zIndex
 - zoomScale
 

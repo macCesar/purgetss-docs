@@ -1,6 +1,7 @@
 ```scss
+// Property: rowHeight
+// Description: Default row height for table view rows.
 // Component(s): Ti.UI.TableView
-// Property(ies): rowHeight
 '.row-h-0': { rowHeight: 0 }
 '.row-h-1': { rowHeight: 4 }
 '.row-h-2': { rowHeight: 8 }

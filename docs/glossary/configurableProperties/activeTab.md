@@ -1,6 +1,7 @@
 ```scss
+// Property: activeTab
+// Description: Active tab.
 // Component(s): Ti.UI.TabGroup
-// Property(ies): activeTab
 '.active-tab-0': { activeTab: 0 }
 '.active-tab-1': { activeTab: 1 }
 '.active-tab-2': { activeTab: 2 }

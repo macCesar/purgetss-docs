@@ -1,6 +1,6 @@
 ```scss
+// Property: activeTintColor
 // Component(s): Ti.UI.Tab, Ti.UI.TabGroup
-// Property(ies): activeTintColor
 '.active-tint-transparent': { activeTintColor: 'transparent' }
 '.active-tint-black': { activeTintColor: '#000000' }
 '.active-tint-white': { activeTintColor: '#ffffff' }

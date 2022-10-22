@@ -20,17 +20,18 @@ module.exports = {
   purge: {
     mode: 'all',
 
-    // These options are passed through directly to PurgeTSS
+    // These options are passed directly to PurgeTSS
     options: {
-      widgets: false, // Purge widgets
-      missing: false, // Report missing classes
+      legacy: false, // Generates & Purge tailwind.tss v5.x classes
+      missing: true, // Report missing classes
+      widgets: false, // Purge widgets too
       safelist: [] // Array of classes to keep
     }
   },
   theme: {
     extend: {}
   },
-  corePlugins: {}
+  plugins: []
 };
 ```
 
@@ -58,6 +59,143 @@ When `purgetss` runs, either manually or automatically (see `purgetss watch` bel
 
 :::info
 After generating your new or updated `tailwind.tss` file, **PurgeTSS** will use it to parse your `xml` files.
+:::
+
+## `shades` command
+To generate color shades from the given hex color and name.
+
+```bash
+> purgetss shades [hexcode] [name]
+
+# alias:
+> purgetss s [hexcode] [name]
+```
+
+ARGUMENTS
+  - `[hexcode]` The base hexcode value. *Omit it to create a random color*
+  - `[name]` The name of the color. *Omit it and it will choose one based on the color's hue*
+
+OPTIONS
+  - `-q, --quotes` Keep double quotes in `config.js`
+  - `-r, --random` Generates shades from a random color
+  - `-l, --log` Log the generated shades instead of saving them
+  - `-j, --json` Log a JSON compatible structure, to use it in `app/config.json` for example
+
+Almost 64% of all `tailwind.tss` classes are for color-related properties... So, having a tool such `shades` to extend all of them with new colors, it's a great addition to **PurgeTSS**!!
+
+Basic usage
+
+```bash
+> purgetss shades 53606b Primary
+
+::PurgeTSS:: "Primary" (#53606b) saved in config.js
+```
+
+The generated color shades will be added to your `config.js` file, to automatically generate the `tailwind.tss` file with the new colors.
+
+```js title="./purgetss/config.js"
+module.exports = {
+  // ...
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f4f6f7',
+          100: '#e3e7ea',
+          200: '#cad2d7',
+          300: '#a6b3ba',
+          400: '#7a8b96',
+          500: '#5f707b',
+          600: '#53606b',
+          700: '#464f58',
+          800: '#3e444c',
+          900: '#373c42',
+          default: '#53606b'
+        }
+      }
+    }
+  },
+  // ...
+}
+```
+
+Output to the console instead of saving
+
+```bash
+> purgetss shades 53606b Primary `--log`
+
+::PurgeTSS:: "Primary" (#53606b)
+{
+  colors: {
+    primary: {
+      50: '#f4f6f7',
+      100: '#e3e7ea',
+      200: '#cad2d7',
+      300: '#a6b3ba',
+      400: '#7a8b96',
+      500: '#5f707b',
+      600: '#53606b',
+      700: '#464f58',
+      800: '#3e444c',
+      900: '#373c42',
+      default: '#53606b'
+    }
+  }
+}
+```
+
+Random color value and log to the console
+
+```bash
+> purgetss shades -rl
+
+::PurgeTSS:: "Harlequin" (#44ed20)
+{
+  colors: {
+    harlequin: {
+      50: '#ecffe6',
+      100: '#d5fec9',
+      200: '#adfd99',
+      300: '#7bf85e',
+      400: '#44ed20',
+      500: '#2ed40e',
+      600: '#1daa06',
+      700: '#19810a',
+      800: '#18660e',
+      900: '#175611',
+      default: '#44ed20'
+    }
+  }
+}
+```
+
+Log to the console a *config.json* compatible structure using the `--json` option
+
+```bash
+> purgetss shades '#65e92c' -j
+
+::PurgeTSS:: "Lima" (#65e92c)
+{
+  "global": {
+    "colors": {
+      "lima": "#65e92c",
+      "lima-50": "#f0fee7",
+      "lima-100": "#dcfdca",
+      "lima-200": "#bbfb9b",
+      "lima-300": "#90f561",
+      "lima-400": "#65e92c",
+      "lima-500": "#48d012",
+      "lima-600": "#34a60a",
+      "lima-700": "#297e0d",
+      "lima-800": "#246410",
+      "lima-900": "#215413"
+    }
+  }
+}
+```
+
+:::info
+This is the first command that writes to the `config.js` file.. If you find any issues.. Please report them to fix them as soon as possible!!
 :::
 
 ## `watch` command
@@ -108,6 +246,8 @@ Use **`purgetss module`** command to install the `purgetss.ui.js` module in your
 
 ## `create` command
 If you want to create a new Alloy Project with `purgetss` ready to go, use the `create` command.
+
+It will ask you if you want to overwrite an existing project or you can add the `--force` flag to immediately overwrite it.
 
 ```bash
 > purgetss create 'Name of the Project' [--vendor="fontawesome, materialdesign, lineicons, boxicons, framework7, tablericons, bootstrapicons"]
