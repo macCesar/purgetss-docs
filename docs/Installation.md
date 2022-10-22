@@ -111,46 +111,48 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
 :::
 
 ```scss title="app.tss after purging"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Styles from _app.tss
+// _app.tss styles
 '.bg-primary': {
   backgroundColor: '#002359'
 }
 
-// Main styles
-'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
+// Ti Elements
 'ImageView[platform=ios]': { hires: true }
+'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 'Window': { backgroundColor: '#ffffff' }
-'.m-4': { top: 16, right: 16, bottom: 16, left: 16 }
-'.mx-auto': { right: null, left: null }
-'.mt-6': { top: 24 }
-'.mt-0.5': { top: 2 }
-'.mr-0': { right: 0 }
-'.mr-1': { right: 4 }
-'.ml-0': { left: 0 }
-'.rounded-16': { borderRadius: 32 }
-'.rounded-lg': { borderRadius: 8 }
-'.text-xs': { font: { fontSize: 12 } }
-'.text-sm': { font: { fontSize: 14 } }
-'.text-lg': { font: { fontSize: 18 } }
-'.font-semibold': { font: { fontWeight: 'semibold' } }
-'.text-gray-600': { color: '#4b5563', textColor: '#4b5563' }
-'.text-gray-900': { color: '#111827', textColor: '#111827' }
-'.text-purple-600': { color: '#9333ea', textColor: '#9333ea' }
+
+// Main Styles
 '.bg-white': { backgroundColor: '#ffffff' }
+'.font-semibold': { font: { fontWeight: 'semibold' } }
 '.h-16': { height: 64 }
 '.h-auto': { height: Ti.UI.SIZE }
-'.vertical': { layout: 'vertical' }
 '.horizontal': { layout: 'horizontal' }
-'.w-16': { width: 64 }
-'.w-10/12': { width: '83.333334%' }
-'.w-screen': { width: Ti.UI.FILL }
+'.m-4': { top: 16, right: 16, bottom: 16, left: 16 }
+'.ml-0': { left: 0 }
+'.mr-0': { right: 0 }
+'.mr-1': { right: 4 }
+'.mt-0.5': { top: 2 }
+'.mt-6': { top: 24 }
+'.mx-auto': { right: null, left: null }
+'.rounded-16': { borderRadius: 32 }
+'.rounded-lg': { borderRadius: 8 }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
+'.text-gray-600': { color: '#4b5563', textColor: '#4b5563' }
+'.text-gray-900': { color: '#111827', textColor: '#111827' }
+'.text-lg': { font: { fontSize: 18 } }
+'.text-purple-600': { color: '#9333ea', textColor: '#9333ea' }
+'.text-sm': { font: { fontSize: 14 } }
+'.text-xs': { font: { fontSize: 12 } }
+'.vertical': { layout: 'vertical' }
+'.w-10/12': { width: '83.333334%' }
+'.w-16': { width: 64 }
+'.w-screen': { width: Ti.UI.FILL }
 
-// Default Font Awesome styles
+// Default Font Awesome
 '.fa-envelope': { text: '\uf0e0', title: '\uf0e0' }
 '.fa-phone-alt': { text: '\uf879', title: '\uf879' }
 '.far': { font: { fontFamily: 'FontAwesome6Free-Regular' } }

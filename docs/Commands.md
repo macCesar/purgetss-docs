@@ -431,39 +431,40 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
 ```
 
 ```scss title="app.tss"
-// PurgeTSS
+// PurgeTSS v6.1.3
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
-// Main styles
-'Window': { backgroundColor: '#ffffff' }
-'ImageView[platform=ios]': { hires: true }
+// Ti Elements
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'.h-10': { height: 40 }
-'.w-10': { width: 40 }
-'.my-1': { top: 4, bottom: 4 }
-'.mx-auto': { right: null, left: null }
-'.mt-2': { top: 8 }
-'.grid': { layout: 'horizontal' }
-'.grid-cols-2': { width: '50%' }
-'.vertical': { layout: 'vertical' }
-'.rounded': { borderRadius: 4 }
-'.text-xl': { font: { fontSize: 20 } }
-'.gap-y-2': { top: 8, bottom: 8 }
-'.bg-blue-500': { backgroundColor: '#3b82f6' }
-'.text-white': { color: '#ffffff', textColor: '#ffffff' }
-'.text-gray-700': { color: '#374151', textColor: '#374151' }
-'.text-blue-500': { color: '#3b82f6', textColor: '#3b82f6' }
+'Window': { backgroundColor: '#ffffff' }
 
-// Default Font Awesome styles
+// Main Styles
+'.bg-blue-500': { backgroundColor: '#3b82f6' }
+'.gap-y-2': { top: 8, bottom: 8 }
+'.grid': { layout: 'horizontal', width: '100%' }
+'.grid-cols-2': { width: '50%' }
+'.h-10': { height: 40 }
+'.mt-2': { top: 8 }
+'.mx-auto': { right: null, left: null }
+'.my-1': { top: 4, bottom: 4 }
+'.rounded': { borderRadius: 4 }
+'.text-blue-500': { color: '#3b82f6', textColor: '#3b82f6' }
+'.text-gray-700': { color: '#374151', textColor: '#374151' }
+'.text-white': { color: '#ffffff', textColor: '#ffffff' }
+'.text-xl': { font: { fontSize: 20 } }
+'.vertical': { layout: 'vertical' }
+'.w-10': { width: 40 }
+
+// Default Font Awesome
 '.fa':{ font: { fontFamily: 'FontAwesome6Free-Solid' } }
 '.fa-home': { text: '\uf015', title: '\uf015' }
 
-// Material Design Icons styles
+// Material Design Icons
 '.md': { font: { fontFamily: 'MaterialIcons-Regular' } }
 '.md-home': { text: '\ue88a', title: '\ue88a' }
 
-// Framework7 styles
+// Framework7
 '.f7': { font: { fontFamily: 'Framework7-Icons' } }
 '.f7-house': { text: 'house', title: 'house' }
 ```
