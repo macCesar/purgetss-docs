@@ -58,9 +58,9 @@ $ purgetss bf [-m]
 ```
 
 #### The `fonts.tss` file
-The `build-fonts` command will generate a custom `./purgetss/fonts.tss` file with all the unicode characters and style rules.
+The `build-fonts` command will generate a custom `./purgetss/syles/fonts.tss` file with all the unicode characters and style rules.
 
-```scss title="./purgetss/fonts.tss"
+```scss title="./purgetss/syles/fonts.tss"
 '.boxicons': { font: { fontFamily: 'boxicons' } }
 '.lineicons': { font: { fontFamily: 'LineIcons' } }
 
@@ -92,7 +92,7 @@ purgetss
 ```
 
 New style rule name: `'.bx'`
-```scss title="./purgetss/fonts.tss"
+```scss title="./purgetss/syles/fonts.tss"
 // new style rule name
 '.bx': { font: { fontFamily: 'boxicons' } }
 ```

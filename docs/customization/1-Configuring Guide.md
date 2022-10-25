@@ -30,13 +30,13 @@ module.exports = {
       legacy: false, // Generates & Purge tailwind.tss v5.x classes
       missing: true, // Report missing classes
       widgets: false, // Purge widgets too
-      safelist: [] // Array of classes to keep
+      safelist: [], // Array of classes to keep
+      plugins: [] // Array of properties to ignore
     }
   },
   theme: {
     extend: {}
-  },
-  plugins: {}
+  }
 };
 ```
 
@@ -58,7 +58,8 @@ module.exports = {
       legacy: false, // Generates & Purge tailwind.tss v5.x classes
       missing: true, // Report missing classes
       widgets: false, // Purge widgets too
-      safelist: [] // Array of classes to keep
+      safelist: [], // Array of classes to keep
+      plugins: [] // Array of properties to ignore
     }
   },
 }
@@ -92,46 +93,58 @@ module.exports = {
 
   List of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in your XML files.
 
-    If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
+  If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
 
-    ```typescript title="External safelist"
-    module.exports = {
-      purge: {
-        mode: 'all',
+  ```typescript title="External safelist"
+  module.exports = {
+    purge: {
+      options: {
+        safelist: require('./safelist') // Array of classes to keep
+      }
+    },
+  }
+  ```
 
-        // These options are passed through directly to PurgeTSS
-        options: {
-          widgets: false, // Purge widgets
-          missing: false, // Report missing classes
-          safelist: require('./safelist') // Array of classes to keep
-        }
-      },
-    }
-    ```
+  You should put it inside `purgetss` to keep everything organized:
+  ```typescript title="./purgetss/safelist.js"
+  // ./purgetss/safelist.js
+  exports.safelist = [
+    // A large list of classes to keep
+    'Label',
+    'Botton',
+    'Window',
+    'ListView',
+    'TableView',
+    'Scrollview',
+    'ScrollableView',
+    // ...
+    // ...
+    // ...
+    'bg-indigo-50',
+    'bg-indigo-100',
+    // ...
+    // ...
+    'bg-indigo-800',
+    'bg-indigo-900',
+  ];
+  ```
+- **`options.plugins`**
+  The `plugins` option lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
 
-    You should put it inside `purgetss` to keep everything organized:
-    ```typescript title="./purgetss/safelist.js"
-    // ./purgetss/safelist.js
-    exports.safelist = [
-      // A large list of classes to keep
-      'Label',
-      'Botton',
-      'Window',
-      'ListView',
-      'TableView',
-      'Scrollview',
-      'ScrollableView',
-      // ...
-      // ...
-      // ...
-      'bg-indigo-50',
-      'bg-indigo-100',
-      // ...
-      // ...
-      'bg-indigo-800',
-      'bg-indigo-900',
-    ];
-    ```
+  To disable specific classes, provide an array of properties ( or plugins ) to disable:
+
+  ```typescript title="The plugins section"
+  module.exports = {
+    purge: {
+      options: {
+        plugins: [
+          opacity,
+          borderRadius
+        ]
+      }
+    },
+  }
+  ```
 
 ### `theme` section
 The `theme` section in `config.js`, is where you define AND extend your project's color palette, type scale, font stacks, border radius values, and many more properties.
@@ -159,31 +172,6 @@ module.exports = {
       }
     }
   }
-}
-```
-
-### `plugins` section
-The `plugins` section lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
-
-To disable specific core plugins, provide an object for `plugins` that sets those plugins to `false`:
-
-```typescript title="The plugins section"
-module.exports = {
-  plugins: {
-    opacity: false,
-    borderRadius: false
-  }
-}
-```
-
-Using an array to disable several core plugins:
-
-```typescript title="An array of disabled core plugins"
-module.exports = {
-  plugins: [
-    'opacity',
-    'borderRadius'
-  ]
 }
 ```
 
@@ -347,6 +335,7 @@ module.exports = {
 
 ### Extending the default palette
 If you want to to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.js` file:
+
 ```typescript title="Extending the default palette"
 module.exports = {
   theme: {
@@ -360,6 +349,12 @@ module.exports = {
 ```
 
 This will generate classes like bg-regal-blue in addition to all of Tailwind's default colors.
+
+:::info
+You can use the `shades` command to generate a range of shades for a given color, automatically adding them to your `config.js` file.
+
+**For more info see the** [**shades command**](/docs/commands#shades-command).
+:::
 
 ## Customizing Spacing
 Customizing the default spacing and sizing scale for your project.

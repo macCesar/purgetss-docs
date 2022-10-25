@@ -81,7 +81,7 @@ module.exports = {
 };
 ```
 
-```scss title="Custom ‘./purgetss/tailwind.tss’ file"
+```scss title="Custom ‘./purgetss/styles/tailwind.tss’ file"
 // Property: TextField
 // Description: A single line text field.
 'TextField': { top: 10, left: 20, right: 20, bottom: 0 }

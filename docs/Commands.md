@@ -15,6 +15,8 @@ Creates a `./purgetss/config.js` file at the root of your project.
 > purgetss i
 ```
 
+No arguments or options needed, just run the command and it will create the file for you inside of `./purgetss/` folder.
+
 ```typescript title="./purgetss/config.js"
 module.exports = {
   purge: {
@@ -25,13 +27,13 @@ module.exports = {
       legacy: false, // Generates & Purge tailwind.tss v5.x classes
       missing: true, // Report missing classes
       widgets: false, // Purge widgets too
-      safelist: [] // Array of classes to keep
+      safelist: [], // Array of classes to keep
+      plugins: [] // Array of properties to ignore
     }
   },
   theme: {
     extend: {}
-  },
-  plugins: []
+  }
 };
 ```
 
@@ -46,7 +48,7 @@ To learn more and view some examples see the **[Configuration Section](customiza
 :::
 
 ## `build` command
-When customizing your `config.js` file, you can re-generate `./purgetss/tailwind.tss` file by running:
+When customizing your `config.js` file, you can re-generate `./purgetss/styles/tailwind.tss` file by running:
 
 ```bash
 > purgetss build
@@ -62,7 +64,9 @@ After generating your new or updated `tailwind.tss` file, **PurgeTSS** will use 
 :::
 
 ## `shades` command
-To generate color shades from the given hex color and name.
+Is a tool to make shades and tints for a given color and generate the proper code for the `config.js` file.
+
+The idea is to make the custom color generation a bit easier when creating custom color variants to use in your app.
 
 ```bash
 > purgetss shades [hexcode] [name]
@@ -71,11 +75,12 @@ To generate color shades from the given hex color and name.
 > purgetss s [hexcode] [name]
 ```
 
-ARGUMENTS
+### Arguments
   - `[hexcode]` The base hexcode value. *Omit it to create a random color*
   - `[name]` The name of the color. *Omit it and it will choose one based on the color's hue*
 
-OPTIONS
+### Options
+  - `-n, --name` The name of the color
   - `-q, --quotes` Keep double quotes in `config.js`
   - `-r, --random` Generates shades from a random color
   - `-l, --log` Log the generated shades instead of saving them
@@ -198,6 +203,59 @@ Log to the console a *config.json* compatible structure using the `--json` optio
 This is the first command that writes to the `config.js` file.. If you find any issues.. Please report them to fix them as soon as possible!!
 :::
 
+## `color-module` command
+```bash
+> purgetss color-module
+
+# alias:
+> purgetss cm
+```
+
+This command will create a `purgetss.colors.js` file in your `lib` folder, with all the colors defined in your `config.js` file.
+```js title="./lib/purgetss.colors.js"
+module.exports = {
+  harlequin: {
+    '50': '#ecffe6',
+    '100': '#d5fec9',
+    '200': '#adfd99',
+    '300': '#7bf85e',
+    '400': '#44ed20',
+    '500': '#2ed40e',
+    '600': '#1daa06',
+    '700': '#19810a',
+    '800': '#18660e',
+    '900': '#175611',
+    default: '#44ed20'
+  },
+  primary: {
+    '50': '#f4f6f7',
+    '100': '#e3e7ea',
+    '200': '#cad2d7',
+    '300': '#a6b3ba',
+    '400': '#7a8b96',
+    '500': '#5f707b',
+    '600': '#53606b',
+    '700': '#464f58',
+    '800': '#3e444c',
+    '900': '#373c42',
+    default: '#53606b'
+  },
+  lima: {
+    '50': '#f0fee7',
+    '100': '#dcfdca',
+    '200': '#bbfb9b',
+    '300': '#90f561',
+    '400': '#65e92c',
+    '500': '#48d012',
+    '600': '#34a60a',
+    '700': '#297e0d',
+    '800': '#246410',
+    '900': '#215413',
+    default: '#65e92c'
+  }
+}
+```
+
 ## `watch` command
 Use this command to autorun `purgetss` every time you compile your project.
 
@@ -250,10 +308,10 @@ If you want to create a new Alloy Project with `purgetss` ready to go, use the `
 It will ask you if you want to overwrite an existing project or you can add the `--force` flag to immediately overwrite it.
 
 ```bash
-> purgetss create 'Name of the Project' [--vendor="fontawesome, materialdesign, lineicons, boxicons, framework7, tablericons, bootstrapicons"]
+> purgetss create 'Name of the Project' [--vendor="fontawesome, materialicons, materialsymbols, framework7"]
 
 # alias:
-> purgetss c 'Name of the Project' [-v=fa,md,f7]
+> purgetss c 'Name of the Project' [-v=fa,mi,ms,f7]
 ```
 
 ### Requirments
@@ -293,20 +351,20 @@ When you run `purgetss create 'Name of the Project'` it will execute the followi
 - **`cd app.workspace/"Name of the Project"`** Change to the newly created folder.
 - **`alloy new`** To convert it to an Alloy Project.
 - **`purgetss w`** To autorun `purgetss` every time you compile your project.
-- **`purgetss b`** To build a new `./purgetss/tailwind.tss` and `./purgetss/config.js` files.
-- **`[-v=fa,md,f7]`** Set the `--vendor` argument to copy the selected fonts into your project. Including the CommonJS module into `./app/lib/` folder.
+- **`purgetss b`** To build a new `./purgetss/styles/tailwind.tss` and `./purgetss/config.js` files.
+- **`[-v=fa,mi,ms,f7]`** Set the `--vendor` argument to copy the selected fonts into your project. Including the CommonJS module into `./app/lib/` folder.
 - **`--tailwind`** When using this option, it will execute the following commands
   - **`npm init -y && npm i tailwindcss -D && npm i postcss -D && npx tailwindcss init`** to install `Tailwind CSS` and its dependancies.
 - **`code .`**, **`subl .`** or **`open .`** It will use either one of these commands to open `VS Code`, `Sublime Text` or the project’s folder in that order.
 
-## `fonts` command
+## `copy-fonts` command
 Use this command to copy the free versions of [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/fontawesome-free/webfonts), [**Material Icons**](https://fonts.google.com/icons?icon.set=Material+Icons), [**Material Symbols**](https://fonts.google.com/icons?icon.set=Material+Symbols) and [**Framework7 Icons**](https://framework7.io/icons/), Fonts into your `app/assets/fonts` folder.
 
 ```bash
-> purgetss fonts
+> purgetss copy-fonts [--vendor=fa,mi,ms,f7] [--module] [-styles]
 
 # alias:
-> purgetss f
+> purgetss cf [-v=fa,mi,ms,f7] [-m] [-s]
 ```
 
 ```bash title="./app/assets/fonts/"
@@ -328,36 +386,36 @@ After copying the desired fonts, you can use them in Buttons and Labels, just se
 
 ### Available font classes
 - [**fontawesome.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/fontawesome.tss)
-- [**framework7icons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/framework7icons.tss)
-- [**materialdesignicons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/materialdesignicons.tss)
+- [**materialicons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/materialicons.tss)
 - [**materialsymbols.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/materialsymbols.tss)
+- [**framework7icons.tss**](https://github.com/macCesar/purgeTSS/blob/master/dist/framework7icons.tss)
 
 ### Copying specific font vendors
 Use any of the following arguments to copy specific vendors:
 
 ```bash
-> purgetss fonts --vendor="fontawesome, framework7, materialdesign, materialsymbols"
+> purgetss fonts --vendor="fontawesome, materialicons, materialsymbols, framework7"
 
 # alias:
-> purgetss f -v=fa,md,f7
+> purgetss f -v=fa,mi,ms,f7
 ```
 
 Available names and aliases:
-- f7, framework7 = Framework7 Icons
 - fa, fontawesome = Font Awesome Icons
-- md, materialdesign = Material Icons
+- mi, materialicons = Material Icons
 - ms, materialsymbol = Material Symbols
+- f7, framework7 = Framework7 Icons
 
-### CommonJS Modules
-You can use the `--modules` flag to copy the corresponding CommonJS modules into `./app/lib/` folder.
+### CommonJS Module
+You can use the `--module` flag to copy the corresponding CommonJS module into `./app/lib/` folder.
 
 ```bash
-> purgetss fonts --modules
-> purgetss fonts --modules --vendor="fontawesome, framework7, materialdesign, materialsymbols"
+> purgetss fonts --module
+> purgetss fonts --module --vendor="fontawesome, materialicons, materialsymbols, framework7"
 
 # alias:
 > purgetss f -m
-> purgetss f -m -v=fa,md,f7
+> purgetss f -m -v=fa,mi,ms,f7
 ```
 
 Each library contains a CommonJS module exposing the UniCode strings for Font Awesome Icons, Material Icons and Framework7-Icons fonts.
@@ -365,7 +423,7 @@ Each library contains a CommonJS module exposing the UniCode strings for Font Aw
 All prefixes are stripped out from their class names and are camelCased, for example:
 
 - **Font Awesome**: `fa-flag` becomes `flag`
-- **Material Icons**: `md-flag` becomes `flag`
+- **Material Icons**: `mi-flag` becomes `flag`
 - **Material Symbols**: `ms-flag` becomes `flag`
 - **Framework7 Icons** `f7-alarm_fill` becomes `alarmFill` or `f7-clock_fill` becomes `clockFill`.
 
@@ -501,7 +559,7 @@ With the `build-fonts` command, you can create a `fonts.tss` file with all the c
 > purgetss bf
 ```
 
-1. It will create the `./purgetss/fonts.tss` file with all class definitions and `fontFamily` selectors
+1. It will create the `./purgetss/styes/fonts.tss` file with all class definitions and `fontFamily` selectors
 2. It will copy the font files into `./app/assets/fonts` folder
 3. If necessary, **PurgeTSS will rename the font files to their corresponding PostScript Name**
 
@@ -518,7 +576,7 @@ purgetss
    └─ DancingScript-SemiBold.ttf
 ```
 
-```scss title="./purgetss/fonts.tss"
+```scss title="./purgetss/syles/fonts.tss"
 // Fonts TSS file generated with PurgeTSS
 // https://github.com/macCesar/purgeTSS
 
@@ -570,7 +628,7 @@ purgetss
 
 After running `purgetss build-fonts` you will have all the unicode characters in `fonts.tss`.
 
-```scss title="./purgetss/fonts.tss"
+```scss title="./purgetss/syles/fonts.tss"
 // Fonts TSS file generated with PurgeTSS
 // https://github.com/macCesar/purgeTSS
 
@@ -599,12 +657,12 @@ After running `purgetss build-fonts` you will have all the unicode characters in
 ![Microns Icon Font](images/mapicon-font.png)
 
 ### CommonJS module
-You can use the `--modules` flag to generate a CommonJS module called `purgetss-fonts.js` in `./app/lib/`.
+You can use the `--module` flag to generate a CommonJS module called `purgetss-fonts.js` in `./app/lib/`.
 
 To avoid any conflicts with other icon libraries that you may use, **PurgeTSS will keep each icon prefix**.
 
 ```bash
-> purgetss build-fonts --modules
+> purgetss build-fonts --module
 
 # alias:
 > purgetss bf -m

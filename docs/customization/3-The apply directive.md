@@ -41,7 +41,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 'Label': { color: '#374151', textColor: '#374151', font: { fontSize: 16, fontWeight: 'bold' } }
 
 // Custom Classes
@@ -66,7 +66,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7', textColor: '#dcfce7' }
@@ -87,7 +87,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.progress': { backgroundColor: '#e9ecef', borderRadius: 4, height: 16, layout: 'horizontal', font: { fontSize: 12 } }
 // ...
@@ -118,7 +118,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
@@ -159,7 +159,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
@@ -194,7 +194,7 @@ theme: {
 // ...
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn[platform=ios]': { right: 16, left: 16, width: Ti.UI.FILL }
@@ -226,7 +226,7 @@ module.exports = {
 };
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
 '.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, height: 128, width: 128 }
 ```
@@ -246,7 +246,7 @@ module.exports = {
 };
 ```
 
-```scss title="./purgetss/tailwind.tss"
+```scss title="./purgetss/styles/tailwind.tss"
 // Ommiting the platform variant in `config.js` will not generate the corresponding property.
 // Missing the property related to `clip-enabled`.
 '.my-view': { backgroundColor: '#22c55e', height: 128, width: 128 }
