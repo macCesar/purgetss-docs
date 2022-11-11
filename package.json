@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@docsearch/js": "^3.2.2",
-    "@docusaurus/core": "^2.1.0",
-    "@docusaurus/preset-classic": "^2.1.0",
-    "@docusaurus/theme-search-algolia": "^2.1.0",
+    "@docusaurus/core": "^2.2.0",
+    "@docusaurus/preset-classic": "^2.2.0",
+    "@docusaurus/theme-search-algolia": "^2.2.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.4",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",

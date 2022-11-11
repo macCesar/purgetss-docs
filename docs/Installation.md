@@ -67,7 +67,7 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 - Compile your app as usual.
 - **We recommend that you use `liveview` to speed up testing and development time**.
 
-```xml title="index.xml
+```xml title=index.xml
 <Alloy>
   <Window class="bg-primary">
     <View class="w-10/12 h-auto bg-white rounded-lg">

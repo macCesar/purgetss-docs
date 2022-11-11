@@ -314,7 +314,7 @@ It will ask you if you want to overwrite an existing project or you can add the 
 > purgetss c 'Name of the Project' [-v=fa,mi,ms,f7]
 ```
 
-### Requirments
+### Requirements
 Please make sure you have `app.idprefix` and `app.idprefix` settings configured.
 
 ```bash
@@ -352,8 +352,8 @@ When you run `purgetss create 'Name of the Project'` it will execute the followi
 - **`alloy new`** To convert it to an Alloy Project.
 - **`purgetss w`** To autorun `purgetss` every time you compile your project.
 - **`purgetss b`** To build a new `./purgetss/styles/tailwind.tss` and `./purgetss/config.js` files.
-- **`[-v=fa,mi,ms,f7]`** Set the `--vendor` argument to copy the selected fonts into your project. Including the CommonJS module into `./app/lib/` folder.
-- **`--tailwind`** When using this option, it will execute the following commands
+- **`[-v=fa,mi,ms,f7, --vendor=fa,mi,ms,f7]`** Set the `--vendor` argument to copy the selected fonts into your project. Including the CommonJS module into `./app/lib/` folder.
+- **`-t, --tailwind`** When using this option, it will execute the following commands
   - **`npm init -y && npm i tailwindcss -D && npm i postcss -D && npx tailwindcss init`** to install `Tailwind CSS` and its dependancies.
 - **`code .`**, **`subl .`** or **`open .`** It will use either one of these commands to open `VS Code`, `Sublime Text` or the project’s folder in that order.
 
@@ -394,10 +394,10 @@ After copying the desired fonts, you can use them in Buttons and Labels, just se
 Use any of the following arguments to copy specific vendors:
 
 ```bash
-> purgetss fonts --vendor="fontawesome, materialicons, materialsymbols, framework7"
+> purgetss copy-fonts --vendor="fontawesome, materialicons, materialsymbols, framework7"
 
 # alias:
-> purgetss f -v=fa,mi,ms,f7
+> purgetss cf -v=fa,mi,ms,f7
 ```
 
 Available names and aliases:
@@ -410,8 +410,8 @@ Available names and aliases:
 You can use the `--module` flag to copy the corresponding CommonJS module into `./app/lib/` folder.
 
 ```bash
-> purgetss fonts --module
-> purgetss fonts --module --vendor="fontawesome, materialicons, materialsymbols, framework7"
+> purgetss copy-fonts --module
+> purgetss copy-fonts --module --vendor="fontawesome, materialicons, materialsymbols, framework7"
 
 # alias:
 > purgetss f -m
