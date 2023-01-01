@@ -4,7 +4,7 @@ slug: arbitrary-values
 ---
 
 # Arbitrary values in XMLs
-There are times when you need a very specific value that is not part of the default values in `tailwind.tss` file or that your are going to use once in your project and don't want to set it in the `config.js` file.
+There are times when you need a very specific value that is not part of the default values or that your are going to use once in your project and don't want to set it in the `config.js` file.
 
 That's where `arbitrary values` come in.
 
@@ -15,7 +15,7 @@ Unfortunally you can't use square bracket notation like in Tailwind, because the
 :::
 
 ## Color properties
-You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in your `xml` files or in your `config.js` file.
+You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in `xml` files or in the `config.js` file.
 
 ```xml title="Arbitrary values to color properties"
 <Alloy>
@@ -98,7 +98,7 @@ You can set an arbitrary value to any of the following color properties:
 - **track-tint-**(*hex-rgb-or-rgba-value*)
 
 ## Spacing properties
-You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in your `xml` files or in your `config.js` file.
+You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in `xml` files or in the `config.js` file.
 
 ```xml title="Arbitrary values to spacing properties"
 <Alloy>

@@ -28,7 +28,7 @@ You can add an **opacity modifier to ANY of the available color properties**, by
 ```
 
 ## In the `apply` directive
-You can also use color opacity modifiers in the `apply` directive in your `config.js` file.
+You can also use color opacity modifiers in the `apply` directive in the `config.js` file.
 
 ```js title="./purgetss/config.js"
 module.exports = {

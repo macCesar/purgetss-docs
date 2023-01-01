@@ -24,6 +24,7 @@ It will create a minimal `./purgetss/config.js` file:
 module.exports = {
   purge: {
     mode: 'all',
+    method: 'sync', // How to execute auto-purging task: sync or async
 
     // These options are passed directly to PurgeTSS
     options: {
@@ -52,6 +53,7 @@ To control how `purgetss` will remove unused classes. Or to keep the ones you wa
 module.exports = {
   purge: {
     mode: 'all',
+    method: 'sync', // How to execute auto-purging task: sync or async
 
     // These options are passed through directly to PurgeTSS
     options: {
@@ -67,13 +69,19 @@ module.exports = {
 
 - **`mode.all`**
 
-  By default, `purgetss` will look everywhere inside your XML files, like in comments, attributes, classes, ids, Ti Element, and even the actual written content in your markup.
+  By default, `purgetss` will look everywhere inside the XML files, like in comments, attributes, classes, ids, Ti Element.
 
   **This mode is necessary if you want `purgetss` to parse any Ti Element that you've styled in `config.js`**.
 
+- **`mode.method`**
+
+  To set how the **auto-purge** taks will be executed: `sync` (default) or `async`.
+
+  **If you don't see any changes reflected when changing and rebuilding a project with TiKit Components and LiveView, set the compile method to `async`.**.
+
 - **`mode.class`**
 
-  Use `class` to search only in `classes` and `id` attributes in your XML files.
+  Use `class` to search only in `classes` and `id` attributes in XML files.
 
 - **`options.legacy`**
 
@@ -91,7 +99,7 @@ module.exports = {
 
 - **`options.safelist`**
 
-  List of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in your XML files.
+  List of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in the XML files.
 
   If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
 

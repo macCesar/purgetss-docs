@@ -3,6 +3,8 @@ sidebar_position: 1
 slug: installation
 ---
 
+# Installation
+
 **Install it globally on your machine via [NPM](https://www.npmjs.com/).**
 
 ```bash
@@ -11,7 +13,7 @@ slug: installation
 
 :::caution Max Node version
 
-Please use up to V16.x of Node.js
+Please use Node.js up to version 16.x
 
 :::
 
@@ -26,7 +28,7 @@ Subsequently, each time you build your application, **PurgeTSS** will `parse` al
 When you run `purgetss` for the first time in your project it will do the following tasks for you.
 
 ### 1. Auto-Run Hook
-It will add a `hook` in `alloy.jmk` to auto-run `purgetss` everytime you compile your app. **Very useful when using `liveview`.**
+It will add a `task` in `alloy.jmk` to auto-run `purgetss` everytime you compile your app. **Very useful when using `liveview`.**
 
 ### 2. purgetss folder
 It will create a `purgetss` folder at the root of your project with the following files and folder:
@@ -62,8 +64,8 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 ## Example files
 **Steps to use the example files:**
 - Copy the content of `index.xml` and `app.tss` into a new Alloy project.
-- Install Font Awesome font files with `purgetss fonts --vendor="fontawesome"`.
-- **Run `purgetss` once to generate de necesary files**.
+- Install Font Awesome font files with `purgetss copy-fonts --vendor=fontawesome`.
+- **Run `purgetss` once, to generate de necesary files**.
 - Compile your app as usual.
 - **We recommend that you use `liveview` to speed up testing and development time**.
 
@@ -103,7 +105,7 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 ```
 
 :::info
-**After running `purgetss` you will have a new `app.tss` file with only the classes used in your XML files.**
+**After running `purgetss` you will have a new `app.tss` file with only the classes used in the XML files.**
 
 Your original `app.tss` file is backed up in `_app.tss`. Use this file if you need to add, delete or update any of your original styles.
 

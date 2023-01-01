@@ -1,0 +1,18 @@
+{
+  "link.title.GitHub": {
+    "message": "GitHub",
+    "description": "The title of the footer links column with title=GitHub in the footer"
+  },
+  "link.item.label.PurgeTTS on GitHub": {
+    "message": "PurgeTTS on GitHub",
+    "description": "The label of footer link with label=PurgeTTS on GitHub linking to https://github.com/macCesar/purgetss/"
+  },
+  "link.item.label.TiKit UI on GitHub": {
+    "message": "TiKit UI on GitHub",
+    "description": "The label of footer link with label=TiKit UI on GitHub linking to https://github.com/macCesar/tikit/"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 Código Móvil. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

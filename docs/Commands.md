@@ -21,6 +21,7 @@ No arguments or options needed, just run the command and it will create the file
 module.exports = {
   purge: {
     mode: 'all',
+    method: 'sync', // How to execute auto-purging task: sync or async
 
     // These options are passed directly to PurgeTSS
     options: {
@@ -211,7 +212,7 @@ This is the first command that writes to the `config.js` file.. If you find any 
 > purgetss cm
 ```
 
-This command will create a `purgetss.colors.js` file in your `lib` folder, with all the colors defined in your `config.js` file.
+This command will create a `purgetss.colors.js` file in the `lib` folder, with all the colors defined in the `config.js` file.
 ```js title="./lib/purgetss.colors.js"
 module.exports = {
   harlequin: {
@@ -257,7 +258,7 @@ module.exports = {
 ```
 
 ## `watch` command
-Use this command to autorun `purgetss` every time you compile your project.
+Use this command to auto-run `purgetss` every time you compile your projects.
 
 ```bash
 > purgetss watch
@@ -266,12 +267,20 @@ Use this command to autorun `purgetss` every time you compile your project.
 > purgetss w
 ```
 
-This is very useful in combination with `LiveView` because it will purge all of your files every time you make a change, for example when adding or deleting styles in your Views.
+This is very useful in combination with `LiveView` because it will automatically purge your project every time you make a change, such as when adding or deleting styles in views.
 
-**You'll get instant feedback of any change you made and speed up your prototyping process significantly.**
+**You'll get instant feedback on any changes you make, which can significantly speed up your prototyping process.**
+
+The command will install the following task in `alloy.jmk` file:
+
+```javascript
+task('pre:compile', function(event, logger) {
+  require('child_process').execSync('purgetss', logger.warn('::PurgeTSS:: Auto-Purging ' + event.dir.project));
+});
+```
 
 :::info `watch` command
-This only works with regular Alloy projects compiled with `[appc] ti build` command, we haven't test it with any other type of project like webpack or vue.
+This only works with regular Alloy projects compiled with the `ti build` command. We haven't tested it with any other types of projects, such as those built with Webpack or Vue.
 :::
 
 **Use the `--off` option to turn it off.**
@@ -283,7 +292,7 @@ This only works with regular Alloy projects compiled with `[appc] ti build` comm
 ```
 
 ## `module` command
-Use **`purgetss module`** command to install the `purgetss.ui.js` module in your `lib` folder.
+Use **`purgetss module`** command to install the `purgetss.ui.js` module in the `lib` folder.
 
 ```bash
 > purgetss module
@@ -315,7 +324,7 @@ It will ask you if you want to overwrite an existing project or you can add the 
 ```
 
 ### Requirements
-Please make sure you have `app.idprefix` and `app.idprefix` settings configured.
+Please make sure you have `app.idprefix` and `app.idprefix` properties configured in Titanium's `config.json` file.
 
 ```bash
 # A name in reverse domain name format.
@@ -414,8 +423,8 @@ You can use the `--module` flag to copy the corresponding CommonJS module into `
 > purgetss copy-fonts --module --vendor="fontawesome, materialicons, materialsymbols, framework7"
 
 # alias:
-> purgetss f -m
-> purgetss f -m -v=fa,mi,ms,f7
+> purgetss cf -m
+> purgetss cf -m -v=fa,mi,ms,f7
 ```
 
 Each library contains a CommonJS module exposing the UniCode strings for Font Awesome Icons, Material Icons and Framework7-Icons fonts.
@@ -428,11 +437,11 @@ All prefixes are stripped out from their class names and are camelCased, for exa
 - **Framework7 Icons** `f7-alarm_fill` becomes `alarmFill` or `f7-clock_fill` becomes `clockFill`.
 
 ### Font Awesome Pro
-If you have a **[Font Awesome Pro Account](https://fontawesome.com/pro)** you can generate a custom `./purgetss/fontawesome.tss` file with all the extra classes that the Pro version has. ***(except duotone icons, see note below)***
+If you have a **[Font Awesome Pro Account](https://fontawesome.com/pro)** you can generate a custom `./purgetss/styles/fontawesome.tss` file with all the extra classes that the Pro version has. ***(except duotone icons, see note below)***
 
-After setting the **[@fortawesome scope](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers#installing-pro)** with your token, you can install them in your project's root folder with `npm init` and `npm install --save-dev @fortawesome/fontawesome-pro` (current version 6.1.1)
+After setting the **[@fortawesome scope](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers#installing-pro)** with your token, you can install them in your project's root folder with `npm init` and `npm install --save-dev @fortawesome/fontawesome-pro` (current version 6.2.1)
 
-Now, all you have to do is run `purgetss build` and it will generate a new `purgetss/fontawesome.tss` file and if needed, it will automatically copy the Pro fonts files into `app/assets/fonts`.
+Now, all you have to do is run `purgetss build` and it will generate a new `purgetss/styles/fontawesome.tss` file and if needed, it will automatically copy the Pro fonts files into `app/assets/fonts`.
 
 **Note: Titanium can't use FontAwesome's Duotone icons because they have two separate glyphs for each individual icon.**
 
@@ -460,7 +469,7 @@ And as with the Pro Version, just run `purgetss build` to generate your custom `
 
 ### Font Example File
 - Copy the content of `index.xml` into a new Alloy project
-- Install the official icon font files with `purgetss fonts`
+- Install the official icon font files with `purgetss copy-fonts`
 - **Run `purgetss` once to generate de necesary files**.
 - Compile your app as usual.
 - **We recommend that you use `liveview` to speed up testing and development time**.

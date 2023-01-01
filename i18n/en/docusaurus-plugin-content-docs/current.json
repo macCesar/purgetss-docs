@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Customization": {
+    "message": "Customization",
+    "description": "The label for category Customization in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Animation Module": {
+    "message": "Animation Module",
+    "description": "The label for category Animation Module in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Glossary": {
+    "message": "Glossary",
+    "description": "The label for category Glossary in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Boolean Properties": {
+    "message": "Boolean Properties",
+    "description": "The label for category Boolean Properties in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Constant Properties": {
+    "message": "Constant Properties",
+    "description": "The label for category Constant Properties in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configurable Properties": {
+    "message": "Configurable Properties",
+    "description": "The label for category Configurable Properties in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Color Properties": {
+    "message": "Color Properties",
+    "description": "The label for category Color Properties in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Compound Properties": {
+    "message": "Compound Properties",
+    "description": "The label for category Compound Properties in sidebar tutorialSidebar"
+  }
+}

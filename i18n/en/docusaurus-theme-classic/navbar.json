@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "PurgeTSS",
+    "description": "The title in the navbar"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.TiKit UI": {
+    "message": "TiKit UI",
+    "description": "Navbar item with label TiKit UI"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

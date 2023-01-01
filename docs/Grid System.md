@@ -2,6 +2,7 @@
 sidebar_position: 5
 slug: grid-system
 ---
+
 # Grid System
 
 A simple but useful **Grid System** with utilities to lay columns and rows.
