@@ -3,10 +3,10 @@ sidebar_position: 4
 slug: the-opacity-modifier
 ---
 
-# The opacity modifier
+# The Opacity Modifier
 
 :::info
-You can add an **opacity modifier to ANY of the available color properties**, by adding an **opacity-value** between 0 and 100 to the end of the color name separated with a slash ( / ).
+You can add an **opacity modifier to ANY of the available color properties** by adding an **opacity value** between 0 and 100 to the end of the color name separated with a slash ( / ).
 :::
 
 ## In your XML files
@@ -27,7 +27,7 @@ You can add an **opacity modifier to ANY of the available color properties**, by
 '.text-purple-900/75': { color: '#bf581c87' }
 ```
 
-## In the `apply` directive
+## In the 'apply' Directive
 You can also use color opacity modifiers in the `apply` directive in the `config.js` file.
 
 ```js title="./purgetss/config.js"

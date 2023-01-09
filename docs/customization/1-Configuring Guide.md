@@ -4,7 +4,7 @@ slug: the-config-file
 ---
 
 # Configuration
-By default, **PurgeTSS** will look for a `./purgetss/config.js` file where you can define any customization.
+By default, **PurgeTSS** will look for a `./purgetss/config.js` file where you can define any customizations.
 
 ## Creating the `config.js` file
 
@@ -18,7 +18,7 @@ If you need to start with a fresh `config.js` file, you can delete the existing 
 > purgetss init
 ```
 
-It will create a minimal `./purgetss/config.js` file:
+This will create a minimal `./purgetss/config.js` file:
 
 ```typescript title="./purgetss/config.js"
 module.exports = {
@@ -41,13 +41,13 @@ module.exports = {
 };
 ```
 
-Every section of the config file is optional, so you only specify what you’d like to change. Any missing sections will fall back to the default configuration.
+Every section of the config file is optional, so you only need to specify what you'd like to change. Any missing sections will fall back to the default configuration.
 
 ## Structure
 The config file consists of three main sections: `purge`, `theme`, and `plugins`.
 
 ### `purge` section
-To control how `purgetss` will remove unused classes. Or to keep the ones you want.
+The `purge` section controls how **PurgeTSS** will remove unused classes or keep the ones you want.
 
 ```typescript title="The purge section"
 module.exports = {
@@ -69,37 +69,37 @@ module.exports = {
 
 - **`mode.all`**
 
-  By default, `purgetss` will look everywhere inside the XML files, like in comments, attributes, classes, ids, Ti Element.
+  By default, **PurgeTSS** will look everywhere inside the XML files, including comments, attributes, classes, IDs, and Ti Elements.
 
-  **This mode is necessary if you want `purgetss` to parse any Ti Element that you've styled in `config.js`**.
+  **This mode is necessary if you want **PurgeTSS** to parse any Ti Elements that you've styled in `config.js`**.
 
 - **`mode.method`**
 
-  To set how the **auto-purge** taks will be executed: `sync` (default) or `async`.
+  The `method` setting determines how the **auto-purge** task will be executed: `sync` (default) or `async`
 
   **If you don't see any changes reflected when changing and rebuilding a project with TiKit Components and LiveView, set the compile method to `async`.**.
 
 - **`mode.class`**
 
-  Use `class` to search only in `classes` and `id` attributes in XML files.
+  Use `class` to search only in classes and ID attributes in XML files..
 
 - **`options.legacy`**
 
-  Set `legacy` to true to parse all your files as if you were using **PurgeTSS v5.x.x**. However, you will not get any of the new auto-generated classes.
+  Set `legacy` to true to parse all your files as if you were using **PurgeTSS v5.x.x**. However, you will not get any of the new auto-generated classes when using this setting.
 
 - **`options.missing`**
 
-  Set it to `true` if you want to get a list of any missing or misspelled classes at the end of the `app.tss` file.
+  Set `missing` to `true` if you want to get a list of any missing or misspelled classes at the end of the `app.tss` file.
 
-  **Very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your `views`.**
+  **This is very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your Views.**
 
 - **`options.widgets`**
 
-  Set it to `true` to also parse all the XML files found in the `widgets` folder.
+  Set `widgets` to `true` to also parse all the XML files found in the **Widgets** folder.
 
 - **`options.safelist`**
 
-  List of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in the XML files.
+  The `safelist` is a list of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in the XML files.
 
   If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
 
@@ -113,7 +113,8 @@ module.exports = {
   }
   ```
 
-  You should put it inside `purgetss` to keep everything organized:
+  "You should put the safelist inside the `purgetss` folder to keep everything organized:
+
   ```typescript title="./purgetss/safelist.js"
   // ./purgetss/safelist.js
   exports.safelist = [
@@ -137,9 +138,9 @@ module.exports = {
   ];
   ```
 - **`options.plugins`**
-  The `plugins` option lets you completely disable classes that PurgeTSS would normally generate by default if you don’t need them for your project.
+  The `plugins` option lets you completely disable classes that **PurgeTSS** would normally generate by default if you don’t need them for your project.
 
-  To disable specific classes, provide an array of properties ( or plugins ) to disable:
+  To disable specific classes, provide an array of properties (or plugins) to disable:
 
   ```typescript title="The plugins section"
   module.exports = {
@@ -155,7 +156,7 @@ module.exports = {
   ```
 
 ### `theme` section
-The `theme` section in `config.js`, is where you define AND extend your project's color palette, type scale, font stacks, border radius values, and many more properties.
+The `theme` section in `config.js` is where you define and extend your project's color palette, type scale, font stacks, border radius values, and many more properties
 
 ```typescript title="The theme section"
 module.exports = {
@@ -184,10 +185,10 @@ module.exports = {
 ```
 
 ## Overriding and extending properties
-Out of the box, your project will automatically inherit the values from the default theme configuration. If you want to customize it, you have two different options depending on your goals.
+Out of the box, your project will automatically inherit the values from the default theme configuration. If you want to customize it, you have two options depending on your goals.
 
 ### Overriding properties
-To override a default property, add it directly in `theme`.
+To override a default property, add it directly in the `theme` section.
 
 ```typescript
 module.exports = {
@@ -205,11 +206,11 @@ module.exports = {
 This will completely replace the original default `opacity` values with the new ones.
 
 :::info
-Any keys you do not provide will be inherited from the default theme, so in the above example, the default theme configuration for things like colors, spacing, border radius, background position, etc. will be preserved.
+Note that any keys you do not provide will be inherited from the default theme, so in the above example, the default theme configuration for things like colors, spacing, border radius, background position, etc. will be preserved.
 :::
 
 ### Extending properties
-If you want to preserve the default values for a theme option but also add new values, add your extensions under the `theme.extend` key.
+If you want to preserve the default values for a theme option but also add new values, add your extensions under the `theme.extend` key..
 
 For example, if you want to add an extra color but preserve the existing ones, you could extend the `colors` section:
 
@@ -249,7 +250,7 @@ module.exports = {
 ## Customizing Colors
 Customizing the default color palette for your project.
 
-**PurgeTSS** includes tailwind's default color palette. But when you do need to customize your palette, you can configure your colors under the `colors` key in the `theme` section of your `config.js` file:
+**PurgeTSS** includes Tailwind's default color palette, but you can customize it by configuring your colors under the `colors` key in the `theme` section of your `config.js` file:
 
 ```typescript title="Customizing Colors"
 module.exports = {
@@ -262,7 +263,7 @@ module.exports = {
 ```
 
 ### Using custom colors
-If you’d like to completely replace the default color palette with your own custom colors, add them directly under the `theme.colors` section of your configuration file:
+To completely replace the default color palette with your own custom colors, add them directly under the `theme.colors` section of your configuration file::
 
 ```typescript title="Using custom colors"
 module.exports = {
@@ -282,10 +283,10 @@ module.exports = {
 }
 ```
 
-By default, these colors will be available everywhere in the framework where you use colors, like the text color, border color, background color utilities, and more.
+By default, these colors will be available everywhere in the framework where you use colors, such as the text color, border color, background color utilities, and more.
 
 ### Color object syntax
-Colors are defined as a simple list of key-value pairs, or as nested object notation. The nested keys are added to the base color name as modifiers.
+Colors can be defined as a simple list of key-value pairs, or as nested objects. The nested keys are added to the base color name as modifiers.
 
 ```typescript title="Color object syntax"
 module.exports = {
@@ -342,7 +343,7 @@ module.exports = {
 ```
 
 ### Extending the default palette
-If you want to to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.js` file:
+If you want to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.js` file.
 
 ```typescript title="Extending the default palette"
 module.exports = {
@@ -356,7 +357,7 @@ module.exports = {
 }
 ```
 
-This will generate classes like bg-regal-blue in addition to all of Tailwind's default colors.
+This will generate classes like `bg-regal-blue` in addition to all of Tailwind's default colors.
 
 :::info
 You can use the `shades` command to generate a range of shades for a given color, automatically adding them to your `config.js` file.
@@ -365,7 +366,7 @@ You can use the `shades` command to generate a range of shades for a given color
 :::
 
 ## Customizing Spacing
-Customizing the default spacing and sizing scale for your project.
+Customize the default spacing and sizing scale for your project.
 
 The `spacing` section allows you to customize the global spacing and sizing scale values.
 
@@ -383,12 +384,12 @@ module.exports = {
   }
 }
 ```
-By default the spacing scale is inherited by the padding, margin, width, height and gap core plugins.
+By default, the spacing scale is inherited by the padding, margin, width, height, and gap core plugins.
 
 ### Shared spacing
 The `spacing` section is shared by the `padding`, `margin`, `width`, and `height` properties.
 
-> **When you include the `spacing` section, `PurgeTSS` will automatically generate all spacing-related properties and merge them with any other spacing-related properties present in the configuration file.**
+> **When you include the `spacing` section, PurgeTSS will automatically generate all spacing-related properties and merge them with any other spacing-related properties present in the configuration file.**
 
 ```typescript title="Shared spacing"
 module.exports = {
@@ -454,7 +455,7 @@ module.exports = {
 
 This will disable the default spacing scale and generate classes like `p-sm` for padding, `m-md` for margin, `w-lg` for width, and `h-xl` for height instead.
 
-### Extending the default spacing scale
+### Extending the Default Spacing Scale
 If you want to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `config.js` file:
 ```typescript title="Extending the default spacing scale"
 module.exports = {
@@ -472,11 +473,11 @@ module.exports = {
 
 This will generate classes like `p-72`, `m-84`, and `h-96` in addition to all of the default spacing/sizing utilities.
 
-## List of customizable properties
+## List of Customizable Properties
 
-### Global properties
-- All Color properties will inherit from the `theme.colors` property.
-- All Spacing properties will inherit from the `theme.spacing` property.
+### Global Properties
+- All color properties will inherit from the `theme.colors` property.
+- All spacing properties will inherit from the `theme.spacing` property.
 
 You can customize any of the following properties individually by adding them in the `theme` section of your `config.js` file, or by extending them in the `theme.extend` section.
 
@@ -617,5 +618,5 @@ You can customize any of the following properties individually by adding them in
 - zIndex
 - zoomScale
 
-### Custom rules & Ti Elements
-- Your own custom rules and ANY Ti Element with ANY number of attributes or conditional statements. See the [**Custom Rules section**](../customization/custom-rules) for more information.
+### Custom Rules & Ti Elements
+- Create your own custom rules and include ANY Ti Element with ANY number of attributes or conditional statements. See the [**Custom Rules section**](../customization/custom-rules) for more information.

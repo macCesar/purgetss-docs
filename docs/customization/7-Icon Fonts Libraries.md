@@ -1,25 +1,25 @@
 ---
 sidebar_position: 7
-slug: missing-icon-libraries
+slug: icon-fonts-libraries
 ---
 
-# Missing Icon libraries
+# Icon Fonts Libraries
 
 :::info official icon fonts for **PurgeTSS**
-Previous versions of **PurgeTSS** included several icon libraries like Bootstrap Icons, Boxicons, LineIcons and Tabler Icons. And adding more icons fonts was getting out of control.
 
-**So we've decided to leave the following fonts as the official icon fonts for PurgeTSS:**
+Previous versions of **PurgeTSS** included several icon fonts libraries such as Bootstrap Icons, Boxicons, LineIcons, and Tabler Icons. **However, adding more icon fonts was getting out of control**.
+
+**As a result, we have decided to leave the following fonts as the official icon fonts for PurgeTSS:**
 
 - [Font Awesome 6 Free](https://fontawesome.com)
 - [Framework 7](https://framework7.io/icons/)
 - [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
 - [Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)
+
 :::
 
 ## Recreating the deleted libraries
-The good news is that you can recreate the deleted libraries, and even combine them with other icon fonts with the `build-fonts` command!
-
-Follow these steps to recreate them:
+The good news is that you can recreate them using the `build-fonts` command:
 
 ### 1. Download the libraries
 Start by downloading the libraries from their official websites:
@@ -30,10 +30,10 @@ Start by downloading the libraries from their official websites:
 - [Tabler Icons](https://tabler-icons.io)
 
 ### 2. The `fonts` folder
-Put the desired libraries in `./purgetss/fonts` folder
+Put the desired libraries in the `./purgetss/fonts` folder
 
 :::info
-You just need to copy the **TrueType** OR **OpenType** font files and the **`.css`** file.
+You just need to copy the **TrueType** or **OpenType** font files and the `.css` file.
 :::
 
 ```bash title="./purgetss/fonts/"
@@ -48,7 +48,7 @@ purgetss
 ```
 
 ### 3. The `build-fonts` command
-Run the `build-fonts` command to create your custom `fonts.tss` file.
+Run the `build-fonts` command to create a custom `fonts.tss` file.
 
 ```bash
 $ purgetss build-fonts [--modules]
@@ -58,7 +58,7 @@ $ purgetss bf [-m]
 ```
 
 #### The `fonts.tss` file
-The `build-fonts` command will generate a custom `./purgetss/syles/fonts.tss` file with all the unicode characters and style rules.
+The `build-fonts` command will generate a custom `./purgetss/styles/fonts.tss` file with all the unicode characters and style rules.
 
 ```scss title="./purgetss/syles/fonts.tss"
 '.boxicons': { font: { fontFamily: 'boxicons' } }
@@ -81,7 +81,7 @@ The `build-fonts` command will generate a custom `./purgetss/syles/fonts.tss` fi
 ```
 
 #### Renaming the style rule name
-**PurgeTSS** will use the font’s file name as the style rule name. **You can change it by renaming the font file**.
+**PurgeTSS** will use the font's file name as the style rule name. **You can change it by renaming the font file**.
 
 ```bash title="./purgetss/fonts/"
 # Root of the project
@@ -98,7 +98,7 @@ New style rule name: `'.bx'`
 ```
 
 #### The `assets/fonts` folder
-The `build-fonts` command will copy the font files to `./app/assets/fonts` folder and it will renaming them to their corresponding **PostScript** name to work on both iOS and Android Apps.
+The `build-fonts` command will copy the font files to `./app/assets/fonts` folder and rename them to their corresponding **PostScript** name to work on both iOS and Android apps.
 
 ```bash title="./app/assets/fonts/"
 app
@@ -132,7 +132,7 @@ exports.icons = icons;
 ```
 
 #### The icon’s `prefix`
-**PurgeTSS** will try to guess the group’s prefix for each icon family.
+**PurgeTSS** will try to guess the group's prefix for each icon family.
 
 If it can't guess it or there is none, it will use the `.css` file name as the prefix. **You can change it by renaming the styles file**.
 

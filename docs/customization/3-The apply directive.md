@@ -6,15 +6,15 @@ slug: the-apply-directive
 ## Create complex classes and ids
 
 :::info
-You can `apply` a set of classes to create more complex classes, or when you find a repetitive pattern in your code and you’d like to extract it to a new class component.
+You can apply a set of classes to create more complex classes or when you find a repetitive pattern in your code and want to extract it to a new class component.
 :::
 
-- Set any id, class or Ti Element
-- Use any of the default classes
-- Use arbitrary values
-- Use any newly defined class in `config.js`
-- You can set a string of classes or an array of classes
-- Combine it with any platform, device or conditional-block properties
+- Set any ID, class, or Ti Element.
+- Use any of the default classes.
+- Use arbitrary values.
+- Use any newly defined class in `config.js`.
+- Set a string of classes or an array of classes.
+- Combine it with any platform, device, or conditional-block properties.
 
 ## Set any id, class or Ti Element
 
@@ -72,7 +72,7 @@ theme: {
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7', textColor: '#dcfce7' }
 ```
 
-## Use arbitrary values
+## Use Arbitrary Values
 You can use [**Arbitrary Values**](arbitrary-values) to define your custom classes.
 
 
@@ -93,8 +93,8 @@ theme: {
 // ...
 ```
 
-## Use any newly defined class in config.js
-In the followind example we are creating a `corporate` color classes, so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100` and `border-corporate-200`.
+## Use Any Newly Defined Class in config.js
+In the following example, we are creating `corporate` color classes so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100`, and `border-corporate-200`.
 
 ```typescript {5,15} title="./purgetss/config.js"
 // ...
@@ -203,7 +203,7 @@ theme: {
 // ...
 ```
 
-## Platform specific classes
+## Platform Specific Classes
 Several classes in `tailwind.tss` are platform specific to prevent polluting objects with properties that are not specific to a particular platform.
 
 :::caution IMPORTANT!
@@ -231,7 +231,7 @@ module.exports = {
 '.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, height: 128, width: 128 }
 ```
 
-### Omiting the platform variant
+### Omitting the Platform Variant
 If you omit the platform variant, **PurgeTSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
 
 ```typescript {5} title="./purgetss/config.js"

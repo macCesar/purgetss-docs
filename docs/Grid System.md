@@ -5,9 +5,9 @@ slug: grid-system
 
 # Grid System
 
-A simple but useful **Grid System** with utilities to lay columns and rows.
+The grid system is a simple but useful layout tool with utilities to lay out columns and rows.
 
-This is the most basic layout in order to use the grid system. Of course you can create a more complex layout by mixing different columns and rows.
+This is the most basic layout for using the grid system. Of course, you can create a more complex layout by mixing different columns and rows.
 
 ```xml {4,11} title="index.xml"
 <Alloy>
@@ -34,54 +34,51 @@ This is the most basic layout in order to use the grid system. Of course you can
 
 ## Column grid
 **`.grid-cols-{n}`**
-With `grid-cols` your are telling the grid system how many columns you want to fit in each row, for example if you set each view with a `.grid-cols-2` class it will fit two views per row, `.grid-cols-3` will fit three views, and so on.
+With `grid-cols`, you are telling the grid system how many columns you want to fit in each row. For example, if you set each view with a `.grid-cols-2` class, it will fit two views per row, `.grid-cols-3` will fit three views, and so on.
 
 **`.col-span-{n}`**
-With `col-span` you are setting the number of columns each element will occupy in a **12 column grid**.
+With `col-span`, you are setting the number of columns that each element will occupy in a **12-column grid**.
 
-If you set a view with `.col-span-3` you can add three more views of equal width to fill the row, or any other combination like 3-6-3, 2-4-6, etc., as long as the sum fills a **12 column grid**.
+If you set a view with `.col-span-3`, you can add three more views of equal width to fill the row, or any other combination like 3-6-3, 2-4-6, etc., as long as the sum fills a **12-column grid**."
 
 ## Row grid
 **`.grid-rows-{n}`**
-With `grid-rows` your are telling the grid system how many rows you want to fit in each column, for example if you set each view with a `.grid-rows-2` class it will fit two views per row, `.grid-rows-3` will fit three views, and so on.
+With `grid-rows`, you are telling the grid system how many rows you want to fit in each column. For example, if you set each view with a `.grid-rows-2` class, it will fit two views per column, `.grid-rows-3` will fit three views, and so on.
 
 **`.row-span-{n}`**
-With `row-span` you are setting the number of rows each element will occupy in a **12 row grid**.
+With `row-span`, you are setting the number of rows that each element will occupy in a **12-row grid**.
 
-If you set a view with `.row-span-3` you can add three more views of equal height to fill the column, or any other combination like 3-6-3, 2-4-6, etc., as long as the sum fills a **12 row grid**.
+If you set a view with `.row-span-3`, you can add three more views of equal height to fill the column, or any other combination like 3-6-3, 2-4-6, etc., as long as the sum fills a **12-row grid**.
 
 ![grid-system-example](images/grid-system-example.png)
 
 ## Available utilities
 These are the available utilities to control [**”The Grid”**](https://youtu.be/4-J4duzP8Ng?t=13) 😉
 
-### Gap
-Utilities for controlling gutters between grid.
-  - Use **`gap-{size}`** to change the gap between both rows and columns.
-  - Use **`gap-x-{size}`** and **`gap-y-{size}`** to change the gap between rows and columns independently.
-  - use **`gap-{side}-{size}`** to change the gap between rows and columns to an specific side. t=top, r=right, b=bottom and l=left.
+### Gutter utilities
+  - `gap-{size}`: Use this to change the gap between rows and columns.
+  - `gap-x-{size}` and `gap-y-{size}`: Use these to change the gap between rows and columns independently.
+  - `gap-{side}-{size}`: Use this to change the gap between rows and columns on a specific side (t=top, r=right, b=bottom, l=left).
 
-### Column Span
-Utilities for controlling how elements are sized across grid columns.
+### Column Span Utilities
+Column Span Utilities.
   - Use the **`col-span-{n}`** utilities to make an element span n columns.
 
-### Row Span
-Utilities for controlling how elements are sized across grid rows.
+### Row Span Utilities
   - Use the **`row-span-{n}`** utilities to make an element span n rows.
 
-### Grid and Grid Flow
-Utilities for controlling the direction of the grid system.
-  - Use **`grid`** or **`grid-flow-col`** to set the `layout` poperty to `horizontal`.
-  - Use **`grid-flow-row`** to set the `layout` poperty to `vertical`.
+### Direction utilities
+Direction utilities.
+  - `grid` or `grid-flow-col`: Use these utilities to set the layout property to horizontal.
+  - `grid-flow-row`: Use this utility to set the `layout` property to `vertical`.
 
-### Grid Template Columns
-Utilities for specifying the columns in a grid layout.
-  - Use the **`grid-cols-{n}`** utilities to create grids with n equally sized columns.
+### Column utilities
+  - `grid-cols-{n}`: Use this utility to create grids with **n** equally sized columns.
 
-### Grid Template Rows
-Utilities for specifying the rows in a grid layout.
+### Row utilities
   - Use the **`grid-rows-{n}`** utilities to create grids with n equally sized rows.
 
-### Items
-Utilities for controlling how elements are sized and placed across grid rows.
-  - `start`, `end` and `center` utilities
+### Row placement utilities
+  - `start`: Aligns an element to the start of a row.
+  - `end`: Aligns an element to the end of a row.
+  - `center`: Aligns an element to the center of a row.

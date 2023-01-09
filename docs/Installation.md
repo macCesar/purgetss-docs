@@ -5,7 +5,7 @@ slug: installation
 
 # Installation
 
-**Install it globally on your machine via [NPM](https://www.npmjs.com/).**
+**Install PurgeTSS globally on your machine using [NPM](https://www.npmjs.com/).**
 
 ```bash
 > [sudo] npm i -g purgetss
@@ -13,61 +13,60 @@ slug: installation
 
 :::caution Max Node version
 
-Please use Node.js up to version 16.x
+PurgeTSS is only compatible with Node.js versions up to 16.x
 
 :::
 
 ## Running PurgeTSS for the first time
 
 :::info
-**You will need to run `purgetss` only once inside your project to automatically generate the necessary files and folders**.
+**You will only need to run `purgetss` once inside your project to automatically generate the necessary files and folders**.
 
 Subsequently, each time you build your application, **PurgeTSS** will `parse` all your XML files and output a clean `app.tss` file with only the classes used in your project.
 :::
 
-When you run `purgetss` for the first time in your project it will do the following tasks for you.
+When you run `purgetss` for the first time in your project, it will do the following tasks:
 
 ### 1. Auto-Run Hook
-It will add a `task` in `alloy.jmk` to auto-run `purgetss` everytime you compile your app. **Very useful when using `liveview`.**
+**PurgeTSS** will add a `task` in `alloy.jmk` to auto-run `purgetss` every time you compile your app. **This is useful when using `liveview`**.
 
 ### 2. purgetss folder
-It will create a `purgetss` folder at the root of your project with the following files and folder:
+**PurgeTSS** will create a `purgetss` folder at the root of your project with the following files and folder:
 
 - **config.js file**
 
-  Where you can customize or create new classes with you own spacing, colors, and margin values and more. See **[Customization Section](customization/the-config-file)** for more details.
+  This is where you can customize or create new classes with your own spacing, colors, margin values, and more. See the **[Customization Section](customization/the-config-file)** for more details.
 
 - **tailwind.tss file**
 
-  It contains all Tailwind-like utility classes, including all your custom classes defined in `config.js`.
+  This file contains all Tailwind-like utility classes, including all your custom classes defined in `config.js`.
 
 - **definitions.css file**
 
-  Is a special `css` file that includes ALL the classes from `tailwind.tss`, `_app.tss`, any `.tss` left in your project, and `fonts.tss` files, including all the classes from the official icon fonts libraries to be used with [**“Intellisencse for CSS class names in HTML”**](#vscode-extension) VS Code extension.
+  This is a special `css` file that includes ALL the classes from `tailwind.tss`, `_app.tss`, any `.tss` left in your project, and `fonts.tss` files, including all the classes from the official icon fonts libraries to be used with the [**“Intellisencse for CSS class names in HTML”**](#vscode-extension) VS Code extension
 
 - **fonts folder**
 
-  Where you can add any Icon, Serif, Sans-Serif, Cursive, Fantasy or Monospace fonts to be used in your app. See [**build-fonts command**](Commands#build-fonts-command)) for a step-by-step instructions.
+  This is where you can add any Icon, Serif, Sans-Serif, Cursive, Fantasy, or Monospace fonts to be used in your app. See the [**build-fonts command**](Commands#build-fonts-command) for step-by-step instructions.
 
 :::caution IMPORTANT NOTICE!!!
 
 **PurgeTSS will OVERWRITE your existing `app.tss` file**
 
-When you run **PurgeTSS** for the first time, it will backup your `app.tss` file to `_app.tss`.
+When you run **PurgeTSS** for the first time, it will back up your `app.tss` file to `_app.tss`.
 
-From this moment, add, delete or update your custom classes in `_app.tss`.
+From this point on, you can add, delete, or update your custom classes in `_app.tss`.
 
-**Or even better! Add your custom values in `config.js`. See the [Configuration Section](customization/the-config-file)**.
-
+**Or, even better, you can add your custom values in `config.js`. See the [Configuration Section](customization/the-config-file) for more information**
 :::
 
 ## Example files
-**Steps to use the example files:**
+**To use the example files:**
 - Copy the content of `index.xml` and `app.tss` into a new Alloy project.
 - Install Font Awesome font files with `purgetss copy-fonts --vendor=fontawesome`.
-- **Run `purgetss` once, to generate de necesary files**.
+- **Run `purgetss` once to generate the necessary files.**
 - Compile your app as usual.
-- **We recommend that you use `liveview` to speed up testing and development time**.
+- **We recommend using `liveview` to speed up testing and development time**.
 
 ```xml title=index.xml
 <Alloy>
@@ -105,11 +104,11 @@ From this moment, add, delete or update your custom classes in `_app.tss`.
 ```
 
 :::info
-**After running `purgetss` you will have a new `app.tss` file with only the classes used in the XML files.**
+**After running `purgetss`, you will have a new `app.tss` file with only the classes used in the XML files.**
 
-Your original `app.tss` file is backed up in `_app.tss`. Use this file if you need to add, delete or update any of your original styles.
+Your original `app.tss` file is backed up in `_app.tss`. You can use this file to add, delete, or update any of your original styles.
 
-Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss`.
+Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 :::
 
 ```scss title="app.tss after purging"
@@ -166,14 +165,13 @@ Every time **PurgeTSS** runs, it will copy the content of `_app.tss` to `app.tss
 **More examples in the [Tailwind TSS Sample App](https://github.com/macCesar/tailwind.tss-sample-app)**
 
 ## VSCode extension
-If you're using **[Visual Studio Code](https://code.visualstudio.com)**, we recommend that you install **[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)** extension.
+If you're using **[Visual Studio Code](https://code.visualstudio.com)**, we recommend installing the **[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)** extension.
 
 It provides class name completion for the `XML` class attribute based on the `definitions.css` file created by PurgeTSS.
 
 ![Class Completion using IntelliSense for CSS class names in HTML](images/class-completion-2.gif)
 
 After installing the extension, you'll need to add the `xml` language to the `"HTMLLanguages"` setting and exclude any `css/html` files from the caching process by pointing `"excludeGlobPattern"` to the `./purgetss/fonts/` folder.
-
 
 ```json title="VS Code ‘settings.json’ file"
 {

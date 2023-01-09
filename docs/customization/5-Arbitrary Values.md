@@ -3,15 +3,13 @@ sidebar_position: 6
 slug: arbitrary-values
 ---
 
-# Arbitrary values in XMLs
-There are times when you need a very specific value that is not part of the default values or that your are going to use once in your project and don't want to set it in the `config.js` file.
-
-That's where `arbitrary values` come in.
+# Arbitrary Values in XMLs
+Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.js` file. In these cases, you can use arbitrary values
 
 :::info
-**To generate an arbitrary style use *parenthesis notation* to almost any default utility classes.**
+**To generate an arbitrary style, you can use *parenthesis notation* with almost any default utility classes.**
 
-Unfortunally you can't use square bracket notation like in Tailwind, because the way Titanium handles platform and conditional statements in `.tss` files.
+Unfortunately, you cannot use square bracket notation like in Tailwind, because Titanium handles platform and conditional statements in `.tss` files differently.
 :::
 
 ## Color properties

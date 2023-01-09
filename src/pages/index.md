@@ -11,20 +11,20 @@
 </div>
 
 :::info
-**PurgeTSS** is a package that provides tailwind-like utility classes for **[Titanium developers](https://tidev.io/)** who want to easily and quickly design beautiful mobile apps.
+**PurgeTSS** is a package that helps **[Titanium developers](https://tidev.io/)** create visually appealing mobile apps more easily, with features including highly customizable utility classes, icon fonts support, a basic Animation module, a simple grid system, and a shades command for creating custom colors.
 :::
 
 ------
 
 # Key features of PurgeTSS
-- Provides more than 19,000 **[Tailwind-like utility classes](https://tailwindcss.com/)** ready to use in your projects.
-- Creates a clean **`app.tss`** file with only the classes used in your project by parsing all your XML files.
-- You can customize any of the default classes via a simple configuration file, or you can create *just-in-time* classes with **arbitrary values** within your `Views`.
-- You can easily use icon fonts from **Font Awesome**, **Material Icons**, **Material Symbols**, and **Framework7-Icons** on `Buttons` and `Labels`.
-- Generates a **`fonts.tss`** file with all class definitions and *fontFamily* selectors for any Icon, Serif, Sans-Serif, Italic, Fancy, or Monospace font.
+- Provides more than 19,000 **[Tailwind-like](https://tailwindcss.com/)** utility classes ready to use in your projects.
+- Creates a clean **app.tss** file with only the classes used in your project by parsing all your XML files.
+- You can customize any of the default classes via a simple configuration file, or create **just-in-time** classes with **arbitrary values** within your Views.
+- You can easily use icon fonts from **Font Awesome**, **Material Icons**, **Material Symbols**, and **Framework7-Icons** on Buttons and Labels.
+- Generates a **fonts.tss** file with all class definitions and `fontFamily` selectors for any icon, serif, sans-serif, italic, fancy, or monospace font.
 - Use the `shades` command to generate custom color shades from the given hex color to use in your projects. No need for a separate online tool.
-- Includes an **Animation module** to apply basic 2D Matrix animations or transform any element or `Array` of elements.
-- Includes a simple two-dimensional **Grid System** to align and distribute elements in your views.
+- Includes an **Animation module** to apply basic 2D Matrix animations or transform to any element or array of elements.
+- Includes a simple two-dimensional **Grid System** to align and distribute elements in your Views.
 
 ## Table of Content
 
@@ -37,7 +37,7 @@
   - [opacity modifier](docs/customization/the-opacity-modifier)
   - [Arbitrary values in XMLs](docs/customization/arbitrary-values)
   - [Platform and Device modifiers](docs/customization/platform-and-device-modifiers)
-  - [Missing Icon libraries](docs/customization/missing-icon-libraries)
+  - [Icon Fonts Libraries](docs/customization/icon-fonts-libraries)
 - Animation module
   - [Introduction](docs/animation-module/introduction)
   - [Available utilities](docs/animation-module/available-utilities)

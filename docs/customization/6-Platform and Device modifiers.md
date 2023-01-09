@@ -4,7 +4,7 @@ slug: platform-and-device-modifiers
 ---
 
 # Platform and Device modifiers
-You can specify different classes to any element using `Platform` and `Device` modifiers ( also called variants or prefixes ):
+Platform and Device modifiers ( also called variants or prefixes ) allow you to specify different styles for an element depending on the platform (iOS or Android) and device (tablet or handheld) that the app is running on:
 
 - Platform modifiers
   - `ios:`
@@ -14,9 +14,7 @@ You can specify different classes to any element using `Platform` and `Device` m
   - `tablet:`
   - `handheld:`
 
-Lets say that you want to have different background color and font sizes, depending on the platform and device your app is running.
-
-You can target them separately, and you can even combine them with arbitrary values, like: `ios:bg-(#53606b)`, `ios:text-(20px)`, `android:bg-(#8fb63e)` and `android:text-(24px)`.
+For example, if you want to have different background colors and font sizes depending on the platform and device your app is running on, you can target them separately, and even combine them with arbitrary values. For example: `ios:bg-(#53606b)`, `ios:text-(20px)`, `android:bg-(#8fb63e)`, and `android:text-(24px)`.
 
 ```xml title="index.xml"
 <Alloy>
