@@ -307,7 +307,7 @@ Use the `icon` property to change its icon, color and size.
 Use the `classes` property to change the color of the title and background:
 
 ```xml title="icon-left variant"
-<Button module="tikit.ui" variant="icon-right" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
+<Button module="tikit.ui" variant="icon-left" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
 ```
 
 ![Buttons icon-left variant](./assets/images/buttons/icon-left-iphone.png)
@@ -322,7 +322,7 @@ Use the `icon` property to change its icon, color and size.
 Use the `classes` property to change the color of the title and background:
 
 ```xml title="icon-right variant"
-<Button module="tikit.ui" variant="icon-left" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
+<Button module="tikit.ui" variant="icon-right" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
 ```
 
 ![Buttons icon-right variant](./assets/images/buttons/icon-right-iphone.png)
