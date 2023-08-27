@@ -37,45 +37,45 @@ For existing projects, please set the `missing` option to true in `config.js` to
 ## 'config.js' file example
 ```typescript title="./purgetss/config.js"
 module.exports = {
-  'theme': {
+  theme: {
     '#main-banner': {
-      'DEFAULT': {
-        'width': '300px',
-        'height': '80px'
+      DEFAULT: {
+        width: '300px',
+        height: '80px'
       },
-      'ios': {
-        'clipMode': 'Ti.UI.iOS.CLIP_MODE_DISABLED'
+      ios: {
+        clipMode: 'Ti.UI.iOS.CLIP_MODE_DISABLED'
       }
     },
     '.gallery': {
-      'DEFAULT': {
-        'height': 'Ti.UI.SIZE'
+      DEFAULT: {
+        height: 'Ti.UI.SIZE'
       },
-      'ios': {
-        'clipMode': 'Ti.UI.iOS.CLIP_MODE_ENABLED'
+      ios: {
+        clipMode: 'Ti.UI.iOS.CLIP_MODE_ENABLED'
       },
-      'android': {
-        'hiddenBehavior': 'Ti.UI.HIDDEN_BEHAVIOR_GONE'
+      android: {
+        hiddenBehavior: 'Ti.UI.HIDDEN_BEHAVIOR_GONE'
       },
-      'handheld': {
-        'width': '250px'
+      handheld: {
+        width: '250px'
       },
-      'tablet': {
-        'width': '500px'
+      tablet: {
+        width: '500px'
       }
     },
-    'TextField': {
-      'DEFAULT': {
-        'top': '10',
-        'left': '20',
-        'right': '20',
-        'bottom': '0'
+    TextField: {
+      DEFAULT: {
+        top: 10,
+        left: 20,
+        right: 20,
+        bottom: 0
       },
       '[if=Alloy.Globals.iPhoneX]': {
-        'bottom': 'Alloy.CFG.iPhoneXNotchSize'
+        bottom: 'Alloy.CFG.iPhoneXNotchSize'
       },
-      'android': {
-        'touchFeedback': true
+      android: {
+        touchFeedback: true
       }
     },
   }

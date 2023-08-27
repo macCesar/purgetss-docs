@@ -27,13 +27,13 @@ For example, if you want to have different background colors and font sizes depe
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.h-32': { height: 128 }

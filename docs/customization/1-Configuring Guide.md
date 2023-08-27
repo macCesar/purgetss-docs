@@ -44,7 +44,7 @@ module.exports = {
 Every section of the config file is optional, so you only need to specify what you'd like to change. Any missing sections will fall back to the default configuration.
 
 ## Structure
-The config file consists of three main sections: `purge`, `theme`, and `plugins`.
+The config file consists of two main sections: `purge`, and `theme`.
 
 ### `purge` section
 The `purge` section controls how **PurgeTSS** will remove unused classes or keep the ones you want.
@@ -495,17 +495,19 @@ You can customize any of the following properties individually by adding them in
 - barColor
 - borderColor
 - color
-- color-alternative
 - colors
+- contentScrimColor
 - currentPageIndicatorColor
 - dateTimeColor
 - disabledColor
 - highlightedColor
 - hintTextColor
+- iconColor
 - imageTouchFeedbackColor
 - indicatorColor
 - keyboardToolbarColor
 - lightColor
+- navigationIconColor
 - navTintColor
 - onTintColor
 - pageIndicatorColor
@@ -526,6 +528,7 @@ You can customize any of the following properties individually by adding them in
 - tabsBackgroundColor
 - tabsBackgroundSelectedColor
 - thumbTintColor
+- tint
 - tintColor
 - titleAttributes
 - titleColor

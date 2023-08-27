@@ -54,6 +54,8 @@ module.exports = {
 
 // backgroundColor Property
 '.bg-primary': { backgroundColor: '#ce10cc' }
+...
+// And the rest of color properties!
 ```
 
 :::caution Semantic Colors

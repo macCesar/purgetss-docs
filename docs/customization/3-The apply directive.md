@@ -35,7 +35,7 @@ theme: {
     apply: 'w-screen h-auto bg-teal-200 mx-2 my-4 horizontal'
   },
   '.my-custom-class': {
-    apply: 'w-auto h-auto font-bold border-2 rounded my-0.5 font-saira-condensed'
+    apply: 'font-bold border-2 rounded wh-auto my-0.5 font-saira-condensed'
   }
 }
 // ...
@@ -46,7 +46,7 @@ theme: {
 
 // Custom Classes
 '#carrousel': { backgroundColor: '#99f6e4', height: Ti.UI.SIZE, layout: 'horizontal', right: 8, left: 8, top: 16, bottom: 16, width: Ti.UI.FILL }
-'.my-custom-class': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontFamily: 'SairaCondensed-Regular', fontWeight: 'bold' } }
+'.my-custom-class': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontFamily: 'SairaCondensed-Regular', fontWeight: 'bold' } }
 '.font-saira-condensed': { font: { fontFamily: 'SairaCondensed-Regular' } }
 '.font-bold': { font: { fontWeight: 'bold' } }
 ```
@@ -57,7 +57,7 @@ theme: {
 // ...
 theme: {
   '.btn': {
-    apply: 'w-auto h-auto font-bold border-2 rounded my-0.5 font-saira-condensed'
+    apply: 'font-bold border-2 rounded wh-auto my-0.5 font-saira-condensed'
   },
   '.btn-primary': {
     apply: 'bg-green-500 text-green-100 border-green-200'
@@ -68,7 +68,7 @@ theme: {
 
 ```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
-'.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
+'.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontFamily: 'SairaCondensed-Regular', fontWeight: 'bold' } }
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7', textColor: '#dcfce7' }
 ```
 
@@ -108,7 +108,7 @@ theme: {
     }
   },
   '.btn': {
-    apply: 'w-auto h-auto font-bold border-2 rounded my-0.5'
+    apply: 'wh-auto font-bold border-2 rounded my-0.5'
   },
   '.btn-corporate': {
     // Newly created classes ( see extend.colors.corporate )
@@ -120,16 +120,25 @@ theme: {
 
 ```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
-'.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
+'.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
 // ...
 // color Property
 '.text-corporate-100': { color: '#dddfe1', textColor: '#dddfe1' }
+'.text-corporate-200': { color: '#babfc4', textColor: '#babfc4' }
+'.text-corporate-500': { color: '#53606b', textColor: '#53606b' }
 // backgroundColor Property
+'.bg-corporate-100': { backgroundColor: '#dddfe1' }
+'.bg-corporate-200': { backgroundColor: '#babfc4' }
 '.bg-corporate-500': { backgroundColor: '#53606b' }
 // borderColor Property
+'.border-corporate-100': { borderColor: '#dddfe1' }
 '.border-corporate-200': { borderColor: '#babfc4' }
+'.border-corporate-500': { borderColor: '#53606b' }
+...
+// And the rest of color properties!
 ```
+
 
 ## You can set a string of classes or an array of classes
 
@@ -145,7 +154,7 @@ theme: {
   },
   // Use a string of classes
   '.btn': {
-    apply: 'w-auto h-auto font-bold border-2 rounded my-0.5'
+    apply: 'font-bold border-2 rounded wh-auto my-0.5'
   },
   // or an array of classes
   '.btn-corporate': {
@@ -161,7 +170,7 @@ theme: {
 
 ```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
-'.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
+'.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
 // ...
 ```
@@ -173,7 +182,7 @@ theme: {
 theme: {
   '.btn': {
     // Default .btn
-    apply: 'w-auto h-auto font-bold border-2 rounded my-0.5',
+    apply: 'font-bold border-2 rounded wh-auto my-0.5',
 
     // Specific to ios devices
     ios: {
@@ -196,7 +205,7 @@ theme: {
 
 ```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
-'.btn': { borderRadius: 4, borderWidth: 2, height: Ti.UI.SIZE, top: 2, bottom: 2, width: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
+'.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn[platform=ios]': { right: 16, left: 16, width: Ti.UI.FILL }
 '.btn[formFactor=handheld]': { height: 80 }
 '.btn[if=Alloy.Globals.iPhoneX]': { bottom: 48 }
@@ -219,7 +228,7 @@ module.exports = {
     '.my-view': {
       // Targeting iOS.
       'ios': {
-        'apply': 'w-32 h-32 ios:clip-enabled bg-green-500'
+        'apply': 'bg-green-500 wh-32 ios:clip-enabled'
       }
     }
   },
@@ -228,7 +237,7 @@ module.exports = {
 
 ```scss title="./purgetss/styles/tailwind.tss"
 // Custom Classes
-'.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, height: 128, width: 128 }
+'.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, width: 128, height: 128 }
 ```
 
 ### Omitting the Platform Variant
@@ -240,7 +249,7 @@ module.exports = {
     // Even if you are not targeting a specific platform, you must specify the platform variant
     '.my-view': {
       // Missing platform variant in clip-enabled
-      'apply': 'w-32 h-32 clip-enabled bg-green-500'
+      'apply': 'wh-32 clip-enabled bg-green-500'
     }
   },
 };
@@ -249,5 +258,5 @@ module.exports = {
 ```scss title="./purgetss/styles/tailwind.tss"
 // Ommiting the platform variant in `config.js` will not generate the corresponding property.
 // Missing the property related to `clip-enabled`.
-'.my-view': { backgroundColor: '#22c55e', height: 128, width: 128 }
+'.my-view': { backgroundColor: '#22c55e', width: 128, height: 128 }
 ```

@@ -24,12 +24,12 @@ You can set arbitrary color values **to ALL available color properties**, using 
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.h-8': { height: 32 }
@@ -107,12 +107,12 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 ```
 
 ```scss title="Generated classes"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.bg-blue-800': { backgroundColor: '#1e40af' }
@@ -287,13 +287,13 @@ You can use any supported units depending of the property you are generating, yo
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.bg-white': { backgroundColor: '#ffffff' }
@@ -370,14 +370,14 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
 'ImageView[platform=ios]': { hires: true }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.bg-white': { backgroundColor: '#ffffff' }
@@ -457,13 +457,13 @@ Try this example in an iPad or tablet.
 ```
 
 ```scss title="app.tss"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
 // Ti Elements
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.bg-transparent': { backgroundColor: 'transparent' }
