@@ -13,7 +13,7 @@ slug: installation
 
 :::caution Max Node version
 
-PurgeTSS is only compatible with Node.js versions up to 16.x
+PurgeTSS has been tested and is compatible with Node.js versions up to 18.x.x.
 
 :::
 
@@ -112,7 +112,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 :::
 
 ```scss title="app.tss after purging"
-// PurgeTSS v6.2.0
+// PurgeTSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -124,7 +124,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 // Ti Elements
 'ImageView[platform=ios]': { hires: true }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#ffffff' }
+'Window': { backgroundColor: '#FFFFFF' }
 
 // Main Styles
 '.bg-white': { backgroundColor: '#ffffff' }
