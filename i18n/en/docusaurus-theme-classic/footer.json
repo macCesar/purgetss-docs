@@ -12,7 +12,7 @@
     "description": "The label of footer link with label=TiKit UI on GitHub linking to https://github.com/macCesar/tikit/"
   },
   "copyright": {
-    "message": "Copyright © 2022 Código Móvil. Built with Docusaurus.",
+    "message": "Copyright © 2023 Código Móvil. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
