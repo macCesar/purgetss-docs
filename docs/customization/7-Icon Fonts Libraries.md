@@ -108,10 +108,10 @@ app
       └─ LineIcons.ttf
 ```
 
-#### The `--modules` flag
+#### The `--modules` option
 When using the `--modules` option, it will generate a `./app/lib/purgetss.fonts.js` CommonJS module file
 
-```typescript title="./app/lib/purgetss.fonts.js"
+```javascript title="./app/lib/purgetss.fonts.js"
 const icons = {
   // boxicons
   'boxicons': {
@@ -131,28 +131,41 @@ const icons = {
 exports.icons = icons;
 ```
 
-#### The icon’s `prefix`
-**PurgeTSS** will try to guess the group's prefix for each icon family.
+#### The `--prefix` option
 
-If it can't guess it or there is none, it will use the `.css` file name as the prefix. **You can change it by renaming the styles file**.
+**PurgeTSS** automatically determine the group's prefix for each icon family and class name. However, you can use the `--prefix` option to apply the style's filename as the prefix for class names in `fonts.tss` and property names in `purgetss.fonts.js`.
 
 ```bash title="./purgetss/fonts/"
 purgetss
 └─ fonts
-   └─ boxicons
-      └─ bx.css
+   └─ lineicons
+      └─ li.css
 ```
 
-New group prefix: `bx`
+**New group prefix: `li`**
 
-```typescript title="./app/lib/purgetss.fonts.js"
+```scss title="./purgetss/syles/fonts.tss"
+// lineicons/li.css
+'.li-zoom-out': { text: '\uea02', title: '\uea02' }
+'.li-zoom-in': { text: '\uea03', title: '\uea03' }
+'.li-zip': { text: '\uea04', title: '\uea04' }
+// ...
+```
+
+
+```javascript title="./app/lib/purgetss.fonts.js"
 const icons = {
-  // bx
-  // New group prefix
-  'bx': {
+  // lineicons/li.css
+  'li': {
     // ...
   },
   // ...
 };
 exports.icons = icons;
 ```
+
+:::danger WARNING
+
+**Make sure that the new prefix remains unique and avoid conflicts with other class prefixes.**
+
+:::

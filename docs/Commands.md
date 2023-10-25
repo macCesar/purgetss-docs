@@ -33,7 +33,7 @@ No arguments or options are needed. The command will create the file inside the 
 > purgetss i
 ```
 
-```typescript title="./purgetss/config.js"
+```javascript title="./purgetss/config.js"
 module.exports = {
   purge: {
     mode: 'all',
@@ -72,9 +72,8 @@ The `create` command generates a new Alloy project with **PurgeTSS** already set
 - Enclose `Project's Name` in single or double quotes. *This argument is required.*
 
 ### Options
-
 - Use `-f, --force` to overwrite an existing project.
-- Use `-t, --tailwind` to install **Tailwind CSS** in your project.
+- Use `-d, --dependencies` to install **ESLint** and **Tailwind CSS** in your project.
 - Use `-v, --vendor [fa,mi,ms,f7]` to copy the selected fonts into your project, including the CommonJS module into the `./app/lib/` folder. Refer to the **[`icon-library` command](#icon-library-command)** for available fonts!
 
 If a project with the same name already exists, the command will prompt you to confirm whether you want to overwrite it.
@@ -106,34 +105,68 @@ ti config app.idprefix 'com.yourdomain'
 ti config app.workspace 'the-full-path/to-the-workspace-folder'
 ```
 
-### Installing Tailwind CSS
+### Installing Dev Dependencies
 
-You can include the `--tailwind` option to install **Tailwind CSS** in your project and work with the [**Tailwind CSS Intellisense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension in VS Code. This extension provides features like autocomplete, syntax highlighting, and linting.
+Installing these dependencies offers a profound enhancement to the setup process for projects using **PurgeTSS**.
 
 ```bash
-> purgetss create 'Name of the Project' [--tailwind]
+> purgetss create 'Name of the Project' [--dependencies]
 
 # alias:
-> purgetss c 'Name of the Project' [-t]
+> purgetss c 'Name of the Project' [-d]
 ```
+
+This option not only installs essential tools like **ESLint** for code quality and **Tailwind CSS** for efficient UI development but also ensures seamless integration with the **Visual Studio Code** (VSCode) environment.
+
+Here's a closer look at the recommended VSCode extensions and their roles:
+
+- **[XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)**: For XML formatting.
+
+- **[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: To ensure consistent code quality, enforcing coding standards and identifying issues in real-time.
+
+- **[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Intelligent **PurgeTSS** classes support.
+
+- **[Tailwind RAW Reorder](https://marketplace.visualstudio.com/items?itemName=Trapfether.tailwind-raw-reorder)**: An opinionated class sorter, it optimizes the arrangement of **PurgeTSS** classes for better readability and maintenance.
+
+- **[Intellisence for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)**: **PurgeTSS** class name completion based on definitions within your workspace (`purgetss/config.js`), for example, all available classes in the `fonts.tss` and `tailwind.tss` files.
 
 ### List of Commands Used
 
-When you run `purgetss create "Name of the Project" [--tailwind --vendor=fa,mi,ms,f7]`, the following commands will be executed:
+When you run `purgetss create "Name of the Project" [--dependencies --vendor=fa,mi,ms,f7]`, the following commands will be executed:
 
 - `ti config app.idprefix && ti config app.workspace` - retrieves the related values.
 - `ti create -t app -p all -n "Name of the Project" --no-prompt --id "the-prefix-id-and-the-name-of-the-project"` - creates an App project with the specified name and its id set automatically.
 - `cd app.workspace/"Name of the Project"` - changes to the newly created folder.
 - `alloy new` - converts it to an Alloy Project.
 - `purgetss w` - autoruns purgetss every time you compile your project.
-- `purgetss b` - builds new `./purgetss/styles/tailwind.tss` and `./purgetss/config.js` files.
+- `purgetss b` - builds a new `./purgetss/styles/tailwind.tss` file.
 - `[--vendor=fa,mi,ms,f7]` - sets the `--vendor` argument to copy the selected fonts into your project, including the CommonJS module into `./app/lib/` folder.
-- `[--tailwind]` - when using this option, the following commands will be executed:
-  - `npm init -y && npm i tailwindcss -D && npx tailwindcss init` - installs Tailwind CSS and its dependencies.
+- `[--dependencies]` - installs the following dependencies and configuration files:
+  - `npm i -D tailwindcss && npx tailwindcss init` - installs Tailwind CSS.
+  - `npm i -D eslint eslint-config-axway eslint-plugin-alloy` - installs ESLint and Titanium specific plugins.
+  - `.editorconfig`, `.eslintrc.js`, `tailwind.config.js`, `.vscode/extensions.json` and `.vscode/settings.json` - copies the configuration files.
 - `code .`, `subl .`, or `open .` - uses either `code`, `subl`, or `open` to open VS Code, Sublime Text, or the project’s folder.
 
 
-## `icon-library` Command
+## `install-dependencies` command
+
+This command simplifies the enhancement of your development workflow in existing projects already using **PurgeTSS**. It automates the installation of dev dependencies and configuration files into your project, ensuring seamless integration with the **Visual Studio Code** (VSCode) environment.
+
+```bash
+> purgetss install-dependiencies
+
+# alias:
+> purgetss id
+```
+
+:::caution IMPORTANT NOTICE!!!
+
+**Please note that this command will overwrite any existing `extensions.json` and `settings.json` files, so it's advisable to create a backup if you wish to preserve them.**
+
+:::
+
+
+## `icon-library` command
 
 The `icon-library` command simplifies the process of copying free font versions of [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/fontawesome-free/webfonts), [**Material Icons**](https://fonts.google.com/icons?icon.set=Material+Icons), [**Material Symbols**](https://fonts.google.com/icons?icon.set=Material+Symbols), and/or [**Framework7 Icons**](https://framework7.io/icons/), to the `./app/assets/fonts` folder. This eliminates the need for manual downloading or copying to the correct folder within your project.
 
@@ -406,6 +439,35 @@ purgetss
 
 By organizing the fonts folder in this way, you will get the same `fonts.tss` file as in the previous example, but with a much more organized `fonts` folder.
 
+:::tip PRO TIP
+
+### Renaming `fontFamily` classes
+
+If you want to use a shorter or different name for any of the `fontFamily` classes, simply rename the font file to your desired name.
+
+For example:
+
+```bash title="./purgetss/fonts/"
+purgetss
+└─ fonts
+   └─ dancing-script
+      ├─ Script-Bold.ttf
+      ├─ Script-Medium.ttf
+      ├─ Script-Regular.ttf
+      └─ Script-SemiBold.ttf
+```
+
+Running `build-fonts` will generate the following classes:
+
+```scss title="./purgetss/syles/fonts.tss"
+'.script-bold': { font: { fontFamily: 'DancingScript-Bold' } }
+'.script-medium': { font: { fontFamily: 'DancingScript-Medium' } }
+'.script-regular': { font: { fontFamily: 'DancingScript-Regular' } }
+'.script-semibold': { font: { fontFamily: 'DancingScript-SemiBold' } }
+```
+
+:::
+
 ### Icon Font Libraries
 
 You can add **any icon font library** that has either a `.ttf` or `.otf` font file and a `.css` file with Unicode characters.
@@ -417,7 +479,7 @@ purgetss
 └─ fonts
    └─ bevan
    └─ dancing-script
-   └─ mapicons
+   └─ map-icons
       ├─ map-icons.css
       └─ map-icons.ttf
    └─ microns
@@ -441,7 +503,7 @@ After running `purgetss build-fonts`, you will have all the `fontFamily` class d
 // Unicode Characters
 // To use your Icon Fonts in Buttons AND Labels each class sets 'text' and 'title' properties
 
-// mapicons/map-icons.css
+// map-icons/map-icons.css
 '.map-icon-abseiling': { text: '\ue800', title: '\ue800' }
 '.map-icon-accounting': { text: '\ue801', title: '\ue801' }
 '.map-icon-airport': { text: '\ue802', title: '\ue802' }
@@ -474,9 +536,9 @@ To avoid conflicts with other icon libraries that you may be using, **PurgeTSS w
 > purgetss bf -m
 ```
 
-```typescript title="./app/lib/purgetss.fonts.js"
+```javascript title="./app/lib/purgetss.fonts.js"
 const icons = {
-  // mapicons/map-icons.css
+  // map-icons/map-icons.css
   'mapIcon': {
     'abseiling': '\ue800',
     'accounting': '\ue801',
@@ -496,52 +558,84 @@ const icons = {
 exports.icons = icons;
 
 const families = {
-	// mapicons/map-icons.css
-	'mapIcon': 'map-icons',
-	// microns/microns.css
-	'mu': 'microns'
+  // map-icons/map-icons.css
+  'mapIcon': 'map-icons',
+  // microns/microns.css
+  'mu': 'microns'
 };
 exports.families = families;
 ```
 
 :::tip PRO TIP
-If you want to use a shorter name for any of the `fontFamily` classes, simply rename the font file to your desired name.
 
-For example:
+### Renaming the Prefix in Icon Fonts
 
-```bash title="./purgetss/fonts/"
-purgetss
-└─ fonts
-   └─ dancing-script
-      ├─ Script-Bold.ttf
-      ├─ Script-Medium.ttf
-      ├─ Script-Regular.ttf
-      └─ Script-SemiBold.ttf
-```
-
-Running `build-fonts` will generate the following classes:
-
-```scss title="./purgetss/syles/fonts.tss"
-'.script-bold': { font: { fontFamily: 'DancingScript-Bold' } }
-'.script-medium': { font: { fontFamily: 'DancingScript-Medium' } }
-'.script-regular': { font: { fontFamily: 'DancingScript-Regular' } }
-'.script-semibold': { font: { fontFamily: 'DancingScript-SemiBold' } }
-```
-
-The same tip applies to any icon font:
+Use the `--prefix` option to apply the style's filename as the prefix for class names in `fonts.tss` and property names in `purgetss.fonts.js`.
 
 ```bash title="./purgetss/fonts/"
 purgetss
 └─ fonts
-   └─ mapicons
+   └─ map-icons
       └─ map.ttf
+      └─ mp.css
+   └─ microns
+      └─ mic.ttf
+      └─ mc.css
 ```
 
 ```scss title="./purgetss/syles/fonts.tss"
+// `fontFamily` classes use the font's filename
 '.map': { font: { fontFamily: 'map-icons' } }
+'.mic': { font: { fontFamily: 'microns' } }
+
+// map-icons/mp.css
+'.mp-abseiling': { text: '\ue800', title: '\ue800' }
+'.mp-accounting': { text: '\ue801', title: '\ue801' }
+'.mp-airport': { text: '\ue802', title: '\ue802' }
+'.mp-amusement-park': { text: '\ue803', title: '\ue803' }
+'.mp-aquarium': { text: '\ue804', title: '\ue804' }
+// ...
+
+// microns/mc.css
+'.mc-arrow-left': { text: '\ue700', title: '\ue700' }
+'.mc-arrow-right': { text: '\ue701', title: '\ue701' }
+'.mc-arrow-up': { text: '\ue702', title: '\ue702' }
+'.mc-arrow-down': { text: '\ue703', title: '\ue703' }
+'.mc-left': { text: '\ue704', title: '\ue704' }
+// ...
 ```
 
-**Just be careful that the new name won't conflict with any other class name, especially icon fonts**.
+```javascript title="./app/lib/purgetss.fonts.js"
+const icons = {
+  // map-icons/mp.css
+  'mp': {
+    'abseiling': '\ue800',
+    'accounting': '\ue801',
+    'airport': '\ue802',
+    'amusementPark': '\ue803',
+    // ...
+  },
+  // microns/mc.css
+  'mc': {
+    'arrowLeft': '\ue700',
+    'arrowRight': '\ue701',
+    'arrowUp': '\ue702',
+    'arrowDown': '\ue703',
+    // ...
+  }
+};
+exports.icons = icons;
+
+const families = {
+  // map-icons/mp.css
+  'mp': 'map-icons',
+  // microns/mc.css
+  'mc': 'microns'
+};
+exports.families = families;
+```
+
+**Make sure that the new prefix remains unique and avoid conflicts with other class prefixes.**
 
 :::
 
@@ -859,7 +953,7 @@ The `module` command installs the `purgetss.ui.js` module in the `lib` folder.
 :::
 
 
-## `update` Command
+## `update` command
 
 The `update` command allows you to upgrade **PurgeTSS** to the most recent version. Use it to get the latest features and bug fixes that have been released.
 
@@ -873,7 +967,7 @@ The `update` command allows you to upgrade **PurgeTSS** to the most recent versi
 We constantly update **PurgeTSS** to add new features, include the latest versions of Tailwind, FontAwesome, etc., and fix bugs.
 
 
-## `sudo-update` Command
+## `sudo-update` command
 
 The `sudo-update` command is similar to the update command, but it's intended to be used when `sudo` is required to install **NPM** modules.
 
