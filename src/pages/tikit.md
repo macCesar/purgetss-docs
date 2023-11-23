@@ -8,9 +8,10 @@
 
 </div>
 
-TiKit is a collection of UI components for **Titanium** built on top of **Alloy** and **PurgeTSS**.
+TiKit is a collection of UI components for **Titanium SDK**, built on top of **Alloy** and **PurgeTSS**.
 
 ![TiKit Poster](./assets/images/tikit-poster.png)
+
 
 ## Installation
 To install it, run the following command in the terminal:
@@ -24,6 +25,7 @@ Ensure that you also have **PurgeTSS** installed:
 ```bash
 > [sudo] npm install -g purgetss
 ```
+
 
 ## Installing the components
 Once everything is installed on your machine, create a new Alloy project using **PurgeTSS**. Ensure that you have the `app.idprefix` and `app.idprefix` [settings configured.](https://purgetss.com/docs/commands/#requirements)*
@@ -44,7 +46,9 @@ Next, run `tikit install` and follow the interactive selection prompt:
     cards
 ```
 
+
 # Available components and their variants
+
 
 ## Alerts
 > ### General properties: variant, color, and classes
@@ -77,6 +81,7 @@ Set the `dismissible` property to true if you want the alert to close when the u
 <Alert module="tikit.ui" variant="pop" color="info" delay="500" dismissible="true" title="Dismissible Alert" text="Lorem ipsum dolor sit..." />
 ```
 
+
 ### callout
 > ### Properties: title and text
 
@@ -87,6 +92,9 @@ This represents a simple alert with a title and a concise description.
 ```
 
 ![Alerts callout variant](./assets/images/alerts/callout.png)
+<p align="center">
+  <img src="./assets/images/alerts/callout.png" width="375" alt="Alerts callout variant" >
+</p>
 
 
 ### pop
@@ -102,7 +110,10 @@ Modify the icon by utilizing the `icon` property, and adjust its size using any 
 <Alert module="tikit.ui" variant="pop" color="primary" title="Primary Alert with custom Icon" text="Lorem ipsum dolor sit..." icon="mi mi-pending_actions text-3xl" />
 ```
 
-![Alerts pop variant](./assets/images/alerts/pop.png)
+<p align="center">
+  <img src="./assets/images/alerts/pop.png" width="375" alt="Alerts pop variant" >
+</p>
+
 
 ### solid
 > ### Properties: title and icon
@@ -115,7 +126,10 @@ Similar to the `pop` variant, you can customize its icon using the `icon` proper
 <Alert module="tikit.ui" variant="solid" color="primary" title="Primary Alert with custom Icon" icon="mi mi-pending_actions text-2xl" />
 ```
 
-![Alerts solid variant](./assets/images/alerts/solid.png)
+<p align="center">
+  <img src="./assets/images/alerts/solid.png" width="375" alt="Alerts solid variant" >
+</p>
+
 
 ## Avatars
 > ### General properties: variant, size, and classes
@@ -137,6 +151,7 @@ Avatars are a useful tool for representing people or objects and can serve as vi
 <Avatar module="tikit.ui" variant="chip" size="base" name="John Doe" image="link-to-image.jpg" />
 ```
 
+
 ### chip
 > ### Properties: name, and image
 
@@ -148,7 +163,9 @@ By default, the colors for the "chip" variant are set to `bg-gray-200` and `text
 <Avatar module="tikit.ui" variant="chip" size="base" name="Mr. John Doe" image="https://randomuser.me/api/portraits/men/86.jpg" classes="bg-violet-900 text-violet-50" />
 ```
 
-![Avatars chip variant](./assets/images/avatars/chip.png)
+<p align="center">
+  <img src="./assets/images/avatars/chip.png" width="375" alt="Avatars chip variant" >
+</p>
 
 
 ### circular
@@ -162,7 +179,9 @@ To further customize the border color, you can utilize the `classes` prop.
 <Avatar module="tikit.ui" variant="circular" size="base" border="true" image="https://randomuser.me/api/portraits/men/86.jpg" />
 ```
 
-![Avatars circular variant](./assets/images/avatars/circular.png)
+<p align="center">
+  <img src="./assets/images/avatars/circular.png" width="375" alt="Avatars circular variant" >
+</p>
 
 
 ### square
@@ -176,7 +195,9 @@ For additional control over the border color, you can make use of the `classes` 
 <Avatar module="tikit.ui" variant="square" size="base" border="true" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
 ```
 
-![Avatars square variant](./assets/images/avatars/square.png)
+<p align="center">
+  <img src="./assets/images/avatars/square.png" width="375" alt="Avatars square variant" >
+</p>
 
 
 ### portrait
@@ -190,7 +211,9 @@ By default, the border color is set to `border-gray-500`. To change this color, 
 <Avatar module="tikit.ui" variant="portrait" size="base" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
 ```
 
-![Avatars portrait variant](./assets/images/avatars/portrait.png)
+<p align="center">
+  <img src="./assets/images/avatars/portrait.png" width="375" alt="Avatars portrait variant" >
+</p>
 
 
 ### landscape
@@ -204,7 +227,9 @@ By default, the border color is set to `border-gray-500`. To alter this color, u
 <Avatar module="tikit.ui" variant="landscape" size="base" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
 ```
 
-![Avatars landscape variant](./assets/images/avatars/landscape.png)
+<p align="center">
+  <img src="./assets/images/avatars/landscape.png" width="375" alt="Avatars landscape variant" >
+</p>
 
 
 ### stacked
@@ -221,8 +246,9 @@ In the "stacked" variant, you can specify the title, icon, and use the `last` pr
 </View>
 ```
 
-![Avatars stacked variant](./assets/images/avatars/stacked.png)
-
+<p align="center">
+  <img src="./assets/images/avatars/stacked.png" width="375" alt="Avatars stacked variant" >
+</p>
 
 
 ## Buttons
@@ -254,7 +280,9 @@ For the "border" variant, you can set the title. To change the color of the titl
 <Button module="tikit.ui" variant="border" size="base" title="Border" classes="border-violet-900 text-violet-900" />
 ```
 
-![Buttons border variant](./assets/images/buttons/border-iphone.png)
+<p align="center">
+  <img src="./assets/images/buttons/border-iphone.png" width="375" alt="Buttons border variant" >
+</p>
 
 
 ### border-rounded
@@ -266,8 +294,9 @@ In the "border-rounded" variant, you can specify the title. To customize the col
 <Button module="tikit.ui" variant="border-rounded" size="base" title="Border Rounded" classes="border-violet-900 text-violet-900" />
 ```
 
-![Buttons border-rounded variant](./assets/images/buttons/border-rounded-iphone.png)
-
+<p align="center">
+  <img src="./assets/images/buttons/border-rounded-iphone.png" width="375" alt="Buttons border-rounded variant" >
+</p>
 
 
 ### filled
@@ -279,7 +308,9 @@ For the "filled" variant, you can set the title. To modify the color of both the
 <Button module="tikit.ui" variant="filled" size="base" title="Filled" classes="text-violet-50 bg-violet-900" />
 ```
 
-![Buttons filled variant](./assets/images/buttons/filled-iphone.png)
+<p align="center">
+  <img src="./assets/images/buttons/filled-iphone.png" width="375" alt="Buttons filled variant" >
+</p>
 
 
 ### filled-rounded
@@ -291,10 +322,9 @@ In the "filled-rounded" variant, you can specify the title. To customize the col
 <Button module="tikit.ui" variant="filled-rounded" size="base" title="Filled Rounded" classes="text-violet-50 bg-violet-900" />
 ```
 
-![Buttons filled-rounded variant](./assets/images/buttons/filled-rounded-iphone.png)
-
-
-
+<p align="center">
+  <img src="./assets/images/buttons/filled-rounded-iphone.png" width="375" alt="Buttons filled-rounded variant" >
+</p>
 
 
 ### icon-left
@@ -308,8 +338,9 @@ Additionally, you can modify the color of the title and background by using the 
 <Button module="tikit.ui" variant="icon-left" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
 ```
 
-![Buttons icon-left variant](./assets/images/buttons/icon-left-iphone.png)
-
+<p align="center">
+  <img src="./assets/images/buttons/icon-left-iphone.png" width="375" alt="Buttons icon-left variant" >
+</p>
 
 
 ### icon-right
@@ -323,7 +354,9 @@ For further customization, such as changing the color of the title and backgroun
 <Button module="tikit.ui" variant="icon-right" size="base" title="Button" icon="fa fa-file text-violet-50" classes="text-violet-50 bg-violet-900" />
 ```
 
-![Buttons icon-right variant](./assets/images/buttons/icon-right-iphone.png)
+<p align="center">
+  <img src="./assets/images/buttons/icon-left-iphone.png" width="375" alt="Buttons icon-left variant" >
+</p>
 
 
 ### Custom Icons
@@ -339,11 +372,9 @@ In the following example, we demonstrate the use of the Material Icons font libr
 <Button module="tikit.ui" variant="icon-left" size="base" icon="mi mi-pending_actions text-2xl text-violet-50" title="Pending Actions" classes="my-4 font-bold bg-violet-900" />
 ```
 
-![Buttons custom icon and color](./assets/images/buttons/pending-actions.png)
-
-
-
-
+<p align="center">
+  <img src="./assets/images/buttons/pending-actions.png" width="375" alt="Buttons custom icon and color" >
+</p>
 
 
 ## Cards
@@ -364,9 +395,6 @@ Cards are a valuable tool for grouping and presenting content in a readable mann
 ```
 
 
-
-
-
 ### code
 > ### Properties: title, text, and copy
 
@@ -376,12 +404,9 @@ You can employ the `copy` property to include a copy button at the top-right cor
 
 To enhance the appearance of your code snippets, install a monotype font family of your choice and create a `font-mono` style in `./purgetss/config.js`. In all our examples, we utilize the `FiraCode-Light` font family.
 
-![Cards code variant](./assets/images/cards/code-variant.png)
-
-
-
-
-
+<p align="center">
+  <img src="./assets/images/cards/code-variant.png" width="375" alt="Cards code variant" >
+</p>
 
 
 ### showcase
@@ -393,10 +418,9 @@ The "showcase" variant is intended for scenarios where you want to showcase an i
 <Card module="tikit.ui" variant="showcase" color="black" title="Pocket" text="Mobile app marketing website" image="images/showcase/1.png" />
 ```
 
-![Cards showcase dark](./assets/images/cards/showcase-black.png)
-
-
-
+<p align="center">
+  <img src="./assets/images/cards/showcase-black.png" width="375" alt="Cards showcase dark">
+</p>
 
 
 ### quote
@@ -408,11 +432,9 @@ The "quote" variant is designed for situations where you want to display a quota
 <Card module="tikit.ui" variant="quote" color="black" name="John Doe" text="Quas ullam, quis eius a blanditiis..." />
 ```
 
-![Cards quote dark](./assets/images/cards/quote-dark.png)
-
-
-
-
+<p align="center">
+  <img src="./assets/images/cards/quote-dark.png" width="375" alt="Cards quote dark">
+</p>
 
 
 ### content
@@ -430,10 +452,9 @@ This variant is ideal for displaying textual information where you want to empha
 <Card module="tikit.ui" variant="content" color="black" title="content variant, black" subtitle="This is a subtitle" text="Alloy.Globals.lorem" />
 ```
 
-![Cards content dark](./assets/images/cards/content-dark.png)
-
-
-
+<p align="center">
+  <img src="./assets/images/cards/content-dark.png" width="375" alt="Cards content dark">
+</p>
 
 
 ## Tabs
@@ -449,6 +470,7 @@ The `icon` property combines the icon font name and the icon code, like `fa fa-h
 </Tab>
 ```
 
+
 ### Additional properties
 
 These are standard **Titanium.UI.Tab** objects, so you can utilize all the properties and methods available for them.
@@ -461,7 +483,10 @@ For instance, you can set the active tint and title color for each tab using the
 </Tab>
 ```
 
-![Tab Active Tint Violet](./assets/images/tabs/tabs-violet.png)
+<p align="center">
+  <img src="./assets/images/tabs/tabs-violet.png" width="375" alt="Tab Active Tint Violet">
+</p>
+
 
 ## Official Icon Fonts in PurgeTSS
 
