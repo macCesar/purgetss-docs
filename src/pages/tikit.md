@@ -10,8 +10,9 @@
 
 TiKit is a collection of UI components for **Titanium SDK**, built on top of **Alloy** and **PurgeTSS**.
 
-![TiKit Poster](./assets/images/tikit-poster.png)
-
+<p align="center">
+  <img src="../assets/images/tikit-poster.png" alt="TiKit Poster" />
+</p>
 
 ## Installation
 To install it, run the following command in the terminal:
@@ -91,9 +92,8 @@ This represents a simple alert with a title and a concise description.
 <Alert module="tikit.ui" variant="callout" color="success" title="Callout variant" text="Lorem ipsum dolor sit..." />
 ```
 
-![Alerts callout variant](./assets/images/alerts/callout.png)
 <p align="center">
-  <img src="./assets/images/alerts/callout.png" width="375" alt="Alerts callout variant" />
+  <img src="../assets/images/alerts/callout.png" width="375" alt="Alerts callout variant" />
 </p>
 
 
@@ -111,7 +111,7 @@ Modify the icon by utilizing the `icon` property, and adjust its size using any 
 ```
 
 <p align="center">
-  <img src="./assets/images/alerts/pop.png" width="375" alt="Alerts pop variant" />
+  <img src="../assets/images/alerts/pop.png" width="375" alt="Alerts pop variant" />
 </p>
 
 
@@ -127,7 +127,7 @@ Similar to the `pop` variant, you can customize its icon using the `icon` proper
 ```
 
 <p align="center">
-  <img src="./assets/images/alerts/solid.png" width="375" alt="Alerts solid variant" />
+  <img src="../assets/images/alerts/solid.png" width="375" alt="Alerts solid variant" />
 </p>
 
 
@@ -164,7 +164,7 @@ By default, the colors for the "chip" variant are set to `bg-gray-200` and `text
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/chip.png" width="375" alt="Avatars chip variant" />
+  <img src="../assets/images/avatars/chip.png" width="375" alt="Avatars chip variant" />
 </p>
 
 
@@ -180,7 +180,7 @@ To further customize the border color, you can utilize the `classes` prop.
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/circular.png" width="375" alt="Avatars circular variant" />
+  <img src="../assets/images/avatars/circular.png" width="375" alt="Avatars circular variant" />
 </p>
 
 
@@ -196,7 +196,7 @@ For additional control over the border color, you can make use of the `classes` 
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/square.png" width="375" alt="Avatars square variant" />
+  <img src="../assets/images/avatars/square.png" width="375" alt="Avatars square variant" />
 </p>
 
 
@@ -212,7 +212,7 @@ By default, the border color is set to `border-gray-500`. To change this color, 
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/portrait.png" width="375" alt="Avatars portrait variant" />
+  <img src="../assets/images/avatars/portrait.png" width="375" alt="Avatars portrait variant" />
 </p>
 
 
@@ -228,7 +228,7 @@ By default, the border color is set to `border-gray-500`. To alter this color, u
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/landscape.png" width="375" alt="Avatars landscape variant" />
+  <img src="../assets/images/avatars/landscape.png" width="375" alt="Avatars landscape variant" />
 </p>
 
 
@@ -247,7 +247,7 @@ In the "stacked" variant, you can specify the title, icon, and use the `last` pr
 ```
 
 <p align="center">
-  <img src="./assets/images/avatars/stacked.png" width="375" alt="Avatars stacked variant" />
+  <img src="../assets/images/avatars/stacked.png" width="375" alt="Avatars stacked variant" />
 </p>
 
 
@@ -281,7 +281,7 @@ For the "border" variant, you can set the title. To change the color of the titl
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/border-iphone.png" width="375" alt="Buttons border variant" />
+  <img src="../assets/images/buttons/border-iphone.png" width="375" alt="Buttons border variant" />
 </p>
 
 
@@ -295,7 +295,7 @@ In the "border-rounded" variant, you can specify the title. To customize the col
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/border-rounded-iphone.png" width="375" alt="Buttons border-rounded variant" />
+  <img src="../assets/images/buttons/border-rounded-iphone.png" width="375" alt="Buttons border-rounded variant" />
 </p>
 
 
@@ -309,7 +309,7 @@ For the "filled" variant, you can set the title. To modify the color of both the
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/filled-iphone.png" width="375" alt="Buttons filled variant" />
+  <img src="../assets/images/buttons/filled-iphone.png" width="375" alt="Buttons filled variant" />
 </p>
 
 
@@ -323,7 +323,7 @@ In the "filled-rounded" variant, you can specify the title. To customize the col
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/filled-rounded-iphone.png" width="375" alt="Buttons filled-rounded variant" />
+  <img src="../assets/images/buttons/filled-rounded-iphone.png" width="375" alt="Buttons filled-rounded variant" />
 </p>
 
 
@@ -339,7 +339,7 @@ Additionally, you can modify the color of the title and background by using the 
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/icon-left-iphone.png" width="375" alt="Buttons icon-left variant" />
+  <img src="../assets/images/buttons/icon-left-iphone.png" width="375" alt="Buttons icon-left variant" />
 </p>
 
 
@@ -355,7 +355,7 @@ For further customization, such as changing the color of the title and backgroun
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/icon-left-iphone.png" width="375" alt="Buttons icon-left variant" />
+  <img src="../assets/images/buttons/icon-right-iphone.png" width="375" alt="Buttons icon-left variant" />
 </p>
 
 
@@ -373,7 +373,7 @@ In the following example, we demonstrate the use of the Material Icons font libr
 ```
 
 <p align="center">
-  <img src="./assets/images/buttons/pending-actions.png" width="375" alt="Buttons custom icon and color" />
+  <img src="../assets/images/buttons/pending-actions.png" width="375" alt="Buttons custom icon and color" />
 </p>
 
 
@@ -402,10 +402,10 @@ The "code" variant is specifically designed for displaying small snippets of cod
 
 You can employ the `copy` property to include a copy button at the top-right corner. The button's title and the alert message are set using Titanium's localization function: `L('copy', 'Copy')` and `L('code_copied', 'Code copied to clipboard!')`, respectively. To personalize and translate these strings, add both "copy" and "code_copied" to your app's target languages (e.g., `app/i18n/xx/strings.xml`).
 
-To enhance the appearance of your code snippets, install a monotype font family of your choice and create a `font-mono` style in `./purgetss/config.js`. In all our examples, we utilize the `FiraCode-Light` font family.
+To enhance the appearance of your code snippets, install a monotype font family of your choice and create a `font-mono` style in `static/purgetss/config.js`. In all our examples, we utilize the `FiraCode-Light` font family.
 
 <p align="center">
-  <img src="./assets/images/cards/code-variant.png" width="375" alt="Cards code variant" />
+  <img src="../assets/images/cards/code-variant.png" width="375" alt="Cards code variant" />
 </p>
 
 
@@ -419,7 +419,7 @@ The "showcase" variant is intended for scenarios where you want to showcase an i
 ```
 
 <p align="center">
-  <img src="./assets/images/cards/showcase-black.png" width="375" alt="Cards showcase dark" />
+  <img src="../assets/images/cards/showcase-black.png" width="375" alt="Cards showcase dark" />
 </p>
 
 
@@ -433,7 +433,7 @@ The "quote" variant is designed for situations where you want to display a quota
 ```
 
 <p align="center">
-  <img src="./assets/images/cards/quote-dark.png" width="375" alt="Cards quote dark" />
+  <img src="../assets/images/cards/quote-dark.png" width="375" alt="Cards quote dark" />
 </p>
 
 
@@ -453,7 +453,7 @@ This variant is ideal for displaying textual information where you want to empha
 ```
 
 <p align="center">
-  <img src="./assets/images/cards/content-dark.png" width="375" alt="Cards content dark" />
+  <img src="../assets/images/cards/content-dark.png" width="375" alt="Cards content dark" />
 </p>
 
 
@@ -484,7 +484,7 @@ For instance, you can set the active tint and title color for each tab using the
 ```
 
 <p align="center">
-  <img src="./assets/images/tabs/tabs-violet.png" width="375" alt="Tab Active Tint Violet" />
+  <img src="../assets/images/tabs/tabs-violet.png" width="375" alt="Tab Active Tint Violet" />
 </p>
 
 

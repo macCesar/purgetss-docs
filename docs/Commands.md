@@ -87,7 +87,7 @@ If a project with the same name already exists, the command will prompt you to c
 
 ### Requirements
 
-Ensure that the `app.idprefix` and `app.idprefix` properties are configured in Titanium’s `config.json` file.
+Ensure that the `app.idprefix` and `app.workspace` properties are configured in Titanium’s `config.json` file.
 
 ```bash
 # A name in reverse domain name format.
