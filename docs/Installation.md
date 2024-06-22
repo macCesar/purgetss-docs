@@ -13,16 +13,16 @@ slug: installation
 
 :::caution Maximum Node.js Version
 
-PurgeTSS has been thoroughly tested and proven to be compatible with Node.js versions up to 18.x.x.
+PurgeTSS has been thoroughly tested and proven to be compatible with Node version 20.x.x.
 
 :::
 
 ## Running PurgeTSS for the First Time
 
 :::info
-**You will only need to execute `purgetss` once within your project to automatically generate the required files and folders**.
+**You only need to execute `purgetss` once within your project to automatically generate the required files and folders.**
 
-Subsequently, whenever you build your application, **PurgeTSS** will `parse` all of your XML files and generate a clean `app.tss` file containing only the classes used in your project.
+Subsequently, whenever you build your application, **PurgeTSS** will `parse` all your XML files and generate a clean `app.tss` file containing only the classes used in your project.
 :::
 
 When you run `purgetss` for the first time in your project, it will perform the following tasks:
@@ -64,7 +64,7 @@ purgetss
 
 - **`fonts` Folder**
 
-  Here, you can add various font types such as Icons, Serif, Sans-Serif, Cursive, Fantasy, or Monospace fonts, all applicable to your app. Step-by-step instructions are available in the [**build-fonts command**](Commands#build-fonts-command) section.
+  Here, you can add various font types such as Icons, Serif, Sans-Serif, Cursive, Fantasy, or Monospace fonts, all applicable to your app. Step-by-step instructions are available in the [**build-fonts command**](commands#build-fonts-command) section.
 
 :::caution IMPORTANT NOTICE!!!
 
