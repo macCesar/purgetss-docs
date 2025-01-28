@@ -1,6 +1,6 @@
 ---
-title: Welcome PurgeTSS
-description: PurgeTSS is a package with tailwind-like utility classes for Titanium developers who want to easily and quickly create beautifully designed mobile apps.
+title: Welcome Purge TSS
+description: Purge TSS is a package with tailwind-like utility classes for Titanium developers who want to easily and quickly create beautifully designed mobile apps.
 slug: welcome-to-purgetss-blog
 tags: [purgetss, titanium, tidev]
 hide_table_of_contents: false

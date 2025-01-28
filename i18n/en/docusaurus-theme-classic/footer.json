@@ -10,9 +10,5 @@
   "link.item.label.TiKit UI on GitHub": {
     "message": "TiKit UI on GitHub",
     "description": "The label of footer link with label=TiKit UI on GitHub linking to https://github.com/macCesar/TiKit-UI/"
-  },
-  "copyright": {
-    "message": "Copyright © 2023 Código Móvil. Built with Docusaurus.",
-    "description": "The footer copyright"
   }
 }

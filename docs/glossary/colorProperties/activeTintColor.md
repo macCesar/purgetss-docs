@@ -1,4 +1,4 @@
-```scss
+```css
 // Property: activeTintColor
 // Component(s): Ti.UI.Tab, Ti.UI.TabGroup
 '.active-tint-transparent': { activeTintColor: 'transparent' }

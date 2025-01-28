@@ -8,7 +8,7 @@
 
 </div>
 
-TiKit is a collection of UI components for **Titanium SDK**, built on top of **Alloy** and **PurgeTSS**.
+TiKit is a collection of UI components for **Titanium SDK**, built on top of **Alloy** and **Purge TSS**.
 
 <p align="center">
   <img src="../assets/images/tikit-poster.png" alt="TiKit Poster" />
@@ -21,7 +21,7 @@ To install it, run the following command in the terminal:
 > [sudo] npm install -g tikit
 ```
 
-Ensure that you also have **PurgeTSS** installed:
+Ensure that you also have **Purge TSS** installed:
 
 ```bash
 > [sudo] npm install -g purgetss
@@ -29,7 +29,7 @@ Ensure that you also have **PurgeTSS** installed:
 
 
 ## Installing the components
-Once everything is installed on your machine, create a new Alloy project using **PurgeTSS**. Ensure that you have the `app.idprefix` and `app.idprefix` [settings configured.](https://purgetss.com/docs/commands/#requirements)*
+Once everything is installed on your machine, create a new Alloy project using **Purge TSS**. Ensure that you have the `app.idprefix` and `app.workspace` [settings configured](https://purgetss.com/docs/commands/#requirements).
 
 ```bash
 > purgetss create myApp
@@ -65,7 +65,7 @@ Each of these variants comes in six primary colors: *success*, *danger*, *warnin
 
 Additionally, there are two custom colors available for each variant, named *primary* and *secondary*.
 
-You can introduce your custom color values using the `shades` command in **PurgeTSS**:
+You can introduce your custom color values using the `shades` command in **Purge TSS**:
 
 ```bash
 > purgetss shades '#hexcode1' primary
@@ -83,7 +83,7 @@ Set the `dismissible` property to true if you want the alert to close when the u
 ```
 
 
-### callout
+### 'callout'
 > ### Properties: title and text
 
 This represents a simple alert with a title and a concise description.
@@ -97,14 +97,14 @@ This represents a simple alert with a title and a concise description.
 </p>
 
 
-### pop
+### 'pop'
 > ### Properties: title, text, and icon
 
 The "pop" variant of alerts is designed to include a predefined icon that highlights the message.
 
 You can employ icon fonts like FontAwesome, Material Icons, or any other icon font of your preference.
 
-Modify the icon by utilizing the `icon` property, and adjust its size using any of **PurgeTSS**'s font size classes:
+Modify the icon by utilizing the `icon` property, and adjust its size using any of **Purge TSS**'s font size classes:
 
 ```xml title="pop variant with custom icon"
 <Alert module="tikit.ui" variant="pop" color="primary" title="Primary Alert with custom Icon" text="Lorem ipsum dolor sit..." icon="mi mi-pending_actions text-3xl" />
@@ -115,12 +115,12 @@ Modify the icon by utilizing the `icon` property, and adjust its size using any 
 </p>
 
 
-### solid
+### 'solid'
 > ### Properties: title and icon
 
 The "solid" variant represents a full-width, solid banner that includes a title and a predefined icon.
 
-Similar to the `pop` variant, you can customize its icon using the `icon` property and adjust its size by utilizing any of **PurgeTSS**'s font size classes.
+Similar to the `pop` variant, you can customize its icon using the `icon` property and adjust its size by utilizing any of **Purge TSS**'s font size classes.
 
 ```xml title="solid variant with custom icon"
 <Alert module="tikit.ui" variant="solid" color="primary" title="Primary Alert with custom Icon" icon="mi mi-pending_actions text-2xl" />
@@ -152,8 +152,8 @@ Avatars are a useful tool for representing people or objects and can serve as vi
 ```
 
 
-### chip
-> ### Properties: name, and image
+### 'chip'
+> ### Properties: name and image
 
 The "chip" variant allows you to specify the name of the person and an image to display. You can use a local filesystem path, a remote URL, or a Blob object containing image data.
 
@@ -168,12 +168,12 @@ By default, the colors for the "chip" variant are set to `bg-gray-200` and `text
 </p>
 
 
-### circular
+### 'circular'
 > ### Properties: name, image, and border
 
 For the "circular" variant, you can specify the name, image, and whether to display a white border around the image. Set the `border` property to true to show the white border.
 
-To further customize the border color, you can utilize the `classes` prop.
+To further customize the border color, you can utilize the `classes` property.
 
 ```xml title="circular variant with custom colors"
 <Avatar module="tikit.ui" variant="circular" size="base" border="true" image="https://randomuser.me/api/portraits/men/86.jpg" />
@@ -184,12 +184,12 @@ To further customize the border color, you can utilize the `classes` prop.
 </p>
 
 
-### square
+### 'square'
 > ### Properties: name, image, and border
 
 In the "square" variant, you can define the name, image, and choose whether to display a white border around the image. To enable the white border, set the `border` property to true.
 
-For additional control over the border color, you can make use of the `classes` prop.
+For additional control over the border color, you can make use of the `classes` property.
 
 ```xml title="square variant with custom colors"
 <Avatar module="tikit.ui" variant="square" size="base" border="true" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
@@ -200,12 +200,12 @@ For additional control over the border color, you can make use of the `classes` 
 </p>
 
 
-### portrait
+### 'portrait'
 > ### Properties: name and image
 
-The "portrait" variant allows you to specify the name and image. To customize the border color, utilize the `classes` prop.
+The "portrait" variant allows you to specify the name and image. To customize the border color, utilize the `classes` property.
 
-By default, the border color is set to `border-gray-500`. To change this color, you can make use of the `classes` prop.
+By default, the border color is set to `border-gray-500`. To change this color, you can make use of the `classes` property.
 
 ```xml title="portrait variant with custom colors"
 <Avatar module="tikit.ui" variant="portrait" size="base" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
@@ -216,12 +216,12 @@ By default, the border color is set to `border-gray-500`. To change this color, 
 </p>
 
 
-### landscape
+### 'landscape'
 > ### Properties: name and image
 
-The "landscape" variant permits you to define the name and image. If you want to modify the border color, you can do so using the `classes` prop.
+The "landscape" variant permits you to define the name and image. If you want to modify the border color, you can do so using the `classes` property.
 
-By default, the border color is set to `border-gray-500`. To alter this color, utilize the `classes` prop.
+By default, the border color is set to `border-gray-500`. To alter this color, utilize the `classes` property.
 
 ```xml title="landscape variant with custom colors"
 <Avatar module="tikit.ui" variant="landscape" size="base" classes="border-violet-900" image="https://randomuser.me/api/portraits/men/86.jpg" />
@@ -232,7 +232,7 @@ By default, the border color is set to `border-gray-500`. To alter this color, u
 </p>
 
 
-### stacked
+### 'stacked'
 > ### Properties: title, icon, and last
 
 In the "stacked" variant, you can specify the title, icon, and use the `last` property to properly adjust the right margin of the last avatar in a stack. Setting `last` to true for the last avatar ensures the appropriate right margin.
@@ -271,7 +271,7 @@ Buttons are interactive elements that enable users to take actions or make choic
 ```
 
 
-### border
+### 'border'
 > ### Property: title
 
 For the "border" variant, you can set the title. To change the color of the title and border, utilize the `classes` property.
@@ -285,7 +285,7 @@ For the "border" variant, you can set the title. To change the color of the titl
 </p>
 
 
-### border-rounded
+### Border-Rounded
 > ### Property: title
 
 In the "border-rounded" variant, you can specify the title. To customize the color of both the title and border, make use of the `classes` property.
@@ -299,7 +299,7 @@ In the "border-rounded" variant, you can specify the title. To customize the col
 </p>
 
 
-### filled
+### 'filled'
 > ### Property: title
 
 For the "filled" variant, you can set the title. To modify the color of both the title and the background, utilize the `classes` property.
@@ -313,7 +313,7 @@ For the "filled" variant, you can set the title. To modify the color of both the
 </p>
 
 
-### filled-rounded
+### 'filled-rounded'
 > ### Property: title
 
 In the "filled-rounded" variant, you can specify the title. To customize the color of both the title and background, make use of the `classes` property.
@@ -327,7 +327,7 @@ In the "filled-rounded" variant, you can specify the title. To customize the col
 </p>
 
 
-### icon-left
+### 'icon-left'
 > ### Properties: title and icon
 
 For the "icon-left" variant, you can set the title and use the `icon` property to change its icon, color, and size.
@@ -343,7 +343,7 @@ Additionally, you can modify the color of the title and background by using the 
 </p>
 
 
-### icon-right
+### 'icon-right'
 > ### Properties: title and icon
 
 In the "icon-right" variant, you can specify the title and utilize the `icon` property to adjust its icon, color, and size.
@@ -355,7 +355,7 @@ For further customization, such as changing the color of the title and backgroun
 ```
 
 <p align="center">
-  <img src="../assets/images/buttons/icon-right-iphone.png" width="375" alt="Buttons icon-left variant" />
+  <img src="../assets/images/buttons/icon-right-iphone.png" width="375" alt="Buttons icon-right variant" />
 </p>
 
 
@@ -364,7 +364,7 @@ For further customization, such as changing the color of the title and backgroun
 
 You have the flexibility to switch to a different icon from the FontAwesome Icon Library or even opt for a different font vendor. You can achieve this by setting the `icon` property with the appropriate font and icon classes, like `fa fa-file-pdf` or `mi mi-pending_actions`.
 
-Furthermore, you can adjust the icon's size using any of PurgeTSS's font size classes, such as `text-lg` or `text-2xl`.
+Furthermore, you can adjust the icon's size using any of Purge TSS's font size classes, such as `text-lg` or `text-2xl`.
 
 In the following example, we demonstrate the use of the Material Icons font library.
 
@@ -388,14 +388,14 @@ Cards are a valuable tool for grouping and presenting content in a readable mann
 * quote
 * showcase
 
-**Each variant is available in four different colors**: *black*, *dark*, *light* and *white*.
+**Each variant is available in four different colors**: *black*, *dark*, *light*, and *white*.
 
 ```xml
 <Card module="tikit.ui" variant="code" color="black" copy="true" title="Card Title" text="Some code or text to display!" />
 ```
 
 
-### code
+### 'code'
 > ### Properties: title, text, and copy
 
 The "code" variant is specifically designed for displaying small snippets of code.
@@ -409,7 +409,7 @@ To enhance the appearance of your code snippets, install a monotype font family 
 </p>
 
 
-### showcase
+### 'showcase'
 > ### Properties: title, text, and image
 
 The "showcase" variant is intended for scenarios where you want to showcase an image alongside a title and a brief description. This variant is particularly useful when you need to present visual content with accompanying information.
@@ -423,7 +423,7 @@ The "showcase" variant is intended for scenarios where you want to showcase an i
 </p>
 
 
-### quote
+### 'quote'
 > ### Properties: name and text
 
 The "quote" variant is designed for situations where you want to display a quotation from someone. This variant allows you to attribute the quote to its source by specifying the name of the person or entity and the text of the quote itself. It's an effective way to showcase quotes within your content.
@@ -437,7 +437,7 @@ The "quote" variant is designed for situations where you want to display a quota
 </p>
 
 
-### content
+### 'content'
 > ### Properties: title, subtitle, and text.
 
 The "content" variant is suitable for presenting a block of text content with the following features:
@@ -488,9 +488,9 @@ For instance, you can set the active tint and title color for each tab using the
 </p>
 
 
-## Official Icon Fonts in PurgeTSS
+## Official Icon Fonts in Purge TSS
 
-To incorporate the free versions of Font Awesome, Material Icons, Material Symbols, or Framework7 Icons into your project, you can use the `icon-library` command in **PurgeTSS**:
+To incorporate the free versions of Font Awesome, Material Icons, Material Symbols, or Framework7 Icons into your project, you can use the `icon-library` command in **Purge TSS**:
 
 ```bash
 > purgetss icon-library --vendor=fa,mi,ms,f7

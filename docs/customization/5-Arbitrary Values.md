@@ -1,10 +1,9 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 slug: arbitrary-values
 ---
 
-# Arbitrary Values in XMLs
-Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.js` file. In these cases, you can use arbitrary values
+Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.js` file. In these cases, you can use arbitrary values.
 
 :::info
 **To generate an arbitrary style, you can use *parenthesis notation* with almost any default utility classes.**
@@ -12,10 +11,10 @@ Sometimes, you may need a specific value that is not included among the default 
 Unfortunately, you cannot use square bracket notation like in Tailwind, because Titanium handles platform and conditional statements in `.tss` files differently.
 :::
 
-## Color properties
+## Color Properties
 You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in `xml` files or in the `config.js` file.
 
-```xml title="Arbitrary values to color properties"
+```xml title="Arbitrary values for color properties"
 <Alloy>
   <Window class="from-(#4C61E4) to-(#804C61E4)">
     <Label class="text-center w-(250) h-8 bg-(rgba(100,200,50)) text-(#4C61E4) text-(15) rounded-4" text="Green Label" />
@@ -23,20 +22,20 @@ You can set arbitrary color values **to ALL available color properties**, using 
 </Alloy>
 ```
 
-```scss title="Generated classes"
-// PurgeTSS v6.2.27
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+```css title="Generated classes"
+/* Purge TSS v6.2.27 */
+/* Created by César Estrada */
+/* https://github.com/macCesar/purgeTSS */
 
-// Ti Elements
+/* Ti Elements */
 'Window': { backgroundColor: '#FFFFFF' }
 
-// Main Styles
+/* Main Styles */
 '.h-8': { height: 32 }
 '.rounded-4': { borderRadius: 8 }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 
-// Arbitrary Values
+/* Arbitrary Values */
 '.bg-(rgba(100,200,50))': { backgroundColor: 'rgba(100,200,50)' }
 '.from-(#4C61E4)': { backgroundGradient: { colors: [ '#004C61E4', '#4C61E4' ] } }
 '.text-(#4C61E4)': { color: '#4C61E4', textColor: '#4C61E4' }
@@ -45,7 +44,7 @@ You can set arbitrary color values **to ALL available color properties**, using 
 '.w-(250)': { width: 250 }
 ```
 
-### List of color properties
+### List of Color Properties
 You can set an arbitrary value to any of the following color properties:
 
 - **active-tint-**(*hex-rgb-or-rgba-value*)
@@ -95,10 +94,10 @@ You can set an arbitrary value to any of the following color properties:
 - **touch-feedback-**(*hex-rgb-or-rgba-value*)
 - **track-tint-**(*hex-rgb-or-rgba-value*)
 
-## Spacing properties
+## Spacing Properties
 You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in `xml` files or in the `config.js` file.
 
-```xml title="Arbitrary values to spacing properties"
+```xml title="Arbitrary values for spacing properties"
 <Alloy>
   <Window>
     <Label class="text-center w-(10rem) h-(1.75rem) text-(15) rounded-(5) text-white bg-blue-800" text="My custom Label" />
@@ -106,27 +105,27 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 </Alloy>
 ```
 
-```scss title="Generated classes"
-// PurgeTSS v6.2.27
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+```css title="Generated classes"
+/* Purge TSS v6.2.27 */
+/* Created by César Estrada */
+/* https://github.com/macCesar/purgeTSS */
 
-// Ti Elements
+/* Ti Elements */
 'Window': { backgroundColor: '#FFFFFF' }
 
-// Main Styles
+/* Main Styles */
 '.bg-blue-800': { backgroundColor: '#1e40af' }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 '.text-white': { color: '#ffffff', textColor: '#ffffff' }
 
-// Arbitrary Values
+/* Arbitrary Values */
 '.h-(1.75rem)': { height: 28 }
 '.rounded-(5)': { borderRadius: 5 }
 '.text-(15)': { font: { fontSize: 15 } }
 '.w-(10rem)': { width: 160 }
 ```
 
-### List of spacing properties
+### List of Spacing Properties
 
 - **Background Padding**
   - **bg-padding-b-**(*any-size-value-and-unit*)
@@ -145,11 +144,11 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
   - **top-**(*any-size-value-and-unit*)
   - **x-**(*any-size-value-and-unit*)
   - **y-**(*any-size-value-and-unit*)
-- **Content Widht and Content Height**
+- **Content Width and Content Height**
   - **content-**(*any-size-value-and-unit*)
   - **content-h-**(*any-size-value-and-unit*)
   - **content-w-**(*any-size-value-and-unit*)
-- **Gaps ( Top, Right, Bottom, Left )**
+- **Gaps (Top, Right, Bottom, Left)**
   - **gap-**(*any-size-value-and-unit*)
   - **gap-b-**(*any-size-value-and-unit*)
   - **gap-l-**(*any-size-value-and-unit*)
@@ -168,7 +167,7 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 - **Left and Right Width**
   - **left-w-**(*any-size-value-and-unit*)
   - **lw-**(*any-size-value-and-unit*)
-  - **right-w-**(*any-size-value-and-unit*)
+ - **right-w-**(*any-size-value-and-unit*)
   - **rw-**(*any-size-value-and-unit*)
 - **Margin**
   - **m-**(*any-size-value-and-unit*)
@@ -222,10 +221,10 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
   - **y-offset-**(*any-size-value-and-unit*)
 
 
-## Miscelaneous properties
+## Miscellaneous Properties
 You can set arbitrary values to the following properties, like border radius, opacity, etc.
 
-### List of miscelaneous properties
+### List of Miscellaneous Properties
 
 - **active-tab-**(*number-value*)
 - **border-width-**(*number-value*)
@@ -259,7 +258,7 @@ You can set arbitrary values to the following properties, like border radius, op
 
 
 ## Examples
-You can use any supported units depending of the property you are generating, you can use `hex` or `rgba` values in any `color` property, or you can use `rem` or `px` in any position or sizing property.
+You can use any supported units depending on the property you are generating. You can use `hex` or `rgba` values for any `color` property, or you can use `rem` or `px` for any position or sizing property.
 
 ### Credit Card
 
@@ -286,16 +285,16 @@ You can use any supported units depending of the property you are generating, yo
 </Alloy>
 ```
 
-```scss title="app.tss"
-// PurgeTSS v6.2.27
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+```css title="app.tss"
+/* Purge TSS v6.2.27 */
+/* Created by César Estrada */
+/* https://github.com/macCesar/purgeTSS */
 
-// Ti Elements
+/* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 'Window': { backgroundColor: '#FFFFFF' }
 
-// Main Styles
+/* Main Styles */
 '.bg-white': { backgroundColor: '#ffffff' }
 '.font-bold': { font: { fontWeight: 'bold' } }
 '.h-16': { height: 64 }
@@ -310,7 +309,7 @@ You can use any supported units depending of the property you are generating, yo
 '.w-full': { width: '100%' }
 '.w-screen': { width: Ti.UI.FILL }
 
-// Arbitrary Values
+/* Arbitrary Values */
 '.-ml-(20)': { left: -20 }
 '.bg-(#4C61E4)': { backgroundColor: '#4C61E4' }
 '.bg-(#53606b)': { backgroundColor: '#53606b' }
@@ -326,7 +325,7 @@ You can use any supported units depending of the property you are generating, yo
 '.w-(2in)': { width: '2in' }
 '.w-(3rem)': { width: 48 }
 
-// Default Font Awesome
+/* Default Font Awesome */
 '.fa-apple': { text: '\uf179', title: '\uf179' }
 '.fab': { font: { fontFamily: 'FontAwesome6Brands-Regular' } }
 ```
@@ -334,7 +333,7 @@ You can use any supported units depending of the property you are generating, yo
 ![arbitrary-values](../images/arbitrary-values.png)
 
 ### Front Cover
-Try this example in an iPad or tablet.
+Try this example on an iPad or tablet.
 
 ```xml title="index.xml"
 <Alloy>
@@ -357,7 +356,7 @@ Try this example in an iPad or tablet.
     </View>
 
     <View class="mt-(450px) right-(250px) rounded-(60px)">
-      <ImageView class="h-(1480px) w-(900px) " image="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=1480&w=900&fit=crop" />
+      <ImageView class="h-(1480px) w-(900px)" image="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=1480&w=900&fit=crop" />
     </View>
 
     <View class="left-(150px) top-(1650px) vertical w-(1300px)">
@@ -369,8 +368,8 @@ Try this example in an iPad or tablet.
 </Alloy>
 ```
 
-```scss title="app.tss"
-// PurgeTSS v6.2.27
+```css title="app.tss"
+// Purge TSS v6.2.27
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -456,16 +455,16 @@ Try this example in an iPad or tablet.
 </Alloy>
 ```
 
-```scss title="app.tss"
-// PurgeTSS v6.2.27
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+```css title="app.tss"
+/* Purge TSS v6.2.27 */
+/* Created by César Estrada */
+/* https://github.com/macCesar/purgeTSS */
 
-// Ti Elements
+/* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 'Window': { backgroundColor: '#FFFFFF' }
 
-// Main Styles
+/* Main Styles */
 '.bg-transparent': { backgroundColor: 'transparent' }
 '.font-bold': { font: { fontWeight: 'bold' } }
 '.h-screen': { height: Ti.UI.FILL }
@@ -477,7 +476,7 @@ Try this example in an iPad or tablet.
 '.w-full': { width: '100%' }
 '.w-screen': { width: Ti.UI.FILL }
 
-// Arbitrary Values
+/* Arbitrary Values */
 '.-right-(10px)': { right: '-10px' }
 '.bg-(#53606b)': { backgroundColor: '#53606b' }
 '.bg-(#53A500)': { backgroundColor: '#53A500' }

@@ -3,14 +3,13 @@ sidebar_position: 6
 slug: platform-and-device-modifiers
 ---
 
-# Platform and Device modifiers
-Platform and Device modifiers ( also called variants or prefixes ) allow you to specify different styles for an element depending on the platform (iOS or Android) and device (tablet or handheld) that the app is running on:
+Platform and Device modifiers (also called variants or prefixes) allow you to specify different styles for an element depending on the platform (iOS or Android) and device (tablet or handheld) that the app is running on:
 
-- Platform modifiers
+- Platform modifiers:
   - `ios:`
   - `android:`
 
-- Device modifiers
+- Device modifiers:
   - `tablet:`
   - `handheld:`
 
@@ -26,22 +25,22 @@ For example, if you want to have different background colors and font sizes depe
 </Alloy>
 ```
 
-```scss title="app.tss"
-// PurgeTSS v6.2.27
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+```css title="app.tss"
+/* Purge TSS v6.2.27 */
+/* Created by César Estrada */
+/* https://github.com/macCesar/purgeTSS */
 
-// Ti Elements
+/* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 'Window': { backgroundColor: '#FFFFFF' }
 
-// Main Styles
+/* Main Styles */
 '.h-32': { height: 128 }
 '.h-auto': { height: Ti.UI.SIZE }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 '.w-screen': { width: Ti.UI.FILL }
 
-// Platform and Device Modifiers
+/* Platform and Device Modifiers */
 '.android:text-2xl[platform=android]': { font: { fontSize: 24 } }
 '.android:text-green-800[platform=android]': { color: '#166534', textColor: '#166534' }
 '.handheld:bg-blue-100[formFactor=handheld]': { backgroundColor: '#dbeafe' }

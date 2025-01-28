@@ -3,10 +3,8 @@ sidebar_position: 4
 slug: the-opacity-modifier
 ---
 
-# The Opacity Modifier
-
 :::info
-You can add an **opacity modifier to ANY of the available color properties** by adding an **opacity value** between 0 and 100 to the end of the color name separated with a slash ( / ).
+You can add an **opacity modifier to ANY of the available color properties** by adding an **opacity value** between 0 and 100 to the end of the color name separated by a slash ( / ).
 :::
 
 ## In your XML files
@@ -15,14 +13,14 @@ You can add an **opacity modifier to ANY of the available color properties** by 
 <Label class="w-11/12 h-8 text-center bg-sky-500/50 text-purple-900/75">My Button</Label>
 ```
 
-```scss
-// Main styles
+```css
+/* Main styles */
 'Window': { backgroundColor: '#ffffff' }
 '.h-8': { height: 32 }
 '.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
 '.w-11/12': { width: '91.666667%' }
 
-// Styles with color opacity modifiers
+/* Styles with color opacity modifiers */
 '.bg-sky-500/50': { backgroundColor: '#800ea5e9' }
 '.text-purple-900/75': { color: '#bf581c87' }
 ```
@@ -48,14 +46,14 @@ module.exports = {
 }
 ```
 
-```scss title="Generated classes"
-// Custom Styles and Resets
+```css title="Generated classes"
+/* Custom Styles and Resets */
 '.main-banner': { backgroundColor: '#59ce10cc', borderColor: '#bfce10cc' }
 
-// backgroundColor Property
+/* backgroundColor Property */
 '.bg-primary': { backgroundColor: '#ce10cc' }
 ...
-// And the rest of color properties!
+/* And the rest of color properties! */
 ```
 
 :::caution Semantic Colors
