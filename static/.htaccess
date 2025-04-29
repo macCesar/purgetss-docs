@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forzar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Seguridad en cabeceras
+<IfModule mod_headers.c>
+  Header unset X-Powered-By
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Referrer-Policy "no-referrer-when-downgrade"
+
+  # Protección con Content-Security-Policy
+  Header always set Content-Security-Policy "default-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https: data:; frame-src 'self' https:;"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Seguridad general del servidor
+Options -Indexes
+
+# Definir archivo de entrada
+DirectoryIndex index.html
+
+# Bloquear ejecución de scripts no deseados
+<FilesMatch "\.(php|php5|php7|phtml|pl|cgi|py|asp|aspx|sh)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Proteger archivos ocultos (.git, .env, etc.)
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Opcional: activar caché para mejorar velocidad
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 month"
+</IfModule>

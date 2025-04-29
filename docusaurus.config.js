@@ -18,6 +18,18 @@ const config = {
   projectName: 'Purge TSS Documentation', // Usually your repo name.
   staticDirectories: ['public', 'static'],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'glossary',
+        path: 'glossary',
+        routeBasePath: 'glossary',
+        // sidebarPath: false, // Deshabilitar el sidebar completamente
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -69,14 +81,14 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Installation',
             position: 'left',
+            docId: 'Installation',
             label: 'Documentation',
           },
           {
             to: 'tikit',
+            position: 'left',
             label: 'TiKit UI',
-            position: 'left'
           }, // or position: 'right'
           {
             href: 'https://github.com/macCesar/purgetss/',
@@ -136,16 +148,16 @@ const config = {
             ],
           },
           {
-            title: 'Glossary of Terms',
+            title: 'Additional Resources',
             items: [
               {
-                label: 'Glossary',
-                href: 'https://github.com/macCesar/purgetss/',
+                label: 'Glossary of Terms',
+                to: '/glossary',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Código Móvil. Built with Docusaurus.`,
+        copyright: `Copyright ${new Date().getFullYear()} Código Móvil. Built with Docusaurus.`,
       },
       prism: {
         theme: themes.github
