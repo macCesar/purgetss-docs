@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 <p align="center">
   <img src="https://codigomovil.mx/images/logotipo-purgetss-gris.svg" height="230" width="230" alt="PurgeCSS logo"/>
 </p>
