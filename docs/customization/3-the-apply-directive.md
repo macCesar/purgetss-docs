@@ -3,6 +3,8 @@ sidebar_position: 3
 slug: the-apply-directive
 ---
 
+# The `apply` Directive
+
 ## Create Complex Classes and IDs
 
 :::info
@@ -97,7 +99,7 @@ theme: {
 
 In the following example, we are creating `corporate` color classes so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100`, and `border-corporate-200`.
 
-```javascript {5,15} title="./purgetss/config.js"
+```javascript title="./purgetss/config.js"
 // ...
 theme: {
   extend: {
@@ -141,7 +143,7 @@ theme: {
 
 ## Set a String of Classes or an Array of Classes
 
-```javascript {10,14} title="./purgetss/config.js"
+```javascript title="./purgetss/config.js"
 // ...
 theme: {
   extend: {
@@ -222,7 +224,7 @@ To properly apply these platform styles when creating custom rules, you must spe
 **Even if you are not targeting a specific platform, you must specify the platform variant.**
 :::
 
-```javascript {15} title="./purgetss/config.js"
+```javascript title="./purgetss/config.js"
 module.exports = {
   theme: {
     '.my-view': {
@@ -244,7 +246,7 @@ module.exports = {
 
 If you omit the platform variant, **Purge TSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
 
-```javascript {5} title="./purgetss/config.js"
+```javascript title="./purgetss/config.js"
 module.exports = {
   theme: {
     // Even if you are not targeting a specific platform, you must specify the platform variant

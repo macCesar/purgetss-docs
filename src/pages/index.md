@@ -18,8 +18,6 @@ It offers a range of tools such as customizable utility classes, support for ico
 With **Purge TSS**, creating visually appealing and dynamic mobile apps becomes more accessible and efficient.
 :::
 
----
-
 Here are its main functionalities:
 
 - **Tailwind-like Utility Classes**: *Purge TSS* offers over 21,000 utility classes similar to Tailwind CSS, providing a vast array of styling options for your projects.
@@ -33,20 +31,24 @@ Here are its main functionalities:
 
 Overall, *Purge TSS* aims to simplify the mobile app development process, offering tools and features that enhance productivity and creativity in designing user interfaces.
 
-## Table of Content
+## Table of Contents
 
 - [Installation](docs/installation)
 - [Commands](docs/commands)
 - Customization
-  - [config file](docs/customization/the-config-file)
-  - [Custom rules](docs/customization/custom-rules)
-  - [apply directive](docs/customization/the-apply-directive)
-  - [opacity modifier](docs/customization/the-opacity-modifier)
-  - [Arbitrary values in XMLs](docs/customization/arbitrary-values)
-  - [Platform and Device modifiers](docs/customization/platform-and-device-modifiers)
+  - [The Config File](docs/customization/the-config-file)
+  - [Custom Rules](docs/customization/custom-rules)
+  - [The `apply` Directive](docs/customization/the-apply-directive)
+  - [The `opacity` Modifier](docs/customization/the-opacity-modifier)
+  - [Arbitrary Values](docs/customization/arbitrary-values)
+  - [Platform and Device Modifiers](docs/customization/platform-and-device-modifiers)
   - [Icon Fonts Libraries](docs/customization/icon-fonts-libraries)
-- Animation module
+- Animation Module
   - [Introduction](docs/animation-module/introduction)
-  - [Available utilities](docs/animation-module/available-utilities)
-  - [Complex UI elements](docs/animation-module/complex-ui-elements)
+  - [The `play` Method](docs/animation-module/the-play-method)
+  - [The `apply` Method](docs/animation-module/the-apply-method)
+  - [The `open` and `close` Methods](docs/animation-module/the-open-and-close-methods)
+  - [The `draggable` Method](docs/animation-module/the-draggable-method)
+  - [Complex UI Elements](docs/animation-module/complex-ui-elements)
+  - [Available Utilities](docs/animation-module/available-utilities)
 - [Grid System](docs/grid-system)

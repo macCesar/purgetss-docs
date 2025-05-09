@@ -3,6 +3,8 @@ sidebar_position: 2
 slug: commands
 ---
 
+# Commands
+
 The following is a description of the various commands that can be used with **Purge TSS**:
 
 - `init`: Initializes Purge TSS on an existing Alloy project.

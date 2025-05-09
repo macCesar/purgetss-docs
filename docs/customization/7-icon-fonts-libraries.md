@@ -3,6 +3,8 @@ sidebar_position: 7
 slug: icon-fonts-libraries
 ---
 
+# Icon Fonts Libraries
+
 :::info Official Icon Fonts for **Purge TSS**
 
 Previous versions of **Purge TSS** included several icon font libraries such as Bootstrap Icons, Boxicons, LineIcons, and Tabler Icons. **However, adding more icon fonts was getting out of control**.

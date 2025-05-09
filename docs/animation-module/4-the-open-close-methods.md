@@ -3,6 +3,8 @@ sidebar_position: 4
 slug: the-open-and-close-methods
 ---
 
+# The `open` and `close` Methods
+
 The `open` and `close` methods provide a clear and straightforward way to manage the opening and closing animations of your views, utilizing the predefined classes with the `open` and `close` modifiers.
 
 By using these methods, you can ensure consistent and manageable animation behavior across your application, as opposed to using the `play` or `toggle` methods, which alternate between the `open` and `close` states based on the current state of the view.

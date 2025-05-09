@@ -3,6 +3,8 @@ sidebar_position: 6
 slug: complex-ui-elements
 ---
 
+# Complex UI Elements
+
 Here is an example of the Animation module with a more complex UI.
 
 To use this example, you'll need to install the FontAwesome fonts in your project by running:

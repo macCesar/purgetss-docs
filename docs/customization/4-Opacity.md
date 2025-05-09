@@ -3,6 +3,8 @@ sidebar_position: 4
 slug: the-opacity-modifier
 ---
 
+# The `opacity` Modifier
+
 :::info
 You can add an **opacity modifier to ANY of the available color properties** by adding an **opacity value** between 0 and 100 to the end of the color name separated by a slash ( / ).
 :::

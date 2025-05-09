@@ -3,6 +3,8 @@ sidebar_position: 3
 slug: the-apply-method
 ---
 
+# The `apply` Method
+
 - Use the `apply` method when you need to immediately apply the properties and transformations to a view without any animation.
 
 ```javascript title="index.js"
