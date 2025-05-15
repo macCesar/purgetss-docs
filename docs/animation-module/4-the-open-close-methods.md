@@ -28,9 +28,9 @@ $.myAnimation.open(views, callback);
 
 ```xml title="index.xml"
 <Alloy>
-  <Animation module="purgetss.ui" id="myAnimation" class="close:opacity-0 open:opacity-100" />
-
   <Window>
+    <Animation module="purgetss.ui" id="myAnimation" class="close:opacity-0 open:opacity-100" />
+
     <View id="myView" class="opacity-0" />
   </Window>
 </Alloy>
@@ -61,9 +61,9 @@ $.myAnimation.close(views, callback);
 
 ```xml title="index.xml"
 <Alloy>
-  <Animation module="purgetss.ui" id="myAnimation" class="close:opacity-0 open:opacity-100" />
-
   <Window>
+    <Animation module="purgetss.ui" id="myAnimation" class="close:opacity-0 open:opacity-100" />
+
     <View id="myView" class="opacity-100" />
   </Window>
 </Alloy>
