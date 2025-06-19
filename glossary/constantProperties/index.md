@@ -1,6 +1,6 @@
 # Constant Properties
 
-Constant properties in Purge TSS are predefined values or enumerations that determine specific behaviors, styles, or states of UI elements. These properties accept only specific predefined values to ensure consistency and proper functionality.
+Constant properties in PurgeTSS are predefined values or enumerations that determine specific behaviors, styles, or states of UI elements. These properties accept only specific predefined values to ensure consistency and proper functionality.
 
 ## User Interface States
 - **Style**: `style`, `textStyle`, `modalStyle`, `borderStyle`, `animationStyle`, `scrollIndicatorStyle`

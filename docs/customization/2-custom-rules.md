@@ -5,7 +5,7 @@ slug: custom-rules
 
 # Custom Rules
 
-Custom rules in **Purge TSS** allow developers to style **Titanium elements**, **IDs**, and **classes** with flexibility and precision. These rules can be configured in the `config.js` file. Additionally, you can target specific platforms, devices, or conditional blocks using global variables.
+Custom rules in **PurgeTSS** allow developers to style **Titanium elements**, **IDs**, and **classes** with flexibility and precision. These rules can be configured in the `config.cjs` file. Additionally, you can target specific platforms, devices, or conditional blocks using global variables.
 
 This feature is particularly useful for meeting visual and design requirements in mobile projects that span multiple platforms, such as iOS and Android. By leveraging custom rules, you ensure that every element in your application can be tailored to deliver the best possible user experience.
 
@@ -18,10 +18,10 @@ Whether you want to style a Ti Element (also known as a markup element), a custo
 ### Modifier Key
 - For **Titanium Elements**, use the exact name of the element, such as `Label`, `Button`, or `ScrollView`.
 - For **IDs**, we recommend sticking with the **camelCase** naming convention to follow the same convention that JavaScript uses.
-- For **classes**, use the **kebab-case** naming convention to ensure compatibility with **Purge TSS v6.x and above**. For example, use `.my-custom-class-name` instead of `.myCustomClassName`.
+- For **classes**, use the **kebab-case** naming convention to ensure compatibility with **PurgeTSS v6.x and above**. For example, use `.my-custom-class-name` instead of `.myCustomClassName`.
 
-:::caution Purge TSS v5 or earlier projects
-For projects created with **Purge TSS** v5 or earlier that are now using version 6.x.x or above, please set `purge.options.missing` to true in `config.js` to get a report ( at the end of `app.tss` ) of any missing classes so you can update them to the new naming convention.
+:::caution PurgeTSS v5 or earlier projects
+For projects created with **PurgeTSS** v5 or earlier that are now using version 7.x.x or above, please set `purge.options.missing` to true in `config.cjs` to get a report ( at the end of `app.tss` ) of any missing classes so you can update them to the new naming convention.
 :::
 
 ### Default, Platform, Device, or Conditional Blocks
@@ -40,9 +40,9 @@ For projects created with **Purge TSS** v5 or earlier that are now using version
   - `em` or `rem` - Values in em or rem will be converted with this little formula: `value * 16`.
   - `dp` - For these values, the unit type will be removed and the value will remain intact.
 
-## 'config.js' file example
+## 'config.cjs' file example
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 module.exports = {
   theme: {
     '#main-banner': {

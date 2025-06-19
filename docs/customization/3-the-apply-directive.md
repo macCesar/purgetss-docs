@@ -14,13 +14,13 @@ You can apply a set of classes to create more complex classes or when you find a
 - Set any ID, class, or Ti Element.
 - Use any of the default classes.
 - Use arbitrary values.
-- Use any newly defined class in `config.js`.
+- Use any newly defined class in `config.cjs`.
 - Set a string of classes or an array of classes.
 - Combine it with any platform, device, or conditional-block properties.
 
 ## Set Any ID, Class, or Ti Element
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   extend: {},
@@ -55,7 +55,7 @@ theme: {
 
 ## Use Any of the Default Classes
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   '.btn': {
@@ -78,7 +78,7 @@ theme: {
 
 You can use [**Arbitrary Values**](arbitrary-values) to define your custom classes.
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   extend: {},
@@ -95,11 +95,11 @@ theme: {
 // ...
 ```
 
-## Use Any Newly Defined Class in config.js
+## Use Any Newly Defined Class in config.cjs
 
 In the following example, we are creating `corporate` color classes so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100`, and `border-corporate-200`.
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   extend: {
@@ -143,7 +143,7 @@ theme: {
 
 ## Set a String of Classes or an Array of Classes
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   extend: {
@@ -178,7 +178,7 @@ theme: {
 
 ## Combine with Any Platform, Device, or Conditional-Block Properties
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 // ...
 theme: {
   '.btn': {
@@ -224,7 +224,7 @@ To properly apply these platform styles when creating custom rules, you must spe
 **Even if you are not targeting a specific platform, you must specify the platform variant.**
 :::
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 module.exports = {
   theme: {
     '.my-view': {
@@ -244,9 +244,9 @@ module.exports = {
 
 ### Omitting the Platform Variant
 
-If you omit the platform variant, **Purge TSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
+If you omit the platform variant, **PurgeTSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 module.exports = {
   theme: {
     // Even if you are not targeting a specific platform, you must specify the platform variant
@@ -259,7 +259,7 @@ module.exports = {
 ```
 
 ```css title="./purgetss/styles/tailwind.tss"
-/* Omitting the platform variant in `config.js` will not generate the corresponding property. */
+/* Omitting the platform variant in `config.cjs` will not generate the corresponding property. */
 /* Missing the property related to `clip-enabled`. */
 '.my-view': { backgroundColor: '#22c55e', width: 128, height: 128 }
 ```

@@ -5,7 +5,7 @@ slug: installation
 
 # Installation
 
-**Install Purge TSS globally on your machine using [NPM](https://www.npmjs.com/).**
+**Install PurgeTSS globally on your machine using [NPM](https://www.npmjs.com/).**
 
 ```bash
 > [sudo] npm install -g purgetss
@@ -13,16 +13,16 @@ slug: installation
 
 :::caution Maximum Node.js Version
 
-Purge TSS has been thoroughly tested and proven to be compatible with Node version 20.x.x.
+PurgeTSS has been thoroughly tested and proven to be compatible with Node version 20.x.x.
 
 :::
 
-## Running Purge TSS for the First Time
+## Running PurgeTSS for the First Time
 
 :::info
 **You only need to execute `purgetss` once within your project to automatically generate the required files and folders.**
 
-Subsequently, whenever you build your application, **Purge TSS** will parse all your XML files and generate a clean `app.tss` file containing only the classes used in your project.
+Subsequently, whenever you build your application, **PurgeTSS** will parse all your XML files and generate a clean `app.tss` file containing only the classes used in your project.
 :::
 
 When you run `purgetss` for the first time in your project, it will perform the following tasks:
@@ -30,12 +30,12 @@ When you run `purgetss` for the first time in your project, it will perform the 
 
 ### 1. Auto-Run Hook
 
-**Purge TSS** adds a task in `alloy.jmk` to auto-run `purgetss` every time you compile your app. **This is especially useful when using `liveview`.**
+**PurgeTSS** adds a task in `alloy.jmk` to auto-run `purgetss` every time you compile your app. **This is especially useful when using `liveview`.**
 
 
 ### 2. purgetss Folder
 
-Upon execution, **Purge TSS** creates a `purgetss` folder at the root of your project containing the following files and folders:
+Upon execution, **PurgeTSS** creates a `purgetss` folder at the root of your project containing the following files and folders:
 
 ```bash title="./purgetss"
 purgetss
@@ -43,10 +43,10 @@ purgetss
 └─ styles
    └─ definitions.css
    └─ tailwind.tss
-└─ config.js
+└─ config.cjs
 ```
 
-- **`config.js` File**
+- **`config.cjs` File**
 
   This is where you can customize or create new classes with your preferred spacing, colors, margin values, and more. For further details, refer to the **[Customization Section](customization/the-config-file)**.
 
@@ -56,7 +56,7 @@ purgetss
 
   - **`tailwind.tss` File**
 
-    This file includes all Tailwind-like utility classes, including any custom classes defined in `config.js`.
+    This file includes all Tailwind-like utility classes, including any custom classes defined in `config.cjs`.
 
   - **`definitions.css` File**
 
@@ -68,13 +68,13 @@ purgetss
 
 :::caution IMPORTANT NOTICE!!!
 
-**Purge TSS will OVERWRITE your existing `app.tss` file.**
+**PurgeTSS will OVERWRITE your existing `app.tss` file.**
 
-Upon the initial execution of **Purge TSS**, your `app.tss` file is backed up to `_app.tss`.
+Upon the initial execution of **PurgeTSS**, your `app.tss` file is backed up to `_app.tss`.
 
 From this point forward, you have the option to add, delete, or update your custom classes in `_app.tss`.
 
-Alternatively, a better approach is to include your custom values in `config.js`. Further information is available in the [Configuration Section](customization/the-config-file).
+Alternatively, a better approach is to include your custom values in `config.cjs`. Further information is available in the [Configuration Section](customization/the-config-file).
 :::
 
 ## Example Files
@@ -132,7 +132,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 :::
 
 ```css title="app.tss after purging"
-/* Purge TSS v6.2.27 */
+/* PurgeTSS v7.1.0 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -189,7 +189,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 
 If you're using **[Visual Studio Code](https://code.visualstudio.com)**, we recommend installing the **[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)** extension.
 
-It provides class name completion for the `XML` class attribute based on the `definitions.css` file created by Purge TSS.
+It provides class name completion for the `XML` class attribute based on the `definitions.css` file created by PurgeTSS.
 
 ![Class Completion using IntelliSense for CSS class names in HTML](images/class-completion-2.gif)
 

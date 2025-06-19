@@ -1,6 +1,6 @@
 # Compound Classes
 
-Compound classes in Purge TSS are advanced properties that combine multiple style attributes into a single, powerful class. These classes provide sophisticated styling capabilities and often have multiple variations or alternative syntaxes.
+Compound classes in PurgeTSS are advanced properties that combine multiple style attributes into a single, powerful class. These classes provide sophisticated styling capabilities and often have multiple variations or alternative syntaxes.
 
 ## Layout and Positioning
 - **Grid System**: `grid-cols-rows-span`, `gridFlow`, `gridSystem`, `items`

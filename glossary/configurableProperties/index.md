@@ -1,6 +1,6 @@
 # Configurable Properties
 
-Configurable properties in Purge TSS are numeric or measurable attributes that allow you to fine-tune the appearance and behavior of UI elements. These properties accept specific values like numbers, dimensions, or durations.
+Configurable properties in PurgeTSS are numeric or measurable attributes that allow you to fine-tune the appearance and behavior of UI elements. These properties accept specific values like numbers, dimensions, or durations.
 
 ## Dimensions and Positioning
 - **Size**: `width`, `height`, `contentWidth`, `contentHeight`, `imageHeight`, `targetImageHeight`, `targetImageWidth`

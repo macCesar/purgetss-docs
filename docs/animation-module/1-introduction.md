@@ -7,7 +7,7 @@ slug: introduction
 
 ## The Animation Module
 :::info
-**Purge TSS** includes an Animation module to apply simple 2D Matrix animations and transformations to any element, an array of elements, or even to individual children of an element.
+**PurgeTSS** includes an Animation module to apply simple 2D Matrix animations and transformations to any element, an array of elements, or even to individual children of an element.
 :::
 
 The Animation object describes the properties of an animation. It represents:
@@ -57,7 +57,7 @@ Use the **`purgetss module`** command to install the module in the `lib` folder.
 
 
 ## Usage
-This is the most basic `Animation` object, equipped with a set of **Purge TSS** classes to animate any element. You can create as many `Animation` objects as you want, each with different properties to animate.
+This is the most basic `Animation` object, equipped with a set of **PurgeTSS** classes to animate any element. You can create as many `Animation` objects as you want, each with different properties to animate.
 
 ```xml
 <Animation id="myAnimation" module="purgetss.ui" class="a-set-of-purgetss-classes-and-modifiers" />

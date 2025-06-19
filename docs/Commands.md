@@ -5,24 +5,47 @@ slug: commands
 
 # Commands
 
-The following is a description of the various commands that can be used with **Purge TSS**:
+:::info What's New in v7.1.0
 
-- `init`: Initializes Purge TSS on an existing Alloy project.
-- `create`: Creates a new Alloy project with Purge TSS already set up.
-- `icon-library`: Copies the official icon fonts for Purge TSS into the `./app/assets/fonts` folder.
-- `build-fonts`: Generates a `./purgetss/styles/fonts.tss` file with class definitions and fontFamily selectors for custom fonts.
-- `shades`: Generates shades and tints for a given color and outputs the corresponding color palette in `config.js`.
-- `color-module`: Creates a `./app/lib/purgetss.colors.js` file, which contains all the colors defined in `config.js`.
-- `build`: Generates the `tailwind.tss` file based on the configuration in `config.js`.
+**Major Refactoring & ESM Migration**: PurgeTSS v7.1 has been completely refactored with improved code organization, better ESM compatibility, enhanced error handling, and a more intuitive CLI experience.
+
+**Key Changes:**
+- **Node.js 16+** required (ESM support)
+- **Configuration file**: `config.js` → `config.cjs` (same content, different extension)
+- **Removed deprecated commands**: `copy-fonts` and `build-legacy`
+- **Complete legacy mode removal**: Legacy mode no longer supported
+- **Enhanced CLI error handling**: Better error messages with command suggestions
+- **Simplified font generation**: `build-fonts` options streamlined
+
+:::
+
+The following is a description of the various commands that can be used with **PurgeTSS**:
+
+## Setup Commands
+- `init`: Initializes PurgeTSS on an existing Alloy project.
+- `create`: Creates a new Alloy project with PurgeTSS already set up.
+
+## Development Commands
+- `build`: Generates the `tailwind.tss` file based on the configuration in `config.cjs`.
 - `watch`: Runs `purgetss` automatically every time the project is compiled (defaults to `--on`).
+
+## Asset Commands
+- `icon-library`: Copies the official icon fonts for PurgeTSS into the `./app/assets/fonts` folder.
+- `build-fonts`: Generates a `./purgetss/styles/fonts.tss` file with class definitions and fontFamily selectors for custom fonts.
+
+## Utility Commands
+- `shades`: Generates shades and tints for a given color and outputs the corresponding color palette in `config.cjs`.
+- `color-module`: Creates a `./app/lib/purgetss.colors.js` file, which contains all the colors defined in `config.cjs`.
 - `module`: Installs the `purgetss.ui.js` module in the `lib` folder.
-- `update`: Updates Purge TSS to the latest version.
-- `sudo-update`: Updates Purge TSS to the latest version, using sudo to install **NPM** modules if necessary.
+
+## Maintenance Commands
+- `update`: Updates PurgeTSS to the latest version.
+- `sudo-update`: Updates PurgeTSS to the latest version, using sudo to install **NPM** modules if necessary.
 
 
 ## `init` Command
 
-The `init` command sets up **Purge TSS** by creating a `./purgetss/config.js` file at the root of an existing Alloy project.
+The `init` command sets up **PurgeTSS** by creating a `./purgetss/config.cjs` file at the root of an existing Alloy project.
 
 No arguments or options are needed. The command will create the file inside the `./purgetss/` folder.
 
@@ -33,15 +56,14 @@ No arguments or options are needed. The command will create the file inside the 
 > purgetss i
 ```
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 module.exports = {
   purge: {
     mode: 'all',
     method: 'sync', // How to execute the auto-purging task: sync or async
 
-    // These options are passed directly to Purge TSS
+    // These options are passed directly to PurgeTSS
     options: {
-      legacy: false, // Generates & purges tailwind.tss v5.x classes
       missing: true, // Reports missing classes
       widgets: false, // Purges widgets too
       safelist: [], // Array of classes to keep
@@ -56,7 +78,7 @@ module.exports = {
 
 :::tip To learn more
 
-**Purge TSS** looks for the file `./purgetss/config.js`, where each section is optional and can be customized. Missing sections will use the default configuration.
+**PurgeTSS** looks for the file `./purgetss/config.cjs`, where each section is optional and can be customized. Missing sections will use the default configuration.
 
 To learn more and view some examples, refer to the **[Configuration Section](customization/the-config-file)**.
 
@@ -65,7 +87,7 @@ To learn more and view some examples, refer to the **[Configuration Section](cus
 
 ## `create` Command
 
-The `create` command generates a new Alloy project with **Purge TSS** already set up.
+The `create` command generates a new Alloy project with **PurgeTSS** already set up.
 
 ### Arguments
 
@@ -107,7 +129,7 @@ ti config app.workspace 'the-full-path/to-the-workspace-folder'
 
 ### Installing Dev Dependencies
 
-Installing these dependencies offers a profound enhancement to the setup process for projects using **Purge TSS**.
+Installing these dependencies offers a profound enhancement to the setup process for projects using **PurgeTSS**.
 
 ```bash
 > purgetss create 'Name of the Project' [--dependencies]
@@ -122,9 +144,9 @@ Here's a closer look at the recommended VSCode extensions and their roles:
 
 - **[XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)**: For XML formatting.
 - **[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: To ensure consistent code quality, enforcing coding standards and identifying issues in real-time.
-- **[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Intelligent **Purge TSS** class support.
-- **[Tailwind RAW Reorder](https://marketplace.visualstudio.com/items?itemName=Trapfether.tailwind-raw-reorder)**: An opinionated class sorter that optimizes the arrangement of **Purge TSS** classes for better readability and maintenance. It works on XML and JS files.
-- **[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)**: **Purge TSS** class name completion based on definitions within your workspace (`purgetss/config.js`), for example, all available classes in the `fonts.tss` and `tailwind.tss` files.
+- **[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Intelligent **PurgeTSS** class support.
+- **[Tailwind RAW Reorder](https://marketplace.visualstudio.com/items?itemName=Trapfether.tailwind-raw-reorder)**: An opinionated class sorter that optimizes the arrangement of **PurgeTSS** classes for better readability and maintenance. It works on XML and JS files.
+- **[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)**: **PurgeTSS** class name completion based on definitions within your workspace (`purgetss/config.cjs`), for example, all available classes in the `fonts.tss` and `tailwind.tss` files.
 
 ### List of Commands Used
 
@@ -146,7 +168,7 @@ When you run `purgetss create "Name of the Project" [--dependencies --vendor=fa,
 
 ## `install-dependencies` Command
 
-This command simplifies the enhancement of your development workflow in existing projects already using **Purge TSS**. It automates the installation of dev dependencies and configuration files into your project, ensuring seamless integration with the **Visual Studio Code** (VSCode) environment.
+This command simplifies the enhancement of your development workflow in existing projects already using **PurgeTSS**. It automates the installation of dev dependencies and configuration files into your project, ensuring seamless integration with the **Visual Studio Code** (VSCode) environment.
 
 ```bash
 > purgetss install-dependencies
@@ -321,7 +343,7 @@ To use this file, follow these steps:
 ```
 
 ```css title="app.tss"
-/* Purge TSS v6.2.27
+/* PurgeTSS v7.1.0
  * Created by César Estrada
  * https://github.com/macCesar/purgeTSS
 */
@@ -382,7 +404,7 @@ To use it, first place all of the `.ttf` or `.otf` files that you want to use in
 
 1. This will create the `./purgetss/styles/fonts.tss` file with all class definitions and `fontFamily` selectors.
 2. It will also copy the font files into the `./app/assets/fonts` folder.
-3. **Purge TSS will rename the font files to match their corresponding PostScript names to ensure proper functionality on both iOS and Android platforms**.
+3. **PurgeTSS will rename the font files to match their corresponding PostScript names to ensure proper functionality on both iOS and Android platforms**.
 
 In this example, we are using the [**Bevan and Dancing Script**](https://fonts.google.com/share?selection.family=Bevan:ital@0;1%7CDancing%20Script:wght@400;500;600;700) fonts from Google Fonts.
 
@@ -402,7 +424,7 @@ purgetss
 After running `> purgetss build-fonts` you will have the following classes:
 
 ```css title="./purgetss/styles/fonts.tss"
-/* Fonts TSS file generated with Purge TSS
+/* Fonts TSS file generated with PurgeTSS
  * https://github.com/macCesar/purgeTSS
 */
 
@@ -491,7 +513,7 @@ After running `purgetss build-fonts`, you will have all the `fontFamily` class d
 :::
 
 ```css title="./purgetss/styles/fonts.tss"
-/* Fonts TSS file generated with Purge TSS */
+/* Fonts TSS file generated with PurgeTSS */
 /* https://github.com/macCesar/purgeTSS */
 
 '.map-icons': { font: { fontFamily: 'map-icons' } }
@@ -520,11 +542,16 @@ After running `purgetss build-fonts`, you will have all the `fontFamily` class d
 ![Microns Icon Font](images/mapicon-font.png)
 
 
+### Options
+
+- `-m, --module`: Generate a CommonJS module in `./app/lib/`.
+- `-f, --filename`: Use filenames as both font class names and icon prefixes (replaces the old `-p` flag).
+
 ### CommonJS Module
 
 You can use the `--module` option to generate a CommonJS module called `purgetss-fonts.js` in `./app/lib/`.
 
-To avoid conflicts with other icon libraries that you may be using, **Purge TSS will keep each icon's prefix**.
+To avoid conflicts with other icon libraries that you may be using, **PurgeTSS will keep each icon's prefix**.
 
 ```bash
 > purgetss build-fonts --module
@@ -565,9 +592,9 @@ exports.families = families;
 
 :::tip PRO TIP
 
-### Renaming the Prefix in Icon Fonts
+### Using Filenames for Class Names and Icon Prefixes
 
-Use the `--prefix` option to apply the style's filename as the prefix for class names in `fonts.tss` and property names in `purgetss.fonts.js`.
+Use the `--filename` option to apply the style's filename as both the font class name and the prefix for icon class names in `fonts.tss` and property names in `purgetss.fonts.js`.
 
 ```bash title="./purgetss/fonts/"
 purgetss
@@ -639,7 +666,7 @@ exports.families = families;
 
 ## `shades` Command
 
-The `shades` command generates shades and tints for a given color and outputs the corresponding color palette in the `config.js` file. This functionality simplifies the process of creating a consistent color scheme for your app.
+The `shades` command generates shades and tints for a given color and outputs the corresponding color palette in the `config.cjs` file. This functionality simplifies the process of creating a consistent color scheme for your app.
 
 ```bash
 > purgetss shades [hexcode] [name]
@@ -656,7 +683,7 @@ The `shades` command generates shades and tints for a given color and outputs th
 ### Options
 
 - `-n, --name`: Specifies the name of the color.
-- `-q, --quotes`: Retains double quotes in the `config.js` file.
+- `-q, --quotes`: Retains double quotes in the `config.cjs` file.
 - `-r, --random`: Generates shades from a random color.
 - `-s, --single`: Generates a single color definition.
 - `-t, --tailwind`: Logs the generated shades with a `tailwind.config.js` compatible structure.
@@ -665,7 +692,7 @@ The `shades` command generates shades and tints for a given color and outputs th
 
 :::info
 
-More than 66% of all `tailwind.tss` classes are related to color properties, making a tool like `shades` a valuable addition to **Purge TSS** for extending color choices!
+More than 66% of all `tailwind.tss` classes are related to color properties, making a tool like `shades` a valuable addition to **PurgeTSS** for extending color choices!
 
 :::
 
@@ -677,12 +704,12 @@ Basic usage:
 # alias:
 > purgetss s 53606b Primary
 
-::Purge TSS:: "Primary" (#53606b) saved in config.js
+::PurgeTSS:: "Primary" (#53606b) saved in config.cjs
 ```
 
-The generated color shades will be added to your `config.js` file, which will subsequently generate the `tailwind.tss` file with the newly added colors.
+The generated color shades will be added to your `config.cjs` file, which will subsequently generate the `tailwind.tss` file with the newly added colors.
 
-```js title="./purgetss/config.js"
+```js title="./purgetss/config.cjs"
 module.exports = {
   // ...
   theme: {
@@ -708,7 +735,7 @@ module.exports = {
 }
 ```
 
-Use the `--log` option to output to the console instead of saving to the `config.js` file.
+Use the `--log` option to output to the console instead of saving to the `config.cjs` file.
 
 ```bash
 > purgetss shades 53606b Primary --log
@@ -716,7 +743,7 @@ Use the `--log` option to output to the console instead of saving to the `config
 # alias:
 > purgetss s 53606b Primary -l
 
-::Purge TSS:: "Primary" (#53606b)
+::PurgeTSS:: "Primary" (#53606b)
 {
   colors: {
     primary: {
@@ -744,7 +771,7 @@ Use the `--tailwind` option to output the generated shades to the console with a
 # alias:
 > purgetss s 000f3d -t
 
-::Purge TSS:: "Stratos" (#000f3d)
+::PurgeTSS:: "Stratos" (#000f3d)
 {
   colors: {
     stratos: {
@@ -768,7 +795,7 @@ To generate a random color value, use the `--random` option. Here, the `--log` o
 ```bash
 > purgetss shades -rl
 
-::Purge TSS:: "Harlequin" (#44ed20)
+::PurgeTSS:: "Harlequin" (#44ed20)
 {
   colors: {
     harlequin: {
@@ -793,7 +820,7 @@ To log a Titanium's `config.json` compatible structure to the console, use the `
 ```bash
 > purgetss shades '#65e92c' -j
 
-::Purge TSS:: "Lima" (#65e92c)
+::PurgeTSS:: "Lima" (#65e92c)
 {
   "global": {
     "colors": {
@@ -814,13 +841,13 @@ To log a Titanium's `config.json` compatible structure to the console, use the `
 ```
 
 :::info
-The `shades` command is the first one that writes to the `config.js` file. If you experience any issues, please report them so we can promptly address them!
+The `shades` command is the first one that writes to the `config.cjs` file. If you experience any issues, please report them so we can promptly address them!
 :::
 
 
 ## `color-module` Command
 
-This command creates a file named `purgetss.colors.js` in the `lib` folder, which includes all the colors defined in the `config.js` file.
+This command creates a file named `purgetss.colors.js` in the `lib` folder, which includes all the colors defined in the `config.cjs` file.
 
 ```bash
 > purgetss color-module
@@ -878,7 +905,7 @@ This feature proves useful if you wish to use these colors within your app's cod
 
 ## `build` Command
 
-The `build` command generates the `tailwind.tss` file based on the configuration in `config.js`. This command is useful if you've made changes to the `config.js` file and want to update the `tailwind.tss` file to reflect those changes.
+The `build` command generates the `tailwind.tss` file based on the configuration in `config.cjs`. This command is useful if you've made changes to the `config.cjs` file and want to update the `tailwind.tss` file to reflect those changes.
 
 ```bash
 > purgetss build
@@ -887,12 +914,12 @@ The `build` command generates the `tailwind.tss` file based on the configuration
 > purgetss b
 ```
 
-When `purgetss` runs, either manually or automatically (as explained in the `purgetss watch` section below), it checks for any changes made to the `config.js` file and regenerates the `tailwind.tss` when necessary.
+When `purgetss` runs, either manually or automatically (as explained in the `purgetss watch` section below), it checks for any changes made to the `config.cjs` file and regenerates the `tailwind.tss` when necessary.
 
 
 ## `watch` Command
 
-The `watch` command automatically runs Purge TSS every time the project is compiled. You won't need to manually execute the `build` command each time you make changes; Purge TSS will handle this for you.
+The `watch` command automatically runs PurgeTSS every time the project is compiled. You won't need to manually execute the `build` command each time you make changes; PurgeTSS will handle this for you.
 
 ```bash
 > purgetss watch
@@ -909,7 +936,7 @@ The command will install a task in the `alloy.jmk` file to enable this behavior:
 
 ```javascript
 task('pre:compile', function(event, logger) {
-  require('child_process').execSync('purgetss', logger.warn('::Purge TSS:: Auto-Purging ' + event.dir.project));
+  require('child_process').execSync('purgetss', logger.warn('::PurgeTSS:: Auto-Purging ' + event.dir.project));
 });
 ```
 
@@ -939,7 +966,7 @@ The `module` command installs the `purgetss.ui.js` module in the `lib` folder.
 > purgetss m
 ```
 
-**The Purge TSS module contains:**
+**The PurgeTSS module contains:**
 
 - **Animation**: Offers methods for `playing` or `applying` basic animations and transformations to Alloy objects.
 
@@ -952,7 +979,7 @@ The `module` command installs the `purgetss.ui.js` module in the `lib` folder.
 
 ## `update` Command
 
-The `update` command allows you to upgrade **Purge TSS** to the most recent version. Use it to get the latest features and bug fixes that have been released.
+The `update` command allows you to upgrade **PurgeTSS** to the most recent version. Use it to get the latest features and bug fixes that have been released.
 
 ```bash
 > purgetss update
@@ -961,7 +988,7 @@ The `update` command allows you to upgrade **Purge TSS** to the most recent vers
 > purgetss u
 ```
 
-We constantly update **Purge TSS** to add new features, include the latest versions of Tailwind, FontAwesome, etc., and fix bugs.
+We constantly update **PurgeTSS** to add new features, include the latest versions of Tailwind, FontAwesome, etc., and fix bugs.
 
 
 ## `sudo-update` Command

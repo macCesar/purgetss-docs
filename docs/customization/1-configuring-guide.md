@@ -5,31 +5,38 @@ slug: the-config-file
 
 # The Config File
 
-By default, **Purge TSS** will look for a `./purgetss/config.js` file where you can define customizations.
+:::info What's New in v7.1.0
 
-## Creating the `config.js` file
+**Configuration File Change**: The configuration file has been renamed from `config.js` to `config.cjs` for better CommonJS compatibility. The content structure remains exactly the same.
 
-:::info
-`config.js` is created automatically when you run `purgetss` for the first time inside your project.
+**Legacy Mode Removed**: Legacy mode has been completely removed from PurgeTSS v7.1.0. All legacy-related options have been eliminated for a cleaner, modern codebase.
+
 :::
 
-If you need to start with a fresh `config.js` file, you can delete the existing one and run:
+By default, **PurgeTSS** will look for a `./purgetss/config.cjs` file where you can define customizations.
+
+## Creating the `config.cjs` file
+
+:::info
+`config.cjs` is created automatically when you run `purgetss` for the first time inside your project.
+:::
+
+If you need to start with a fresh `config.cjs` file, you can delete the existing one and run:
 
 ```bash
 > purgetss init
 ```
 
-This will create a minimal `./purgetss/config.js` file:
+This will create a minimal `./purgetss/config.cjs` file:
 
-```javascript title="./purgetss/config.js"
+```javascript title="./purgetss/config.cjs"
 module.exports = {
   purge: {
     mode: 'all',
     method: 'sync', // How to execute the auto-purging task: sync or async
 
-    // These options are passed directly to Purge TSS
+    // These options are passed directly to PurgeTSS
     options: {
-      legacy: false, // Generates & purges tailwind.tss v5.x classes
       missing: true, // Reports missing classes
       widgets: false, // Purges widgets too
       safelist: [], // Array of classes to keep
@@ -48,7 +55,7 @@ Every section of the config file is optional, so you only need to specify what y
 The config file consists of two main sections: `purge` and `theme`.
 
 ### `purge` section
-The `purge` section controls how **Purge TSS** will remove unused classes or keep the ones you want.
+The `purge` section controls how **PurgeTSS** will remove unused classes or keep the ones you want.
 
 ```javascript title="The purge section"
 module.exports = {
@@ -56,9 +63,8 @@ module.exports = {
     mode: 'all',
     method: 'sync', // How to execute the auto-purging task: sync or async
 
-    // These options are passed through directly to Purge TSS
+    // These options are passed through directly to PurgeTSS
     options: {
-      legacy: false, // Generates & purges tailwind.tss v5.x classes
       missing: true, // Reports missing classes
       widgets: false, // Purges widgets too
       safelist: [], // Array of classes to keep
@@ -70,9 +76,9 @@ module.exports = {
 
 - **`mode.all`**
 
-  By default, **Purge TSS** will look everywhere inside the XML files, including comments, attributes, classes, IDs, and Ti Elements.
+  By default, **PurgeTSS** will look everywhere inside the XML files, including comments, attributes, classes, IDs, and Ti Elements.
 
-  **This mode is necessary if you want **Purge TSS** to parse any Ti Elements that you've styled in `config.js`**.
+  **This mode is necessary if you want **PurgeTSS** to parse any Ti Elements that you've styled in `config.cjs`**.
 
 - **`mode.method`**
 
@@ -84,16 +90,12 @@ module.exports = {
 
   Use `class` to search only in classes and ID attributes in XML files.
 
-- **`options.legacy`**
-
-  Set `legacy` to true to parse all your files as if you were using **Purge TSS** v5. However, you will not get any of the new auto-generated classes when using this setting.
-
 - **`options.missing`**
 
   Set `missing` to `true` if you want to get a list of any missing or misspelled classes at the end of the `app.tss` file.
 
   :::info
-  This is very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your views, especially if you have upgraded from **Purge TSS** v5 to v6.
+  This is very useful if you want to check if you forgot to add a class definition or if you forgot to remove non-existing classes from your views, especially if you have upgraded from **PurgeTSS** v5 to v6.
   :::
 
 - **`options.widgets`**
@@ -104,7 +106,7 @@ module.exports = {
 
   The `safelist` is a list of classes and Ti Elements that you want to keep regardless of the purge mode or whether or not they are included in the XML files.
 
-  If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.js` like this:
+  If you need to keep a large list of classes and elements, you can create a CommonJS module with an array of all the styles and require it in `config.cjs` like this:
 
   ```javascript title="External safelist"
   module.exports = {
@@ -142,7 +144,7 @@ module.exports = {
   ```
 
 - **`options.plugins`**
-  The `plugins` option lets you completely disable classes that **Purge TSS** would normally generate by default.
+  The `plugins` option lets you completely disable classes that **PurgeTSS** would normally generate by default.
 
   To disable specific classes, provide an array of properties (or plugins) to disable:
 
@@ -161,7 +163,7 @@ module.exports = {
 
 ### `theme` section
 
-The `theme` section in `config.js` is where you define and extend your project's color palette, type scale, font stacks, border radius values, and many more properties.
+The `theme` section in `config.cjs` is where you define and extend your project's color palette, type scale, font stacks, border radius values, and many more properties.
 
 ```javascript title="The theme section"
 module.exports = {
@@ -260,7 +262,7 @@ module.exports = {
 
 Customize the default color palette for your project.
 
-**Purge TSS** includes Tailwind's default color palette, but you can customize it by configuring your colors under the `colors` key in the `theme` section of your `config.js` file:
+**PurgeTSS** includes Tailwind's default color palette, but you can customize it by configuring your colors under the `colors` key in the `theme` section of your `config.cjs` file:
 
 ```javascript title="Customizing Colors"
 module.exports = {
@@ -330,7 +332,7 @@ The nested keys will be combined with the parent key to form class names like `b
 
 ### Overriding a default color
 
-If you want to override one of the default colors but preserve the rest, simply provide the new values in the `theme.extend.colors` section of your `config.js` file.
+If you want to override one of the default colors but preserve the rest, simply provide the new values in the `theme.extend.colors` section of your `config.cjs` file.
 
 For example, here we've replaced the default cool grays with a neutral gray palette:
 
@@ -358,7 +360,7 @@ module.exports = {
 ```
 
 ### Extending the default palette
-If you want to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.js` file.
+If you want to extend the default color palette, you can do so using the `theme.extend.colors` section of your `config.cjs` file.
 
 ```javascript title="Extending the default palette"
 module.exports = {
@@ -375,7 +377,7 @@ module.exports = {
 This will generate classes like `bg-regal-blue` in addition to all of Tailwind's default colors.
 
 :::info
-You can use the `shades` command to generate a range of shades for a given color, automatically adding them to your `config.js` file.
+You can use the `shades` command to generate a range of shades for a given color, automatically adding them to your `config.cjs` file.
 
 **For more info see the** [**shades command**](/docs/commands#shades-command).
 :::
@@ -405,7 +407,7 @@ By default, the spacing scale is inherited by the padding, margin, width, height
 ### Shared spacing
 The `spacing` section is shared by the `padding`, `margin`, `width`, and `height` properties.
 
-> **When you include the `spacing` section, Purge TSS will automatically generate all spacing-related properties and merge them with any other spacing-related properties present in the configuration file.**
+> **When you include the `spacing` section, PurgeTSS will automatically generate all spacing-related properties and merge them with any other spacing-related properties present in the configuration file.**
 
 ```javascript title="Shared spacing"
 module.exports = {
@@ -455,7 +457,7 @@ module.exports = {
 ```
 
 ### Overriding the default spacing scale
-If you want to override the default spacing scale, you can do so using the `theme.spacing` section of your `config.js` file:
+If you want to override the default spacing scale, you can do so using the `theme.spacing` section of your `config.cjs` file:
 
 ```javascript title="Overriding the default spacing scale"
 module.exports = {
@@ -473,7 +475,7 @@ module.exports = {
 This will disable the default spacing scale and generate classes like `p-sm` for padding, `m-md` for margin, `w-lg` for width, and `h-xl` for height instead.
 
 ### Extending the Default Spacing Scale
-If you want to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `config.js` file:
+If you want to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `config.cjs` file:
 
 ```javascript title="Extending the default spacing scale"
 module.exports = {
@@ -497,7 +499,7 @@ This will generate classes like `p-72`, `m-84`, and `h-96` in addition to all of
 - All color properties will inherit from the `theme.colors` property.
 - All spacing properties will inherit from the `theme.spacing` property.
 
-You can customize any of the following properties individually by adding them in the `theme` section of your `config.js` file, or by extending them in the `theme.extend` section.
+You can customize any of the following properties individually by adding them in the `theme` section of your `config.cjs` file, or by extending them in the `theme.extend` section.
 
 ### Color properties
 

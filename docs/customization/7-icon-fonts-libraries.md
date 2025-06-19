@@ -5,11 +5,11 @@ slug: icon-fonts-libraries
 
 # Icon Fonts Libraries
 
-:::info Official Icon Fonts for **Purge TSS**
+:::info Official Icon Fonts for **PurgeTSS**
 
-Previous versions of **Purge TSS** included several icon font libraries such as Bootstrap Icons, Boxicons, LineIcons, and Tabler Icons. **However, adding more icon fonts was getting out of control**.
+Previous versions of **PurgeTSS** included several icon font libraries such as Bootstrap Icons, Boxicons, LineIcons, and Tabler Icons. **However, adding more icon fonts was getting out of control**.
 
-**As a result, we have decided to leave the following fonts as the official icon fonts for Purge TSS:**
+**As a result, we have decided to leave the following fonts as the official icon fonts for PurgeTSS:**
 
 - [Font Awesome 6 Free](https://fontawesome.com)
 - [Framework 7](https://framework7.io/icons/)
@@ -81,7 +81,7 @@ The `build-fonts` command will generate a custom `./purgetss/styles/fonts.tss` f
 ```
 
 #### Renaming the Style Rule Name
-**Purge TSS** will use the font's file name as the style rule name. **You can change it by renaming the font file**.
+**PurgeTSS** will use the font's file name as the style rule name. **You can change it by renaming the font file**.
 
 ```bash title="./purgetss/fonts/"
 # Root of the project
@@ -133,7 +133,7 @@ exports.icons = icons;
 
 #### The `--prefix` Option
 
-**Purge TSS** automatically determines the group's prefix for each icon family and class name. However, you can use the `--prefix` option to apply the style's filename as the prefix for class names in `fonts.tss` and property names in `purgetss.fonts.js`.
+**PurgeTSS** automatically determines the group's prefix for each icon family and class name. However, you can use the `--prefix` option to apply the style's filename as the prefix for class names in `fonts.tss` and property names in `purgetss.fonts.js`.
 
 ```bash title="./purgetss/fonts/"
 purgetss

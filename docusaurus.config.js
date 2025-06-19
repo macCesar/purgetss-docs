@@ -7,7 +7,7 @@ import { themes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Purge TSS',
+  title: 'PurgeTSS',
   tagline: 'It’s fun making great design with ease',
   url: 'https://purgetss.com',
   baseUrl: '/',
@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Código Móvil', // Usually your GitHub org/user name.
-  projectName: 'Purge TSS Documentation', // Usually your repo name.
+  projectName: 'PurgeTSS Documentation', // Usually your repo name.
   staticDirectories: ['public', 'static'],
 
   plugins: [
@@ -73,9 +73,9 @@ const config = {
         maxHeadingLevel: 4,
       },
       navbar: {
-        title: 'Purge TSS',
+        title: 'PurgeTSS',
         logo: {
-          alt: 'Purge TSS Logo',
+          alt: 'PurgeTSS Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -165,8 +165,8 @@ const config = {
       // algolia: {
       //   appId: '4U672EC5Z0',
       //   apiKey: 'a514f779640de4726dab86a97fbeead9',
-      //   indexName: 'Purge TSS',
-      //   placeholder: 'Search in Purge TSS',
+      //   indexName: 'PurgeTSS',
+      //   placeholder: 'Search in PurgeTSS',
       //   contextualSearch: true,
       //   externalUrlRegex: 'external\\.com|domain\\.com',
       //   searchParameters: {},

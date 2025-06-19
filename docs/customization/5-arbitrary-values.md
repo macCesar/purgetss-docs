@@ -5,7 +5,7 @@ slug: arbitrary-values
 
 # Arbitrary Values
 
-Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.js` file. In these cases, you can use arbitrary values.
+Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.cjs` file. In these cases, you can use arbitrary values.
 
 :::info
 **To generate an arbitrary style, you can use *parenthesis notation* with almost any default utility classes.**
@@ -14,7 +14,7 @@ Unfortunately, you cannot use square bracket notation like in Tailwind, because 
 :::
 
 ## Color Properties
-You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in `xml` files or in the `config.js` file.
+You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in `xml` files or in the `config.cjs` file.
 
 ```xml title="Arbitrary values for color properties"
 <Alloy>
@@ -25,7 +25,7 @@ You can set arbitrary color values **to ALL available color properties**, using 
 ```
 
 ```css title="Generated classes"
-/* Purge TSS v6.2.27 */
+/* PurgeTSS v7.1.0 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -97,7 +97,7 @@ You can set an arbitrary value to any of the following color properties:
 - **track-tint-**(*hex-rgb-or-rgba-value*)
 
 ## Spacing Properties
-You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in `xml` files or in the `config.js` file.
+You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in `xml` files or in the `config.cjs` file.
 
 ```xml title="Arbitrary values for spacing properties"
 <Alloy>
@@ -108,7 +108,7 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 ```
 
 ```css title="Generated classes"
-/* Purge TSS v6.2.27 */
+/* PurgeTSS v7.1.0 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -288,7 +288,7 @@ You can use any supported units depending on the property you are generating. Yo
 ```
 
 ```css title="app.tss"
-/* Purge TSS v6.2.27 */
+/* PurgeTSS v7.1.0 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -371,7 +371,7 @@ Try this example on an iPad or tablet.
 ```
 
 ```css title="app.tss"
-// Purge TSS v6.2.27
+// PurgeTSS v7.1.0
 // Created by César Estrada
 // https://github.com/macCesar/purgeTSS
 
@@ -458,7 +458,7 @@ Try this example on an iPad or tablet.
 ```
 
 ```css title="app.tss"
-/* Purge TSS v6.2.27 */
+/* PurgeTSS v7.1.0 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 

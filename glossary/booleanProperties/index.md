@@ -1,6 +1,6 @@
 # Boolean Properties
 
-Boolean properties in Purge TSS are those that can only have two values: true or false. These properties are fundamental for controlling the behavior and appearance of elements in your application.
+Boolean properties in PurgeTSS are those that can only have two values: true or false. These properties are fundamental for controlling the behavior and appearance of elements in your application.
 
 This section contains over 200 boolean properties organized into several key categories:
 

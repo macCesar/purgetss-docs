@@ -1,6 +1,6 @@
 # Color Properties
 
-Color properties in Purge TSS allow you to customize the visual appearance of your application's elements. These properties accept various color formats including hex codes, RGB values, and predefined color names.
+Color properties in PurgeTSS allow you to customize the visual appearance of your application's elements. These properties accept various color formats including hex codes, RGB values, and predefined color names.
 
 This section includes color properties organized into these main categories:
 
