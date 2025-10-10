@@ -1,6 +1,6 @@
 ```css
 // Property: style
-// Component(s): NumberFormatOptions, Ti.Android.Notification, Ti.Android.R, Ti.UI.ActivityIndicator, Ti.UI.AlertDialog, Ti.UI.Button, RowActionType, Ti.UI.ListView, Ti.UI.ProgressBar, Ti.UI.SearchBar, Ti.UI.Switch, Ti.UI.TabGroup, Ti.UI.TabbedBar, Ti.UI.TableView, Ti.UI.iOS.FeedbackGenerator, Ti.UI.iOS.PreviewAction, Ti.UI.iOS.PreviewActionGroup
+// Component(s): NumberFormatOptions, Ti.Android.Notification, Ti.Android.R, Ti.UI.ActivityIndicator, Ti.UI.AlertDialog, Ti.UI.Button, RowActionType, Ti.UI.ListView, Ti.UI.ProgressBar, Ti.UI.SearchBar, Ti.UI.Switch, Ti.UI.TabGroup, Ti.UI.TabbedBar, Ti.UI.TableView, GlassEffectConfiguration, Ti.UI.iOS.ButtonConfiguration, Ti.UI.iOS.FeedbackGenerator, Ti.UI.iOS.PreviewAction, Ti.UI.iOS.PreviewActionGroup
 '.style-activity-indicator-big': { style: Ti.UI.ActivityIndicatorStyle.BIG }
 '.style-activity-indicator-dark': { style: Ti.UI.ActivityIndicatorStyle.DARK }
 '.style-activity-indicator-big-dark': { style: Ti.UI.ActivityIndicatorStyle.BIG_DARK }
@@ -25,6 +25,8 @@
 '.style-table-view-grouped[platform=ios]': { style: Ti.UI.iOS.TableViewStyle.GROUPED }
 '.style-table-view-plain[platform=ios]': { style: Ti.UI.iOS.TableViewStyle.PLAIN }
 '.style-table-view-inset-grouped[platform=ios]': { style: Ti.UI.iOS.TableViewStyle.INSET_GROUPED }
+'.style-glass-effect-regular[platform=ios]': { style: Ti.UI.iOS.GLASS_EFFECT_STYLE_REGULAR }
+'.style-glass-effect-clear[platform=ios]': { style: Ti.UI.iOS.GLASS_EFFECT_STYLE_CLEAR }
 '.style-feedback-generator-impact-light[platform=ios]': { style: Ti.UI.iOS.FEEDBACK_GENERATOR_IMPACT_STYLE_LIGHT }
 '.style-feedback-generator-impact-medium[platform=ios]': { style: Ti.UI.iOS.FEEDBACK_GENERATOR_IMPACT_STYLE_MEDIUM }
 '.style-feedback-generator-impact-heavy[platform=ios]': { style: Ti.UI.iOS.FEEDBACK_GENERATOR_IMPACT_STYLE_HEAVY }

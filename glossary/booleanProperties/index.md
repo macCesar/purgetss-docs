@@ -9,7 +9,7 @@ Properties like `accessibilityEnabled`, `accessibilityHidden`, and `accessibilit
 
 ## User Interface Controls
 - **Navigation**: `navBarHidden`, `tabBarHidden`, `showSearchBarInNavBar`, `homeButtonEnabled`
-- **Interaction**: `touchEnabled`, `scrollable`, `swipeable`, `bubbleParent`, `focusable`
+- **Interaction**: `touchEnabled`, `scrollable`, `swipeable`, `bubbleParent`, `focusable`, `interactive`
 - **Display**: `visible`, `animated`, `fullscreen`, `translucent`, `opaque`
 
 ## Media and Content

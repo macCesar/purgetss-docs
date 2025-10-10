@@ -176,8 +176,8 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 /* Default Font Awesome */
 '.fa-envelope': { text: '\uf0e0', title: '\uf0e0' }
 '.fa-phone-alt': { text: '\uf879', title: '\uf879' }
-'.far': { font: { fontFamily: 'FontAwesome6Free-Regular' } }
-'.fas': { font: { fontFamily: 'FontAwesome6Free-Solid' } }
+'.far': { font: { fontFamily: 'FontAwesome7Free-Regular' } }
+'.fas': { font: { fontFamily: 'FontAwesome7Free-Solid' } }
 ```
 
 ![iOS Screen - Example](images/sample-fixed.png)

@@ -36,6 +36,7 @@ Constant properties in PurgeTSS are predefined values or enumerations that deter
 - **Drawers**: `drawerLockMode`, `leftDrawerLockMode`, `rightDrawerLockMode`
 - **Layout**: `layout`, `gravity`, `position`, `extendEdges`, `aspectRatio`, `collisionMode`
 - **Buttons**: `systemButton`, `leftButtonMode`, `rightButtonMode`, `clearButtonMode`
+- **Tab Group**: `minimizeBehavior`
 
 ## Notifications and Alerts
 - **Settings**: `alertSetting`, `badgeSetting`, `soundSetting`, `criticalAlertSetting`, `providesAppNotificationSettings`

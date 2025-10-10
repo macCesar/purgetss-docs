@@ -9,7 +9,7 @@ Configurable properties in PurgeTSS are numeric or measurable attributes that al
 - **Scaling**: `scale`, `scaleX`, `scaleY`, `zoomScale`, `minZoomScale`, `maxZoomScale`
 
 ## Spacing and Padding
-- **Padding**: `padding`, `paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`
+- **Padding**: `padding`, `paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`, `imagePadding`, `titlePadding`
 - **Margins**: `horizontalMargin`, `verticalMargin`
 - **Indentation**: `indentionLevel`
 - **Headers**: `sectionHeaderTopPadding`

@@ -1,6 +1,6 @@
 ```css
 // Property: effect
-// Description: The effect you provide for the view.
+// Description: The blur effect to apply to the effect view.
 // Component(s): Ti.UI.iOS.BlurView
 '.effect-blur-style-extra-light[platform=ios]': { effect: Ti.UI.iOS.BLUR_EFFECT_STYLE_EXTRA_LIGHT }
 '.effect-blur-style-light[platform=ios]': { effect: Ti.UI.iOS.BLUR_EFFECT_STYLE_LIGHT }
