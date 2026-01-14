@@ -5,11 +5,11 @@ slug: the-config-file
 
 # The Config File
 
-:::info What's New in v7.1.0
+:::info What's New in v7.2.x
 
 **Configuration File Change**: The configuration file has been renamed from `config.js` to `config.cjs` for better CommonJS compatibility. The content structure remains exactly the same.
 
-**Legacy Mode Removed**: Legacy mode has been completely removed from PurgeTSS v7.1.0. All legacy-related options have been eliminated for a cleaner, modern codebase.
+**Legacy Mode Removed**: Legacy mode has been completely removed from PurgeTSS v7.2.x. All legacy-related options have been eliminated for a cleaner, modern codebase.
 
 :::
 

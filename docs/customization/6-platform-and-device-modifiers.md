@@ -28,7 +28,7 @@ For example, if you want to have different background colors and font sizes depe
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 

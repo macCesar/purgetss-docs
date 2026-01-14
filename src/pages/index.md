@@ -10,6 +10,14 @@
 
 </div>
 
+:::info
+**PurgeTSS** is a toolkit designed to enhance the development of mobile applications using the **[Titanium framework](https://titaniumsdk.com)**. It introduces several key features to streamline the app development process, making it simpler and more efficient for developers.
+
+It offers a range of tools such as customizable utility classes, support for icon fonts, a user-friendly Animation module, a straightforward grid system, and the added convenience of the `shades` command for crafting personalized colors.
+
+With **PurgeTSS**, creating visually appealing and dynamic mobile apps becomes more accessible and efficient.
+:::
+
 ## What's New in v7.2.x
 
 **FontAwesome 7 & Major Optimization**: **PurgeTSS v7.2** introduces full support for **FontAwesome 7**, including the new CSS custom properties format. This version also features a significant reduction in installation size and a complete internal restructuring for better performance and maintainability.
@@ -53,14 +61,6 @@ npm install -g purgetss@latest
 - **FontAwesome 7**: If you use FA7, PurgeTSS will automatically handle the new `--fa:` properties.
 - **VS Code Extension**: We now recommend using `KevinYouu.tailwind-raw-reorder-tw4` for better compatibility with modern Tailwind versions and XML reordering.
 - **Clean reinstall**: If you experience issues, try a clean reinstall: `npm uninstall -g purgetss && npm install -g purgetss`.
-
-:::info
-**PurgeTSS** is a toolkit designed to enhance the development of mobile applications using the **[Titanium framework](https://titaniumsdk.com)**. It introduces several key features to streamline the app development process, making it simpler and more efficient for developers.
-
-It offers a range of tools such as customizable utility classes, support for icon fonts, a user-friendly Animation module, a straightforward grid system, and the added convenience of the `shades` command for crafting personalized colors.
-
-With **PurgeTSS**, creating visually appealing and dynamic mobile apps becomes more accessible and efficient.
-:::
 
 ---
 

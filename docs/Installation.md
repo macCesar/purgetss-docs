@@ -11,9 +11,9 @@ slug: installation
 > [sudo] npm install -g purgetss
 ```
 
-:::caution Maximum Node.js Version
+:::caution Node.js 20+ Required
 
-PurgeTSS has been thoroughly tested and proven to be compatible with Node version 20.x.x.
+PurgeTSS has been thoroughly tested and proven to be compatible with Node 20.0.0 or higher.
 
 :::
 
@@ -132,7 +132,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 :::
 
 ```css title="app.tss after purging"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 

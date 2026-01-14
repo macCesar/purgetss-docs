@@ -19,13 +19,13 @@ You can set arbitrary color values **to ALL available color properties**, using 
 ```xml title="Arbitrary values for color properties"
 <Alloy>
   <Window class="from-(#4C61E4) to-(#804C61E4)">
-    <Label class="text-center w-(250) h-8 bg-(rgba(100,200,50)) text-(#4C61E4) text-(15) rounded-4" text="Green Label" />
+    <Label class="w-(250) bg-(rgba(100,200,50)) text-(#4C61E4) text-(15) rounded-4 h-8 text-center" text="Green Label" />
   </Window>
 </Alloy>
 ```
 
 ```css title="Generated classes"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -102,13 +102,13 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 ```xml title="Arbitrary values for spacing properties"
 <Alloy>
   <Window>
-    <Label class="text-center w-(10rem) h-(1.75rem) text-(15) rounded-(5) text-white bg-blue-800" text="My custom Label" />
+    <Label class="w-(10rem) h-(1.75rem) text-(15) rounded-(5) bg-blue-800 text-center text-white" text="My custom Label" />
   </Window>
 </Alloy>
 ```
 
 ```css title="Generated classes"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -268,17 +268,17 @@ You can use any supported units depending on the property you are generating. Yo
 <Alloy>
   <Window class="bg-(#53606b)">
     <View class="w-(2in) h-(3.5in) bg-(#4C61E4) rounded-(20)">
-      <View class="m-(50px) w-screen h-screen">
-        <View class="mt-0 ml-0 horizontal">
-          <View class="w-(3rem) h-(3rem) rounded-(1.5rem) bg-white opacity-(0.35)" />
-          <View class="-ml-(20) w-(3rem) h-(3rem) rounded-(1.5rem) bg-white opacity-(0.25)" />
-          <Label class="font-bold text-white ml-2.5">Mastercard</Label>
+      <View class="m-(50px) h-screen w-screen">
+        <View class="horizontal ml-0 mt-0">
+          <View class="w-(3rem) h-(3rem) rounded-(1.5rem) opacity-(0.35) bg-white" />
+          <View class="-ml-(20) w-(3rem) h-(3rem) rounded-(1.5rem) opacity-(0.25) bg-white" />
+          <Label class="ml-2.5 font-bold text-white">Mastercard</Label>
         </View>
       </View>
 
-      <View class="bottom-(0) bg-(#6D80FB) w-full h-16">
+      <View class="bottom-(0) bg-(#6D80FB) h-16 w-full">
         <View class="horizontal">
-          <Label class="text-2xl text-white fab fa-apple" />
+          <Label class="fab fa-apple text-2xl text-white" />
           <Label class="ml-2 text-2xl font-bold text-white" text="Pay"/>
         </View>
       </View>
@@ -288,7 +288,7 @@ You can use any supported units depending on the property you are generating. Yo
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
@@ -340,21 +340,21 @@ Try this example on an iPad or tablet.
 ```xml title="index.xml"
 <Alloy>
   <Window class="bg-white">
-    <View class="bg-(#1B6F3F) mt-0 ml-0 w-(2300px) h-(1600px)">
+    <View class="bg-(#1B6F3F) w-(2300px) h-(1600px) ml-0 mt-0">
       <View class="mt-(100px) h-(200px) left-(150px) horizontal">
         <Label class="fas fa-cloud text-(48px) text-white" />
-        <Label class="ml-(30px) text-white text-(48px) font-bold h-(200px)">ZULTYS</Label>
+        <Label class="ml-(30px) text-(48px) h-(200px) font-bold text-white">ZULTYS</Label>
       </View>
 
       <View class="vertical left-(150px) w-(1300px)">
-        <Label class="text-white font-bold text-(64px) mt-(275px)">Convert your business to remote work at a time that matters most</Label>
+        <Label class="text-(64px) mt-(275px) font-bold text-white">Convert your business to remote work at a time that matters most</Label>
         <Button class="mt-(75px) bg-(#fff) text-(#25A25B) h-(100px) w-(400px) rounded-(20px) left-(0) font-bold">Request Free Demo</Button>
       </View>
     </View>
 
     <View class="mt-(100px) mr-(150px) w-(1800px) h-(200px) bg-(#0B4825)">
-      <Label class="left-(50px) text-white font-normal text-(22px)">We can have your remote teams up and running in 24 hours</Label>
-      <Button class="bg-(#25A25B) text-white h-(100px) w-(350px) rounded-(20px) right-(50px)">Request Free Demo</Button>
+      <Label class="left-(50px) text-(22px) font-normal text-white">We can have your remote teams up and running in 24 hours</Label>
+      <Button class="bg-(#25A25B) h-(100px) w-(350px) rounded-(20px) right-(50px) text-white">Request Free Demo</Button>
     </View>
 
     <View class="mt-(450px) right-(250px) rounded-(60px)">
@@ -362,9 +362,9 @@ Try this example on an iPad or tablet.
     </View>
 
     <View class="left-(150px) top-(1650px) vertical w-(1300px)">
-      <Button class="left-(0) bg-(#83B758) text-white font-bold h-(60px) w-(250px) rounded-(20px)">Fast Setup</Button>
-      <Label class="left-(0) text-(#042F16) font-bold text-(48px)">24 hour activation</Label>
-      <Label class="left-(0) text-(#042F16) font-normal text-(22px)">We offer same day activation. We are here to transition your business communications to the Cloud and get you back in business</Label>
+      <Button class="left-(0) bg-(#83B758) h-(60px) w-(250px) rounded-(20px) font-bold text-white">Fast Setup</Button>
+      <Label class="left-(0) text-(#042F16) text-(48px) font-bold">24 hour activation</Label>
+      <Label class="left-(0) text-(#042F16) text-(22px) font-normal">We offer same day activation. We are here to transition your business communications to the Cloud and get you back in business</Label>
     </View>
   </Window>
 </Alloy>
@@ -440,17 +440,17 @@ Try this example on an iPad or tablet.
 ```xml title="index.xml"
 <Alloy>
   <Window class="bg-(#53606b)" backgroundImage="https://i.pinimg.com/originals/ab/70/a1/ab70a19f087cc9ba2b03e3bee71acc3e.jpg">
-    <View class="mt-0 w-full h-(150px) bg-(#53A500) horizontal">
-      <Label class="w-(4.5rem) font-bold text-(16px) h-(150px) text-(#12681E) text-center" text="Home" />
-      <Label class="w-(4.5rem) font-bold text-(16px) h-(150px) text-(#12681E) bg-(#6DB400) text-center" text="News" />
-      <Label class="w-(4.5rem) font-bold text-(16px) h-(150px) text-(#12681E) text-center" text="About" />
-      <Label class="w-(4.5rem) font-bold text-(16px) h-(150px) text-(#12681E) text-center" text="Contact" />
+    <View class="h-(150px) bg-(#53A500) horizontal mt-0 w-full">
+      <Label class="w-(4.5rem) text-(16px) h-(150px) text-(#12681E) text-center font-bold" text="Home" />
+      <Label class="w-(4.5rem) text-(16px) h-(150px) text-(#12681E) bg-(#6DB400) text-center font-bold" text="News" />
+      <Label class="w-(4.5rem) text-(16px) h-(150px) text-(#12681E) text-center font-bold" text="About" />
+      <Label class="w-(4.5rem) text-(16px) h-(150px) text-(#12681E) text-center font-bold" text="Contact" />
     </View>
 
-    <View class="bg-(rgba(255,255,0,0.75)) -right-(10px) top-(250px) bottom-(75px) h-screen w-(80%) border-(5) border-(#12681E)">
-      <View class="m-(1rem) h-screen w-screen vertical">
-        <Label class="text-(32px) font-bold text-(#12681E)" text="Superb idea: Building Green garden in your home" />
-        <TextArea class="bg-transparent mt-1 text-(14px) text-(#12681E)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident, est facere quos veniam repellat. Eum, perferendis quae! Tenetur necessitatibus, voluptatem error voluptate culpa minus est voluptates facere quis distinctio minima dignissimos iure in sequi ex amet officia rerum. Ut fugiat non vero nemo at quaerat assumenda ab officia reiciendis.</TextArea>
+    <View class="bg-(rgba(255,255,0,0.75)) -right-(10px) top-(250px) bottom-(75px) w-(80%) border-(5) border-(#12681E) h-screen">
+      <View class="m-(1rem) vertical h-screen w-screen">
+        <Label class="text-(32px) text-(#12681E) font-bold" text="Superb idea: Building Green garden in your home" />
+        <TextArea class="text-(14px) text-(#12681E) mt-1 bg-transparent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident, est facere quos veniam repellat. Eum, perferendis quae! Tenetur necessitatibus, voluptatem error voluptate culpa minus est voluptates facere quis distinctio minima dignissimos iure in sequi ex amet officia rerum. Ut fugiat non vero nemo at quaerat assumenda ab officia reiciendis.</TextArea>
       </View>
     </View>
   </Window>
@@ -458,7 +458,7 @@ Try this example on an iPad or tablet.
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.1.0 */
+/* PurgeTSS v7.2.7 */
 /* Created by César Estrada */
 /* https://github.com/macCesar/purgeTSS */
 
