@@ -12,7 +12,11 @@ const config = {
   url: 'https://purgetss.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/favicon.ico',
   organizationName: 'Código Móvil', // Usually your GitHub org/user name.
   projectName: 'PurgeTSS Documentation', // Usually your repo name.
@@ -57,6 +61,7 @@ const config = {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
+        indexBlog: false,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         // language: ["en", "zh"],
