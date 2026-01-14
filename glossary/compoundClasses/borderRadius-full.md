@@ -13,7 +13,9 @@
 '.rounded-full-10': { width: 40, height: 40, borderRadius: 20 }
 '.rounded-full-11': { width: 44, height: 44, borderRadius: 22 }
 '.rounded-full-12': { width: 48, height: 48, borderRadius: 24 }
+'.rounded-full-13': { width: 52, height: 52, borderRadius: 26 }
 '.rounded-full-14': { width: 56, height: 56, borderRadius: 28 }
+'.rounded-full-15': { width: 60, height: 60, borderRadius: 30 }
 '.rounded-full-16': { width: 64, height: 64, borderRadius: 32 }
 '.rounded-full-20': { width: 80, height: 80, borderRadius: 40 }
 '.rounded-full-24': { width: 96, height: 96, borderRadius: 48 }
@@ -29,6 +31,9 @@
 '.rounded-full-64': { width: 256, height: 256, borderRadius: 128 }
 '.rounded-full-72': { width: 288, height: 288, borderRadius: 144 }
 '.rounded-full-80': { width: 320, height: 320, borderRadius: 160 }
+'.rounded-full-84': { width: 672, height: 672, borderRadius: 336 }
+'.rounded-full-85': { width: 680, height: 680, borderRadius: 340 }
+'.rounded-full-86': { width: 688, height: 688, borderRadius: 344 }
 '.rounded-full-96': { width: 384, height: 384, borderRadius: 192 }
 '.rounded-full-none': { width: 0, height: 0, borderRadius: 0 }
 '.rounded-full-sm': { width: 4, height: 4, borderRadius: 2 }

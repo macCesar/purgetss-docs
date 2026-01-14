@@ -1,6 +1,6 @@
 ```css
 // Property: backgroundSelectedColor
-// Component(s): Ti.UI.View, Ti.Media.VideoPlayer, Ti.UI.Android.CardView, Ti.UI.Android.DrawerLayout, Ti.UI.Android.SearchView, Ti.UI.Button, Ti.UI.ButtonBar, Ti.UI.ImageView, Ti.UI.Label, Ti.UI.ListItem, Ti.UI.MaskedImage, Ti.UI.NavigationWindow, Ti.UI.OptionBar, Ti.UI.PickerRow, Ti.UI.ProgressBar, Ti.UI.ScrollView, Ti.UI.ScrollableView, Ti.UI.SearchBar, Ti.UI.Slider, Ti.UI.Switch, Ti.UI.Tab, Ti.UI.TabbedBar, Ti.UI.TableViewRow, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.WebView, Ti.UI.Window, Ti.UI.iOS.ButtonConfiguration
+// Component(s): Ti.UI.View, Ti.Media.VideoPlayer, Ti.UI.Android.CardView, Ti.UI.Android.DrawerLayout, Ti.UI.Android.SearchView, Ti.UI.Button, Ti.UI.ButtonBar, Ti.UI.ImageView, Ti.UI.Label, Ti.UI.ListItem, Ti.UI.MaskedImage, Ti.UI.NavigationWindow, Ti.UI.OptionBar, Ti.UI.PickerRow, Ti.UI.ProgressBar, Ti.UI.ScrollView, Ti.UI.ScrollableView, Ti.UI.SearchBar, Ti.UI.Slider, Ti.UI.Switch, Ti.UI.Tab, Ti.UI.TabbedBar, Ti.UI.TableViewRow, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.WebView, Ti.UI.Window, Ti.UI.iOS.BlurView, Ti.UI.iOS.ButtonConfiguration, Ti.UI.iOS.CoverFlowView, Ti.UI.iOS.LivePhotoView, Ti.UI.iOS.SplitWindow, Ti.UI.iOS.Stepper
 '.bg-selected-transparent': { backgroundSelectedColor: 'transparent' }
 '.bg-selected-black': { backgroundSelectedColor: '#000000' }
 '.bg-selected-white': { backgroundSelectedColor: '#ffffff' }
@@ -246,4 +246,22 @@
 '.bg-selected-rose-800': { backgroundSelectedColor: '#9f1239' }
 '.bg-selected-rose-900': { backgroundSelectedColor: '#881337' }
 '.bg-selected-rose-950': { backgroundSelectedColor: '#4c0519' }
+'.bg-selected-highlight': { backgroundSelectedColor: '#ffff00' }
+'.bg-selected-primary-dark': { backgroundSelectedColor: '#000030' }
+'.bg-selected-primary-solid': { backgroundSelectedColor: '#10284B' }
+'.bg-selected-primary-transparent': { backgroundSelectedColor: '#D9002359' }
+'.bg-selected-secondary-dark': { backgroundSelectedColor: '#000023' }
+'.bg-selected-secondary-solid': { backgroundSelectedColor: '#13294B' }
+'.bg-selected-secondary-transparent': { backgroundSelectedColor: '#D913294B' }
+'.bg-selected-robins-egg-blue-50': { backgroundSelectedColor: '#ecffff' }
+'.bg-selected-robins-egg-blue-100': { backgroundSelectedColor: '#cffcfe' }
+'.bg-selected-robins-egg-blue-200': { backgroundSelectedColor: '#a4f9fd' }
+'.bg-selected-robins-egg-blue-300': { backgroundSelectedColor: '#66f1fa' }
+'.bg-selected-robins-egg-blue-400': { backgroundSelectedColor: '#20dff0' }
+'.bg-selected-robins-egg-blue-500': { backgroundSelectedColor: '#04bbce' }
+'.bg-selected-robins-egg-blue-600': { backgroundSelectedColor: '#069bb4' }
+'.bg-selected-robins-egg-blue-700': { backgroundSelectedColor: '#0d7c91' }
+'.bg-selected-robins-egg-blue-800': { backgroundSelectedColor: '#146376' }
+'.bg-selected-robins-egg-blue-900': { backgroundSelectedColor: '#155264' }
+'.bg-selected-robins-egg-blue': { backgroundSelectedColor: '#04bbce' }
 ```

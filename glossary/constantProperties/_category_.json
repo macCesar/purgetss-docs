@@ -1,3 +1,7 @@
 {
-  "label": "Constant Properties"
+  "label": "Constant Properties",
+  "link": {
+    "type": "doc",
+    "id": "constantProperties/index"
+  }
 }

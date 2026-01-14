@@ -247,4 +247,22 @@
 '.paging-control-rose-800': { pagingControlColor: '#9f1239' }
 '.paging-control-rose-900': { pagingControlColor: '#881337' }
 '.paging-control-rose-950': { pagingControlColor: '#4c0519' }
+'.paging-control-highlight': { pagingControlColor: '#ffff00' }
+'.paging-control-primary-dark': { pagingControlColor: '#000030' }
+'.paging-control-primary-solid': { pagingControlColor: '#10284B' }
+'.paging-control-primary-transparent': { pagingControlColor: '#D9002359' }
+'.paging-control-secondary-dark': { pagingControlColor: '#000023' }
+'.paging-control-secondary-solid': { pagingControlColor: '#13294B' }
+'.paging-control-secondary-transparent': { pagingControlColor: '#D913294B' }
+'.paging-control-robins-egg-blue-50': { pagingControlColor: '#ecffff' }
+'.paging-control-robins-egg-blue-100': { pagingControlColor: '#cffcfe' }
+'.paging-control-robins-egg-blue-200': { pagingControlColor: '#a4f9fd' }
+'.paging-control-robins-egg-blue-300': { pagingControlColor: '#66f1fa' }
+'.paging-control-robins-egg-blue-400': { pagingControlColor: '#20dff0' }
+'.paging-control-robins-egg-blue-500': { pagingControlColor: '#04bbce' }
+'.paging-control-robins-egg-blue-600': { pagingControlColor: '#069bb4' }
+'.paging-control-robins-egg-blue-700': { pagingControlColor: '#0d7c91' }
+'.paging-control-robins-egg-blue-800': { pagingControlColor: '#146376' }
+'.paging-control-robins-egg-blue-900': { pagingControlColor: '#155264' }
+'.paging-control-robins-egg-blue': { pagingControlColor: '#04bbce' }
 ```

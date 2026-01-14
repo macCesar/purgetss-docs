@@ -247,4 +247,22 @@
 '.date-time-rose-800': { dateTimeColor: '#9f1239' }
 '.date-time-rose-900': { dateTimeColor: '#881337' }
 '.date-time-rose-950': { dateTimeColor: '#4c0519' }
+'.date-time-highlight': { dateTimeColor: '#ffff00' }
+'.date-time-primary-dark': { dateTimeColor: '#000030' }
+'.date-time-primary-solid': { dateTimeColor: '#10284B' }
+'.date-time-primary-transparent': { dateTimeColor: '#D9002359' }
+'.date-time-secondary-dark': { dateTimeColor: '#000023' }
+'.date-time-secondary-solid': { dateTimeColor: '#13294B' }
+'.date-time-secondary-transparent': { dateTimeColor: '#D913294B' }
+'.date-time-robins-egg-blue-50': { dateTimeColor: '#ecffff' }
+'.date-time-robins-egg-blue-100': { dateTimeColor: '#cffcfe' }
+'.date-time-robins-egg-blue-200': { dateTimeColor: '#a4f9fd' }
+'.date-time-robins-egg-blue-300': { dateTimeColor: '#66f1fa' }
+'.date-time-robins-egg-blue-400': { dateTimeColor: '#20dff0' }
+'.date-time-robins-egg-blue-500': { dateTimeColor: '#04bbce' }
+'.date-time-robins-egg-blue-600': { dateTimeColor: '#069bb4' }
+'.date-time-robins-egg-blue-700': { dateTimeColor: '#0d7c91' }
+'.date-time-robins-egg-blue-800': { dateTimeColor: '#146376' }
+'.date-time-robins-egg-blue-900': { dateTimeColor: '#155264' }
+'.date-time-robins-egg-blue': { dateTimeColor: '#04bbce' }
 ```

@@ -1,6 +1,11 @@
 ```css
 // Property(ies): minimumFontSize
 // Component(s): Ti.UI.label, Ti.UI.TextField
+'.minimum-text-13': { minimumFontSize: 52 }
+'.minimum-text-15': { minimumFontSize: 60 }
+'.minimum-text-84': { minimumFontSize: 336 }
+'.minimum-text-85': { minimumFontSize: 340 }
+'.minimum-text-86': { minimumFontSize: 344 }
 '.minimum-text-xs': { minimumFontSize: 12 }
 '.minimum-text-sm': { minimumFontSize: 14 }
 '.minimum-text-base': { minimumFontSize: 16 }
@@ -14,4 +19,5 @@
 '.minimum-text-7xl': { minimumFontSize: 72 }
 '.minimum-text-8xl': { minimumFontSize: 96 }
 '.minimum-text-9xl': { minimumFontSize: 128 }
+'.minimum-text-xxs': { minimumFontSize: 10 }
 ```

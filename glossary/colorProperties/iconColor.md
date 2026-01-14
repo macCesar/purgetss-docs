@@ -247,4 +247,22 @@
 '.icon-rose-800': { iconColor: '#9f1239' }
 '.icon-rose-900': { iconColor: '#881337' }
 '.icon-rose-950': { iconColor: '#4c0519' }
+'.icon-highlight': { iconColor: '#ffff00' }
+'.icon-primary-dark': { iconColor: '#000030' }
+'.icon-primary-solid': { iconColor: '#10284B' }
+'.icon-primary-transparent': { iconColor: '#D9002359' }
+'.icon-secondary-dark': { iconColor: '#000023' }
+'.icon-secondary-solid': { iconColor: '#13294B' }
+'.icon-secondary-transparent': { iconColor: '#D913294B' }
+'.icon-robins-egg-blue-50': { iconColor: '#ecffff' }
+'.icon-robins-egg-blue-100': { iconColor: '#cffcfe' }
+'.icon-robins-egg-blue-200': { iconColor: '#a4f9fd' }
+'.icon-robins-egg-blue-300': { iconColor: '#66f1fa' }
+'.icon-robins-egg-blue-400': { iconColor: '#20dff0' }
+'.icon-robins-egg-blue-500': { iconColor: '#04bbce' }
+'.icon-robins-egg-blue-600': { iconColor: '#069bb4' }
+'.icon-robins-egg-blue-700': { iconColor: '#0d7c91' }
+'.icon-robins-egg-blue-800': { iconColor: '#146376' }
+'.icon-robins-egg-blue-900': { iconColor: '#155264' }
+'.icon-robins-egg-blue': { iconColor: '#04bbce' }
 ```

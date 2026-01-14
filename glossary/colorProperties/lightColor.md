@@ -247,4 +247,22 @@
 '.light-rose-800': { lightColor: '#9f1239' }
 '.light-rose-900': { lightColor: '#881337' }
 '.light-rose-950': { lightColor: '#4c0519' }
+'.light-highlight': { lightColor: '#ffff00' }
+'.light-primary-dark': { lightColor: '#000030' }
+'.light-primary-solid': { lightColor: '#10284B' }
+'.light-primary-transparent': { lightColor: '#D9002359' }
+'.light-secondary-dark': { lightColor: '#000023' }
+'.light-secondary-solid': { lightColor: '#13294B' }
+'.light-secondary-transparent': { lightColor: '#D913294B' }
+'.light-robins-egg-blue-50': { lightColor: '#ecffff' }
+'.light-robins-egg-blue-100': { lightColor: '#cffcfe' }
+'.light-robins-egg-blue-200': { lightColor: '#a4f9fd' }
+'.light-robins-egg-blue-300': { lightColor: '#66f1fa' }
+'.light-robins-egg-blue-400': { lightColor: '#20dff0' }
+'.light-robins-egg-blue-500': { lightColor: '#04bbce' }
+'.light-robins-egg-blue-600': { lightColor: '#069bb4' }
+'.light-robins-egg-blue-700': { lightColor: '#0d7c91' }
+'.light-robins-egg-blue-800': { lightColor: '#146376' }
+'.light-robins-egg-blue-900': { lightColor: '#155264' }
+'.light-robins-egg-blue': { lightColor: '#04bbce' }
 ```

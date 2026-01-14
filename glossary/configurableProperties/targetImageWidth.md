@@ -15,7 +15,9 @@
 '.target-image-w-10': { targetImageWidth: 40 }
 '.target-image-w-11': { targetImageWidth: 44 }
 '.target-image-w-12': { targetImageWidth: 48 }
+'.target-image-w-13': { targetImageWidth: 52 }
 '.target-image-w-14': { targetImageWidth: 56 }
+'.target-image-w-15': { targetImageWidth: 60 }
 '.target-image-w-16': { targetImageWidth: 64 }
 '.target-image-w-20': { targetImageWidth: 80 }
 '.target-image-w-24': { targetImageWidth: 96 }
@@ -31,6 +33,9 @@
 '.target-image-w-64': { targetImageWidth: 256 }
 '.target-image-w-72': { targetImageWidth: 288 }
 '.target-image-w-80': { targetImageWidth: 320 }
+'.target-image-w-84': { targetImageWidth: 336 }
+'.target-image-w-85': { targetImageWidth: 340 }
+'.target-image-w-86': { targetImageWidth: 344 }
 '.target-image-w-96': { targetImageWidth: 384 }
 '.target-image-w-auto': { targetImageWidth: Ti.UI.SIZE }
 '.target-image-w-px': { targetImageWidth: '1px' }

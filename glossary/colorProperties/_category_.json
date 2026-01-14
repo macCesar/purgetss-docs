@@ -1,3 +1,7 @@
 {
-  "label": "Color Properties"
+  "label": "Color Properties",
+  "link": {
+    "type": "doc",
+    "id": "colorProperties/index"
+  }
 }

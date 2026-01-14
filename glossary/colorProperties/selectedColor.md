@@ -246,4 +246,22 @@
 '.selected-rose-800': { selectedColor: '#9f1239' }
 '.selected-rose-900': { selectedColor: '#881337' }
 '.selected-rose-950': { selectedColor: '#4c0519' }
+'.selected-highlight': { selectedColor: '#ffff00' }
+'.selected-primary-dark': { selectedColor: '#000030' }
+'.selected-primary-solid': { selectedColor: '#10284B' }
+'.selected-primary-transparent': { selectedColor: '#D9002359' }
+'.selected-secondary-dark': { selectedColor: '#000023' }
+'.selected-secondary-solid': { selectedColor: '#13294B' }
+'.selected-secondary-transparent': { selectedColor: '#D913294B' }
+'.selected-robins-egg-blue-50': { selectedColor: '#ecffff' }
+'.selected-robins-egg-blue-100': { selectedColor: '#cffcfe' }
+'.selected-robins-egg-blue-200': { selectedColor: '#a4f9fd' }
+'.selected-robins-egg-blue-300': { selectedColor: '#66f1fa' }
+'.selected-robins-egg-blue-400': { selectedColor: '#20dff0' }
+'.selected-robins-egg-blue-500': { selectedColor: '#04bbce' }
+'.selected-robins-egg-blue-600': { selectedColor: '#069bb4' }
+'.selected-robins-egg-blue-700': { selectedColor: '#0d7c91' }
+'.selected-robins-egg-blue-800': { selectedColor: '#146376' }
+'.selected-robins-egg-blue-900': { selectedColor: '#155264' }
+'.selected-robins-egg-blue': { selectedColor: '#04bbce' }
 ```

@@ -13,7 +13,9 @@
 '.m-10': { top: 40, right: 40, bottom: 40, left: 40 }
 '.m-11': { top: 44, right: 44, bottom: 44, left: 44 }
 '.m-12': { top: 48, right: 48, bottom: 48, left: 48 }
+'.m-13': { top: 52, right: 52, bottom: 52, left: 52 }
 '.m-14': { top: 56, right: 56, bottom: 56, left: 56 }
+'.m-15': { top: 60, right: 60, bottom: 60, left: 60 }
 '.m-16': { top: 64, right: 64, bottom: 64, left: 64 }
 '.m-20': { top: 80, right: 80, bottom: 80, left: 80 }
 '.m-24': { top: 96, right: 96, bottom: 96, left: 96 }
@@ -29,6 +31,9 @@
 '.m-64': { top: 256, right: 256, bottom: 256, left: 256 }
 '.m-72': { top: 288, right: 288, bottom: 288, left: 288 }
 '.m-80': { top: 320, right: 320, bottom: 320, left: 320 }
+'.m-84': { top: 336, right: 336, bottom: 336, left: 336 }
+'.m-85': { top: 340, right: 340, bottom: 340, left: 340 }
+'.m-86': { top: 344, right: 344, bottom: 344, left: 344 }
 '.m-96': { top: 384, right: 384, bottom: 384, left: 384 }
 '.m-auto': { top: null, right: null, bottom: null, left: null }
 '.m-px': { top: '1px', right: '1px', bottom: '1px', left: '1px' }
@@ -76,7 +81,9 @@
 '.my-10': { top: 40, bottom: 40 }
 '.my-11': { top: 44, bottom: 44 }
 '.my-12': { top: 48, bottom: 48 }
+'.my-13': { top: 52, bottom: 52 }
 '.my-14': { top: 56, bottom: 56 }
+'.my-15': { top: 60, bottom: 60 }
 '.my-16': { top: 64, bottom: 64 }
 '.my-20': { top: 80, bottom: 80 }
 '.my-24': { top: 96, bottom: 96 }
@@ -92,6 +99,9 @@
 '.my-64': { top: 256, bottom: 256 }
 '.my-72': { top: 288, bottom: 288 }
 '.my-80': { top: 320, bottom: 320 }
+'.my-84': { top: 336, bottom: 336 }
+'.my-85': { top: 340, bottom: 340 }
+'.my-86': { top: 344, bottom: 344 }
 '.my-96': { top: 384, bottom: 384 }
 '.my-auto': { top: null, bottom: null }
 '.my-px': { top: '1px', bottom: '1px' }
@@ -139,7 +149,9 @@
 '.mx-10': { right: 40, left: 40 }
 '.mx-11': { right: 44, left: 44 }
 '.mx-12': { right: 48, left: 48 }
+'.mx-13': { right: 52, left: 52 }
 '.mx-14': { right: 56, left: 56 }
+'.mx-15': { right: 60, left: 60 }
 '.mx-16': { right: 64, left: 64 }
 '.mx-20': { right: 80, left: 80 }
 '.mx-24': { right: 96, left: 96 }
@@ -155,6 +167,9 @@
 '.mx-64': { right: 256, left: 256 }
 '.mx-72': { right: 288, left: 288 }
 '.mx-80': { right: 320, left: 320 }
+'.mx-84': { right: 336, left: 336 }
+'.mx-85': { right: 340, left: 340 }
+'.mx-86': { right: 344, left: 344 }
 '.mx-96': { right: 384, left: 384 }
 '.mx-auto': { right: null, left: null }
 '.mx-px': { right: '1px', left: '1px' }
@@ -202,7 +217,9 @@
 '.mt-10': { top: 40 }
 '.mt-11': { top: 44 }
 '.mt-12': { top: 48 }
+'.mt-13': { top: 52 }
 '.mt-14': { top: 56 }
+'.mt-15': { top: 60 }
 '.mt-16': { top: 64 }
 '.mt-20': { top: 80 }
 '.mt-24': { top: 96 }
@@ -218,6 +235,9 @@
 '.mt-64': { top: 256 }
 '.mt-72': { top: 288 }
 '.mt-80': { top: 320 }
+'.mt-84': { top: 336 }
+'.mt-85': { top: 340 }
+'.mt-86': { top: 344 }
 '.mt-96': { top: 384 }
 '.mt-auto': { top: null }
 '.mt-px': { top: '1px' }
@@ -265,7 +285,9 @@
 '.mr-10': { right: 40 }
 '.mr-11': { right: 44 }
 '.mr-12': { right: 48 }
+'.mr-13': { right: 52 }
 '.mr-14': { right: 56 }
+'.mr-15': { right: 60 }
 '.mr-16': { right: 64 }
 '.mr-20': { right: 80 }
 '.mr-24': { right: 96 }
@@ -281,6 +303,9 @@
 '.mr-64': { right: 256 }
 '.mr-72': { right: 288 }
 '.mr-80': { right: 320 }
+'.mr-84': { right: 336 }
+'.mr-85': { right: 340 }
+'.mr-86': { right: 344 }
 '.mr-96': { right: 384 }
 '.mr-auto': { right: null }
 '.mr-px': { right: '1px' }
@@ -328,7 +353,9 @@
 '.mb-10': { bottom: 40 }
 '.mb-11': { bottom: 44 }
 '.mb-12': { bottom: 48 }
+'.mb-13': { bottom: 52 }
 '.mb-14': { bottom: 56 }
+'.mb-15': { bottom: 60 }
 '.mb-16': { bottom: 64 }
 '.mb-20': { bottom: 80 }
 '.mb-24': { bottom: 96 }
@@ -344,6 +371,9 @@
 '.mb-64': { bottom: 256 }
 '.mb-72': { bottom: 288 }
 '.mb-80': { bottom: 320 }
+'.mb-84': { bottom: 336 }
+'.mb-85': { bottom: 340 }
+'.mb-86': { bottom: 344 }
 '.mb-96': { bottom: 384 }
 '.mb-auto': { bottom: null }
 '.mb-px': { bottom: '1px' }
@@ -391,7 +421,9 @@
 '.ml-10': { left: 40 }
 '.ml-11': { left: 44 }
 '.ml-12': { left: 48 }
+'.ml-13': { left: 52 }
 '.ml-14': { left: 56 }
+'.ml-15': { left: 60 }
 '.ml-16': { left: 64 }
 '.ml-20': { left: 80 }
 '.ml-24': { left: 96 }
@@ -407,6 +439,9 @@
 '.ml-64': { left: 256 }
 '.ml-72': { left: 288 }
 '.ml-80': { left: 320 }
+'.ml-84': { left: 336 }
+'.ml-85': { left: 340 }
+'.ml-86': { left: 344 }
 '.ml-96': { left: 384 }
 '.ml-auto': { left: null }
 '.ml-px': { left: '1px' }
@@ -454,7 +489,9 @@
 '.-m-10': { top: -40, right: -40, bottom: -40, left: -40 }
 '.-m-11': { top: -44, right: -44, bottom: -44, left: -44 }
 '.-m-12': { top: -48, right: -48, bottom: -48, left: -48 }
+'.-m-13': { top: -52, right: -52, bottom: -52, left: -52 }
 '.-m-14': { top: -56, right: -56, bottom: -56, left: -56 }
+'.-m-15': { top: -60, right: -60, bottom: -60, left: -60 }
 '.-m-16': { top: -64, right: -64, bottom: -64, left: -64 }
 '.-m-20': { top: -80, right: -80, bottom: -80, left: -80 }
 '.-m-24': { top: -96, right: -96, bottom: -96, left: -96 }
@@ -470,6 +507,9 @@
 '.-m-64': { top: -256, right: -256, bottom: -256, left: -256 }
 '.-m-72': { top: -288, right: -288, bottom: -288, left: -288 }
 '.-m-80': { top: -320, right: -320, bottom: -320, left: -320 }
+'.-m-84': { top: -336, right: -336, bottom: -336, left: -336 }
+'.-m-85': { top: -340, right: -340, bottom: -340, left: -340 }
+'.-m-86': { top: -344, right: -344, bottom: -344, left: -344 }
 '.-m-96': { top: -384, right: -384, bottom: -384, left: -384 }
 '.-m-auto': { top: null, right: null, bottom: null, left: null }
 '.-m-px': { top: '-1px', right: '-1px', bottom: '-1px', left: '-1px' }
@@ -517,7 +557,9 @@
 '.-my-10': { top: -40, bottom: -40 }
 '.-my-11': { top: -44, bottom: -44 }
 '.-my-12': { top: -48, bottom: -48 }
+'.-my-13': { top: -52, bottom: -52 }
 '.-my-14': { top: -56, bottom: -56 }
+'.-my-15': { top: -60, bottom: -60 }
 '.-my-16': { top: -64, bottom: -64 }
 '.-my-20': { top: -80, bottom: -80 }
 '.-my-24': { top: -96, bottom: -96 }
@@ -533,6 +575,9 @@
 '.-my-64': { top: -256, bottom: -256 }
 '.-my-72': { top: -288, bottom: -288 }
 '.-my-80': { top: -320, bottom: -320 }
+'.-my-84': { top: -336, bottom: -336 }
+'.-my-85': { top: -340, bottom: -340 }
+'.-my-86': { top: -344, bottom: -344 }
 '.-my-96': { top: -384, bottom: -384 }
 '.-my-auto': { top: null, bottom: null }
 '.-my-px': { top: '-1px', bottom: '-1px' }
@@ -580,7 +625,9 @@
 '.-mx-10': { left: -40, right: -40 }
 '.-mx-11': { left: -44, right: -44 }
 '.-mx-12': { left: -48, right: -48 }
+'.-mx-13': { left: -52, right: -52 }
 '.-mx-14': { left: -56, right: -56 }
+'.-mx-15': { left: -60, right: -60 }
 '.-mx-16': { left: -64, right: -64 }
 '.-mx-20': { left: -80, right: -80 }
 '.-mx-24': { left: -96, right: -96 }
@@ -596,6 +643,9 @@
 '.-mx-64': { left: -256, right: -256 }
 '.-mx-72': { left: -288, right: -288 }
 '.-mx-80': { left: -320, right: -320 }
+'.-mx-84': { left: -336, right: -336 }
+'.-mx-85': { left: -340, right: -340 }
+'.-mx-86': { left: -344, right: -344 }
 '.-mx-96': { left: -384, right: -384 }
 '.-mx-auto': { left: null, right: null }
 '.-mx-px': { left: '-1px', right: '-1px' }
@@ -643,7 +693,9 @@
 '.-mt-10': { top: -40 }
 '.-mt-11': { top: -44 }
 '.-mt-12': { top: -48 }
+'.-mt-13': { top: -52 }
 '.-mt-14': { top: -56 }
+'.-mt-15': { top: -60 }
 '.-mt-16': { top: -64 }
 '.-mt-20': { top: -80 }
 '.-mt-24': { top: -96 }
@@ -659,6 +711,9 @@
 '.-mt-64': { top: -256 }
 '.-mt-72': { top: -288 }
 '.-mt-80': { top: -320 }
+'.-mt-84': { top: -336 }
+'.-mt-85': { top: -340 }
+'.-mt-86': { top: -344 }
 '.-mt-96': { top: -384 }
 '.-mt-auto': { top: null }
 '.-mt-px': { top: '-1px' }
@@ -706,7 +761,9 @@
 '.-mr-10': { right: -40 }
 '.-mr-11': { right: -44 }
 '.-mr-12': { right: -48 }
+'.-mr-13': { right: -52 }
 '.-mr-14': { right: -56 }
+'.-mr-15': { right: -60 }
 '.-mr-16': { right: -64 }
 '.-mr-20': { right: -80 }
 '.-mr-24': { right: -96 }
@@ -722,6 +779,9 @@
 '.-mr-64': { right: -256 }
 '.-mr-72': { right: -288 }
 '.-mr-80': { right: -320 }
+'.-mr-84': { right: -336 }
+'.-mr-85': { right: -340 }
+'.-mr-86': { right: -344 }
 '.-mr-96': { right: -384 }
 '.-mr-auto': { right: null }
 '.-mr-px': { right: '-1px' }
@@ -769,7 +829,9 @@
 '.-mb-10': { bottom: -40 }
 '.-mb-11': { bottom: -44 }
 '.-mb-12': { bottom: -48 }
+'.-mb-13': { bottom: -52 }
 '.-mb-14': { bottom: -56 }
+'.-mb-15': { bottom: -60 }
 '.-mb-16': { bottom: -64 }
 '.-mb-20': { bottom: -80 }
 '.-mb-24': { bottom: -96 }
@@ -785,6 +847,9 @@
 '.-mb-64': { bottom: -256 }
 '.-mb-72': { bottom: -288 }
 '.-mb-80': { bottom: -320 }
+'.-mb-84': { bottom: -336 }
+'.-mb-85': { bottom: -340 }
+'.-mb-86': { bottom: -344 }
 '.-mb-96': { bottom: -384 }
 '.-mb-auto': { bottom: null }
 '.-mb-px': { bottom: '-1px' }
@@ -832,7 +897,9 @@
 '.-ml-10': { left: -40 }
 '.-ml-11': { left: -44 }
 '.-ml-12': { left: -48 }
+'.-ml-13': { left: -52 }
 '.-ml-14': { left: -56 }
+'.-ml-15': { left: -60 }
 '.-ml-16': { left: -64 }
 '.-ml-20': { left: -80 }
 '.-ml-24': { left: -96 }
@@ -848,6 +915,9 @@
 '.-ml-64': { left: -256 }
 '.-ml-72': { left: -288 }
 '.-ml-80': { left: -320 }
+'.-ml-84': { left: -336 }
+'.-ml-85': { left: -340 }
+'.-ml-86': { left: -344 }
 '.-ml-96': { left: -384 }
 '.-ml-auto': { left: null }
 '.-ml-px': { left: '-1px' }
@@ -895,7 +965,9 @@
 '.-top-10': { top: -40 }
 '.-top-11': { top: -44 }
 '.-top-12': { top: -48 }
+'.-top-13': { top: -52 }
 '.-top-14': { top: -56 }
+'.-top-15': { top: -60 }
 '.-top-16': { top: -64 }
 '.-top-20': { top: -80 }
 '.-top-24': { top: -96 }
@@ -911,6 +983,9 @@
 '.-top-64': { top: -256 }
 '.-top-72': { top: -288 }
 '.-top-80': { top: -320 }
+'.-top-84': { top: -336 }
+'.-top-85': { top: -340 }
+'.-top-86': { top: -344 }
 '.-top-96': { top: -384 }
 '.-top-auto': { top: null }
 '.-top-px': { top: '-1px' }
@@ -958,7 +1033,9 @@
 '.-right-10': { right: -40 }
 '.-right-11': { right: -44 }
 '.-right-12': { right: -48 }
+'.-right-13': { right: -52 }
 '.-right-14': { right: -56 }
+'.-right-15': { right: -60 }
 '.-right-16': { right: -64 }
 '.-right-20': { right: -80 }
 '.-right-24': { right: -96 }
@@ -974,6 +1051,9 @@
 '.-right-64': { right: -256 }
 '.-right-72': { right: -288 }
 '.-right-80': { right: -320 }
+'.-right-84': { right: -336 }
+'.-right-85': { right: -340 }
+'.-right-86': { right: -344 }
 '.-right-96': { right: -384 }
 '.-right-auto': { right: null }
 '.-right-px': { right: '-1px' }
@@ -1021,7 +1101,9 @@
 '.-bottom-10': { bottom: -40 }
 '.-bottom-11': { bottom: -44 }
 '.-bottom-12': { bottom: -48 }
+'.-bottom-13': { bottom: -52 }
 '.-bottom-14': { bottom: -56 }
+'.-bottom-15': { bottom: -60 }
 '.-bottom-16': { bottom: -64 }
 '.-bottom-20': { bottom: -80 }
 '.-bottom-24': { bottom: -96 }
@@ -1037,6 +1119,9 @@
 '.-bottom-64': { bottom: -256 }
 '.-bottom-72': { bottom: -288 }
 '.-bottom-80': { bottom: -320 }
+'.-bottom-84': { bottom: -336 }
+'.-bottom-85': { bottom: -340 }
+'.-bottom-86': { bottom: -344 }
 '.-bottom-96': { bottom: -384 }
 '.-bottom-auto': { bottom: null }
 '.-bottom-px': { bottom: '-1px' }
@@ -1084,7 +1169,9 @@
 '.-left-10': { left: -40 }
 '.-left-11': { left: -44 }
 '.-left-12': { left: -48 }
+'.-left-13': { left: -52 }
 '.-left-14': { left: -56 }
+'.-left-15': { left: -60 }
 '.-left-16': { left: -64 }
 '.-left-20': { left: -80 }
 '.-left-24': { left: -96 }
@@ -1100,6 +1187,9 @@
 '.-left-64': { left: -256 }
 '.-left-72': { left: -288 }
 '.-left-80': { left: -320 }
+'.-left-84': { left: -336 }
+'.-left-85': { left: -340 }
+'.-left-86': { left: -344 }
 '.-left-96': { left: -384 }
 '.-left-auto': { left: null }
 '.-left-px': { left: '-1px' }

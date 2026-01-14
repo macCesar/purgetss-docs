@@ -15,7 +15,9 @@
 '.minimum-line-h-10': { minimumLineHeight: 40 }
 '.minimum-line-h-11': { minimumLineHeight: 44 }
 '.minimum-line-h-12': { minimumLineHeight: 48 }
+'.minimum-line-h-13': { minimumLineHeight: 52 }
 '.minimum-line-h-14': { minimumLineHeight: 56 }
+'.minimum-line-h-15': { minimumLineHeight: 60 }
 '.minimum-line-h-16': { minimumLineHeight: 64 }
 '.minimum-line-h-20': { minimumLineHeight: 80 }
 '.minimum-line-h-24': { minimumLineHeight: 96 }
@@ -31,6 +33,9 @@
 '.minimum-line-h-64': { minimumLineHeight: 256 }
 '.minimum-line-h-72': { minimumLineHeight: 288 }
 '.minimum-line-h-80': { minimumLineHeight: 320 }
+'.minimum-line-h-84': { minimumLineHeight: 336 }
+'.minimum-line-h-85': { minimumLineHeight: 340 }
+'.minimum-line-h-86': { minimumLineHeight: 344 }
 '.minimum-line-h-96': { minimumLineHeight: 384 }
 '.minimum-line-h-auto': { minimumLineHeight: Ti.UI.SIZE }
 '.minimum-line-h-px': { minimumLineHeight: '1px' }

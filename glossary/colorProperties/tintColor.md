@@ -246,4 +246,24 @@
 '.tint-color-rose-800': { tintColor: '#9f1239' }
 '.tint-color-rose-900': { tintColor: '#881337' }
 '.tint-color-rose-950': { tintColor: '#4c0519' }
+'.tint-color-highlight': { tintColor: '#ffff00' }
+'.tint-color-primary-dark': { tintColor: '#000030' }
+'.tint-color-primary-solid': { tintColor: '#10284B' }
+'.tint-color-primary-transparent': { tintColor: '#D9002359' }
+'.tint-color-secondary-dark': { tintColor: '#000023' }
+'.tint-color-secondary-solid': { tintColor: '#13294B' }
+'.tint-color-secondary-transparent': { tintColor: '#D913294B' }
+'.tint-color-robins-egg-blue-50': { tintColor: '#ecffff' }
+'.tint-color-robins-egg-blue-100': { tintColor: '#cffcfe' }
+'.tint-color-robins-egg-blue-200': { tintColor: '#a4f9fd' }
+'.tint-color-robins-egg-blue-300': { tintColor: '#66f1fa' }
+'.tint-color-robins-egg-blue-400': { tintColor: '#20dff0' }
+'.tint-color-robins-egg-blue-500': { tintColor: '#04bbce' }
+'.tint-color-robins-egg-blue-600': { tintColor: '#069bb4' }
+'.tint-color-robins-egg-blue-700': { tintColor: '#0d7c91' }
+'.tint-color-robins-egg-blue-800': { tintColor: '#146376' }
+'.tint-color-robins-egg-blue-900': { tintColor: '#155264' }
+'.tint-color-robins-egg-blue': { tintColor: '#04bbce' }
+'.tint-color-semantic': { tintColor: 'textColor' }
+'.tint-color-semantic-invertido': { tintColor: 'textColorInvertido' }
 ```

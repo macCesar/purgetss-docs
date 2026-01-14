@@ -15,7 +15,9 @@
 '.left-track-top-cap-10': { leftTrackTopCap: 40 }
 '.left-track-top-cap-11': { leftTrackTopCap: 44 }
 '.left-track-top-cap-12': { leftTrackTopCap: 48 }
+'.left-track-top-cap-13': { leftTrackTopCap: 52 }
 '.left-track-top-cap-14': { leftTrackTopCap: 56 }
+'.left-track-top-cap-15': { leftTrackTopCap: 60 }
 '.left-track-top-cap-16': { leftTrackTopCap: 64 }
 '.left-track-top-cap-20': { leftTrackTopCap: 80 }
 '.left-track-top-cap-24': { leftTrackTopCap: 96 }
@@ -31,6 +33,9 @@
 '.left-track-top-cap-64': { leftTrackTopCap: 256 }
 '.left-track-top-cap-72': { leftTrackTopCap: 288 }
 '.left-track-top-cap-80': { leftTrackTopCap: 320 }
+'.left-track-top-cap-84': { leftTrackTopCap: 336 }
+'.left-track-top-cap-85': { leftTrackTopCap: 340 }
+'.left-track-top-cap-86': { leftTrackTopCap: 344 }
 '.left-track-top-cap-96': { leftTrackTopCap: 384 }
 '.left-track-top-cap-px': { leftTrackTopCap: '1px' }
 '.left-track-top-cap-0.5': { leftTrackTopCap: 2 }

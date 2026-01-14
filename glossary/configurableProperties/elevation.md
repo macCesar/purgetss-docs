@@ -14,7 +14,9 @@
 '.elevation-10': { elevation: 40 }
 '.elevation-11': { elevation: 44 }
 '.elevation-12': { elevation: 48 }
+'.elevation-13': { elevation: 52 }
 '.elevation-14': { elevation: 56 }
+'.elevation-15': { elevation: 60 }
 '.elevation-16': { elevation: 64 }
 '.elevation-20': { elevation: 80 }
 '.elevation-24': { elevation: 96 }
@@ -30,6 +32,9 @@
 '.elevation-64': { elevation: 256 }
 '.elevation-72': { elevation: 288 }
 '.elevation-80': { elevation: 320 }
+'.elevation-84': { elevation: 336 }
+'.elevation-85': { elevation: 340 }
+'.elevation-86': { elevation: 344 }
 '.elevation-96': { elevation: 384 }
 '.elevation-px': { elevation: '1px' }
 '.elevation-0.5': { elevation: 2 }

@@ -14,7 +14,9 @@
 '.padding-left-10': { paddingLeft: 40 }
 '.padding-left-11': { paddingLeft: 44 }
 '.padding-left-12': { paddingLeft: 48 }
+'.padding-left-13': { paddingLeft: 52 }
 '.padding-left-14': { paddingLeft: 56 }
+'.padding-left-15': { paddingLeft: 60 }
 '.padding-left-16': { paddingLeft: 64 }
 '.padding-left-20': { paddingLeft: 80 }
 '.padding-left-24': { paddingLeft: 96 }
@@ -30,6 +32,9 @@
 '.padding-left-64': { paddingLeft: 256 }
 '.padding-left-72': { paddingLeft: 288 }
 '.padding-left-80': { paddingLeft: 320 }
+'.padding-left-84': { paddingLeft: 336 }
+'.padding-left-85': { paddingLeft: 340 }
+'.padding-left-86': { paddingLeft: 344 }
 '.padding-left-96': { paddingLeft: 384 }
 '.padding-left-px': { paddingLeft: '1px' }
 '.padding-left-0.5': { paddingLeft: 2 }

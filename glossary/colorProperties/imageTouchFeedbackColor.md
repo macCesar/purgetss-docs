@@ -247,4 +247,22 @@
 '.image-touch-feedback-rose-800': { imageTouchFeedbackColor: '#9f1239' }
 '.image-touch-feedback-rose-900': { imageTouchFeedbackColor: '#881337' }
 '.image-touch-feedback-rose-950': { imageTouchFeedbackColor: '#4c0519' }
+'.image-touch-feedback-highlight': { imageTouchFeedbackColor: '#ffff00' }
+'.image-touch-feedback-primary-dark': { imageTouchFeedbackColor: '#000030' }
+'.image-touch-feedback-primary-solid': { imageTouchFeedbackColor: '#10284B' }
+'.image-touch-feedback-primary-transparent': { imageTouchFeedbackColor: '#D9002359' }
+'.image-touch-feedback-secondary-dark': { imageTouchFeedbackColor: '#000023' }
+'.image-touch-feedback-secondary-solid': { imageTouchFeedbackColor: '#13294B' }
+'.image-touch-feedback-secondary-transparent': { imageTouchFeedbackColor: '#D913294B' }
+'.image-touch-feedback-robins-egg-blue-50': { imageTouchFeedbackColor: '#ecffff' }
+'.image-touch-feedback-robins-egg-blue-100': { imageTouchFeedbackColor: '#cffcfe' }
+'.image-touch-feedback-robins-egg-blue-200': { imageTouchFeedbackColor: '#a4f9fd' }
+'.image-touch-feedback-robins-egg-blue-300': { imageTouchFeedbackColor: '#66f1fa' }
+'.image-touch-feedback-robins-egg-blue-400': { imageTouchFeedbackColor: '#20dff0' }
+'.image-touch-feedback-robins-egg-blue-500': { imageTouchFeedbackColor: '#04bbce' }
+'.image-touch-feedback-robins-egg-blue-600': { imageTouchFeedbackColor: '#069bb4' }
+'.image-touch-feedback-robins-egg-blue-700': { imageTouchFeedbackColor: '#0d7c91' }
+'.image-touch-feedback-robins-egg-blue-800': { imageTouchFeedbackColor: '#146376' }
+'.image-touch-feedback-robins-egg-blue-900': { imageTouchFeedbackColor: '#155264' }
+'.image-touch-feedback-robins-egg-blue': { imageTouchFeedbackColor: '#04bbce' }
 ```

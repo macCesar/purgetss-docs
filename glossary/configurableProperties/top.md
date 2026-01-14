@@ -14,7 +14,9 @@
 '.top-10': { top: 40 }
 '.top-11': { top: 44 }
 '.top-12': { top: 48 }
+'.top-13': { top: 52 }
 '.top-14': { top: 56 }
+'.top-15': { top: 60 }
 '.top-16': { top: 64 }
 '.top-20': { top: 80 }
 '.top-24': { top: 96 }
@@ -30,6 +32,9 @@
 '.top-64': { top: 256 }
 '.top-72': { top: 288 }
 '.top-80': { top: 320 }
+'.top-84': { top: 336 }
+'.top-85': { top: 340 }
+'.top-86': { top: 344 }
 '.top-96': { top: 384 }
 '.top-auto': { top: null }
 '.top-px': { top: '1px' }

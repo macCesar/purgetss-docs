@@ -247,4 +247,22 @@
 '.results-separator-rose-800': { resultsSeparatorColor: '#9f1239' }
 '.results-separator-rose-900': { resultsSeparatorColor: '#881337' }
 '.results-separator-rose-950': { resultsSeparatorColor: '#4c0519' }
+'.results-separator-highlight': { resultsSeparatorColor: '#ffff00' }
+'.results-separator-primary-dark': { resultsSeparatorColor: '#000030' }
+'.results-separator-primary-solid': { resultsSeparatorColor: '#10284B' }
+'.results-separator-primary-transparent': { resultsSeparatorColor: '#D9002359' }
+'.results-separator-secondary-dark': { resultsSeparatorColor: '#000023' }
+'.results-separator-secondary-solid': { resultsSeparatorColor: '#13294B' }
+'.results-separator-secondary-transparent': { resultsSeparatorColor: '#D913294B' }
+'.results-separator-robins-egg-blue-50': { resultsSeparatorColor: '#ecffff' }
+'.results-separator-robins-egg-blue-100': { resultsSeparatorColor: '#cffcfe' }
+'.results-separator-robins-egg-blue-200': { resultsSeparatorColor: '#a4f9fd' }
+'.results-separator-robins-egg-blue-300': { resultsSeparatorColor: '#66f1fa' }
+'.results-separator-robins-egg-blue-400': { resultsSeparatorColor: '#20dff0' }
+'.results-separator-robins-egg-blue-500': { resultsSeparatorColor: '#04bbce' }
+'.results-separator-robins-egg-blue-600': { resultsSeparatorColor: '#069bb4' }
+'.results-separator-robins-egg-blue-700': { resultsSeparatorColor: '#0d7c91' }
+'.results-separator-robins-egg-blue-800': { resultsSeparatorColor: '#146376' }
+'.results-separator-robins-egg-blue-900': { resultsSeparatorColor: '#155264' }
+'.results-separator-robins-egg-blue': { resultsSeparatorColor: '#04bbce' }
 ```

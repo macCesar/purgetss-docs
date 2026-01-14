@@ -247,4 +247,22 @@
 '.badge-bg-rose-800': { badgeBackgroundColor: '#9f1239' }
 '.badge-bg-rose-900': { badgeBackgroundColor: '#881337' }
 '.badge-bg-rose-950': { badgeBackgroundColor: '#4c0519' }
+'.badge-bg-highlight': { badgeBackgroundColor: '#ffff00' }
+'.badge-bg-primary-dark': { badgeBackgroundColor: '#000030' }
+'.badge-bg-primary-solid': { badgeBackgroundColor: '#10284B' }
+'.badge-bg-primary-transparent': { badgeBackgroundColor: '#D9002359' }
+'.badge-bg-secondary-dark': { badgeBackgroundColor: '#000023' }
+'.badge-bg-secondary-solid': { badgeBackgroundColor: '#13294B' }
+'.badge-bg-secondary-transparent': { badgeBackgroundColor: '#D913294B' }
+'.badge-bg-robins-egg-blue-50': { badgeBackgroundColor: '#ecffff' }
+'.badge-bg-robins-egg-blue-100': { badgeBackgroundColor: '#cffcfe' }
+'.badge-bg-robins-egg-blue-200': { badgeBackgroundColor: '#a4f9fd' }
+'.badge-bg-robins-egg-blue-300': { badgeBackgroundColor: '#66f1fa' }
+'.badge-bg-robins-egg-blue-400': { badgeBackgroundColor: '#20dff0' }
+'.badge-bg-robins-egg-blue-500': { badgeBackgroundColor: '#04bbce' }
+'.badge-bg-robins-egg-blue-600': { badgeBackgroundColor: '#069bb4' }
+'.badge-bg-robins-egg-blue-700': { badgeBackgroundColor: '#0d7c91' }
+'.badge-bg-robins-egg-blue-800': { badgeBackgroundColor: '#146376' }
+'.badge-bg-robins-egg-blue-900': { badgeBackgroundColor: '#155264' }
+'.badge-bg-robins-egg-blue': { badgeBackgroundColor: '#04bbce' }
 ```

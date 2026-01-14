@@ -15,7 +15,9 @@
 '.left-w-10': { leftWidth: 40 }
 '.left-w-11': { leftWidth: 44 }
 '.left-w-12': { leftWidth: 48 }
+'.left-w-13': { leftWidth: 52 }
 '.left-w-14': { leftWidth: 56 }
+'.left-w-15': { leftWidth: 60 }
 '.left-w-16': { leftWidth: 64 }
 '.left-w-20': { leftWidth: 80 }
 '.left-w-24': { leftWidth: 96 }
@@ -31,6 +33,9 @@
 '.left-w-64': { leftWidth: 256 }
 '.left-w-72': { leftWidth: 288 }
 '.left-w-80': { leftWidth: 320 }
+'.left-w-84': { leftWidth: 336 }
+'.left-w-85': { leftWidth: 340 }
+'.left-w-86': { leftWidth: 344 }
 '.left-w-96': { leftWidth: 384 }
 '.left-w-auto': { leftWidth: Ti.UI.SIZE }
 '.left-w-px': { leftWidth: '1px' }

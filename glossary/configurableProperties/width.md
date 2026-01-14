@@ -14,7 +14,9 @@
 '.w-10': { width: 40 }
 '.w-11': { width: 44 }
 '.w-12': { width: 48 }
+'.w-13': { width: 52 }
 '.w-14': { width: 56 }
+'.w-15': { width: 60 }
 '.w-16': { width: 64 }
 '.w-20': { width: 80 }
 '.w-24': { width: 96 }
@@ -30,6 +32,9 @@
 '.w-64': { width: 256 }
 '.w-72': { width: 288 }
 '.w-80': { width: 320 }
+'.w-84': { width: 336 }
+'.w-85': { width: 340 }
+'.w-86': { width: 344 }
 '.w-96': { width: 384 }
 '.w-auto': { width: Ti.UI.SIZE }
 '.w-px': { width: '1px' }

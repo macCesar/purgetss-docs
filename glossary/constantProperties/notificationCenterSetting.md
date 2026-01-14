@@ -1,6 +1,6 @@
 ```css
 // Property: notificationCenterSetting
-// Description: The current notication-center settings.
+// Description: The current notification-center settings.
 // Component(s): GetUserNotificationSettings
 '.notification-center-setting-user-not-supported[platform=ios]': { notificationCenterSetting: Ti.App.iOS.USER_NOTIFICATION_SETTING_NOT_SUPPORTED }
 '.notification-center-setting-user-enabled[platform=ios]': { notificationCenterSetting: Ti.App.iOS.USER_NOTIFICATION_SETTING_ENABLED }

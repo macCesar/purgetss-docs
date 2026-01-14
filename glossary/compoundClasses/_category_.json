@@ -1,3 +1,7 @@
 {
-  "label": "Compound Properties"
+  "label": "Compound Properties",
+  "link": {
+    "type": "doc",
+    "id": "compoundClasses/index"
+  }
 }

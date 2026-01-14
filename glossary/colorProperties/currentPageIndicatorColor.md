@@ -247,4 +247,22 @@
 '.current-page-indicator-rose-800': { currentPageIndicatorColor: '#9f1239' }
 '.current-page-indicator-rose-900': { currentPageIndicatorColor: '#881337' }
 '.current-page-indicator-rose-950': { currentPageIndicatorColor: '#4c0519' }
+'.current-page-indicator-highlight': { currentPageIndicatorColor: '#ffff00' }
+'.current-page-indicator-primary-dark': { currentPageIndicatorColor: '#000030' }
+'.current-page-indicator-primary-solid': { currentPageIndicatorColor: '#10284B' }
+'.current-page-indicator-primary-transparent': { currentPageIndicatorColor: '#D9002359' }
+'.current-page-indicator-secondary-dark': { currentPageIndicatorColor: '#000023' }
+'.current-page-indicator-secondary-solid': { currentPageIndicatorColor: '#13294B' }
+'.current-page-indicator-secondary-transparent': { currentPageIndicatorColor: '#D913294B' }
+'.current-page-indicator-robins-egg-blue-50': { currentPageIndicatorColor: '#ecffff' }
+'.current-page-indicator-robins-egg-blue-100': { currentPageIndicatorColor: '#cffcfe' }
+'.current-page-indicator-robins-egg-blue-200': { currentPageIndicatorColor: '#a4f9fd' }
+'.current-page-indicator-robins-egg-blue-300': { currentPageIndicatorColor: '#66f1fa' }
+'.current-page-indicator-robins-egg-blue-400': { currentPageIndicatorColor: '#20dff0' }
+'.current-page-indicator-robins-egg-blue-500': { currentPageIndicatorColor: '#04bbce' }
+'.current-page-indicator-robins-egg-blue-600': { currentPageIndicatorColor: '#069bb4' }
+'.current-page-indicator-robins-egg-blue-700': { currentPageIndicatorColor: '#0d7c91' }
+'.current-page-indicator-robins-egg-blue-800': { currentPageIndicatorColor: '#146376' }
+'.current-page-indicator-robins-egg-blue-900': { currentPageIndicatorColor: '#155264' }
+'.current-page-indicator-robins-egg-blue': { currentPageIndicatorColor: '#04bbce' }
 ```

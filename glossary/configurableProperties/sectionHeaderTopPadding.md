@@ -15,7 +15,9 @@
 '.section-header-top-padding-10': { sectionHeaderTopPadding: 40 }
 '.section-header-top-padding-11': { sectionHeaderTopPadding: 44 }
 '.section-header-top-padding-12': { sectionHeaderTopPadding: 48 }
+'.section-header-top-padding-13': { sectionHeaderTopPadding: 52 }
 '.section-header-top-padding-14': { sectionHeaderTopPadding: 56 }
+'.section-header-top-padding-15': { sectionHeaderTopPadding: 60 }
 '.section-header-top-padding-16': { sectionHeaderTopPadding: 64 }
 '.section-header-top-padding-20': { sectionHeaderTopPadding: 80 }
 '.section-header-top-padding-24': { sectionHeaderTopPadding: 96 }
@@ -31,6 +33,9 @@
 '.section-header-top-padding-64': { sectionHeaderTopPadding: 256 }
 '.section-header-top-padding-72': { sectionHeaderTopPadding: 288 }
 '.section-header-top-padding-80': { sectionHeaderTopPadding: 320 }
+'.section-header-top-padding-84': { sectionHeaderTopPadding: 336 }
+'.section-header-top-padding-85': { sectionHeaderTopPadding: 340 }
+'.section-header-top-padding-86': { sectionHeaderTopPadding: 344 }
 '.section-header-top-padding-96': { sectionHeaderTopPadding: 384 }
 '.section-header-top-padding-px': { sectionHeaderTopPadding: '1px' }
 '.section-header-top-padding-0.5': { sectionHeaderTopPadding: 2 }

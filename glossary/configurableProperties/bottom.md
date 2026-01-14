@@ -14,7 +14,9 @@
 '.bottom-10': { bottom: 40 }
 '.bottom-11': { bottom: 44 }
 '.bottom-12': { bottom: 48 }
+'.bottom-13': { bottom: 52 }
 '.bottom-14': { bottom: 56 }
+'.bottom-15': { bottom: 60 }
 '.bottom-16': { bottom: 64 }
 '.bottom-20': { bottom: 80 }
 '.bottom-24': { bottom: 96 }
@@ -30,6 +32,9 @@
 '.bottom-64': { bottom: 256 }
 '.bottom-72': { bottom: 288 }
 '.bottom-80': { bottom: 320 }
+'.bottom-84': { bottom: 336 }
+'.bottom-85': { bottom: 340 }
+'.bottom-86': { bottom: 344 }
 '.bottom-96': { bottom: 384 }
 '.bottom-auto': { bottom: null }
 '.bottom-px': { bottom: '1px' }

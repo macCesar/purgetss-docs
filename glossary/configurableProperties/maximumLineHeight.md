@@ -15,7 +15,9 @@
 '.maximum-line-h-10': { maximumLineHeight: 40 }
 '.maximum-line-h-11': { maximumLineHeight: 44 }
 '.maximum-line-h-12': { maximumLineHeight: 48 }
+'.maximum-line-h-13': { maximumLineHeight: 52 }
 '.maximum-line-h-14': { maximumLineHeight: 56 }
+'.maximum-line-h-15': { maximumLineHeight: 60 }
 '.maximum-line-h-16': { maximumLineHeight: 64 }
 '.maximum-line-h-20': { maximumLineHeight: 80 }
 '.maximum-line-h-24': { maximumLineHeight: 96 }
@@ -31,6 +33,9 @@
 '.maximum-line-h-64': { maximumLineHeight: 256 }
 '.maximum-line-h-72': { maximumLineHeight: 288 }
 '.maximum-line-h-80': { maximumLineHeight: 320 }
+'.maximum-line-h-84': { maximumLineHeight: 336 }
+'.maximum-line-h-85': { maximumLineHeight: 340 }
+'.maximum-line-h-86': { maximumLineHeight: 344 }
 '.maximum-line-h-96': { maximumLineHeight: 384 }
 '.maximum-line-h-px': { maximumLineHeight: '1px' }
 '.maximum-line-h-0.5': { maximumLineHeight: 2 }

@@ -14,7 +14,9 @@
 '.shadow-radius-10': { shadowRadius: 40 }
 '.shadow-radius-11': { shadowRadius: 44 }
 '.shadow-radius-12': { shadowRadius: 48 }
+'.shadow-radius-13': { shadowRadius: 52 }
 '.shadow-radius-14': { shadowRadius: 56 }
+'.shadow-radius-15': { shadowRadius: 60 }
 '.shadow-radius-16': { shadowRadius: 64 }
 '.shadow-radius-20': { shadowRadius: 80 }
 '.shadow-radius-24': { shadowRadius: 96 }
@@ -30,6 +32,9 @@
 '.shadow-radius-64': { shadowRadius: 256 }
 '.shadow-radius-72': { shadowRadius: 288 }
 '.shadow-radius-80': { shadowRadius: 320 }
+'.shadow-radius-84': { shadowRadius: 336 }
+'.shadow-radius-85': { shadowRadius: 340 }
+'.shadow-radius-86': { shadowRadius: 344 }
 '.shadow-radius-96': { shadowRadius: 384 }
 '.shadow-radius-px': { shadowRadius: '1px' }
 '.shadow-radius-0.5': { shadowRadius: 2 }

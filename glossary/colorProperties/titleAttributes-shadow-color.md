@@ -246,4 +246,22 @@
 '.title-attributes-shadow-rose-800': { titleAttributes: { shadow: { color: '#9f1239' } } }
 '.title-attributes-shadow-rose-900': { titleAttributes: { shadow: { color: '#881337' } } }
 '.title-attributes-shadow-rose-950': { titleAttributes: { shadow: { color: '#4c0519' } } }
+'.title-attributes-shadow-highlight': { titleAttributes: { shadow: { color: '#ffff00' } } }
+'.title-attributes-shadow-primary-dark': { titleAttributes: { shadow: { color: '#000030' } } }
+'.title-attributes-shadow-primary-solid': { titleAttributes: { shadow: { color: '#10284B' } } }
+'.title-attributes-shadow-primary-transparent': { titleAttributes: { shadow: { color: '#D9002359' } } }
+'.title-attributes-shadow-secondary-dark': { titleAttributes: { shadow: { color: '#000023' } } }
+'.title-attributes-shadow-secondary-solid': { titleAttributes: { shadow: { color: '#13294B' } } }
+'.title-attributes-shadow-secondary-transparent': { titleAttributes: { shadow: { color: '#D913294B' } } }
+'.title-attributes-shadow-robins-egg-blue-50': { titleAttributes: { shadow: { color: '#ecffff' } } }
+'.title-attributes-shadow-robins-egg-blue-100': { titleAttributes: { shadow: { color: '#cffcfe' } } }
+'.title-attributes-shadow-robins-egg-blue-200': { titleAttributes: { shadow: { color: '#a4f9fd' } } }
+'.title-attributes-shadow-robins-egg-blue-300': { titleAttributes: { shadow: { color: '#66f1fa' } } }
+'.title-attributes-shadow-robins-egg-blue-400': { titleAttributes: { shadow: { color: '#20dff0' } } }
+'.title-attributes-shadow-robins-egg-blue-500': { titleAttributes: { shadow: { color: '#04bbce' } } }
+'.title-attributes-shadow-robins-egg-blue-600': { titleAttributes: { shadow: { color: '#069bb4' } } }
+'.title-attributes-shadow-robins-egg-blue-700': { titleAttributes: { shadow: { color: '#0d7c91' } } }
+'.title-attributes-shadow-robins-egg-blue-800': { titleAttributes: { shadow: { color: '#146376' } } }
+'.title-attributes-shadow-robins-egg-blue-900': { titleAttributes: { shadow: { color: '#155264' } } }
+'.title-attributes-shadow-robins-egg-blue': { titleAttributes: { shadow: { color: '#04bbce' } } }
 ```

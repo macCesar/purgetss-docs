@@ -15,7 +15,9 @@
 '.page-w-10': { pageWidth: 40 }
 '.page-w-11': { pageWidth: 44 }
 '.page-w-12': { pageWidth: 48 }
+'.page-w-13': { pageWidth: 52 }
 '.page-w-14': { pageWidth: 56 }
+'.page-w-15': { pageWidth: 60 }
 '.page-w-16': { pageWidth: 64 }
 '.page-w-20': { pageWidth: 80 }
 '.page-w-24': { pageWidth: 96 }
@@ -31,6 +33,9 @@
 '.page-w-64': { pageWidth: 256 }
 '.page-w-72': { pageWidth: 288 }
 '.page-w-80': { pageWidth: 320 }
+'.page-w-84': { pageWidth: 336 }
+'.page-w-85': { pageWidth: 340 }
+'.page-w-86': { pageWidth: 344 }
 '.page-w-96': { pageWidth: 384 }
 '.page-w-px': { pageWidth: '1px' }
 '.page-w-0.5': { pageWidth: 2 }

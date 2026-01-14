@@ -15,7 +15,9 @@
 '.indention-level-10': { indentionLevel: 40 }
 '.indention-level-11': { indentionLevel: 44 }
 '.indention-level-12': { indentionLevel: 48 }
+'.indention-level-13': { indentionLevel: 52 }
 '.indention-level-14': { indentionLevel: 56 }
+'.indention-level-15': { indentionLevel: 60 }
 '.indention-level-16': { indentionLevel: 64 }
 '.indention-level-20': { indentionLevel: 80 }
 '.indention-level-24': { indentionLevel: 96 }
@@ -31,6 +33,9 @@
 '.indention-level-64': { indentionLevel: 256 }
 '.indention-level-72': { indentionLevel: 288 }
 '.indention-level-80': { indentionLevel: 320 }
+'.indention-level-84': { indentionLevel: 336 }
+'.indention-level-85': { indentionLevel: 340 }
+'.indention-level-86': { indentionLevel: 344 }
 '.indention-level-96': { indentionLevel: 384 }
 '.indention-level-px': { indentionLevel: '1px' }
 '.indention-level-0.5': { indentionLevel: 2 }

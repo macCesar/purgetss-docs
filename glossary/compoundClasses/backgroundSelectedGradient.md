@@ -246,6 +246,24 @@
 '.bg-selected-from-rose-800': { backgroundSelectedGradient: { colors: [ '#009f1239', '#9f1239' ] } }
 '.bg-selected-from-rose-900': { backgroundSelectedGradient: { colors: [ '#00881337', '#881337' ] } }
 '.bg-selected-from-rose-950': { backgroundSelectedGradient: { colors: [ '#004c0519', '#4c0519' ] } }
+'.bg-selected-from-highlight': { backgroundSelectedGradient: { colors: [ '#00ffff00', '#ffff00' ] } }
+'.bg-selected-from-primary-dark': { backgroundSelectedGradient: { colors: [ '#00000030', '#000030' ] } }
+'.bg-selected-from-primary-solid': { backgroundSelectedGradient: { colors: [ '#0010284B', '#10284B' ] } }
+'.bg-selected-from-primary-transparent': { backgroundSelectedGradient: { colors: [ '#00002359', '#D9002359' ] } }
+'.bg-selected-from-secondary-dark': { backgroundSelectedGradient: { colors: [ '#00000023', '#000023' ] } }
+'.bg-selected-from-secondary-solid': { backgroundSelectedGradient: { colors: [ '#0013294B', '#13294B' ] } }
+'.bg-selected-from-secondary-transparent': { backgroundSelectedGradient: { colors: [ '#0013294B', '#D913294B' ] } }
+'.bg-selected-from-robins-egg-blue-50': { backgroundSelectedGradient: { colors: [ '#00ecffff', '#ecffff' ] } }
+'.bg-selected-from-robins-egg-blue-100': { backgroundSelectedGradient: { colors: [ '#00cffcfe', '#cffcfe' ] } }
+'.bg-selected-from-robins-egg-blue-200': { backgroundSelectedGradient: { colors: [ '#00a4f9fd', '#a4f9fd' ] } }
+'.bg-selected-from-robins-egg-blue-300': { backgroundSelectedGradient: { colors: [ '#0066f1fa', '#66f1fa' ] } }
+'.bg-selected-from-robins-egg-blue-400': { backgroundSelectedGradient: { colors: [ '#0020dff0', '#20dff0' ] } }
+'.bg-selected-from-robins-egg-blue-500': { backgroundSelectedGradient: { colors: [ '#0004bbce', '#04bbce' ] } }
+'.bg-selected-from-robins-egg-blue-600': { backgroundSelectedGradient: { colors: [ '#00069bb4', '#069bb4' ] } }
+'.bg-selected-from-robins-egg-blue-700': { backgroundSelectedGradient: { colors: [ '#000d7c91', '#0d7c91' ] } }
+'.bg-selected-from-robins-egg-blue-800': { backgroundSelectedGradient: { colors: [ '#00146376', '#146376' ] } }
+'.bg-selected-from-robins-egg-blue-900': { backgroundSelectedGradient: { colors: [ '#00155264', '#155264' ] } }
+'.bg-selected-from-robins-egg-blue': { backgroundSelectedGradient: { colors: [ '#0004bbce', '#04bbce' ] } }
 
 // Property(ies): backgroundSelectedGradient: colors - To Color - iOS Only
 // Component(s): Ti.UI.ListItem, Ti.UI.View
@@ -494,4 +512,22 @@
 '.bg-selected-to-rose-800': { backgroundSelectedGradient: { colors: [ '#9f1239' ] } }
 '.bg-selected-to-rose-900': { backgroundSelectedGradient: { colors: [ '#881337' ] } }
 '.bg-selected-to-rose-950': { backgroundSelectedGradient: { colors: [ '#4c0519' ] } }
+'.bg-selected-to-highlight': { backgroundSelectedGradient: { colors: [ '#ffff00' ] } }
+'.bg-selected-to-primary-dark': { backgroundSelectedGradient: { colors: [ '#000030' ] } }
+'.bg-selected-to-primary-solid': { backgroundSelectedGradient: { colors: [ '#10284B' ] } }
+'.bg-selected-to-primary-transparent': { backgroundSelectedGradient: { colors: [ '#D9002359' ] } }
+'.bg-selected-to-secondary-dark': { backgroundSelectedGradient: { colors: [ '#000023' ] } }
+'.bg-selected-to-secondary-solid': { backgroundSelectedGradient: { colors: [ '#13294B' ] } }
+'.bg-selected-to-secondary-transparent': { backgroundSelectedGradient: { colors: [ '#D913294B' ] } }
+'.bg-selected-to-robins-egg-blue-50': { backgroundSelectedGradient: { colors: [ '#ecffff' ] } }
+'.bg-selected-to-robins-egg-blue-100': { backgroundSelectedGradient: { colors: [ '#cffcfe' ] } }
+'.bg-selected-to-robins-egg-blue-200': { backgroundSelectedGradient: { colors: [ '#a4f9fd' ] } }
+'.bg-selected-to-robins-egg-blue-300': { backgroundSelectedGradient: { colors: [ '#66f1fa' ] } }
+'.bg-selected-to-robins-egg-blue-400': { backgroundSelectedGradient: { colors: [ '#20dff0' ] } }
+'.bg-selected-to-robins-egg-blue-500': { backgroundSelectedGradient: { colors: [ '#04bbce' ] } }
+'.bg-selected-to-robins-egg-blue-600': { backgroundSelectedGradient: { colors: [ '#069bb4' ] } }
+'.bg-selected-to-robins-egg-blue-700': { backgroundSelectedGradient: { colors: [ '#0d7c91' ] } }
+'.bg-selected-to-robins-egg-blue-800': { backgroundSelectedGradient: { colors: [ '#146376' ] } }
+'.bg-selected-to-robins-egg-blue-900': { backgroundSelectedGradient: { colors: [ '#155264' ] } }
+'.bg-selected-to-robins-egg-blue': { backgroundSelectedGradient: { colors: [ '#04bbce' ] } }
 ```

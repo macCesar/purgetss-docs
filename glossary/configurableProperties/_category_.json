@@ -1,3 +1,7 @@
 {
-  "label": "Configurable Properties"
+  "label": "Configurable Properties",
+  "link": {
+    "type": "doc",
+    "id": "configurableProperties/index"
+  }
 }

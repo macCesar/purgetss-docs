@@ -15,7 +15,9 @@
 '.paging-control-h-10': { pagingControlHeight: 40 }
 '.paging-control-h-11': { pagingControlHeight: 44 }
 '.paging-control-h-12': { pagingControlHeight: 48 }
+'.paging-control-h-13': { pagingControlHeight: 52 }
 '.paging-control-h-14': { pagingControlHeight: 56 }
+'.paging-control-h-15': { pagingControlHeight: 60 }
 '.paging-control-h-16': { pagingControlHeight: 64 }
 '.paging-control-h-20': { pagingControlHeight: 80 }
 '.paging-control-h-24': { pagingControlHeight: 96 }
@@ -31,6 +33,9 @@
 '.paging-control-h-64': { pagingControlHeight: 256 }
 '.paging-control-h-72': { pagingControlHeight: 288 }
 '.paging-control-h-80': { pagingControlHeight: 320 }
+'.paging-control-h-84': { pagingControlHeight: 336 }
+'.paging-control-h-85': { pagingControlHeight: 340 }
+'.paging-control-h-86': { pagingControlHeight: 344 }
 '.paging-control-h-96': { pagingControlHeight: 384 }
 '.paging-control-h-px': { pagingControlHeight: '1px' }
 '.paging-control-h-0.5': { pagingControlHeight: 2 }

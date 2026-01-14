@@ -1,3 +1,7 @@
 {
-  "label": "Boolean Properties"
+  "label": "Boolean Properties",
+  "link": {
+    "type": "doc",
+    "id": "booleanProperties/index"
+  }
 }

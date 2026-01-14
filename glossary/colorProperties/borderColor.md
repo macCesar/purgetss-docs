@@ -247,4 +247,23 @@
 '.border-rose-800': { borderColor: '#9f1239' }
 '.border-rose-900': { borderColor: '#881337' }
 '.border-rose-950': { borderColor: '#4c0519' }
+'.border-highlight': { borderColor: '#ffff00' }
+'.border-primary-dark': { borderColor: '#000030' }
+'.border-primary-solid': { borderColor: '#10284B' }
+'.border-primary-transparent': { borderColor: '#D9002359' }
+'.border-secondary-dark': { borderColor: '#000023' }
+'.border-secondary-solid': { borderColor: '#13294B' }
+'.border-secondary-transparent': { borderColor: '#D913294B' }
+'.border-robins-egg-blue-50': { borderColor: '#ecffff' }
+'.border-robins-egg-blue-100': { borderColor: '#cffcfe' }
+'.border-robins-egg-blue-200': { borderColor: '#a4f9fd' }
+'.border-robins-egg-blue-300': { borderColor: '#66f1fa' }
+'.border-robins-egg-blue-400': { borderColor: '#20dff0' }
+'.border-robins-egg-blue-500': { borderColor: '#04bbce' }
+'.border-robins-egg-blue-600': { borderColor: '#069bb4' }
+'.border-robins-egg-blue-700': { borderColor: '#0d7c91' }
+'.border-robins-egg-blue-800': { borderColor: '#146376' }
+'.border-robins-egg-blue-900': { borderColor: '#155264' }
+'.border-robins-egg-blue': { borderColor: '#04bbce' }
+'.border-semantic': { borderColor: 'borderColor' }
 ```
