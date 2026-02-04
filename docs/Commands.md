@@ -26,7 +26,7 @@ The following is a description of the various commands that can be used with **P
 - "create": Creates a new Alloy project with PurgeTSS already set up.
 
 ## Development Commands
-- "build": Generates the "tailwind.tss" file based on the configuration in "config.cjs".
+- "build": Generates the "utilities.tss" file based on the configuration in "config.cjs".
 - "watch": Runs "purgetss" automatically every time the project is compiled (defaults to "--on").
 
 ## Asset Commands
@@ -146,7 +146,7 @@ Here's a closer look at the recommended VSCode extensions and their roles:
 - **[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: To ensure consistent code quality, enforcing coding standards and identifying issues in real-time.
 - **[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Intelligent **PurgeTSS** class support.
 - **[Tailwind RAW Reorder](https://marketplace.visualstudio.com/items?itemName=KevinYouu.tailwind-raw-reorder-tw4)**: An opinionated class sorter that optimizes the arrangement of **PurgeTSS** classes for better readability and maintenance. It works on XML and JS files.
-- **[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)**: **PurgeTSS** class name completion based on definitions within your workspace ("purgetss/config.cjs"), for example, all available classes in the "fonts.tss" and "tailwind.tss" files.
+- **[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)**: **PurgeTSS** class name completion based on definitions within your workspace ("purgetss/config.cjs"), for example, all available classes in the "fonts.tss" and "utilities.tss" files.
 
 ### List of Commands Used
 
@@ -157,7 +157,7 @@ When you run "purgetss create "Name of the Project" [--dependencies --vendor=fa,
 - "cd app.workspace/"Name of the Project"" - changes to the newly created folder.
 - "alloy new" - converts it to an Alloy Project.
 - "purgetss w" - autoruns purgetss every time you compile your project.
-- "purgetss b" - builds a new "./purgetss/styles/tailwind.tss" file.
+- "purgetss b" - builds a new "./purgetss/styles/utilities.tss" file.
 - "[--vendor=fa,mi,ms,f7]" - sets the "--vendor" argument to copy the selected fonts into your project, including the CommonJS module into "./app/lib/" folder.
 - "[--dependencies]" - installs the following dependencies and configuration files:
   - "npm i -D tailwindcss && npx tailwindcss init" - installs Tailwind CSS.
@@ -692,7 +692,7 @@ The "shades" command generates shades and tints for a given color and outputs th
 
 :::info
 
-More than 66% of all "tailwind.tss" classes are related to color properties, making a tool like "shades" a valuable addition to **PurgeTSS** for extending color choices!
+More than 66% of all "utilities.tss" classes are related to color properties, making a tool like "shades" a valuable addition to **PurgeTSS** for extending color choices!
 
 :::
 
@@ -707,7 +707,7 @@ Basic usage:
 ::PurgeTSS:: "Primary" (#53606b) saved in config.cjs
 ```
 
-The generated color shades will be added to your "config.cjs" file, which will subsequently generate the "tailwind.tss" file with the newly added colors.
+The generated color shades will be added to your "config.cjs" file, which will subsequently generate the "utilities.tss" file with the newly added colors.
 
 ```js title="./purgetss/config.cjs"
 module.exports = {
@@ -908,7 +908,7 @@ This feature proves useful if you wish to use these colors within your app's cod
 
 ## "build" Command
 
-The "build" command generates the "tailwind.tss" file based on the configuration in "config.cjs". This command is useful if you've made changes to the "config.cjs" file and want to update the "tailwind.tss" file to reflect those changes.
+The "build" command generates the "utilities.tss" file based on the configuration in "config.cjs". This command is useful if you've made changes to the "config.cjs" file and want to update the "utilities.tss" file to reflect those changes.
 
 ```bash
 > purgetss build
@@ -917,7 +917,7 @@ The "build" command generates the "tailwind.tss" file based on the configuration
 > purgetss b
 ```
 
-When "purgetss" runs, either manually or automatically (as explained in the "purgetss watch" section below), it checks for any changes made to the "config.cjs" file and regenerates the "tailwind.tss" when necessary.
+When "purgetss" runs, either manually or automatically (as explained in the "purgetss watch" section below), it checks for any changes made to the "config.cjs" file and regenerates the "utilities.tss" when necessary.
 
 
 ## "watch" Command

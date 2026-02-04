@@ -42,7 +42,7 @@ purgetss
 └─ fonts
 └─ styles
    └─ definitions.css
-   └─ tailwind.tss
+   └─ utilities.tss
 └─ config.cjs
 ```
 
@@ -52,15 +52,15 @@ purgetss
 
 - **`styles` Folder**
 
-  The `styles` folder contains the `tailwind.tss` and `definitions.css` files:
+  The `styles` folder contains the `utilities.tss` and `definitions.css` files:
 
-  - **`tailwind.tss` File**
+  - **`utilities.tss` File**
 
     This file includes all Tailwind-like utility classes, including any custom classes defined in `config.cjs`.
 
   - **`definitions.css` File**
 
-    A special `css` file that incorporates ALL classes from `tailwind.tss`, `_app.tss`, any `.tss` remaining in your project, and `fonts.tss` files. This encompasses all classes from official icon font libraries, meant for use with the [**“IntelliSense for CSS class names in HTML”**](#vscode-extension) VS Code extension.
+    A special `css` file that incorporates ALL classes from `utilities.tss`, `_app.tss`, any `.tss` remaining in your project, and `fonts.tss` files. This encompasses all classes from official icon font libraries, meant for use with the [**“IntelliSense for CSS class names in HTML”**](#vscode-extension) VS Code extension.
 
 - **`fonts` Folder**
 
@@ -182,7 +182,7 @@ Every time `purgetss` runs, it will copy the content of `_app.tss` to `app.tss`.
 
 ![iOS Screen - Example](images/sample-fixed.png)
 
-**Find more examples in the [Tailwind TSS Sample App](https://github.com/macCesar/tailwind.tss-sample-app)**
+**Find more examples in the [Tailwind TSS Sample App](https://github.com/macCesar/utilities.tss-sample-app)**
 
 
 ## VSCode Extension

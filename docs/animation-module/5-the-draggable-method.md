@@ -87,7 +87,7 @@ To simplify things, we are restricting the types of animations that can be appli
 ## `draggingType` Property
 To control how `drag:` and `drop:` modifiers are applied, you can use either the `drag-animate` (default) or `drag-apply` class. The `drag-animate` class will animate the properties, while the `drag-apply` class will apply them immediately.
 
-```css title="tailwind.tss"
+```css title="utilities.tss"
 /* Component(s): For the Animation Component */
 /* Property(ies): draggingType */
 .drag-apply { draggingType: 'apply' }

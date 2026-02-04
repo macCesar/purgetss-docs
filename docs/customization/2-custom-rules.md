@@ -89,7 +89,7 @@ module.exports = {
 };
 ```
 
-```css title="Custom ‘./purgetss/styles/tailwind.tss’ file"
+```css title="Custom ‘./purgetss/styles/utilities.tss’ file"
 /* Property: TextField */
 /* Description: A single line text field. */
 'TextField': { top: 10, left: 20, right: 20, bottom: 0 }

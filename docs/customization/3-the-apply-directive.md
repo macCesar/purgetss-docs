@@ -43,7 +43,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 'Label': { color: '#374151', textColor: '#374151', font: { fontSize: 16, fontWeight: 'bold' } }
 
 /* Custom Classes */
@@ -68,7 +68,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontFamily: 'SairaCondensed-Regular', fontWeight: 'bold' } }
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7', textColor: '#dcfce7' }
@@ -89,7 +89,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.progress': { backgroundColor: '#e9ecef', borderRadius: 4, height: 16, layout: 'horizontal', font: { fontSize: 12 } }
 // ...
@@ -121,7 +121,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
@@ -169,7 +169,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn-corporate': { backgroundColor: '#53606b', borderColor: '#babfc4', color: '#dddfe1', textColor: '#dddfe1' }
@@ -204,7 +204,7 @@ theme: {
 // ...
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.btn': { borderRadius: 4, borderWidth: 2, top: 2, bottom: 2, width: Ti.UI.SIZE, height: Ti.UI.SIZE, font: { fontWeight: 'bold' } }
 '.btn[platform=ios]': { right: 16, left: 16, width: Ti.UI.FILL }
@@ -215,7 +215,7 @@ theme: {
 
 ## Platform-Specific Classes
 
-Several classes in `tailwind.tss` are platform-specific to prevent polluting objects with properties that are not specific to a particular platform.
+Several classes in `utilities.tss` are platform-specific to prevent polluting objects with properties that are not specific to a particular platform.
 
 :::caution IMPORTANT!
 
@@ -237,7 +237,7 @@ module.exports = {
 };
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Custom Classes */
 '.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, width: 128, height: 128 }
 ```
@@ -258,7 +258,7 @@ module.exports = {
 };
 ```
 
-```css title="./purgetss/styles/tailwind.tss"
+```css title="./purgetss/styles/utilities.tss"
 /* Omitting the platform variant in `config.cjs` will not generate the corresponding property. */
 /* Missing the property related to `clip-enabled`. */
 '.my-view': { backgroundColor: '#22c55e', width: 128, height: 128 }

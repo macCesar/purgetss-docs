@@ -63,4 +63,4 @@ This is the most basic `Animation` object, equipped with a set of **PurgeTSS** c
 <Animation id="myAnimation" module="purgetss.ui" class="a-set-of-purgetss-classes-and-modifiers" />
 ```
 
-**You can set any position, size, colors, transformation, and opacity classes from `tailwind.tss`.**
+**You can set any position, size, colors, transformation, and opacity classes from `utilities.tss`.**
