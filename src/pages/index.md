@@ -18,38 +18,35 @@ It includes utility classes, icon font support, an Animation module, a simple gr
 If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writing long TSS files.
 :::
 
-## What's New in v7.2.x
+## What's New in v7.3.x
 
-FontAwesome 7 support and major internal cleanup. PurgeTSS v7.2 adds full support for FontAwesome 7, including the new CSS custom properties format. It also reduces installation size and reorganizes the codebase for better performance and maintainability.
+**File rename and improved error handling.** PurgeTSS v7.3 renames `tailwind.tss` to `utilities.tss` to reflect the project's standalone identity, and adds XML syntax validation to catch errors early.
 
 ### Breaking changes
 
-- Node.js 20+ required (due to the `inquirer` v13 upgrade)
-- Removed deprecated commands:
-  - `copy-fonts` (use `icon-library` instead)
-  - `build-legacy` (legacy Tailwind build removed)
-- Complete legacy mode removal:
-  - All legacy-related code and conditional checks eliminated
-  - Legacy mode no longer supported anywhere in the codebase
+- **File rename**: Output file is now `utilities.tss` instead of `tailwind.tss`
+  - Generated file: `purgetss/styles/utilities.tss` (was `purgetss/styles/tailwind.tss`)
+  - Distribution file: `dist/utilities.tss` (was `dist/tailwind.tss`)
 
 ### Major improvements
 
-- FontAwesome 7 support: Works with the new `--fa:` custom properties while staying compatible with version 6.
-- Reduced installation size: About 45MB smaller by moving non-essential assets to dev dependencies.
-- Improved Unicode extraction: Better handling of short hex codes, ASCII symbols, and direct character mappings.
-- Optimized internal structure: Codebase split into focused modules for readability and speed.
-- Enhanced CLI experience: Commands grouped by purpose, with better error handling and smarter suggestions.
-
-### Command improvements
-
-- `build-fonts` simplified:
-  - Automatically detects and handles both FontAwesome 6 and 7 formats.
-  - The `-f` flag now controls both font class names and icon prefixes using filenames.
-- `tailwind init`: Removed redundant flags for a cleaner initialization process.
-- `shades` command: Better precision when generating custom color shades.
-- CLI categories: Commands grouped by purpose: Setup, Development, Assets, Utilities, and Maintenance.
+- **XML syntax validation**: Catches common Alloy XML malformations before processing
+  - Detects missing opening `<` brackets (e.g., `Label id=` instead of `<Label id=`)
+  - Shows detailed error messages with line numbers, context preview, and fix suggestions
+  - Saves debugging time by catching errors early in the build process
+- **Classic Titanium compatibility**: `deviceInfo()` function now works in both Alloy and Classic projects
+  - Removed dependency on `Alloy.isTablet`/`Alloy.isHandheld`
+  - Uses platform-based detection instead
 
 ### Migration guide
+
+If you have references to `tailwind.tss` in your project, update them to `utilities.tss`:
+
+```bash
+# Update any custom scripts or paths
+# From: purgetss/styles/tailwind.tss
+# To:   purgetss/styles/utilities.tss
+```
 
 For most users, upgrading is straightforward:
 ```bash
