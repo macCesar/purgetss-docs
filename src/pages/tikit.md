@@ -1,4 +1,4 @@
-# 👋 Welcome to TiKit UI Components!
+# Welcome to TiKit UI Components
 
 <div align="center">
 
@@ -8,22 +8,20 @@
 
 </div>
 
-Building beautiful, consistent UIs in **Titanium SDK** can sometimes feel like a chore. That's where TiKit comes in! It's a growing collection of handy UI components built with **Alloy** and **PurgeTSS** to make your life easier. Think of it as your toolkit for creating slick, modern mobile app interfaces without reinventing the wheel every time.
+Building consistent UIs in Titanium SDK can feel repetitive. TiKit is a small library of UI components built with Alloy and PurgeTSS to reduce that work. It gives you reusable building blocks for common UI patterns, so you can focus on the parts of your app that are unique.
 
-We designed TiKit to help you ship faster and focus on what makes your app unique, not wrestling with styling details.
+TiKit is meant to help you move faster without fighting styling details.
 
-### Why You'll Like TiKit:
+### Why TiKit
 
-  * **Ready-to-Go Components**: Grab Alerts, Avatars, Buttons, Cards, and Tabs right out of the box, with different looks and options.
-  * **Style Flexibly with PurgeTSS**: Uses PurgeTSS utility classes, so you can tweak styles easily without writing mountains of TSS.
-  * **Update Components on the Fly**: Change properties like text or images dynamically without rebuilding the whole component. Nifty!
-  * **Icons Included**: Easily use FontAwesome, Material Icons, and other popular icon fonts.
-  * **Consistent Look & Feel**: Components are designed to work well together, giving your app a polished vibe.
-  * **Make It Your Own**: Customize colors and styles to match your brand identity.
-  * **Light & Fast**: Built with performance in mind, so it won't weigh your app down.
-  * **Smart Defaults**: Each component comes with sensible default values, so you only need to provide what's unique to your use case.
-
-In short, TiKit helps you build great-looking Titanium apps faster. Less UI hassle, more building awesome features!
+- Ready-to-use components: Alerts, Avatars, Buttons, Cards, and Tabs with practical defaults.
+- PurgeTSS-first styling: Use utility classes instead of large TSS files.
+- Dynamic updates: Change text, images, and icons without recreating the component.
+- Icon support: Works with FontAwesome, Material Icons, and other icon fonts.
+- Consistent UI: Components are designed to look good together.
+- Easy to customize: Adjust colors and styles to match your brand.
+- Lightweight: Built to stay fast and avoid extra overhead.
+- Sensible defaults: You only pass what you need.
 
 <p align="center">
   <img src="../assets/images/tikit-poster.png" alt="TiKit Poster" />
@@ -31,14 +29,14 @@ In short, TiKit helps you build great-looking Titanium apps faster. Less UI hass
 
 ## Getting Started
 
-First, you'll need the TiKit CLI. Open your terminal and run:
+First, install the TiKit CLI:
 
 ```bash
 # Might need 'sudo' depending on your setup
 npm install -g tikit
 ```
 
-Make sure you also have **PurgeTSS** installed globally:
+Make sure you also have PurgeTSS installed globally:
 
 ```bash
 # Might need 'sudo' here too
@@ -47,39 +45,39 @@ npm install -g purgetss
 
 ## Setting Up Your Project
 
-1.  **Create a PurgeTSS Project**: If you haven't already, create a new Alloy project using PurgeTSS. *Make sure you've configured the `app.idprefix` and `app.theme` settings as [required by PurgeTSS](https://purgetss.com/docs/commands/#requirements).*
+1. Create a PurgeTSS project. If you haven't already, create a new Alloy project using PurgeTSS. Make sure you've configured the `app.idprefix` and `app.theme` settings as required by PurgeTSS:
 
-    ```bash
-    purgetss create myApp
-    # Follow the prompts
-    ```
+   ```bash
+   purgetss create myApp
+   # Follow the prompts
+   ```
 
-2.  **Install TiKit Components**: Navigate into your new project directory (`cd myApp`) and run the TiKit installer. It'll guide you through picking the components you want:
+2. Install TiKit components. Navigate into your new project directory (`cd myApp`) and run the TiKit installer. It will guide you through picking the components you want:
 
-    ```bash
-    tikit install
-    # ? Choose a component to install › - Use arrow-keys. Return to submit.
-    # ❯   all components
-    #     alerts
-    #     avatars
-    #     buttons
-    #     cards
-    ```
+   ```bash
+   tikit install
+   # ? Choose a component to install › - Use arrow-keys. Return to submit.
+   # ❯   all components
+   #     alerts
+   #     avatars
+   #     buttons
+   #     cards
+   ```
 
 ## Component Default Values
 
-TiKit components are designed to work right out of the box with sensible defaults. Here's a summary of what each primary component uses as defaults when not specified:
+TiKit components work out of the box with sensible defaults. Here's a summary of what each primary component uses when a property isn't specified:
 
-| Component   | Property  | Default Value                                                                  | Description                  |
-| ----------- | --------- | ------------------------------------------------------------------------------ | ---------------------------- |
-| **Alerts**  | `color`   | `"dark"`                                                                       | The alert's color scheme     |
-|             | `variant` | `"pop"` (with text) or `"solid"` (without text)                                | The alert's visual style     |
-| **Avatars** | `size`    | `"base"`                                                                       | The avatar's size            |
-|             | `variant` | `"chip"` (with name) or `"square"` (without name)                              | The avatar's shape and style |
-| **Buttons** | `size`    | `"base"`                                                                       | The button's size            |
-|             | `variant` | `"icon-left"` (with icon) or `"filled"` (without icon)                         | The button's visual style    |
-| **Cards**   | `color`   | `"dark"`                                                                       | The card's color scheme      |
-|             | `variant` | `"showcase"` (with image) or `"content"` (with subtitle) or `"code"` (default) | The card's layout style      |
+| Component | Property  | Default Value                                                                  | Description                  |
+| --------- | --------- | ------------------------------------------------------------------------------ | ---------------------------- |
+| Alerts    | `color`   | `"dark"`                                                                       | The alert's color scheme     |
+|           | `variant` | `"pop"` (with text) or `"solid"` (without text)                                | The alert's visual style     |
+| Avatars   | `size`    | `"base"`                                                                       | The avatar's size            |
+|           | `variant` | `"chip"` (with name) or `"square"` (without name)                              | The avatar's shape and style |
+| Buttons   | `size`    | `"base"`                                                                       | The button's size            |
+|           | `variant` | `"icon-left"` (with icon) or `"filled"` (without icon)                         | The button's visual style    |
+| Cards     | `color`   | `"dark"`                                                                       | The card's color scheme      |
+|           | `variant` | `"showcase"` (with image) or `"content"` (with subtitle) or `"code"` (default) | The card's layout style      |
 
 This means you can use components with minimal properties. For example:
 
@@ -103,27 +101,27 @@ This means you can use components with minimal properties. For example:
 <Card module="tikit.ui" title="Image Card" text="With an image" image="path/to/image.jpg" />
 ```
 
-These defaults make it faster to build interfaces by requiring fewer parameters for common use cases.
+These defaults reduce boilerplate for common use cases.
 
-## Available Components & How to Use Them
+## Available Components and How to Use Them
 
-Let's dive into what TiKit offers!
+Below is an overview of each component.
 
 -----
 
 ## Alerts
 
-> **Common Properties:** `variant`, `color`, `classes`, `title`, `text`
+> Common properties: `variant`, `color`, `classes`, `title`, `text`
 
-Need to show a short, important message without interrupting the user? Alerts are perfect for that.
+Alerts are for short, important messages that don't block the user.
 
-**TiKit Alert Variants:**
+TiKit Alert variants:
 
-  * `callout`: Simple message with title and text.
-  * `pop`: Includes an icon alongside the title and text.
-  * `solid`: A full-width banner style, usually with just a title and icon.
+- `callout`: Simple message with title and text.
+- `pop`: Includes an icon alongside the title and text.
+- `solid`: A full-width banner style, usually with just a title and icon.
 
-**Colors:** Each variant comes in `success`, `danger`, `warning`, `info`, `dark`, and `light`. You can also define `primary` and `secondary` custom colors using PurgeTSS:
+Colors: Each variant comes in `success`, `danger`, `warning`, `info`, `dark`, and `light`. You can also define `primary` and `secondary` custom colors using PurgeTSS:
 
 ```bash
 # Define your brand colors
@@ -131,13 +129,11 @@ purgetss shades '#yourHexCode1' primary
 purgetss shades '#yourHexCode2' secondary
 ```
 
-**Extra Controls:**
+Extra controls:
 
-  * `delay` (milliseconds): Wait before showing the alert.
-  * `duration` (milliseconds): Control the animation speed.
-  * `dismissible` (boolean): Set to `true` to let users tap/click the alert to close it.
-
-<!-- end list -->
+- `delay` (milliseconds): Wait before showing the alert.
+- `duration` (milliseconds): Control the animation speed.
+- `dismissible` (boolean): Set to `true` to let users tap/click the alert to close it.
 
 ```xml
 <Alert module="tikit.ui" variant="pop" color="info" delay="500" dismissible="true" title="Just FYI" text="You can tap this alert to close it." />
@@ -145,7 +141,7 @@ purgetss shades '#yourHexCode2' secondary
 
 ### `callout`
 
-> **Properties:** `title`, `text`
+> Properties: `title`, `text`
 
 A basic alert for straightforward messages.
 
@@ -159,7 +155,7 @@ A basic alert for straightforward messages.
 
 ### `pop`
 
-> **Properties:** `title`, `text`, `icon`
+> Properties: `title`, `text`, `icon`
 
 Adds a visual cue with an icon. You can customize the icon and its size using PurgeTSS classes in the `icon` property.
 
@@ -173,9 +169,9 @@ Adds a visual cue with an icon. You can customize the icon and its size using Pu
 
 ### `solid`
 
-> **Properties:** `title`, `icon`
+> Properties: `title`, `icon`
 
-A bold, full-width banner. Great for prominent notifications. Customize the icon just like the `pop` variant.
+A full-width banner. Customize the icon just like the `pop` variant.
 
 ```xml title="Solid Variant with Custom Icon"
 <Alert module="tikit.ui" variant="solid" color="warning" title="Maintenance Soon" icon="mi mi-warning text-2xl" />
@@ -189,20 +185,20 @@ A bold, full-width banner. Great for prominent notifications. Customize the icon
 
 ## Avatars
 
-> **Common Properties:** `variant`, `size`, `classes`, `image`
+> Common properties: `variant`, `size`, `classes`, `image`
 
-Great for representing users or objects visually.
+Avatars represent users or objects visually.
 
-**TiKit Avatar Variants:**
+TiKit Avatar variants:
 
-  * `chip`: Image with a name label next to it.
-  * `circular`: Standard round avatar.
-  * `landscape`: Rectangular, wider than tall.
-  * `portrait`: Rectangular, taller than wide.
-  * `square`: Simple square avatar.
-  * `stacked`: Designed to overlap slightly in a horizontal group.
+- `chip`: Image with a name label next to it.
+- `circular`: Standard round avatar.
+- `landscape`: Rectangular, wider than tall.
+- `portrait`: Rectangular, taller than wide.
+- `square`: Simple square avatar.
+- `stacked`: Designed to overlap slightly in a horizontal group.
 
-**Sizes:** Available in `xs`, `sm`, `base`, `lg`, `xl`, and `2xl`.
+Sizes: `xs`, `sm`, `base`, `lg`, `xl`, and `2xl`.
 
 ```xml title="Basic Avatar Example"
 <Avatar module="tikit.ui" variant="circular" size="lg" image="path/to/your/image.jpg" />
@@ -210,7 +206,7 @@ Great for representing users or objects visually.
 
 ### `chip`
 
-> **Properties:** `name`, `image`
+> Properties: `name`, `image`
 
 Shows an image and a name. Good for lists or mentions. Default background/text is gray, but you can change it with `classes`.
 
@@ -222,11 +218,11 @@ Shows an image and a name. Good for lists or mentions. Default background/text i
   <img src="../assets/images/avatars/chip.png" width="375" alt="Avatars chip variant" />
 </p>
 
-### `circular` & `square`
+### `circular` and `square`
 
-> **Properties:** `name` (optional, for accessibility), `image`, `border` (boolean)
+> Properties: `name` (optional, for accessibility), `image`, `border` (boolean)
 
-Classic avatar shapes. Set `border="true"` for a default white border. Customize the border color using `classes` (e.g., `border-blue-500`).
+Classic avatar shapes. Set `border="true"` for a default white border. Customize the border color using `classes` (for example, `border-blue-500`).
 
 ```xml title="Circular Avatar with Custom Border"
 <Avatar module="tikit.ui" variant="circular" size="base" border="true" image="https://randomuser.me/api/portraits/men/86.jpg" classes="border-gray-300" />
@@ -239,11 +235,11 @@ Classic avatar shapes. Set `border="true"` for a default white border. Customize
   <img src="../assets/images/avatars/square.png" width="375" alt="Avatars square variant" />
 </p>
 
-### `portrait` & `landscape`
+### `portrait` and `landscape`
 
-> **Properties:** `name` (optional), `image`
+> Properties: `name` (optional), `image`
 
-Rectangular avatars. They have a default gray border (`border-gray-500`) which you can override using `classes`.
+Rectangular avatars with a default gray border (`border-gray-500`). Override it using `classes`.
 
 ```xml title="Portrait Avatar with Custom Border"
 <Avatar module="tikit.ui" variant="portrait" size="base" image="https://randomuser.me/api/portraits/men/87.jpg" classes="border-green-500" />
@@ -258,9 +254,9 @@ Rectangular avatars. They have a default gray border (`border-gray-500`) which y
 
 ### `stacked`
 
-> **Properties:** `image`, `last` (boolean)
+> Properties: `image`, `last` (boolean)
 
-Use these inside a `<View class="horizontal">` to create an overlapping stack. Set `last="true"` on the very last avatar in the stack to fix its right margin.
+Use these inside a `<View class="horizontal">` to create an overlapping stack. Set `last="true"` on the final avatar in the stack to fix its right margin.
 
 ```xml title="Stacked Avatars Example"
 <View class="horizontal">
@@ -279,30 +275,30 @@ Use these inside a `<View class="horizontal">` to create an overlapping stack. S
 
 ## Buttons
 
-> **Common Properties:** `variant`, `size`, `classes`, `title`
+> Common properties: `variant`, `size`, `classes`, `title`
 
-Essential for user actions and choices. Click, tap, go!
+Buttons are for user actions and choices.
 
-**TiKit Button Variants:**
+TiKit Button variants:
 
-  * `border`: Text with an outline border.
-  * `border-rounded`: Like `border`, but with rounded corners.
-  * `filled`: Solid background color with text.
-  * `filled-rounded`: Like `filled`, but with rounded corners.
-  * `icon-left`: Icon on the left, text on the right.
-  * `icon-right`: Text on the left, icon on the right.
+- `border`: Text with an outline border.
+- `border-rounded`: Like `border`, but with rounded corners.
+- `filled`: Solid background color with text.
+- `filled-rounded`: Like `filled`, but with rounded corners.
+- `icon-left`: Icon on the left, text on the right.
+- `icon-right`: Text on the left, icon on the right.
 
-**Sizes:** Comes in `xs`, `sm`, `base`, `lg`, `xl`, and `2xl`.
+Sizes: `xs`, `sm`, `base`, `lg`, `xl`, and `2xl`.
 
 ```xml
 <Button module="tikit.ui" variant="filled" size="lg" title="Submit" classes="bg-blue-500 text-white" />
 ```
 
-### `border` & `border-rounded`
+### `border` and `border-rounded`
 
-> **Property:** `title`
+> Property: `title`
 
-Simple outlined buttons. Use `classes` to control the border and text color (e.g., `border-purple-500 text-purple-500`).
+Outlined buttons. Use `classes` to control the border and text color (for example, `border-purple-500 text-purple-500`).
 
 ```xml title="Border Button Example"
 <Button module="tikit.ui" variant="border" size="base" title="Cancel" classes="border-red-500 text-red-500" />
@@ -315,11 +311,11 @@ Simple outlined buttons. Use `classes` to control the border and text color (e.g
   <img src="../assets/images/buttons/border-rounded-iphone.png" width="375" alt="Buttons border-rounded variant" />
 </p>
 
-### `filled` & `filled-rounded`
+### `filled` and `filled-rounded`
 
-> **Property:** `title`
+> Property: `title`
 
-Solid background buttons. Use `classes` to set background and text colors (e.g., `bg-green-600 text-white`).
+Solid background buttons. Use `classes` to set background and text colors (for example, `bg-green-600 text-white`).
 
 ```xml title="Filled Rounded Button Example"
 <Button module="tikit.ui" variant="filled-rounded" size="base" title="Confirm" classes="bg-green-600 text-white" />
@@ -332,11 +328,11 @@ Solid background buttons. Use `classes` to set background and text colors (e.g.,
   <img src="../assets/images/buttons/filled-rounded-iphone.png" width="375" alt="Buttons filled-rounded variant" />
 </p>
 
-### `icon-left` & `icon-right`
+### `icon-left` and `icon-right`
 
-> **Properties:** `title`, `icon`
+> Properties: `title`, `icon`
 
-Buttons with text and an icon. Use the `icon` property to specify the icon class (e.g., `fa fa-save`) and `classes` for background/text colors.
+Buttons with text and an icon. Use the `icon` property to specify the icon class (for example, `fa fa-save`) and `classes` for background/text colors.
 
 ```xml title="Icon Left Button Example"
 <Button module="tikit.ui" variant="icon-left" size="base" title="Save" icon="fa fa-save text-white" classes="bg-blue-500 text-white" />
@@ -348,7 +344,7 @@ Buttons with text and an icon. Use the `icon` property to specify the icon class
 
 ### Using Custom Icons in Buttons
 
-You're not limited to the default icons! Use any icon font loaded via PurgeTSS. Just specify the font prefix and icon name in the `icon` property, along with any size or color classes from PurgeTSS.
+You can use any icon font loaded via PurgeTSS. Specify the font prefix and icon name in the `icon` property, along with any size or color classes from PurgeTSS.
 
 ```xml title="Button with Material Icon"
 <Button module="tikit.ui" variant="icon-right" size="lg" title="Settings" icon="mi mi-settings text-lg text-gray-100" classes="bg-gray-700 text-gray-100" />
@@ -362,18 +358,18 @@ You're not limited to the default icons! Use any icon font loaded via PurgeTSS. 
 
 ## Cards
 
-> **Common Properties:** `variant`, `color`, `classes`
+> Common properties: `variant`, `color`, `classes`
 
-Cards group related content nicely. Great for summaries or showcasing items.
+Cards group related content for summaries or showcases.
 
-**TiKit Card Variants:**
+TiKit Card variants:
 
-  * `code`: Display code snippets, with an optional copy button.
-  * `content`: For blocks of text with a main title and highlighted subtitle.
-  * `quote`: Showcase a quote with attribution.
-  * `showcase`: Combine an image with a title and description.
+- `code`: Display code snippets, with an optional copy button.
+- `content`: Blocks of text with a main title and highlighted subtitle.
+- `quote`: A quote with attribution.
+- `showcase`: An image with a title and description.
 
-**Colors:** Available in `black`, `dark`, `light`, and `white` themes, affecting background and text colors.
+Colors: `black`, `dark`, `light`, and `white` themes that affect background and text colors.
 
 ```xml
 <Card module="tikit.ui" variant="showcase" color="light" title="Featured Item" text="A brief description goes here." image="images/feature.png" />
@@ -381,11 +377,13 @@ Cards group related content nicely. Great for summaries or showcasing items.
 
 ### `code`
 
-> **Properties:** `title`, `text`, `copy` (boolean)
+> Properties: `title`, `text`, `copy` (boolean)
 
-Perfect for showing code examples. Set `copy="true"` to add a copy button.
-*Pro Tip:* For best results, install a monospaced font (like Fira Code, JetBrains Mono) and configure `font-mono` in your PurgeTSS config.
-*Localization:* The copy button uses `L('copy', 'Copy')` for its title and `L('code_copied', 'Code copied!')` for the confirmation message. Add these keys to your `strings.xml` files for translation.
+Use this for code examples. Set `copy="true"` to add a copy button.
+
+Pro tip: For best results, install a monospaced font (like Fira Code or JetBrains Mono) and configure `font-mono` in your PurgeTSS config.
+
+Localization: The copy button uses `L('copy', 'Copy')` for its title and `L('code_copied', 'Code copied!')` for the confirmation message. Add these keys to your `strings.xml` files for translation.
 
 ```xml title="Code Card Example"
 <Card module="tikit.ui" variant="code" color="dark" copy="true" title="Example Function" text="function hello() { console.log('Hi!'); }" />
@@ -397,9 +395,9 @@ Perfect for showing code examples. Set `copy="true"` to add a copy button.
 
 ### `showcase`
 
-> **Properties:** `title`, `text`, `image`, `rounded` (integer)
+> Properties: `title`, `text`, `image`, `rounded` (integer)
 
-Perfect for displaying an image with a title and description text. The `rounded` property accepts any integer value (0 or greater) to control the border radius. Use `rounded=0` for sharp corners, or increase the value (like `rounded=12`) for more rounded corners.
+Displays an image with a title and description. The `rounded` property accepts any integer value (0 or greater) to control the border radius. Use `rounded=0` for sharp corners, or increase the value (like `rounded=12`) for more rounded corners.
 
 ```xml title="Showcase Card Example"
 <Card module="tikit.ui" variant="showcase" color="black" title="Project X" text="Mobile app design concept." image="images/showcase/project-x.jpg" />
@@ -411,7 +409,7 @@ Perfect for displaying an image with a title and description text. The `rounded`
 
 ### `quote`
 
-> **Properties:** `name`, `text`
+> Properties: `name`, `text`
 
 Display a quote attributed to someone.
 
@@ -420,13 +418,14 @@ Display a quote attributed to someone.
 ```
 
 <p align="center">
-  <img src="../assets/images/cards/quote-dark.png" width="375" alt="Cards quote dark" /> </p>
+  <img src="../assets/images/cards/quote-dark.png" width="375" alt="Cards quote dark" />
+</p>
 
 ### `content`
 
-> **Properties:** `title`, `subtitle`, `text`
+> Properties: `title`, `subtitle`, `text`
 
-Use this for presenting text content with a clear hierarchy: a large title, a highlighted subtitle, and the main body text.
+Use this for text content with a clear hierarchy: a large title, a highlighted subtitle, and the main body text.
 
 ```xml title="Content Card Example"
 <Card module="tikit.ui" variant="content" color="light" title="About TiKit" subtitle="Making UI Easier" text="TiKit aims to provide useful components..." />
@@ -440,9 +439,9 @@ Use this for presenting text content with a clear hierarchy: a large title, a hi
 
 ## Tabs
 
-> **Properties:** `title`, `icon`, `activeIcon` (iOS only) + standard `Titanium.UI.Tab` properties
+> Properties: `title`, `icon`, `activeIcon` (iOS only) plus standard `Titanium.UI.Tab` properties
 
-Need tabs for your `TabGroup`? TiKit makes it easy to add tabs with icons from your favorite font libraries (FontAwesome, Material Icons, etc.).
+Need tabs for your `TabGroup`? TiKit makes it easy to add tabs with icons from your favorite font libraries (FontAwesome, Material Icons, and others).
 
 Specify the icon using `icon="fa fa-home"` or `icon="mi mi-settings"`. On iOS, you can provide a different icon for the active state using `activeIcon`.
 
@@ -454,7 +453,7 @@ Specify the icon using `icon="fa fa-home"` or `icon="mi mi-settings"`. On iOS, y
 
 ### Styling Tabs Further
 
-Since these are essentially `Titanium.UI.Tab` objects, you can use standard properties and PurgeTSS classes. For example, change the active tint color:
+Because these are `Titanium.UI.Tab` objects, you can use standard properties and PurgeTSS classes. For example, change the active tint color:
 
 ```xml
 <Tab module="tikit.ui"
@@ -472,41 +471,39 @@ Since these are essentially `Titanium.UI.Tab` objects, you can use standard prop
 
 -----
 
-## ✨ Updating Components Dynamically
+## Updating Components Dynamically
 
-One of the coolest things about TiKit is that you don't need to destroy and recreate components just to change simple things like text or an image. This makes your app feel more responsive!
+TiKit components do not need to be destroyed and recreated just to change simple things like text or an image. When you give a component an `id` in your XML, you can call update methods in your controller (`.js` file).
 
-When you give a TiKit component an `id` in your XML, you can access special methods in your controller (`.js` file) to update it.
+Why this is useful:
 
-**Why is this useful?**
+- Update a Card's text after data loads from an API.
+- Change an Avatar image after the user uploads a new photo.
+- Modify an Alert message based on user actions.
+- Change a Button's title or icon (for example, from "Save" to "Saving..." and back).
 
-  * Update a Card's text when new data loads from an API.
-  * Change an Avatar image after the user uploads a new photo.
-  * Modify an Alert message based on user actions.
-  * Change a Button's title or icon (e.g., from "Save" to "Saving..." and back).
+### Available Update Methods
 
-### Available Update Methods:
+You can call these on your component's proxy (for example, `$.myCard.updateTitle(...)`):
 
-You can call these on your component's proxy (e.g., `$.myCard.updateTitle(...)`):
+1. `updateTitle(newTitle)`: Changes the main title.
+2. `updateSubtitle(newSubtitle)`: Changes the subtitle (mainly for Cards).
+3. `updateText(newText)`: Changes the main text content.
+4. `updateName(newName)`: Changes the name (useful for Avatar `chip` variant).
+5. `updateImage(newImage)`: Changes the image (path or blob).
+6. `updateIcon(newIcon)`: Changes the icon class string (for Alerts and Buttons).
+7. `update(args)`: Shortcut to update multiple properties at once. Pass an object like `{ title: 'New', text: 'Updated text' }`. Supports `title`, `subtitle`, `text`, `name`, `image`, and `icon`.
 
-1.  **`updateTitle(newTitle)`**: Changes the main title.
-2.  **`updateSubtitle(newSubtitle)`**: Changes the subtitle (mainly for Cards).
-3.  **`updateText(newText)`**: Changes the main text content.
-4.  **`updateName(newName)`**: Changes the name (useful for Avatar `chip` variant).
-5.  **`updateImage(newImage)`**: Changes the image (path or blob).
-6.  **`updateIcon(newIcon)`**: Changes the icon class string (for Alerts, Buttons).
-7.  **`update(args)`**: A handy shortcut to update multiple properties at once. Pass an object like `{ title: 'New', text: 'Updated text' }`. Supports `title`, `subtitle`, `text`, `name`, `image`, and `icon`.
+### Which Components Support Updates
 
-### Which Components Support Updates?
-
-  * **Cards (`<Card>`)**: `title`, `subtitle`, `text`, `image` (Works across variants where applicable).
-  * **Avatars (`<Avatar>`)**: `image`, `name` (`name` mostly for `chip`).
-  * **Alerts (`<Alert>`)**: `title`, `text`, `icon` (`text` not applicable to `solid`).
-  * **Buttons (`<Button>`)**: `title`, `icon` (`icon` for `icon-left`/`icon-right`).
+- Cards (`<Card>`): `title`, `subtitle`, `text`, `image` (works across variants where applicable).
+- Avatars (`<Avatar>`): `image`, `name` (`name` mostly for `chip`).
+- Alerts (`<Alert>`): `title`, `text`, `icon` (`text` not applicable to `solid`).
+- Buttons (`<Button>`): `title`, `icon` (`icon` for `icon-left`/`icon-right`).
 
 ### Example: Updating a Card
 
-**View (index.xml):**
+View (index.xml):
 
 ```xml
 <Alloy>
@@ -525,7 +522,7 @@ You can call these on your component's proxy (e.g., `$.myCard.updateTitle(...)`)
 </Alloy>
 ```
 
-**Controller (index.js):**
+Controller (index.js):
 
 ```javascript
 function fetchStatus() {
@@ -543,67 +540,67 @@ function fetchStatus() {
 }
 ```
 
-This makes handling dynamic content much cleaner!
+This keeps dynamic content straightforward.
 
 -----
 
 ## Working with Icon Fonts
 
-Icons add a lot of visual appeal! PurgeTSS helps manage icon fonts easily.
+Icons add clarity and help users scan UI quickly. PurgeTSS helps manage icon fonts.
 
 ### Using Official Icon Fonts
 
-Want to quickly add popular free icon sets? Use the PurgeTSS command:
+To add popular free icon sets, run:
 
 ```bash
 # Add Font Awesome (fa), Material Icons (mi), Material Symbols (ms), Framework7 (f7)
 purgetss icon-library --vendor=fa,mi,ms,f7
 ```
 
-This copies the necessary font files and CSS into your project, ready to use.
+This copies the font files and CSS into your project, ready to use.
 
 ### Adding Your Own Custom Icon Fonts
 
-Got a specific icon font you love? No problem!
+If you use a custom icon font, follow these steps:
 
-1.  **Organize Files**: Place your font (`.ttf` or `.otf`) and its CSS file (mapping icon names to Unicode characters) in the PurgeTSS fonts directory:
+1. Organize files. Place your font (`.ttf` or `.otf`) and its CSS file (mapping icon names to Unicode characters) in the PurgeTSS fonts directory:
 
-    ```
-    YourProject/
-    └── purgetss/
-        └── fonts/
-            └── your-cool-font-name/  <-- Create this folder
-                ├── cool-font.css
-                └── cool-font.ttf
-    ```
+   ```
+   YourProject/
+   └── purgetss/
+       └── fonts/
+           └── your-cool-font-name/  <-- Create this folder
+               ├── cool-font.css
+               └── cool-font.ttf
+   ```
 
-2.  **Build Fonts**: Run the PurgeTSS command to process them:
+2. Build fonts. Run the PurgeTSS command to process them:
 
-    ```bash
-    purgetss build-fonts
-    ```
+   ```bash
+   purgetss build-fonts
+   ```
 
-    This generates the necessary TSS classes in `fonts.tss`.
+   This generates the necessary TSS classes in `fonts.tss`.
 
-3.  **Use in TiKit**: Now you can use your custom icons just like the built-in ones!
+3. Use in TiKit. Now you can use your custom icons just like the built-in ones:
 
-    ```xml
-    <Button module="tikit.ui" variant="icon-left" title="Launch"
-            icon="myicon myicon-rocket text-lg"
-            classes="bg-purple-600 text-white" />
+   ```xml
+   <Button module="tikit.ui" variant="icon-left" title="Launch"
+           icon="myicon myicon-rocket text-lg"
+           classes="bg-purple-600 text-white" />
 
-    <Alert module="tikit.ui" variant="pop" color="info"
-           title="Update Available"
-           icon="myicon myicon-download text-2xl" />
-    ```
+   <Alert module="tikit.ui" variant="pop" color="info"
+          title="Update Available"
+          icon="myicon myicon-download text-2xl" />
+   ```
 
-You can mix and match icons from different libraries throughout your app. Super flexible!
+You can mix and match icons from different libraries throughout your app.
 
 -----
 
 ## License
 
-TiKit UI Components is open source and shared under the MIT License. Feel free to use and adapt it!
+TiKit UI Components is open source and shared under the MIT License.
 
 ```
 MIT License

@@ -5,10 +5,10 @@ slug: the-apply-directive
 
 # The `apply` Directive
 
-## Create Complex Classes and IDs
+## Create complex classes and IDs
 
 :::info
-You can apply a set of classes to create more complex classes or when you find a repetitive pattern in your code and want to extract it into a new class component.
+Use `apply` to bundle classes into a new class, or to extract a repeated pattern into a reusable class.
 :::
 
 - Set any ID, class, or Ti Element.
@@ -18,7 +18,7 @@ You can apply a set of classes to create more complex classes or when you find a
 - Set a string of classes or an array of classes.
 - Combine it with any platform, device, or conditional-block properties.
 
-## Set Any ID, Class, or Ti Element
+## Set any ID, class, or Ti Element
 
 ```javascript title="./purgetss/config.cjs"
 // ...
@@ -53,7 +53,7 @@ theme: {
 '.font-bold': { font: { fontWeight: 'bold' } }
 ```
 
-## Use Any of the Default Classes
+## Use default classes
 
 ```javascript title="./purgetss/config.cjs"
 // ...
@@ -74,9 +74,9 @@ theme: {
 '.btn-primary': { backgroundColor: '#22c55e', borderColor: '#bbf7d0', color: '#dcfce7', textColor: '#dcfce7' }
 ```
 
-## Use Arbitrary Values
+## Use arbitrary values
 
-You can use [**Arbitrary Values**](arbitrary-values) to define your custom classes.
+You can use [**Arbitrary values**](arbitrary-values) to define your custom classes.
 
 ```javascript title="./purgetss/config.cjs"
 // ...
@@ -95,7 +95,7 @@ theme: {
 // ...
 ```
 
-## Use Any Newly Defined Class in config.cjs
+## Use newly defined classes in `config.cjs`
 
 In the following example, we are creating `corporate` color classes so we can use them in the `apply` directive with `bg-corporate-500`, `text-corporate-100`, and `border-corporate-200`.
 
@@ -141,7 +141,7 @@ theme: {
 /* And the rest of color properties! */
 ```
 
-## Set a String of Classes or an Array of Classes
+## Set a string of classes or an array of classes
 
 ```javascript title="./purgetss/config.cjs"
 // ...
@@ -176,7 +176,7 @@ theme: {
 /* ... */
 ```
 
-## Combine with Any Platform, Device, or Conditional-Block Properties
+## Combine with platform, device, or conditional blocks
 
 ```javascript title="./purgetss/config.cjs"
 // ...
@@ -213,15 +213,14 @@ theme: {
 // ...
 ```
 
-## Platform-Specific Classes
+## Platform-specific classes
 
-Several classes in `utilities.tss` are platform-specific to prevent polluting objects with properties that are not specific to a particular platform.
+Several classes in `utilities.tss` are platform-specific to prevent adding properties that do not exist on a platform.
 
-:::caution IMPORTANT!
+:::caution
+To apply these platform styles when creating custom rules, you must specify the platform variant in the `apply` directive.
 
-To properly apply these platform styles when creating custom rules, you must specify the platform variant in the `apply` directive.
-
-**Even if you are not targeting a specific platform, you must specify the platform variant.**
+**Even if you are not targeting a specific platform, you still need to specify the platform variant.**
 :::
 
 ```javascript title="./purgetss/config.cjs"
@@ -242,7 +241,7 @@ module.exports = {
 '.my-view[platform=ios]': { backgroundColor: '#22c55e', clipMode: Ti.UI.iOS.CLIP_MODE_ENABLED, width: 128, height: 128 }
 ```
 
-### Omitting the Platform Variant
+### Omitting the platform variant
 
 If you omit the platform variant, **PurgeTSS** won't be able to determine which platform you are targeting, and the custom class will not have the corresponding property.
 

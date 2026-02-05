@@ -3,18 +3,18 @@ sidebar_position: 5
 slug: arbitrary-values
 ---
 
-# Arbitrary Values
+# Arbitrary values
 
-Sometimes, you may need a specific value that is not included among the default values, or that you only need to use once in your project and do not want to include in the `config.cjs` file. In these cases, you can use arbitrary values.
+Sometimes you need a value that is not in the defaults, or you only need it once and do not want to add it to `config.cjs`. Use arbitrary values for that.
 
 :::info
-**To generate an arbitrary style, you can use *parenthesis notation* with almost any default utility classes.**
+To generate an arbitrary style, use parentheses notation with almost any default utility class.
 
-Unfortunately, you cannot use square bracket notation like in Tailwind, because Titanium handles platform and conditional statements in `.tss` files differently.
+You cannot use square bracket notation like in Tailwind because Titanium handles platform and conditional statements in `.tss` files differently.
 :::
 
-## Color Properties
-You can set arbitrary color values **to ALL available color properties**, using `hex`, `rgb` or `rgba` color values, directly in `xml` files or in the `config.cjs` file.
+## Color properties
+You can set arbitrary color values for all available color properties using `hex`, `rgb`, or `rgba` values, directly in XML files or in `config.cjs`.
 
 ```xml title="Arbitrary values for color properties"
 <Alloy>
@@ -46,58 +46,58 @@ You can set arbitrary color values **to ALL available color properties**, using 
 '.w-(250)': { width: 250 }
 ```
 
-### List of Color Properties
-You can set an arbitrary value to any of the following color properties:
+### List of color properties
+You can set an arbitrary value for any of the following color properties:
 
-- **active-tint-**(*hex-rgb-or-rgba-value*)
-- **active-title-**(*hex-rgb-or-rgba-value*)
-- **badge-**(*hex-rgb-or-rgba-value*)
-- **bar-**(*hex-rgb-or-rgba-value*)
-- **bg-**(*hex-rgb-or-rgba-value*)
-- **bg-focused-**(*hex-rgb-or-rgba-value*)
-- **bg-selected-**(*hex-rgb-or-rgba-value*)
-- **bg-selected-from-**(*hex-rgb-or-rgba-value*)
-- **bg-selected-to-**(*hex-rgb-or-rgba-value*)
-- **border-**(*hex-rgb-or-rgba-value*)
-- **current-page-indicator-**(*hex-rgb-or-rgba-value*)
-- **date-time-**(*hex-rgb-or-rgba-value*)
-- **disabled-**(*hex-rgb-or-rgba-value*)
-- **drop-shadow-**(*hex-rgb-or-rgba-value*)
-- **from-**(*hex-rgb-or-rgba-value*)
-- **highlighted-**(*hex-rgb-or-rgba-value*)
-- **image-touch-feedback-**(*hex-rgb-or-rgba-value*)
-- **indicator-**(*hex-rgb-or-rgba-value*)
-- **keyboard-toolbar-**(*hex-rgb-or-rgba-value*)
-- **nav-tint-**(*hex-rgb-or-rgba-value*)
-- **on-tint-**(*hex-rgb-or-rgba-value*)
-- **page-indicator-**(*hex-rgb-or-rgba-value*)
-- **paging-control-**(*hex-rgb-or-rgba-value*)
-- **placeholder-**(*hex-rgb-or-rgba-value*)
-- **pull-bg-**(*hex-rgb-or-rgba-value*)
-- **results-bg-**(*hex-rgb-or-rgba-value*)
-- **results-separator-**(*hex-rgb-or-rgba-value*)
-- **selected-**(*hex-rgb-or-rgba-value*)
-- **selected-button-**(*hex-rgb-or-rgba-value*)
-- **selected-subtitle-**(*hex-rgb-or-rgba-value*)
-- **selected-text-**(*hex-rgb-or-rgba-value*)
-- **separator-**(*hex-rgb-or-rgba-value*)
-- **shadow-**(*hex-rgb-or-rgba-value*)
-- **subtitle-**(*hex-rgb-or-rgba-value*)
-- **tabs-bg-**(*hex-rgb-or-rgba-value*)
-- **tabs-bg-selected-**(*hex-rgb-or-rgba-value*)
-- **text-**(*hex-rgb-or-rgba-value*)
-- **thumb-tint-**(*hex-rgb-or-rgba-value*)
-- **tint-**(*hex-rgb-or-rgba-value*)
-- **title-**(*hex-rgb-or-rgba-value*)
-- **title-attributes-**(*hex-rgb-or-rgba-value*)
-- **title-attributes-shadow-**(*hex-rgb-or-rgba-value*)
-- **title-text-**(*hex-rgb-or-rgba-value*)
-- **to-**(*hex-rgb-or-rgba-value*)
-- **touch-feedback-**(*hex-rgb-or-rgba-value*)
-- **track-tint-**(*hex-rgb-or-rgba-value*)
+- `active-tint-` (*hex-rgb-or-rgba-value*)
+- `active-title-` (*hex-rgb-or-rgba-value*)
+- `badge-` (*hex-rgb-or-rgba-value*)
+- `bar-` (*hex-rgb-or-rgba-value*)
+- `bg-` (*hex-rgb-or-rgba-value*)
+- `bg-focused-` (*hex-rgb-or-rgba-value*)
+- `bg-selected-` (*hex-rgb-or-rgba-value*)
+- `bg-selected-from-` (*hex-rgb-or-rgba-value*)
+- `bg-selected-to-` (*hex-rgb-or-rgba-value*)
+- `border-` (*hex-rgb-or-rgba-value*)
+- `current-page-indicator-` (*hex-rgb-or-rgba-value*)
+- `date-time-` (*hex-rgb-or-rgba-value*)
+- `disabled-` (*hex-rgb-or-rgba-value*)
+- `drop-shadow-` (*hex-rgb-or-rgba-value*)
+- `from-` (*hex-rgb-or-rgba-value*)
+- `highlighted-` (*hex-rgb-or-rgba-value*)
+- `image-touch-feedback-` (*hex-rgb-or-rgba-value*)
+- `indicator-` (*hex-rgb-or-rgba-value*)
+- `keyboard-toolbar-` (*hex-rgb-or-rgba-value*)
+- `nav-tint-` (*hex-rgb-or-rgba-value*)
+- `on-tint-` (*hex-rgb-or-rgba-value*)
+- `page-indicator-` (*hex-rgb-or-rgba-value*)
+- `paging-control-` (*hex-rgb-or-rgba-value*)
+- `placeholder-` (*hex-rgb-or-rgba-value*)
+- `pull-bg-` (*hex-rgb-or-rgba-value*)
+- `results-bg-` (*hex-rgb-or-rgba-value*)
+- `results-separator-` (*hex-rgb-or-rgba-value*)
+- `selected-` (*hex-rgb-or-rgba-value*)
+- `selected-button-` (*hex-rgb-or-rgba-value*)
+- `selected-subtitle-` (*hex-rgb-or-rgba-value*)
+- `selected-text-` (*hex-rgb-or-rgba-value*)
+- `separator-` (*hex-rgb-or-rgba-value*)
+- `shadow-` (*hex-rgb-or-rgba-value*)
+- `subtitle-` (*hex-rgb-or-rgba-value*)
+- `tabs-bg-` (*hex-rgb-or-rgba-value*)
+- `tabs-bg-selected-` (*hex-rgb-or-rgba-value*)
+- `text-` (*hex-rgb-or-rgba-value*)
+- `thumb-tint-` (*hex-rgb-or-rgba-value*)
+- `tint-` (*hex-rgb-or-rgba-value*)
+- `title-` (*hex-rgb-or-rgba-value*)
+- `title-attributes-` (*hex-rgb-or-rgba-value*)
+- `title-attributes-shadow-` (*hex-rgb-or-rgba-value*)
+- `title-text-` (*hex-rgb-or-rgba-value*)
+- `to-` (*hex-rgb-or-rgba-value*)
+- `touch-feedback-` (*hex-rgb-or-rgba-value*)
+- `track-tint-` (*hex-rgb-or-rgba-value*)
 
-## Spacing Properties
-You can set arbitrary values **to MOST of the size and dimension properties**, using `rem`, `px` or `pt` values, directly in `xml` files or in the `config.cjs` file.
+## Spacing properties
+You can set arbitrary values for most size and dimension properties using `rem`, `px`, or `pt` values, directly in XML files or in `config.cjs`.
 
 ```xml title="Arbitrary values for spacing properties"
 <Alloy>
@@ -127,142 +127,142 @@ You can set arbitrary values **to MOST of the size and dimension properties**, u
 '.w-(10rem)': { width: 160 }
 ```
 
-### List of Spacing Properties
+### List of spacing properties
 
-- **Background Padding**
-  - **bg-padding-b-**(*any-size-value-and-unit*)
-  - **bg-padding-l-**(*any-size-value-and-unit*)
-  - **bg-padding-r-**(*any-size-value-and-unit*)
-  - **bg-padding-t-**(*any-size-value-and-unit*)
-- **Background Left and Top Cap**
-  - **bg-l-cap-**(*any-size-value-and-unit*)
-  - **bg-t-cap-**(*any-size-value-and-unit*)
-- **Top, Right, Bottom, Left**
-  - **bottom-**(*any-size-value-and-unit*)
-  - **left-**(*any-size-value-and-unit*)
-  - **l-**(*any-size-value-and-unit*)
-  - **right-**(*any-size-value-and-unit*)
-  - **r-**(*any-size-value-and-unit*)
-  - **top-**(*any-size-value-and-unit*)
-  - **x-**(*any-size-value-and-unit*)
-  - **y-**(*any-size-value-and-unit*)
-- **Content Width and Content Height**
-  - **content-**(*any-size-value-and-unit*)
-  - **content-h-**(*any-size-value-and-unit*)
-  - **content-w-**(*any-size-value-and-unit*)
-- **Gaps (Top, Right, Bottom, Left)**
-  - **gap-**(*any-size-value-and-unit*)
-  - **gap-b-**(*any-size-value-and-unit*)
-  - **gap-l-**(*any-size-value-and-unit*)
-  - **gap-r-**(*any-size-value-and-unit*)
-  - **gap-t-**(*any-size-value-and-unit*)
-  - **gap-x-**(*any-size-value-and-unit*)
-  - **gap-y-**(*any-size-value-and-unit*)
-- **Width and Height**
-  - **h-**(*any-size-value-and-unit*)
-  - **w-**(*any-size-value-and-unit*)
-- **indentation-level-**(*any-size-value-and-unit*)
-- **keyboard-toolbar-h-**(*any-size-value-and-unit*)
-- **Left and Right Button Padding**
-  - **left-button-padding-**(*any-size-value-and-unit*)
-  - **right-button-padding-**(*any-size-value-and-unit*)
-- **Left and Right Width**
-  - **left-w-**(*any-size-value-and-unit*)
-  - **lw-**(*any-size-value-and-unit*)
- - **right-w-**(*any-size-value-and-unit*)
-  - **rw-**(*any-size-value-and-unit*)
-- **Margin**
-  - **m-**(*any-size-value-and-unit*)
-  - **mb-**(*any-size-value-and-unit*)
-  - **ml-**(*any-size-value-and-unit*)
-  - **mr-**(*any-size-value-and-unit*)
-  - **mt-**(*any-size-value-and-unit*)
-  - **mx-**(*any-size-value-and-unit*)
-  - **my-**(*any-size-value-and-unit*)
-- **max-elevation-**(*any-size-value-and-unit*)
-- **Max and Min Row Height**
-  - **max-row-h-**(*any-size-value-and-unit*)
-  - **min-row-h-**(*any-size-value-and-unit*)
-- **Padding**
-  - **p-**(*any-size-value-and-unit*)
-  - **pb-**(*any-size-value-and-unit*)
-  - **pl-**(*any-size-value-and-unit*)
-  - **pr-**(*any-size-value-and-unit*)
-  - **pt-**(*any-size-value-and-unit*)
-  - **px-**(*any-size-value-and-unit*)
-  - **py-**(*any-size-value-and-unit*)
-- **paddingTop, paddingRight, paddingBottom, paddingLeft**
-  - **padding-**(*any-size-value-and-unit*)
-  - **padding-b-**(*any-size-value-and-unit*)
-  - **padding-bottom-**(*any-size-value-and-unit*)
-  - **padding-l-**(*any-size-value-and-unit*)
-  - **padding-left-**(*any-size-value-and-unit*)
-  - **padding-r-**(*any-size-value-and-unit*)
-  - **padding-right-**(*any-size-value-and-unit*)
-  - **padding-t-**(*any-size-value-and-unit*)
-  - **padding-top-**(*any-size-value-and-unit*)
-  - **padding-x-**(*any-size-value-and-unit*)
-  - **padding-y-**(*any-size-value-and-unit*)
-- **paging-control-h-**(*any-size-value-and-unit*)
-- **Border Radius**
-  - **rounded-**(*any-size-value-and-unit*)
-  - **rounded-b-**(*any-size-value-and-unit*)
-  - **rounded-bl-**(*any-size-value-and-unit*)
-  - **rounded-br-**(*any-size-value-and-unit*)
-  - **rounded-l-**(*any-size-value-and-unit*)
-  - **rounded-r-**(*any-size-value-and-unit*)
-  - **rounded-t-**(*any-size-value-and-unit*)
-  - **rounded-tl-**(*any-size-value-and-unit*)
-  - **rounded-tr-**(*any-size-value-and-unit*)
-- **row-h-**(*any-size-value-and-unit*)
-- **section-header-top-padding-**(*any-size-value-and-unit*)
-- **separator-h-**(*any-size-value-and-unit*)
-- **shadow-radius-**(*any-size-value-and-unit*)
-- **xOffset & yOffset**
-  - **x-offset-**(*any-size-value-and-unit*)
-  - **y-offset-**(*any-size-value-and-unit*)
+- Background padding
+  - `bg-padding-b-` (*any-size-value-and-unit*)
+  - `bg-padding-l-` (*any-size-value-and-unit*)
+  - `bg-padding-r-` (*any-size-value-and-unit*)
+  - `bg-padding-t-` (*any-size-value-and-unit*)
+- Background left and top cap
+  - `bg-l-cap-` (*any-size-value-and-unit*)
+  - `bg-t-cap-` (*any-size-value-and-unit*)
+- Top, right, bottom, left
+  - `bottom-` (*any-size-value-and-unit*)
+  - `left-` (*any-size-value-and-unit*)
+  - `l-` (*any-size-value-and-unit*)
+  - `right-` (*any-size-value-and-unit*)
+  - `r-` (*any-size-value-and-unit*)
+  - `top-` (*any-size-value-and-unit*)
+  - `x-` (*any-size-value-and-unit*)
+  - `y-` (*any-size-value-and-unit*)
+- Content width and content height
+  - `content-` (*any-size-value-and-unit*)
+  - `content-h-` (*any-size-value-and-unit*)
+  - `content-w-` (*any-size-value-and-unit*)
+- Gaps (top, right, bottom, left)
+  - `gap-` (*any-size-value-and-unit*)
+  - `gap-b-` (*any-size-value-and-unit*)
+  - `gap-l-` (*any-size-value-and-unit*)
+  - `gap-r-` (*any-size-value-and-unit*)
+  - `gap-t-` (*any-size-value-and-unit*)
+  - `gap-x-` (*any-size-value-and-unit*)
+  - `gap-y-` (*any-size-value-and-unit*)
+- Width and height
+  - `h-` (*any-size-value-and-unit*)
+  - `w-` (*any-size-value-and-unit*)
+- `indentation-level-` (*any-size-value-and-unit*)
+- `keyboard-toolbar-h-` (*any-size-value-and-unit*)
+- Left and right button padding
+  - `left-button-padding-` (*any-size-value-and-unit*)
+  - `right-button-padding-` (*any-size-value-and-unit*)
+- Left and right width
+  - `left-w-` (*any-size-value-and-unit*)
+  - `lw-` (*any-size-value-and-unit*)
+  - `right-w-` (*any-size-value-and-unit*)
+  - `rw-` (*any-size-value-and-unit*)
+- Margin
+  - `m-` (*any-size-value-and-unit*)
+  - `mb-` (*any-size-value-and-unit*)
+  - `ml-` (*any-size-value-and-unit*)
+  - `mr-` (*any-size-value-and-unit*)
+  - `mt-` (*any-size-value-and-unit*)
+  - `mx-` (*any-size-value-and-unit*)
+  - `my-` (*any-size-value-and-unit*)
+- `max-elevation-` (*any-size-value-and-unit*)
+- Max and min row height
+  - `max-row-h-` (*any-size-value-and-unit*)
+  - `min-row-h-` (*any-size-value-and-unit*)
+- Padding
+  - `p-` (*any-size-value-and-unit*)
+  - `pb-` (*any-size-value-and-unit*)
+  - `pl-` (*any-size-value-and-unit*)
+  - `pr-` (*any-size-value-and-unit*)
+  - `pt-` (*any-size-value-and-unit*)
+  - `px-` (*any-size-value-and-unit*)
+  - `py-` (*any-size-value-and-unit*)
+- paddingTop, paddingRight, paddingBottom, paddingLeft
+  - `padding-` (*any-size-value-and-unit*)
+  - `padding-b-` (*any-size-value-and-unit*)
+  - `padding-bottom-` (*any-size-value-and-unit*)
+  - `padding-l-` (*any-size-value-and-unit*)
+  - `padding-left-` (*any-size-value-and-unit*)
+  - `padding-r-` (*any-size-value-and-unit*)
+  - `padding-right-` (*any-size-value-and-unit*)
+  - `padding-t-` (*any-size-value-and-unit*)
+  - `padding-top-` (*any-size-value-and-unit*)
+  - `padding-x-` (*any-size-value-and-unit*)
+  - `padding-y-` (*any-size-value-and-unit*)
+- paging-control-h- (*any-size-value-and-unit*)
+- Border radius
+  - `rounded-` (*any-size-value-and-unit*)
+  - `rounded-b-` (*any-size-value-and-unit*)
+  - `rounded-bl-` (*any-size-value-and-unit*)
+  - `rounded-br-` (*any-size-value-and-unit*)
+  - `rounded-l-` (*any-size-value-and-unit*)
+  - `rounded-r-` (*any-size-value-and-unit*)
+  - `rounded-t-` (*any-size-value-and-unit*)
+  - `rounded-tl-` (*any-size-value-and-unit*)
+  - `rounded-tr-` (*any-size-value-and-unit*)
+- `row-h-` (*any-size-value-and-unit*)
+- `section-header-top-padding-` (*any-size-value-and-unit*)
+- `separator-h-` (*any-size-value-and-unit*)
+- `shadow-radius-` (*any-size-value-and-unit*)
+- xOffset and yOffset
+  - `x-offset-` (*any-size-value-and-unit*)
+  - `y-offset-` (*any-size-value-and-unit*)
 
 
-## Miscellaneous Properties
-You can set arbitrary values to the following properties, like border radius, opacity, etc.
+## Miscellaneous properties
+You can set arbitrary values for the following properties, like border radius and opacity.
 
-### List of Miscellaneous Properties
+### List of miscellaneous properties
 
-- **active-tab-**(*number-value*)
-- **border-width-**(*number-value*)
-- **cache-size-**(*number-value*)
-- **count-down-**(*in-milliseconds*)
-- **delay-**(*in-milliseconds*)
-- **duration-**(*in-milliseconds*)
-- **elevation-**(*number-value*)
-- **font-**(*valid-font-weight-value*)
-- **horizontal-margin-**(*decimal-value*)
-- **lines-**(*number-value*)
-- **max-length-**(*number-value*)
-- **max-lines-**(*number-value*)
-- **max-zoom-scale-**(*decimal-value*)
-- **min-zoom-scale-**(*decimal-value*)
-- **min-**(*number-value*)
-- **minimum-text-**(*number-value*)
-- **opacity-**(*decimal-value-from-0-to-1*)
-- **origin-**(*x-and-y-coordinates*)
-- **paging-control-alpha-**(*decimal-value-from-0-to-1*)
-- **paging-control-timeout-**(*in-milliseconds*)
-- **repeat-count-**(*number-value*)
-- **repeat-**(*number-value*)
-- **rotate-**(*number-value*)
-- **scale-**(*decimal-value*)
-- **text-size-**(*number-value*)
-- **timeout-**(*in-milliseconds*)
-- **vertical-margin-**(*decimal-value*)
-- **z-**(*number-value*)
-- **zoom-scale-**(*decimal-value*)
+- `active-tab-` (*number-value*)
+- `border-width-` (*number-value*)
+- `cache-size-` (*number-value*)
+- `count-down-` (*in-milliseconds*)
+- `delay-` (*in-milliseconds*)
+- `duration-` (*in-milliseconds*)
+- `elevation-` (*number-value*)
+- `font-` (*valid-font-weight-value*)
+- `horizontal-margin-` (*decimal-value*)
+- `lines-` (*number-value*)
+- `max-length-` (*number-value*)
+- `max-lines-` (*number-value*)
+- `max-zoom-scale-` (*decimal-value*)
+- `min-zoom-scale-` (*decimal-value*)
+- `min-` (*number-value*)
+- `minimum-text-` (*number-value*)
+- `opacity-` (*decimal-value-from-0-to-1*)
+- `origin-` (*x-and-y-coordinates*)
+- `paging-control-alpha-` (*decimal-value-from-0-to-1*)
+- `paging-control-timeout-` (*in-milliseconds*)
+- `repeat-count-` (*number-value*)
+- `repeat-` (*number-value*)
+- `rotate-` (*number-value*)
+- `scale-` (*decimal-value*)
+- `text-size-` (*number-value*)
+- `timeout-` (*in-milliseconds*)
+- `vertical-margin-` (*decimal-value*)
+- `z-` (*number-value*)
+- `zoom-scale-` (*decimal-value*)
 
 
 ## Examples
-You can use any supported units depending on the property you are generating. You can use `hex` or `rgba` values for any `color` property, or you can use `rem` or `px` for any position or sizing property.
+You can use any supported units depending on the property you are generating. Use `hex` or `rgba` values for any color property, or `rem` or `px` for position and sizing properties.
 
-### Credit Card
+### Credit card
 
 ```xml title="index.xml"
 <Alloy>
@@ -332,9 +332,11 @@ You can use any supported units depending on the property you are generating. Yo
 '.fab': { font: { fontFamily: 'FontAwesome7Brands-Regular' } }
 ```
 
+<div align="center">
 ![arbitrary-values](../images/arbitrary-values.png)
+</div>
 
-### Front Cover
+### Front cover
 Try this example on an iPad or tablet.
 
 ```xml title="index.xml"
@@ -434,9 +436,11 @@ Try this example on an iPad or tablet.
 '.fas': { font: { fontFamily: 'FontAwesome7Free-Solid' } }
 ```
 
+<div align="center">
 ![zultys](../images/zultys.png)
+</div>
 
-### Menu Bar
+### Menu bar
 ```xml title="index.xml"
 <Alloy>
   <Window class="bg-(#53606b)" backgroundImage="https://i.pinimg.com/originals/ab/70/a1/ab70a19f087cc9ba2b03e3bee71acc3e.jpg">
@@ -498,6 +502,8 @@ Try this example on an iPad or tablet.
 '.w-(80%)': { width: '80%' }
 ```
 
-**Result**
+Result
 
+<div align="center">
 ![building-green](../images/building-green.png)
+</div>

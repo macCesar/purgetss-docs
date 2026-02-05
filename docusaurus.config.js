@@ -87,7 +87,7 @@ const config = {
           {
             type: 'doc',
             position: 'left',
-            docId: 'installation',
+            docId: 'Installation',
             label: 'Documentation',
           },
           {
