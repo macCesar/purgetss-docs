@@ -15,9 +15,7 @@
 '.title-padding-10': { titlePadding: 40 }
 '.title-padding-11': { titlePadding: 44 }
 '.title-padding-12': { titlePadding: 48 }
-'.title-padding-13': { titlePadding: 52 }
 '.title-padding-14': { titlePadding: 56 }
-'.title-padding-15': { titlePadding: 60 }
 '.title-padding-16': { titlePadding: 64 }
 '.title-padding-20': { titlePadding: 80 }
 '.title-padding-24': { titlePadding: 96 }
@@ -33,9 +31,6 @@
 '.title-padding-64': { titlePadding: 256 }
 '.title-padding-72': { titlePadding: 288 }
 '.title-padding-80': { titlePadding: 320 }
-'.title-padding-84': { titlePadding: 336 }
-'.title-padding-85': { titlePadding: 340 }
-'.title-padding-86': { titlePadding: 344 }
 '.title-padding-96': { titlePadding: 384 }
 '.title-padding-px': { titlePadding: '1px' }
 '.title-padding-0.5': { titlePadding: 2 }

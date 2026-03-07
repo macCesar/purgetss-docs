@@ -247,22 +247,4 @@
 '.status-bar-bg-rose-800': { statusBarBackgroundColor: '#9f1239' }
 '.status-bar-bg-rose-900': { statusBarBackgroundColor: '#881337' }
 '.status-bar-bg-rose-950': { statusBarBackgroundColor: '#4c0519' }
-'.status-bar-bg-highlight': { statusBarBackgroundColor: '#ffff00' }
-'.status-bar-bg-primary-dark': { statusBarBackgroundColor: '#000030' }
-'.status-bar-bg-primary-solid': { statusBarBackgroundColor: '#10284B' }
-'.status-bar-bg-primary-transparent': { statusBarBackgroundColor: '#D9002359' }
-'.status-bar-bg-secondary-dark': { statusBarBackgroundColor: '#000023' }
-'.status-bar-bg-secondary-solid': { statusBarBackgroundColor: '#13294B' }
-'.status-bar-bg-secondary-transparent': { statusBarBackgroundColor: '#D913294B' }
-'.status-bar-bg-robins-egg-blue-50': { statusBarBackgroundColor: '#ecffff' }
-'.status-bar-bg-robins-egg-blue-100': { statusBarBackgroundColor: '#cffcfe' }
-'.status-bar-bg-robins-egg-blue-200': { statusBarBackgroundColor: '#a4f9fd' }
-'.status-bar-bg-robins-egg-blue-300': { statusBarBackgroundColor: '#66f1fa' }
-'.status-bar-bg-robins-egg-blue-400': { statusBarBackgroundColor: '#20dff0' }
-'.status-bar-bg-robins-egg-blue-500': { statusBarBackgroundColor: '#04bbce' }
-'.status-bar-bg-robins-egg-blue-600': { statusBarBackgroundColor: '#069bb4' }
-'.status-bar-bg-robins-egg-blue-700': { statusBarBackgroundColor: '#0d7c91' }
-'.status-bar-bg-robins-egg-blue-800': { statusBarBackgroundColor: '#146376' }
-'.status-bar-bg-robins-egg-blue-900': { statusBarBackgroundColor: '#155264' }
-'.status-bar-bg-robins-egg-blue': { statusBarBackgroundColor: '#04bbce' }
 ```

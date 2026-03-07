@@ -15,9 +15,7 @@
 '.status-bar-h-10': { statusBarHeight: 40 }
 '.status-bar-h-11': { statusBarHeight: 44 }
 '.status-bar-h-12': { statusBarHeight: 48 }
-'.status-bar-h-13': { statusBarHeight: 52 }
 '.status-bar-h-14': { statusBarHeight: 56 }
-'.status-bar-h-15': { statusBarHeight: 60 }
 '.status-bar-h-16': { statusBarHeight: 64 }
 '.status-bar-h-20': { statusBarHeight: 80 }
 '.status-bar-h-24': { statusBarHeight: 96 }
@@ -33,9 +31,6 @@
 '.status-bar-h-64': { statusBarHeight: 256 }
 '.status-bar-h-72': { statusBarHeight: 288 }
 '.status-bar-h-80': { statusBarHeight: 320 }
-'.status-bar-h-84': { statusBarHeight: 336 }
-'.status-bar-h-85': { statusBarHeight: 340 }
-'.status-bar-h-86': { statusBarHeight: 344 }
 '.status-bar-h-96': { statusBarHeight: 384 }
 '.status-bar-h-auto': { statusBarHeight: Ti.UI.SIZE }
 '.status-bar-h-px': { statusBarHeight: '1px' }

@@ -246,22 +246,4 @@
 '.thumb-rose-800': { thumbColor: '#9f1239' }
 '.thumb-rose-900': { thumbColor: '#881337' }
 '.thumb-rose-950': { thumbColor: '#4c0519' }
-'.thumb-highlight': { thumbColor: '#ffff00' }
-'.thumb-primary-dark': { thumbColor: '#000030' }
-'.thumb-primary-solid': { thumbColor: '#10284B' }
-'.thumb-primary-transparent': { thumbColor: '#D9002359' }
-'.thumb-secondary-dark': { thumbColor: '#000023' }
-'.thumb-secondary-solid': { thumbColor: '#13294B' }
-'.thumb-secondary-transparent': { thumbColor: '#D913294B' }
-'.thumb-robins-egg-blue-50': { thumbColor: '#ecffff' }
-'.thumb-robins-egg-blue-100': { thumbColor: '#cffcfe' }
-'.thumb-robins-egg-blue-200': { thumbColor: '#a4f9fd' }
-'.thumb-robins-egg-blue-300': { thumbColor: '#66f1fa' }
-'.thumb-robins-egg-blue-400': { thumbColor: '#20dff0' }
-'.thumb-robins-egg-blue-500': { thumbColor: '#04bbce' }
-'.thumb-robins-egg-blue-600': { thumbColor: '#069bb4' }
-'.thumb-robins-egg-blue-700': { thumbColor: '#0d7c91' }
-'.thumb-robins-egg-blue-800': { thumbColor: '#146376' }
-'.thumb-robins-egg-blue-900': { thumbColor: '#155264' }
-'.thumb-robins-egg-blue': { thumbColor: '#04bbce' }
 ```

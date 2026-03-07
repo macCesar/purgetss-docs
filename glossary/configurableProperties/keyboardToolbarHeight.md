@@ -15,9 +15,7 @@
 '.keyboard-toolbar-h-10': { keyboardToolbarHeight: 40 }
 '.keyboard-toolbar-h-11': { keyboardToolbarHeight: 44 }
 '.keyboard-toolbar-h-12': { keyboardToolbarHeight: 48 }
-'.keyboard-toolbar-h-13': { keyboardToolbarHeight: 52 }
 '.keyboard-toolbar-h-14': { keyboardToolbarHeight: 56 }
-'.keyboard-toolbar-h-15': { keyboardToolbarHeight: 60 }
 '.keyboard-toolbar-h-16': { keyboardToolbarHeight: 64 }
 '.keyboard-toolbar-h-20': { keyboardToolbarHeight: 80 }
 '.keyboard-toolbar-h-24': { keyboardToolbarHeight: 96 }
@@ -33,9 +31,6 @@
 '.keyboard-toolbar-h-64': { keyboardToolbarHeight: 256 }
 '.keyboard-toolbar-h-72': { keyboardToolbarHeight: 288 }
 '.keyboard-toolbar-h-80': { keyboardToolbarHeight: 320 }
-'.keyboard-toolbar-h-84': { keyboardToolbarHeight: 336 }
-'.keyboard-toolbar-h-85': { keyboardToolbarHeight: 340 }
-'.keyboard-toolbar-h-86': { keyboardToolbarHeight: 344 }
 '.keyboard-toolbar-h-96': { keyboardToolbarHeight: 384 }
 '.keyboard-toolbar-h-px': { keyboardToolbarHeight: '1px' }
 '.keyboard-toolbar-h-0.5': { keyboardToolbarHeight: 2 }

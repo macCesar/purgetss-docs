@@ -15,9 +15,7 @@
 '.page-h-10': { pageHeight: 40 }
 '.page-h-11': { pageHeight: 44 }
 '.page-h-12': { pageHeight: 48 }
-'.page-h-13': { pageHeight: 52 }
 '.page-h-14': { pageHeight: 56 }
-'.page-h-15': { pageHeight: 60 }
 '.page-h-16': { pageHeight: 64 }
 '.page-h-20': { pageHeight: 80 }
 '.page-h-24': { pageHeight: 96 }
@@ -33,9 +31,6 @@
 '.page-h-64': { pageHeight: 256 }
 '.page-h-72': { pageHeight: 288 }
 '.page-h-80': { pageHeight: 320 }
-'.page-h-84': { pageHeight: 336 }
-'.page-h-85': { pageHeight: 340 }
-'.page-h-86': { pageHeight: 344 }
 '.page-h-96': { pageHeight: 384 }
 '.page-h-px': { pageHeight: '1px' }
 '.page-h-0.5': { pageHeight: 2 }

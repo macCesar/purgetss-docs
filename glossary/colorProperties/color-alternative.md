@@ -246,24 +246,4 @@
 '.text-rose-800': { color: '#9f1239', textColor: '#9f1239' }
 '.text-rose-900': { color: '#881337', textColor: '#881337' }
 '.text-rose-950': { color: '#4c0519', textColor: '#4c0519' }
-'.text-highlight': { color: '#ffff00', textColor: '#ffff00' }
-'.text-primary-dark': { color: '#000030', textColor: '#000030' }
-'.text-primary-solid': { color: '#10284B', textColor: '#10284B' }
-'.text-primary-transparent': { color: '#D9002359', textColor: '#D9002359' }
-'.text-secondary-dark': { color: '#000023', textColor: '#000023' }
-'.text-secondary-solid': { color: '#13294B', textColor: '#13294B' }
-'.text-secondary-transparent': { color: '#D913294B', textColor: '#D913294B' }
-'.text-robins-egg-blue-50': { color: '#ecffff', textColor: '#ecffff' }
-'.text-robins-egg-blue-100': { color: '#cffcfe', textColor: '#cffcfe' }
-'.text-robins-egg-blue-200': { color: '#a4f9fd', textColor: '#a4f9fd' }
-'.text-robins-egg-blue-300': { color: '#66f1fa', textColor: '#66f1fa' }
-'.text-robins-egg-blue-400': { color: '#20dff0', textColor: '#20dff0' }
-'.text-robins-egg-blue-500': { color: '#04bbce', textColor: '#04bbce' }
-'.text-robins-egg-blue-600': { color: '#069bb4', textColor: '#069bb4' }
-'.text-robins-egg-blue-700': { color: '#0d7c91', textColor: '#0d7c91' }
-'.text-robins-egg-blue-800': { color: '#146376', textColor: '#146376' }
-'.text-robins-egg-blue-900': { color: '#155264', textColor: '#155264' }
-'.text-robins-egg-blue': { color: '#04bbce', textColor: '#04bbce' }
-'.text-semantic': { color: 'textColor', textColor: 'textColor' }
-'.text-semantic-invertido': { color: 'textColorInvertido', textColor: 'textColorInvertido' }
 ```

@@ -247,22 +247,4 @@
 '.on-tint-rose-800': { onTintColor: '#9f1239' }
 '.on-tint-rose-900': { onTintColor: '#881337' }
 '.on-tint-rose-950': { onTintColor: '#4c0519' }
-'.on-tint-highlight': { onTintColor: '#ffff00' }
-'.on-tint-primary-dark': { onTintColor: '#000030' }
-'.on-tint-primary-solid': { onTintColor: '#10284B' }
-'.on-tint-primary-transparent': { onTintColor: '#D9002359' }
-'.on-tint-secondary-dark': { onTintColor: '#000023' }
-'.on-tint-secondary-solid': { onTintColor: '#13294B' }
-'.on-tint-secondary-transparent': { onTintColor: '#D913294B' }
-'.on-tint-robins-egg-blue-50': { onTintColor: '#ecffff' }
-'.on-tint-robins-egg-blue-100': { onTintColor: '#cffcfe' }
-'.on-tint-robins-egg-blue-200': { onTintColor: '#a4f9fd' }
-'.on-tint-robins-egg-blue-300': { onTintColor: '#66f1fa' }
-'.on-tint-robins-egg-blue-400': { onTintColor: '#20dff0' }
-'.on-tint-robins-egg-blue-500': { onTintColor: '#04bbce' }
-'.on-tint-robins-egg-blue-600': { onTintColor: '#069bb4' }
-'.on-tint-robins-egg-blue-700': { onTintColor: '#0d7c91' }
-'.on-tint-robins-egg-blue-800': { onTintColor: '#146376' }
-'.on-tint-robins-egg-blue-900': { onTintColor: '#155264' }
-'.on-tint-robins-egg-blue': { onTintColor: '#04bbce' }
 ```

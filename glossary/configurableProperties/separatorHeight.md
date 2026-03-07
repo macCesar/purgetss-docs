@@ -15,9 +15,7 @@
 '.separator-h-10': { separatorHeight: 40 }
 '.separator-h-11': { separatorHeight: 44 }
 '.separator-h-12': { separatorHeight: 48 }
-'.separator-h-13': { separatorHeight: 52 }
 '.separator-h-14': { separatorHeight: 56 }
-'.separator-h-15': { separatorHeight: 60 }
 '.separator-h-16': { separatorHeight: 64 }
 '.separator-h-20': { separatorHeight: 80 }
 '.separator-h-24': { separatorHeight: 96 }
@@ -33,9 +31,6 @@
 '.separator-h-64': { separatorHeight: 256 }
 '.separator-h-72': { separatorHeight: 288 }
 '.separator-h-80': { separatorHeight: 320 }
-'.separator-h-84': { separatorHeight: 336 }
-'.separator-h-85': { separatorHeight: 340 }
-'.separator-h-86': { separatorHeight: 344 }
 '.separator-h-96': { separatorHeight: 384 }
 '.separator-h-px': { separatorHeight: '1px' }
 '.separator-h-0.5': { separatorHeight: 2 }

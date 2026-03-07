@@ -14,9 +14,7 @@
 '.border-radius-10': { borderRadius: 20 }
 '.border-radius-11': { borderRadius: 22 }
 '.border-radius-12': { borderRadius: 24 }
-'.border-radius-13': { borderRadius: 26 }
 '.border-radius-14': { borderRadius: 28 }
-'.border-radius-15': { borderRadius: 30 }
 '.border-radius-16': { borderRadius: 32 }
 '.border-radius-20': { borderRadius: 40 }
 '.border-radius-24': { borderRadius: 48 }
@@ -32,9 +30,6 @@
 '.border-radius-64': { borderRadius: 128 }
 '.border-radius-72': { borderRadius: 144 }
 '.border-radius-80': { borderRadius: 160 }
-'.border-radius-84': { borderRadius: 336 }
-'.border-radius-85': { borderRadius: 340 }
-'.border-radius-86': { borderRadius: 344 }
 '.border-radius-96': { borderRadius: 192 }
 '.border-radius-none': { borderRadius: 0 }
 '.border-radius-sm': { borderRadius: 2 }

@@ -15,9 +15,7 @@
 '.right-button-padding-10': { rightButtonPadding: 40 }
 '.right-button-padding-11': { rightButtonPadding: 44 }
 '.right-button-padding-12': { rightButtonPadding: 48 }
-'.right-button-padding-13': { rightButtonPadding: 52 }
 '.right-button-padding-14': { rightButtonPadding: 56 }
-'.right-button-padding-15': { rightButtonPadding: 60 }
 '.right-button-padding-16': { rightButtonPadding: 64 }
 '.right-button-padding-20': { rightButtonPadding: 80 }
 '.right-button-padding-24': { rightButtonPadding: 96 }
@@ -33,9 +31,6 @@
 '.right-button-padding-64': { rightButtonPadding: 256 }
 '.right-button-padding-72': { rightButtonPadding: 288 }
 '.right-button-padding-80': { rightButtonPadding: 320 }
-'.right-button-padding-84': { rightButtonPadding: 336 }
-'.right-button-padding-85': { rightButtonPadding: 340 }
-'.right-button-padding-86': { rightButtonPadding: 344 }
 '.right-button-padding-96': { rightButtonPadding: 384 }
 '.right-button-padding-px': { rightButtonPadding: '1px' }
 '.right-button-padding-0.5': { rightButtonPadding: 2 }

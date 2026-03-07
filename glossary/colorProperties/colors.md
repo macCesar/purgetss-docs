@@ -246,22 +246,4 @@
 '.colors-rose-800': { colors: '#9f1239' }
 '.colors-rose-900': { colors: '#881337' }
 '.colors-rose-950': { colors: '#4c0519' }
-'.colors-highlight': { colors: '#ffff00' }
-'.colors-primary-dark': { colors: '#000030' }
-'.colors-primary-solid': { colors: '#10284B' }
-'.colors-primary-transparent': { colors: '#D9002359' }
-'.colors-secondary-dark': { colors: '#000023' }
-'.colors-secondary-solid': { colors: '#13294B' }
-'.colors-secondary-transparent': { colors: '#D913294B' }
-'.colors-robins-egg-blue-50': { colors: '#ecffff' }
-'.colors-robins-egg-blue-100': { colors: '#cffcfe' }
-'.colors-robins-egg-blue-200': { colors: '#a4f9fd' }
-'.colors-robins-egg-blue-300': { colors: '#66f1fa' }
-'.colors-robins-egg-blue-400': { colors: '#20dff0' }
-'.colors-robins-egg-blue-500': { colors: '#04bbce' }
-'.colors-robins-egg-blue-600': { colors: '#069bb4' }
-'.colors-robins-egg-blue-700': { colors: '#0d7c91' }
-'.colors-robins-egg-blue-800': { colors: '#146376' }
-'.colors-robins-egg-blue-900': { colors: '#155264' }
-'.colors-robins-egg-blue': { colors: '#04bbce' }
 ```

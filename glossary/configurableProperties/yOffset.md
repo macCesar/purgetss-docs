@@ -15,9 +15,7 @@
 '.y-offset-10': { yOffset: 40 }
 '.y-offset-11': { yOffset: 44 }
 '.y-offset-12': { yOffset: 48 }
-'.y-offset-13': { yOffset: 52 }
 '.y-offset-14': { yOffset: 56 }
-'.y-offset-15': { yOffset: 60 }
 '.y-offset-16': { yOffset: 64 }
 '.y-offset-20': { yOffset: 80 }
 '.y-offset-24': { yOffset: 96 }
@@ -33,9 +31,6 @@
 '.y-offset-64': { yOffset: 256 }
 '.y-offset-72': { yOffset: 288 }
 '.y-offset-80': { yOffset: 320 }
-'.y-offset-84': { yOffset: 336 }
-'.y-offset-85': { yOffset: 340 }
-'.y-offset-86': { yOffset: 344 }
 '.y-offset-96': { yOffset: 384 }
 '.y-offset-px': { yOffset: '1px' }
 '.y-offset-0.5': { yOffset: 2 }

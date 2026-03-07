@@ -15,9 +15,7 @@
 '.image-h-10': { imageHeight: 40 }
 '.image-h-11': { imageHeight: 44 }
 '.image-h-12': { imageHeight: 48 }
-'.image-h-13': { imageHeight: 52 }
 '.image-h-14': { imageHeight: 56 }
-'.image-h-15': { imageHeight: 60 }
 '.image-h-16': { imageHeight: 64 }
 '.image-h-20': { imageHeight: 80 }
 '.image-h-24': { imageHeight: 96 }
@@ -33,9 +31,6 @@
 '.image-h-64': { imageHeight: 256 }
 '.image-h-72': { imageHeight: 288 }
 '.image-h-80': { imageHeight: 320 }
-'.image-h-84': { imageHeight: 336 }
-'.image-h-85': { imageHeight: 340 }
-'.image-h-86': { imageHeight: 344 }
 '.image-h-96': { imageHeight: 384 }
 '.image-h-auto': { imageHeight: Ti.UI.SIZE }
 '.image-h-px': { imageHeight: '1px' }

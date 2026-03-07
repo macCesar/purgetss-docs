@@ -1,7 +1,7 @@
 ```css
 // Ti.Media
 // Property(ies): scalingMode - ( Alternative )
-// Description: Background Size for compatibility with Tailwind classes
+// Description: Background Size for compatibility
 // Component(s): Ti.UI.ImageView
 '.bg-auto': { scalingMode: Ti.Media.IMAGE_SCALING_AUTO }
 '.bg-fill': { scalingMode: Ti.Media.IMAGE_SCALING_FILL }
@@ -10,7 +10,7 @@
 '.bg-contain': { scalingMode: Ti.Media.IMAGE_SCALING_ASPECT_FIT }
 
 // Property(ies): scalingMode - ( Alternative )
-// Description: Object Fit for compatibility with Tailwind classes
+// Description: Object Fit for compatibility
 // Component(s): Ti.UI.ImageView
 '.object-auto': { scalingMode: Ti.Media.IMAGE_SCALING_AUTO }
 '.object-fill': { scalingMode: Ti.Media.IMAGE_SCALING_FILL }

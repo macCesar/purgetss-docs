@@ -246,22 +246,4 @@
 '.bg-focused-rose-800': { backgroundFocusedColor: '#9f1239' }
 '.bg-focused-rose-900': { backgroundFocusedColor: '#881337' }
 '.bg-focused-rose-950': { backgroundFocusedColor: '#4c0519' }
-'.bg-focused-highlight': { backgroundFocusedColor: '#ffff00' }
-'.bg-focused-primary-dark': { backgroundFocusedColor: '#000030' }
-'.bg-focused-primary-solid': { backgroundFocusedColor: '#10284B' }
-'.bg-focused-primary-transparent': { backgroundFocusedColor: '#D9002359' }
-'.bg-focused-secondary-dark': { backgroundFocusedColor: '#000023' }
-'.bg-focused-secondary-solid': { backgroundFocusedColor: '#13294B' }
-'.bg-focused-secondary-transparent': { backgroundFocusedColor: '#D913294B' }
-'.bg-focused-robins-egg-blue-50': { backgroundFocusedColor: '#ecffff' }
-'.bg-focused-robins-egg-blue-100': { backgroundFocusedColor: '#cffcfe' }
-'.bg-focused-robins-egg-blue-200': { backgroundFocusedColor: '#a4f9fd' }
-'.bg-focused-robins-egg-blue-300': { backgroundFocusedColor: '#66f1fa' }
-'.bg-focused-robins-egg-blue-400': { backgroundFocusedColor: '#20dff0' }
-'.bg-focused-robins-egg-blue-500': { backgroundFocusedColor: '#04bbce' }
-'.bg-focused-robins-egg-blue-600': { backgroundFocusedColor: '#069bb4' }
-'.bg-focused-robins-egg-blue-700': { backgroundFocusedColor: '#0d7c91' }
-'.bg-focused-robins-egg-blue-800': { backgroundFocusedColor: '#146376' }
-'.bg-focused-robins-egg-blue-900': { backgroundFocusedColor: '#155264' }
-'.bg-focused-robins-egg-blue': { backgroundFocusedColor: '#04bbce' }
 ```

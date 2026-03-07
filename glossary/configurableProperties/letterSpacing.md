@@ -15,9 +15,7 @@
 '.letter-spacing-10': { letterSpacing: 40 }
 '.letter-spacing-11': { letterSpacing: 44 }
 '.letter-spacing-12': { letterSpacing: 48 }
-'.letter-spacing-13': { letterSpacing: 52 }
 '.letter-spacing-14': { letterSpacing: 56 }
-'.letter-spacing-15': { letterSpacing: 60 }
 '.letter-spacing-16': { letterSpacing: 64 }
 '.letter-spacing-20': { letterSpacing: 80 }
 '.letter-spacing-24': { letterSpacing: 96 }
@@ -33,9 +31,6 @@
 '.letter-spacing-64': { letterSpacing: 256 }
 '.letter-spacing-72': { letterSpacing: 288 }
 '.letter-spacing-80': { letterSpacing: 320 }
-'.letter-spacing-84': { letterSpacing: 336 }
-'.letter-spacing-85': { letterSpacing: 340 }
-'.letter-spacing-86': { letterSpacing: 344 }
 '.letter-spacing-96': { letterSpacing: 384 }
 '.letter-spacing-auto': { letterSpacing: Ti.UI.SIZE }
 '.letter-spacing-px': { letterSpacing: '1px' }

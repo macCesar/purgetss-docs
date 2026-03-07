@@ -14,9 +14,7 @@
 '.right-10': { right: 40 }
 '.right-11': { right: 44 }
 '.right-12': { right: 48 }
-'.right-13': { right: 52 }
 '.right-14': { right: 56 }
-'.right-15': { right: 60 }
 '.right-16': { right: 64 }
 '.right-20': { right: 80 }
 '.right-24': { right: 96 }
@@ -32,9 +30,6 @@
 '.right-64': { right: 256 }
 '.right-72': { right: 288 }
 '.right-80': { right: 320 }
-'.right-84': { right: 336 }
-'.right-85': { right: 340 }
-'.right-86': { right: 344 }
 '.right-96': { right: 384 }
 '.right-auto': { right: null }
 '.right-px': { right: '1px' }

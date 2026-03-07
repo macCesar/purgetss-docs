@@ -247,22 +247,4 @@
 '.thumb-tint-rose-800': { thumbTintColor: '#9f1239' }
 '.thumb-tint-rose-900': { thumbTintColor: '#881337' }
 '.thumb-tint-rose-950': { thumbTintColor: '#4c0519' }
-'.thumb-tint-highlight': { thumbTintColor: '#ffff00' }
-'.thumb-tint-primary-dark': { thumbTintColor: '#000030' }
-'.thumb-tint-primary-solid': { thumbTintColor: '#10284B' }
-'.thumb-tint-primary-transparent': { thumbTintColor: '#D9002359' }
-'.thumb-tint-secondary-dark': { thumbTintColor: '#000023' }
-'.thumb-tint-secondary-solid': { thumbTintColor: '#13294B' }
-'.thumb-tint-secondary-transparent': { thumbTintColor: '#D913294B' }
-'.thumb-tint-robins-egg-blue-50': { thumbTintColor: '#ecffff' }
-'.thumb-tint-robins-egg-blue-100': { thumbTintColor: '#cffcfe' }
-'.thumb-tint-robins-egg-blue-200': { thumbTintColor: '#a4f9fd' }
-'.thumb-tint-robins-egg-blue-300': { thumbTintColor: '#66f1fa' }
-'.thumb-tint-robins-egg-blue-400': { thumbTintColor: '#20dff0' }
-'.thumb-tint-robins-egg-blue-500': { thumbTintColor: '#04bbce' }
-'.thumb-tint-robins-egg-blue-600': { thumbTintColor: '#069bb4' }
-'.thumb-tint-robins-egg-blue-700': { thumbTintColor: '#0d7c91' }
-'.thumb-tint-robins-egg-blue-800': { thumbTintColor: '#146376' }
-'.thumb-tint-robins-egg-blue-900': { thumbTintColor: '#155264' }
-'.thumb-tint-robins-egg-blue': { thumbTintColor: '#04bbce' }
 ```

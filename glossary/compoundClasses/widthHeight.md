@@ -14,9 +14,7 @@
 '.wh-10': { width: 40, height: 40 }
 '.wh-11': { width: 44, height: 44 }
 '.wh-12': { width: 48, height: 48 }
-'.wh-13': { width: 52, height: 52 }
 '.wh-14': { width: 56, height: 56 }
-'.wh-15': { width: 60, height: 60 }
 '.wh-16': { width: 64, height: 64 }
 '.wh-20': { width: 80, height: 80 }
 '.wh-24': { width: 96, height: 96 }
@@ -32,9 +30,6 @@
 '.wh-64': { width: 256, height: 256 }
 '.wh-72': { width: 288, height: 288 }
 '.wh-80': { width: 320, height: 320 }
-'.wh-84': { width: 336, height: 336 }
-'.wh-85': { width: 340, height: 340 }
-'.wh-86': { width: 344, height: 344 }
 '.wh-96': { width: 384, height: 384 }
 '.wh-auto': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 '.wh-px': { width: '1px', height: '1px' }

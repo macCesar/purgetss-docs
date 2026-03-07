@@ -15,9 +15,7 @@
 '.paragraph-spacing-before-10': { paragraphSpacingBefore: 40 }
 '.paragraph-spacing-before-11': { paragraphSpacingBefore: 44 }
 '.paragraph-spacing-before-12': { paragraphSpacingBefore: 48 }
-'.paragraph-spacing-before-13': { paragraphSpacingBefore: 52 }
 '.paragraph-spacing-before-14': { paragraphSpacingBefore: 56 }
-'.paragraph-spacing-before-15': { paragraphSpacingBefore: 60 }
 '.paragraph-spacing-before-16': { paragraphSpacingBefore: 64 }
 '.paragraph-spacing-before-20': { paragraphSpacingBefore: 80 }
 '.paragraph-spacing-before-24': { paragraphSpacingBefore: 96 }
@@ -33,9 +31,6 @@
 '.paragraph-spacing-before-64': { paragraphSpacingBefore: 256 }
 '.paragraph-spacing-before-72': { paragraphSpacingBefore: 288 }
 '.paragraph-spacing-before-80': { paragraphSpacingBefore: 320 }
-'.paragraph-spacing-before-84': { paragraphSpacingBefore: 336 }
-'.paragraph-spacing-before-85': { paragraphSpacingBefore: 340 }
-'.paragraph-spacing-before-86': { paragraphSpacingBefore: 344 }
 '.paragraph-spacing-before-96': { paragraphSpacingBefore: 384 }
 '.paragraph-spacing-before-auto': { paragraphSpacingBefore: Ti.UI.SIZE }
 '.paragraph-spacing-before-px': { paragraphSpacingBefore: '1px' }

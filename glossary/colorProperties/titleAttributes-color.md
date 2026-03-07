@@ -246,22 +246,4 @@
 '.title-attributes-rose-800': { titleAttributes: { color: '#9f1239' } }
 '.title-attributes-rose-900': { titleAttributes: { color: '#881337' } }
 '.title-attributes-rose-950': { titleAttributes: { color: '#4c0519' } }
-'.title-attributes-highlight': { titleAttributes: { color: '#ffff00' } }
-'.title-attributes-primary-dark': { titleAttributes: { color: '#000030' } }
-'.title-attributes-primary-solid': { titleAttributes: { color: '#10284B' } }
-'.title-attributes-primary-transparent': { titleAttributes: { color: '#D9002359' } }
-'.title-attributes-secondary-dark': { titleAttributes: { color: '#000023' } }
-'.title-attributes-secondary-solid': { titleAttributes: { color: '#13294B' } }
-'.title-attributes-secondary-transparent': { titleAttributes: { color: '#D913294B' } }
-'.title-attributes-robins-egg-blue-50': { titleAttributes: { color: '#ecffff' } }
-'.title-attributes-robins-egg-blue-100': { titleAttributes: { color: '#cffcfe' } }
-'.title-attributes-robins-egg-blue-200': { titleAttributes: { color: '#a4f9fd' } }
-'.title-attributes-robins-egg-blue-300': { titleAttributes: { color: '#66f1fa' } }
-'.title-attributes-robins-egg-blue-400': { titleAttributes: { color: '#20dff0' } }
-'.title-attributes-robins-egg-blue-500': { titleAttributes: { color: '#04bbce' } }
-'.title-attributes-robins-egg-blue-600': { titleAttributes: { color: '#069bb4' } }
-'.title-attributes-robins-egg-blue-700': { titleAttributes: { color: '#0d7c91' } }
-'.title-attributes-robins-egg-blue-800': { titleAttributes: { color: '#146376' } }
-'.title-attributes-robins-egg-blue-900': { titleAttributes: { color: '#155264' } }
-'.title-attributes-robins-egg-blue': { titleAttributes: { color: '#04bbce' } }
 ```

@@ -247,22 +247,4 @@
 '.results-bg-rose-800': { resultsBackgroundColor: '#9f1239' }
 '.results-bg-rose-900': { resultsBackgroundColor: '#881337' }
 '.results-bg-rose-950': { resultsBackgroundColor: '#4c0519' }
-'.results-bg-highlight': { resultsBackgroundColor: '#ffff00' }
-'.results-bg-primary-dark': { resultsBackgroundColor: '#000030' }
-'.results-bg-primary-solid': { resultsBackgroundColor: '#10284B' }
-'.results-bg-primary-transparent': { resultsBackgroundColor: '#D9002359' }
-'.results-bg-secondary-dark': { resultsBackgroundColor: '#000023' }
-'.results-bg-secondary-solid': { resultsBackgroundColor: '#13294B' }
-'.results-bg-secondary-transparent': { resultsBackgroundColor: '#D913294B' }
-'.results-bg-robins-egg-blue-50': { resultsBackgroundColor: '#ecffff' }
-'.results-bg-robins-egg-blue-100': { resultsBackgroundColor: '#cffcfe' }
-'.results-bg-robins-egg-blue-200': { resultsBackgroundColor: '#a4f9fd' }
-'.results-bg-robins-egg-blue-300': { resultsBackgroundColor: '#66f1fa' }
-'.results-bg-robins-egg-blue-400': { resultsBackgroundColor: '#20dff0' }
-'.results-bg-robins-egg-blue-500': { resultsBackgroundColor: '#04bbce' }
-'.results-bg-robins-egg-blue-600': { resultsBackgroundColor: '#069bb4' }
-'.results-bg-robins-egg-blue-700': { resultsBackgroundColor: '#0d7c91' }
-'.results-bg-robins-egg-blue-800': { resultsBackgroundColor: '#146376' }
-'.results-bg-robins-egg-blue-900': { resultsBackgroundColor: '#155264' }
-'.results-bg-robins-egg-blue': { resultsBackgroundColor: '#04bbce' }
 ```

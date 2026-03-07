@@ -247,22 +247,4 @@
 '.keyboard-toolbar-rose-800': { keyboardToolbarColor: '#9f1239' }
 '.keyboard-toolbar-rose-900': { keyboardToolbarColor: '#881337' }
 '.keyboard-toolbar-rose-950': { keyboardToolbarColor: '#4c0519' }
-'.keyboard-toolbar-highlight': { keyboardToolbarColor: '#ffff00' }
-'.keyboard-toolbar-primary-dark': { keyboardToolbarColor: '#000030' }
-'.keyboard-toolbar-primary-solid': { keyboardToolbarColor: '#10284B' }
-'.keyboard-toolbar-primary-transparent': { keyboardToolbarColor: '#D9002359' }
-'.keyboard-toolbar-secondary-dark': { keyboardToolbarColor: '#000023' }
-'.keyboard-toolbar-secondary-solid': { keyboardToolbarColor: '#13294B' }
-'.keyboard-toolbar-secondary-transparent': { keyboardToolbarColor: '#D913294B' }
-'.keyboard-toolbar-robins-egg-blue-50': { keyboardToolbarColor: '#ecffff' }
-'.keyboard-toolbar-robins-egg-blue-100': { keyboardToolbarColor: '#cffcfe' }
-'.keyboard-toolbar-robins-egg-blue-200': { keyboardToolbarColor: '#a4f9fd' }
-'.keyboard-toolbar-robins-egg-blue-300': { keyboardToolbarColor: '#66f1fa' }
-'.keyboard-toolbar-robins-egg-blue-400': { keyboardToolbarColor: '#20dff0' }
-'.keyboard-toolbar-robins-egg-blue-500': { keyboardToolbarColor: '#04bbce' }
-'.keyboard-toolbar-robins-egg-blue-600': { keyboardToolbarColor: '#069bb4' }
-'.keyboard-toolbar-robins-egg-blue-700': { keyboardToolbarColor: '#0d7c91' }
-'.keyboard-toolbar-robins-egg-blue-800': { keyboardToolbarColor: '#146376' }
-'.keyboard-toolbar-robins-egg-blue-900': { keyboardToolbarColor: '#155264' }
-'.keyboard-toolbar-robins-egg-blue': { keyboardToolbarColor: '#04bbce' }
 ```

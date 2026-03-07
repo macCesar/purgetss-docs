@@ -15,9 +15,7 @@
 '.max-elevation-10': { maxElevation: 40 }
 '.max-elevation-11': { maxElevation: 44 }
 '.max-elevation-12': { maxElevation: 48 }
-'.max-elevation-13': { maxElevation: 52 }
 '.max-elevation-14': { maxElevation: 56 }
-'.max-elevation-15': { maxElevation: 60 }
 '.max-elevation-16': { maxElevation: 64 }
 '.max-elevation-20': { maxElevation: 80 }
 '.max-elevation-24': { maxElevation: 96 }
@@ -33,9 +31,6 @@
 '.max-elevation-64': { maxElevation: 256 }
 '.max-elevation-72': { maxElevation: 288 }
 '.max-elevation-80': { maxElevation: 320 }
-'.max-elevation-84': { maxElevation: 336 }
-'.max-elevation-85': { maxElevation: 340 }
-'.max-elevation-86': { maxElevation: 344 }
 '.max-elevation-96': { maxElevation: 384 }
 '.max-elevation-px': { maxElevation: '1px' }
 '.max-elevation-0.5': { maxElevation: 2 }

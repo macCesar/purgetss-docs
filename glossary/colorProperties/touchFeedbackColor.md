@@ -247,22 +247,4 @@
 '.touch-feedback-rose-800': { touchFeedbackColor: '#9f1239' }
 '.touch-feedback-rose-900': { touchFeedbackColor: '#881337' }
 '.touch-feedback-rose-950': { touchFeedbackColor: '#4c0519' }
-'.touch-feedback-highlight': { touchFeedbackColor: '#ffff00' }
-'.touch-feedback-primary-dark': { touchFeedbackColor: '#000030' }
-'.touch-feedback-primary-solid': { touchFeedbackColor: '#10284B' }
-'.touch-feedback-primary-transparent': { touchFeedbackColor: '#D9002359' }
-'.touch-feedback-secondary-dark': { touchFeedbackColor: '#000023' }
-'.touch-feedback-secondary-solid': { touchFeedbackColor: '#13294B' }
-'.touch-feedback-secondary-transparent': { touchFeedbackColor: '#D913294B' }
-'.touch-feedback-robins-egg-blue-50': { touchFeedbackColor: '#ecffff' }
-'.touch-feedback-robins-egg-blue-100': { touchFeedbackColor: '#cffcfe' }
-'.touch-feedback-robins-egg-blue-200': { touchFeedbackColor: '#a4f9fd' }
-'.touch-feedback-robins-egg-blue-300': { touchFeedbackColor: '#66f1fa' }
-'.touch-feedback-robins-egg-blue-400': { touchFeedbackColor: '#20dff0' }
-'.touch-feedback-robins-egg-blue-500': { touchFeedbackColor: '#04bbce' }
-'.touch-feedback-robins-egg-blue-600': { touchFeedbackColor: '#069bb4' }
-'.touch-feedback-robins-egg-blue-700': { touchFeedbackColor: '#0d7c91' }
-'.touch-feedback-robins-egg-blue-800': { touchFeedbackColor: '#146376' }
-'.touch-feedback-robins-egg-blue-900': { touchFeedbackColor: '#155264' }
-'.touch-feedback-robins-egg-blue': { touchFeedbackColor: '#04bbce' }
 ```

@@ -14,9 +14,7 @@
 '.size-10': { width: 40, height: 40 }
 '.size-11': { width: 44, height: 44 }
 '.size-12': { width: 48, height: 48 }
-'.size-13': { width: 52, height: 52 }
 '.size-14': { width: 56, height: 56 }
-'.size-15': { width: 60, height: 60 }
 '.size-16': { width: 64, height: 64 }
 '.size-20': { width: 80, height: 80 }
 '.size-24': { width: 96, height: 96 }
@@ -32,9 +30,6 @@
 '.size-64': { width: 256, height: 256 }
 '.size-72': { width: 288, height: 288 }
 '.size-80': { width: 320, height: 320 }
-'.size-84': { width: 336, height: 336 }
-'.size-85': { width: 340, height: 340 }
-'.size-86': { width: 344, height: 344 }
 '.size-96': { width: 384, height: 384 }
 '.size-auto': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
 '.size-px': { width: '1px', height: '1px' }

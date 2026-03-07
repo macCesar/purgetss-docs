@@ -247,22 +247,4 @@
 '.subtitle-text-rose-800': { subtitleTextColor: '#9f1239' }
 '.subtitle-text-rose-900': { subtitleTextColor: '#881337' }
 '.subtitle-text-rose-950': { subtitleTextColor: '#4c0519' }
-'.subtitle-text-highlight': { subtitleTextColor: '#ffff00' }
-'.subtitle-text-primary-dark': { subtitleTextColor: '#000030' }
-'.subtitle-text-primary-solid': { subtitleTextColor: '#10284B' }
-'.subtitle-text-primary-transparent': { subtitleTextColor: '#D9002359' }
-'.subtitle-text-secondary-dark': { subtitleTextColor: '#000023' }
-'.subtitle-text-secondary-solid': { subtitleTextColor: '#13294B' }
-'.subtitle-text-secondary-transparent': { subtitleTextColor: '#D913294B' }
-'.subtitle-text-robins-egg-blue-50': { subtitleTextColor: '#ecffff' }
-'.subtitle-text-robins-egg-blue-100': { subtitleTextColor: '#cffcfe' }
-'.subtitle-text-robins-egg-blue-200': { subtitleTextColor: '#a4f9fd' }
-'.subtitle-text-robins-egg-blue-300': { subtitleTextColor: '#66f1fa' }
-'.subtitle-text-robins-egg-blue-400': { subtitleTextColor: '#20dff0' }
-'.subtitle-text-robins-egg-blue-500': { subtitleTextColor: '#04bbce' }
-'.subtitle-text-robins-egg-blue-600': { subtitleTextColor: '#069bb4' }
-'.subtitle-text-robins-egg-blue-700': { subtitleTextColor: '#0d7c91' }
-'.subtitle-text-robins-egg-blue-800': { subtitleTextColor: '#146376' }
-'.subtitle-text-robins-egg-blue-900': { subtitleTextColor: '#155264' }
-'.subtitle-text-robins-egg-blue': { subtitleTextColor: '#04bbce' }
 ```

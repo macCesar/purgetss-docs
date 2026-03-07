@@ -247,22 +247,4 @@
 '.highlighted-rose-800': { highlightedColor: '#9f1239' }
 '.highlighted-rose-900': { highlightedColor: '#881337' }
 '.highlighted-rose-950': { highlightedColor: '#4c0519' }
-'.highlighted-highlight': { highlightedColor: '#ffff00' }
-'.highlighted-primary-dark': { highlightedColor: '#000030' }
-'.highlighted-primary-solid': { highlightedColor: '#10284B' }
-'.highlighted-primary-transparent': { highlightedColor: '#D9002359' }
-'.highlighted-secondary-dark': { highlightedColor: '#000023' }
-'.highlighted-secondary-solid': { highlightedColor: '#13294B' }
-'.highlighted-secondary-transparent': { highlightedColor: '#D913294B' }
-'.highlighted-robins-egg-blue-50': { highlightedColor: '#ecffff' }
-'.highlighted-robins-egg-blue-100': { highlightedColor: '#cffcfe' }
-'.highlighted-robins-egg-blue-200': { highlightedColor: '#a4f9fd' }
-'.highlighted-robins-egg-blue-300': { highlightedColor: '#66f1fa' }
-'.highlighted-robins-egg-blue-400': { highlightedColor: '#20dff0' }
-'.highlighted-robins-egg-blue-500': { highlightedColor: '#04bbce' }
-'.highlighted-robins-egg-blue-600': { highlightedColor: '#069bb4' }
-'.highlighted-robins-egg-blue-700': { highlightedColor: '#0d7c91' }
-'.highlighted-robins-egg-blue-800': { highlightedColor: '#146376' }
-'.highlighted-robins-egg-blue-900': { highlightedColor: '#155264' }
-'.highlighted-robins-egg-blue': { highlightedColor: '#04bbce' }
 ```

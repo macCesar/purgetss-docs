@@ -15,9 +15,7 @@
 '.line-h-multiple-10': { lineHeightMultiple: 40 }
 '.line-h-multiple-11': { lineHeightMultiple: 44 }
 '.line-h-multiple-12': { lineHeightMultiple: 48 }
-'.line-h-multiple-13': { lineHeightMultiple: 52 }
 '.line-h-multiple-14': { lineHeightMultiple: 56 }
-'.line-h-multiple-15': { lineHeightMultiple: 60 }
 '.line-h-multiple-16': { lineHeightMultiple: 64 }
 '.line-h-multiple-20': { lineHeightMultiple: 80 }
 '.line-h-multiple-24': { lineHeightMultiple: 96 }
@@ -33,9 +31,6 @@
 '.line-h-multiple-64': { lineHeightMultiple: 256 }
 '.line-h-multiple-72': { lineHeightMultiple: 288 }
 '.line-h-multiple-80': { lineHeightMultiple: 320 }
-'.line-h-multiple-84': { lineHeightMultiple: 336 }
-'.line-h-multiple-85': { lineHeightMultiple: 340 }
-'.line-h-multiple-86': { lineHeightMultiple: 344 }
 '.line-h-multiple-96': { lineHeightMultiple: 384 }
 '.line-h-multiple-auto': { lineHeightMultiple: Ti.UI.SIZE }
 '.line-h-multiple-px': { lineHeightMultiple: '1px' }
