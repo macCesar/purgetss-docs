@@ -33,9 +33,11 @@ $.myAnimation.open(views, callback);
 ```
 
 ```javascript title="index.js"
-$.myAnimation.open($.myView, () => {
-  console.log('Open animation complete');
-});
+$.myAnimation.open($.myView, (e) => {
+  console.log('Open animation complete')
+  console.log(e.state)    // 'open'
+  console.log(e.targetId) // ID of the animated view
+})
 ```
 
 In this example, `myView` uses the properties under `open`, making it fully opaque.
@@ -66,9 +68,13 @@ $.myAnimation.close(views, callback);
 ```
 
 ```javascript title="index.js"
-$.myAnimation.close($.myView, () => {
-  console.log('Close animation complete');
-});
+$.myAnimation.close($.myView, (e) => {
+  console.log('Close animation complete')
+  console.log(e.state)    // 'close'
+  console.log(e.targetId) // ID of the animated view
+})
 ```
+
+The callback receives the same enriched event object as `play`. See [Callback event object](the-play-method#callback-event-object) for the full property reference.
 
 In this example, `myView` uses the properties under `close`, making it fully transparent.

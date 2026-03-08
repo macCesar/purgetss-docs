@@ -159,3 +159,54 @@ function doReset() {
 <div align="center">
 ![complete example 1](../images/complete-attribute.gif)
 </div>
+
+## Callback event object
+
+When you pass a callback to `play`, `toggle`, `open`, or `close`, it receives an enriched event object instead of the raw native event:
+
+```javascript
+$.myAnimation.play($.myView, (e) => {
+  console.log(e.action)   // 'play'
+  console.log(e.state)    // 'open' or 'close'
+  console.log(e.id)       // Animation object ID
+  console.log(e.targetId) // ID of the animated view
+})
+```
+
+### Event object properties
+
+| Property       | Type     | Description                                 |
+| -------------- | -------- | ------------------------------------------- |
+| `type`         | String   | Event type (`'complete'`)                   |
+| `bubbles`      | Boolean  | Whether the event bubbles                   |
+| `cancelBubble` | Boolean  | Whether bubbling is cancelled               |
+| `action`       | String   | `'play'` or `'apply'`                       |
+| `state`        | String   | `'open'` or `'close'`                       |
+| `id`           | String   | ID of the Animation object                  |
+| `targetId`     | String   | ID of the animated view                     |
+| `index`        | Number   | Position of the view in the array (0-based) |
+| `total`        | Number   | Total number of views in the array          |
+| `getTarget()`  | Function | Returns the animated view object            |
+
+### Animating an array of views
+
+When you pass an array to `play`, the callback is called once per view. Use `index` and `total` to track progress:
+
+```javascript
+$.myAnimation.play([$.card1, $.card2, $.card3], (e) => {
+  console.log(`Animated ${e.index + 1} of ${e.total}`)
+
+  if (e.index === e.total - 1) {
+    console.log('All animations complete')
+  }
+})
+```
+
+Use `getTarget()` to reference the specific view that just finished animating:
+
+```javascript
+$.myAnimation.play([$.card1, $.card2, $.card3], (e) => {
+  const view = e.getTarget()
+  view.borderColor = 'green'
+})
+```

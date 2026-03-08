@@ -23,6 +23,8 @@ When you call `play` on a View, it animates from its current state to the state 
 - `apply`: Apply properties instantly without animation.
 - `draggable`: Convert a View or array of Views into draggable elements.
 
+All methods except `draggable` accept an optional callback. The callback receives an enriched event object — see [The `play` method](the-play-method#callback-event-object) for details.
+
 ## Available modifiers
 - `open:`, `close:`, `complete:`: Set different properties for each state.
 - `children:`: Set global properties for all children of a View.
@@ -40,6 +42,13 @@ When you call `play` on a View, it animates from its current state to the state 
 - `drag-apply`, `drag-animate`: Apply or animate properties while dragging.
 - `ease-in`, `ease-out`, `ease-linear`, `ease-in-out`: Animation curve.
 - `vertical-constraint`, `horizontal-constraint`: Constrain dragging to one axis.
+
+## Utility functions
+
+The module also exports two helper functions:
+
+- `deviceInfo()`: Logs detailed platform and display information to the console. Works in both Alloy and Classic Titanium projects.
+- `saveComponent({ source, directory })`: Saves a snapshot of a view as a PNG to the photo gallery.
 
 ## Installation
 Use the **`purgetss module`** command to install the module in the `lib` folder.

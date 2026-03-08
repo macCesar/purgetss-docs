@@ -51,3 +51,17 @@ $.index.open()
 </div>
 
 *Low framerate gif.*
+
+## Callback event object
+
+`apply` also accepts an optional callback. It receives the same enriched event object as `play`, with `action` set to `'apply'` and `type` set to `'applied'`:
+
+```javascript
+$.myAnimation.apply($.myView, (e) => {
+  console.log(e.action)   // 'apply'
+  console.log(e.state)    // 'open' or 'close'
+  console.log(e.targetId) // ID of the view
+})
+```
+
+When passing an array of views, `index` and `total` work the same as with `play`. See [Callback event object](the-play-method#callback-event-object) for the full property reference.
