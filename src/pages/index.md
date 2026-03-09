@@ -18,6 +18,31 @@ It includes utility classes, icon font support, an Animation module, a simple gr
 If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writing long TSS files.
 :::
 
+## What's New in v7.4.0
+
+**Bug fix and documentation improvements.** PurgeTSS v7.4.0 fixes a serialization bug in custom rules and improves the Animation module documentation.
+
+### Fixed
+
+- **`backgroundGradient.colors` serialization**: Custom classes using arrays of objects (e.g. gradient color stops) now serialize correctly in `utilities.tss`.
+
+  Previously, defining `colors` as an array of `{ color, offset }` objects in `purgetss/config.cjs` produced broken output:
+  ```
+  colors: { 0: '[object Object]', 1: '[object Object]' }
+  ```
+  It now outputs the correct format:
+  ```
+  colors: [ { color: '#132C50', offset: 0 }, { color: '#0A1529', offset: 1 } ]
+  ```
+  This fix applies to any array of objects at any depth in your custom rules.
+
+### Documentation
+
+- Added full Animation Module reference to `README.md`: method table, callback event object, array animation patterns, and utility classes.
+- Animation module docs updated with the enriched callback event object (`index`, `total`, `getTarget()`).
+
+---
+
 ## What's New in v7.3.x
 
 **File rename and improved error handling.** PurgeTSS v7.3 renames `tailwind.tss` to `utilities.tss` to reflect the project's standalone identity, and adds XML syntax validation to catch errors early.
