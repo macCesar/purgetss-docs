@@ -186,12 +186,14 @@ Every time `purgetss` runs, it copies the content of `_app.tss` to `app.tss`.
 
 Find more examples in the [**Tailwind TSS Sample App**](https://github.com/macCesar/utilities.tss-sample-app).
 
-:::warning `Label` and `Button` with opposite margins
-In Titanium, `Label` and `Button` can stretch when opposite margins pin both sides of the same axis and the dimension is still implicit.
+:::warning `Label`, `Button`, and `Switch` with opposite margins
+In Titanium, `Label`, `Button`, and `Switch` can stretch when opposite margins pin both sides of the same axis and the dimension is still implicit.
 
 - `mt-*` + `mb-*` or `my-*` can stretch the component vertically. Add `h-auto`.
 - `ml-*` + `mr-*` or `mx-*` can stretch the component horizontally. Add `w-auto`.
 - If margins affect both axes, use `wh-auto`.
+
+This applies to **any component whose default size is `Ti.UI.SIZE`**. If you set opposite margins on the same axis (e.g., left and right), Titanium's composite layout uses those pins to calculate the dimension instead of the content — so the component stretches to fill its parent.
 
 Examples:
 
@@ -199,6 +201,7 @@ Examples:
 <Label class="mt-2 mb-4 h-auto" text="Only content height" />
 <Label class="mx-4 w-auto" text="Only content width" />
 <Label class="m-4 wh-auto" text="Safe reset on both axes" />
+<Switch class="my-1 mr-2 h-auto" onChange="onChanged" />
 ```
 :::
 

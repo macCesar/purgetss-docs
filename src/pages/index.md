@@ -94,7 +94,7 @@ Here are its main functionalities:
 - Icon fonts integration: Use icon fonts such as Font Awesome, Material Icons, Material Symbols, and Framework7-Icons in Buttons and Labels.
 - `fonts.tss` generation: The `build-fonts` command creates a `fonts.tss` file with class definitions and fontFamily selectors for regular and icon fonts, with simplified options for filenames and icon prefixes.
 - `shades` command: Generate custom color shades from a hex color without external tools.
-- Animation module: Apply basic 2D matrix animations or transformations to elements or arrays of elements.
+- Animation module: 2D matrix animations, draggable elements with collision detection, sequential animations, and position-based utilities.
 - Grid system: A two-dimensional grid system to align and distribute elements within views.
 
 In short, PurgeTSS keeps styling consistent and removes a lot of repetitive UI setup work.
@@ -118,5 +118,6 @@ In short, PurgeTSS keeps styling consistent and removes a lot of repetitive UI s
   - [The `open` and `close` Methods](docs/animation-module/the-open-and-close-methods)
   - [The `draggable` Method](docs/animation-module/the-draggable-method)
   - [Complex UI Elements](docs/animation-module/complex-ui-elements)
+  - [Additional Methods](docs/animation-module/additional-methods)
   - [Available Utilities](docs/animation-module/available-utilities)
 - [Grid System](docs/grid-system)
