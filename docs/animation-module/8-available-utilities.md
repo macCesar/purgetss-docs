@@ -1,16 +1,16 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 slug: available-utilities
 ---
 
 # Available Utilities
 
-Along with regular utilities like colors, widths, and heights, you can use the following animation-specific utilities.
+Besides regular utilities like colors, widths, and heights, the Animation module has these animation-specific utilities.
 
 ## anchorPoint
-Coordinate of the View about which to pivot an animation.
+The point on the View around which animations pivot.
 
-This is a dictionary with `x` and `y` properties, where `{x: 0.5, y: 0.5}` represents the center of the View.
+A dictionary with `x` and `y` properties, where `{x: 0.5, y: 0.5}` is the center of the View.
 
 **Default:** `(0.5, 0.5)`
 
@@ -40,7 +40,7 @@ This is a dictionary with `x` and `y` properties, where `{x: 0.5, y: 0.5}` repre
 ```
 
 ## autoreverse
-Specifies whether the animation should replay in reverse after completion.
+Whether the animation replays in reverse after completing.
 
 **Default:** `false`
 
@@ -183,7 +183,7 @@ Rotation in degrees. See the rotate method for more detail.
 ```
 
 ## scale
-Scales the matrix by the specified factor. The same factor is used for both horizontal and vertical scaling.
+Scales the matrix by the specified factor. The same value applies to both horizontal and vertical scaling.
 
 **Default:** `1`
 
@@ -217,7 +217,7 @@ Use `drag-animate` (default) or `drag-apply` to control how `drag:` and `drop:` 
 ```
 
 ## opacity-to-*, toggle-visible
-Utility to automatically animate opacity and toggle visibility.
+Animates opacity and toggles visibility automatically.
 
 ```css
 /* Property(ies): toggle - For the Animation module */
@@ -228,9 +228,9 @@ Utility to automatically animate opacity and toggle visibility.
 ```
 
 ## zoom-in-*, zoom-out-*
-Utility to animate zoom in and zoom out.
+Animates zoom in and zoom out.
 
-It sets the View's scale to the specified value and then animates it to 1.
+Sets the View's scale to the specified value, then animates it back to 1.
 
 ```css
 /* Property(ies): animationProperties - scales the View (in or out) and resets it to 100% when the animation completes */
