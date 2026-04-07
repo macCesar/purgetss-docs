@@ -424,31 +424,58 @@ A 3x3 grid where dragging a card onto another swaps their positions — combinin
 
 ```xml title="grid.xml"
 <Alloy>
-  <Window class="bg-gray-900" onClose="onClose">
+  <Window class="bg-slate-900" onClose="onClose">
     <Animation id="gridAnim" module="purgetss.ui" class="snap-back duration-150" />
 
-    <View id="c0" class="wh-20 rounded-xl bg-red-500"><Label class="text-white font-bold touch-enabled-false" text="1" /></View>
-    <View id="c1" class="wh-20 rounded-xl bg-blue-500"><Label class="text-white font-bold touch-enabled-false" text="2" /></View>
-    <View id="c2" class="wh-20 rounded-xl bg-green-500"><Label class="text-white font-bold touch-enabled-false" text="3" /></View>
-    <!-- ...more cards -->
+    <!-- 3x3 Grid: 80px boxes (wh-20), 88px spacing -->
+    <View class="clip-disabled">
+      <!-- Row 0 -->
+      <View id="c0" class="wh-20 left-0 top-0 rounded-xl bg-red-500 shadow-lg">
+        <Label class="touch-enabled-false text-sm font-bold text-white" text="1" />
+      </View>
+      <View id="c1" class="wh-20 left-(88) top-0 rounded-xl bg-blue-500 shadow-lg">
+        <Label class="touch-enabled-false text-sm font-bold text-white" text="2" />
+      </View>
+      <View id="c2" class="wh-20 left-(176) top-0 rounded-xl bg-green-500 shadow-lg">
+        <Label class="touch-enabled-false text-sm font-bold text-white" text="3" />
+      </View>
+
+      <!-- Row 1 -->
+      <View id="c3" class="wh-20 left-0 top-(88) rounded-xl bg-amber-500 shadow-lg">
+        <Label class="touch-enabled-false text-sm font-bold text-white" text="4" />
+      </View>
+      <!-- ...c4 through c8 follow the same pattern -->
+    </View>
   </Window>
 </Alloy>
 ```
 
 ```javascript title="grid.js"
-const cards = [$.c0, $.c1, $.c2]
+const cards = [$.c0, $.c1, $.c2, $.c3, $.c4, $.c5, $.c6, $.c7, $.c8]
 
 // 1. Make all cards draggable
 $.gridAnim.draggable(cards)
 
 // 2. Enable collision + swap on drop
+let lastTarget = null
+
 $.gridAnim.detectCollisions(cards,
-  (source, target) => {
-    if (target) target.opacity = 0.6  // Highlight on hover
+  function (source, target) {
+    // Reset previous highlight
+    if (lastTarget && lastTarget !== target) {
+      lastTarget.applyProperties({ opacity: 1 })
+    }
+    if (target) {
+      target.applyProperties({ opacity: 0.6 })
+    }
+    lastTarget = target
   },
-  (source, target) => {
-    target.opacity = 1                // Reset highlight
-    $.gridAnim.swap(source, target)   // Swap positions
+  function (source, target) {
+    if (target) {
+      target.applyProperties({ opacity: 1 })
+      $.gridAnim.swap(source, target)
+    }
+    lastTarget = null
   }
 )
 
@@ -458,4 +485,4 @@ function onClose() {
 }
 ```
 
-Three method calls set up a fully interactive grid with drag, collision detection, and animated swaps.
+Three method calls set up a fully interactive grid with drag, collision detection, and animated swaps. The `lastTarget` tracking ensures only the current hover target is highlighted, and the `if (target)` guard prevents errors when dropping outside any card.

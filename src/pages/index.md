@@ -36,7 +36,27 @@ If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writi
 
 ## What's New in v7.4.0
 
-**Animation module expansion.** PurgeTSS v7.4.0 adds 10 new methods to the Animation module: `pulse`, `transition`, `sequence`, `swap`, `shake`, `snapTo`, `reorder`, `undraggable`, `detectCollisions`, and position normalization utilities. Plus delta-based drag for transformed views, `keep-z-index` class, and `snap-back`/`snap-center` classes.
+**Animation module expansion.** 10 new methods bring the module to 15 total:
+
+### New methods
+- **`transition(views, layouts)`** — multi-view layout transitions using GPU-accelerated `Matrix2D.translate().rotate().scale()`. Compatible with TiDesigner presets
+- **`pulse(view, count)`** — scale-up-and-back pulse using native `autoreverse` + `repeat`. Perfect for notification badges
+- **`sequence(views, cb)`** — animate views one after another (not parallel like `play`)
+- **`swap(view1, view2)`** — animate two views exchanging positions
+- **`shake(view, intensity)`** — bidirectional horizontal shake for error/validation feedback
+- **`snapTo(view, targets)`** — snap a view to the nearest target by center distance
+- **`reorder(views, newOrder)`** — animate views to new positions by index mapping
+- **`undraggable(views)`** — remove draggable behavior and clean up all listeners
+- **`detectCollisions(views, dragCB, dropCB)`** — collision detection with hover and drop callbacks
+
+### New utility classes
+- `snap-back`, `snap-center`, `snap-magnet` — control drop behavior on draggable views
+- `keep-z-index` — preserve z-order during drag (for `transition` presets)
+
+### Improvements
+- Delta-based drag for views with `rotate`/`scale` transforms
+- Position normalization — `swap`, `reorder`, and `snapTo` work without explicit `top`/`left`
+- Property inheritance — `swap`, `reorder`, `snapTo`, and `shake` inherit `duration`, `delay`, and `curve` from the `<Animation>` object
 
 See the [Animation Module documentation](docs/animation-module/introduction) for full details.
 

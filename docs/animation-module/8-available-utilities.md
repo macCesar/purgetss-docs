@@ -206,6 +206,36 @@ Scales the matrix by the specified factor. The same value applies to both horizo
 '.scale-150': { scale: 1.5 }
 ```
 
+## snap-back, snap-center, snap-magnet
+
+Control how draggable views behave when dropped. All are **off by default** — opt-in via classes on the `<Animation>` object.
+
+- `snap-back`: view returns to its origin when dropped outside a collision target
+- `snap-center`: view auto-centers on the target when dropped on it (uses `snapTo` internally)
+- `snap-magnet`: (planned) magnetic attraction while dragging near a target
+
+```css
+/* Property(ies): snap - For the Animation module */
+/* Component(s): Animation */
+'.snap-back': { animationProperties: { snap: { back: true } } }
+'.snap-back-false': { animationProperties: { snap: { back: false } } }
+'.snap-center': { animationProperties: { snap: { center: true } } }
+'.snap-center-false': { animationProperties: { snap: { center: false } } }
+'.snap-magnet': { animationProperties: { snap: { magnet: true } } }
+'.snap-magnet-false': { animationProperties: { snap: { magnet: false } } }
+```
+
+## keep-z-index
+
+Prevents the drag system from auto-promoting the dragged view's z-index. Useful when using `transition` presets where z-order is part of the layout.
+
+```css
+/* Property(ies): snap - For the Animation module */
+/* Component(s): Animation */
+'.keep-z-index': { animationProperties: { keepZIndex: true } }
+'.keep-z-index-false': { animationProperties: { keepZIndex: false } }
+```
+
 ## drag-apply, drag-animate
 Use `drag-animate` (default) or `drag-apply` to control how `drag:` and `drop:` modifiers are applied. `drag-animate` animates the properties, `drag-apply` applies them immediately.
 
