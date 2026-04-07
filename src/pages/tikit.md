@@ -14,14 +14,12 @@ TiKit is meant to help you move faster without fighting styling details.
 
 ### Why TiKit
 
-- Ready-to-use components: Alerts, Avatars, Buttons, Cards, and Tabs with practical defaults.
-- PurgeTSS-first styling: Use utility classes instead of large TSS files.
-- Dynamic updates: Change text, images, and icons without recreating the component.
-- Icon support: Works with FontAwesome, Material Icons, and other icon fonts.
-- Consistent UI: Components are designed to look good together.
-- Easy to customize: Adjust colors and styles to match your brand.
-- Lightweight: Built to stay fast and avoid extra overhead.
-- Sensible defaults: You only pass what you need.
+- Alerts, Avatars, Buttons, Cards, and Tabs with practical defaults.
+- Styled with PurgeTSS utility classes instead of large TSS files.
+- Dynamic updates -- change text, images, and icons without recreating the component.
+- Works with FontAwesome, Material Icons, and other icon fonts.
+- Customizable colors and styles via `classes` property.
+- You only pass what you need.
 
 <p align="center">
   <img src="../assets/images/tikit-poster.png" alt="TiKit Poster" />
@@ -101,11 +99,7 @@ This means you can use components with minimal properties. For example:
 <Card module="tikit.ui" title="Image Card" text="With an image" image="path/to/image.jpg" />
 ```
 
-These defaults reduce boilerplate for common use cases.
-
-## Available Components and How to Use Them
-
-Below is an overview of each component.
+## Components
 
 -----
 
@@ -441,7 +435,7 @@ Use this for text content with a clear hierarchy: a large title, a highlighted s
 
 > Properties: `title`, `icon`, `activeIcon` (iOS only) plus standard `Titanium.UI.Tab` properties
 
-Need tabs for your `TabGroup`? TiKit makes it easy to add tabs with icons from your favorite font libraries (FontAwesome, Material Icons, and others).
+Tabs with icon font support for FontAwesome, Material Icons, and others.
 
 Specify the icon using `icon="fa fa-home"` or `icon="mi mi-settings"`. On iOS, you can provide a different icon for the active state using `activeIcon`.
 
@@ -540,13 +534,11 @@ function fetchStatus() {
 }
 ```
 
-This keeps dynamic content straightforward.
-
 -----
 
 ## Working with Icon Fonts
 
-Icons add clarity and help users scan UI quickly. PurgeTSS helps manage icon fonts.
+PurgeTSS manages icon fonts for you.
 
 ### Using Official Icon Fonts
 

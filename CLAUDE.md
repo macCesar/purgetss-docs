@@ -116,6 +116,6 @@ npm run swizzle
 - The site documents PurgeTSS v7.1.x with breaking changes from previous versions
 - Content focuses on Titanium mobile development workflow
 - Extensive use of code examples and visual demonstrations
-- The glossary contains over 21,000 utility class definitions
+- The glossary contains over 23,300 utility class definitions
 - Site URL: https://purgetss.com
 - GitHub repository: https://github.com/macCesar/purgetss/

@@ -162,7 +162,7 @@ module.exports = {
 
 ### `theme` section
 
-The `theme` section in `config.cjs` is where you define and extend your project's color palette, type scale, font stacks, border radius values, and other properties.
+The `theme` section defines your project's color palette, type scale, font stacks, border radius values, and other properties.
 
 ```javascript title="The theme section"
 module.exports = {
@@ -381,7 +381,7 @@ You can use the `shades` command to generate a range of shades for a color and a
 
 ## Customize spacing
 
-The `spacing` section controls the global spacing and sizing scale values.
+The `spacing` section sets the global spacing and sizing scale.
 
 ```javascript title="Customizing Spacing"
 module.exports = {

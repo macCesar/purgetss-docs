@@ -40,7 +40,7 @@ If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writi
 
 ### New methods
 - **`transition(views, layouts)`** — multi-view layout transitions using GPU-accelerated `Matrix2D.translate().rotate().scale()`. Compatible with TiDesigner presets
-- **`pulse(view, count)`** — scale-up-and-back pulse using native `autoreverse` + `repeat`. Perfect for notification badges
+- **`pulse(view, count)`** — scale-up-and-back pulse using native `autoreverse` + `repeat`. Good for notification badges
 - **`sequence(views, cb)`** — animate views one after another (not parallel like `play`)
 - **`swap(view1, view2)`** — animate two views exchanging positions
 - **`shake(view, intensity)`** — bidirectional horizontal shake for error/validation feedback
@@ -62,18 +62,16 @@ See the [Animation Module documentation](docs/animation-module/introduction) for
 
 ---
 
-Here are its main functionalities:
+What it does:
 
-- Utility-First Classes: PurgeTSS ships with 21,000+ utility classes, so you get a lot of styling options out of the box.
-- Efficient style management: It parses all XML files to create a clean `app.tss` containing only the classes used in your project, reducing size and improving performance.
-- Customization and JIT classes: You can customize default classes via a config file and use JIT classes for arbitrary values inside views.
-- Icon fonts integration: Use icon fonts such as Font Awesome, Material Icons, Material Symbols, and Framework7-Icons in Buttons and Labels.
-- `fonts.tss` generation: The `build-fonts` command creates a `fonts.tss` file with class definitions and fontFamily selectors for regular and icon fonts, with simplified options for filenames and icon prefixes.
-- `shades` command: Generate custom color shades from a hex color without external tools.
-- Animation module: 2D matrix animations, draggable elements with collision detection, sequential animations, and position-based utilities.
-- Grid system: A two-dimensional grid system to align and distribute elements within views.
-
-In short, PurgeTSS keeps styling consistent and removes a lot of repetitive UI setup work.
+- 23,300+ utility classes for colors, spacing, typography, layout, and more.
+- Parses your XML files and writes an `app.tss` with only the classes you actually use.
+- Customizable via `config.cjs`. Supports arbitrary values for one-off sizes and colors.
+- Icon fonts: Font Awesome, Material Icons, Material Symbols, and Framework7-Icons in Buttons and Labels.
+- `build-fonts` command generates `fonts.tss` with class definitions and `fontFamily` selectors for any font you drop in.
+- `shades` command generates color palettes from a hex value.
+- Animation module: 2D transforms, draggable views with collision detection, sequential animations, and position utilities.
+- Grid system for aligning and distributing elements in rows and columns.
 
 ## Table of Contents
 
