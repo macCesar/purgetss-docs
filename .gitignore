@@ -21,3 +21,8 @@ build.zip
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# PurgeTSS reference copies
+purgetss-CHANGELOG.md
+purgetss-README.md
+purgetss.ui.js

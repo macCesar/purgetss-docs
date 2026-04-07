@@ -18,71 +18,27 @@ It includes utility classes, icon font support, an Animation module, a simple gr
 If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writing long TSS files.
 :::
 
-## What's New in v7.4.0
+## What's New in v7.5.0
 
-**Bug fix and documentation improvements.** PurgeTSS v7.4.0 fixes a serialization bug in custom rules and improves the Animation module documentation.
+### Added
+- **`extend` support for Window, View, and ImageView** — customize component defaults from `theme.extend` in `config.cjs`
+- **Shorthand `apply`** — `{ apply: '...' }` is automatically normalized to `{ default: { apply: '...' } }`
+- **Apply directive property deduplication** — applied values win over static defaults instead of duplicating
+- **Automatic platform resolution in apply directives** — classes inside `ios:`/`android:` blocks find their platform-specific version automatically
+- **Updated Font Awesome to 7.2.0**
 
 ### Fixed
-
-- **`backgroundGradient.colors` serialization**: Custom classes using arrays of objects (e.g. gradient color stops) now serialize correctly in `utilities.tss`.
-
-  Previously, defining `colors` as an array of `{ color, offset }` objects in `purgetss/config.cjs` produced broken output:
-  ```
-  colors: { 0: '[object Object]', 1: '[object Object]' }
-  ```
-  It now outputs the correct format:
-  ```
-  colors: [ { color: '#132C50', offset: 0 }, { color: '#0A1529', offset: 1 } ]
-  ```
-  This fix applies to any array of objects at any depth in your custom rules.
-
-### Documentation
-
-- Added full Animation Module reference to `README.md`: method table, callback event object, array animation patterns, and utility classes.
-- Animation module docs updated with the enriched callback event object (`index`, `total`, `getTarget()`).
+- `extend.Window` was silently ignored — both `theme.Window` and `theme.extend.Window` work now
+- Duplicate `font` properties in apply directives
+- Array-type properties (`extendEdges`, `mediaTypes`, etc.) now correctly wrapped in `[ ]` notation
 
 ---
 
-## What's New in v7.3.x
+## What's New in v7.4.0
 
-**File rename and improved error handling.** PurgeTSS v7.3 renames `tailwind.tss` to `utilities.tss` to reflect the project's standalone identity, and adds XML syntax validation to catch errors early.
+**Animation module expansion.** PurgeTSS v7.4.0 adds 10 new methods to the Animation module: `pulse`, `transition`, `sequence`, `swap`, `shake`, `snapTo`, `reorder`, `undraggable`, `detectCollisions`, and position normalization utilities. Plus delta-based drag for transformed views, `keep-z-index` class, and `snap-back`/`snap-center` classes.
 
-### Breaking changes
-
-- **File rename**: Output file is now `utilities.tss` instead of `tailwind.tss`
-  - Generated file: `purgetss/styles/utilities.tss` (was `purgetss/styles/tailwind.tss`)
-  - Distribution file: `dist/utilities.tss` (was `dist/tailwind.tss`)
-
-### Major improvements
-
-- **XML syntax validation**: Catches common Alloy XML malformations before processing
-  - Detects missing opening `<` brackets (e.g., `Label id=` instead of `<Label id=`)
-  - Shows detailed error messages with line numbers, context preview, and fix suggestions
-  - Saves debugging time by catching errors early in the build process
-- **Classic Titanium compatibility**: `deviceInfo()` function now works in both Alloy and Classic projects
-  - Removed dependency on `Alloy.isTablet`/`Alloy.isHandheld`
-  - Uses platform-based detection instead
-
-### Migration guide
-
-If you have references to `tailwind.tss` in your project, update them to `utilities.tss`:
-
-```bash
-# Update any custom scripts or paths
-# From: purgetss/styles/tailwind.tss
-# To:   purgetss/styles/utilities.tss
-```
-
-For most users, upgrading is straightforward:
-```bash
-npm install -g purgetss@latest
-```
-
-Key changes to note:
-- Node.js 20 or higher is now required.
-- FontAwesome 7: If you use FA7, PurgeTSS will automatically handle the new `--fa:` properties.
-- VS Code extension: We recommend `KevinYouu.tailwind-raw-reorder-tw4` for better compatibility with modern Tailwind versions and XML reordering.
-- Clean reinstall: If you run into issues, try `npm uninstall -g purgetss && npm install -g purgetss`.
+See the [Animation Module documentation](docs/animation-module/introduction) for full details.
 
 ---
 
@@ -120,4 +76,5 @@ In short, PurgeTSS keeps styling consistent and removes a lot of repetitive UI s
   - [Complex UI Elements](docs/animation-module/complex-ui-elements)
   - [Additional Methods](docs/animation-module/additional-methods)
   - [Available Utilities](docs/animation-module/available-utilities)
+  - [Implementation Rules](docs/animation-module/implementation-rules)
 - [Grid System](docs/grid-system)
