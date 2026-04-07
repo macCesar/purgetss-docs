@@ -5,13 +5,13 @@ slug: implementation-rules
 
 # Implementation Rules
 
-Rules that every method in the Animation module MUST follow. They keep behavior consistent and respect the declarative model of PurgeTSS.
+Rules that every method in the Animation module must follow. They keep behavior consistent with the declarative model of PurgeTSS.
 
 ## Rule 1: Inherit from the `<Animation />` object via `...args`
 
 Every method MUST inherit all properties from the Animation object by spreading `args`. Never cherry-pick individual properties.
 
-The `<Animation />` object is the **single source of truth** for animation behavior. When a developer declares:
+The `<Animation />` object is the single source of truth for animation behavior. When a developer declares:
 
 ```xml
 <Animation id="myAnim" module="purgetss.ui" class="curve-animation-ease-out opacity-50 delay-100 duration-300" />
@@ -37,7 +37,7 @@ const animation = Ti.UI.createAnimation(args)
 view.animate(animation)
 ```
 
-If a developer adds `opacity-50` to their `<Animation>`, they expect ALL methods to animate opacity — not just `play`. The `<Animation />` is the **behavior declarator**, methods are the **executors**.
+If a developer adds `opacity-50` to their `<Animation>`, they expect ALL methods to animate opacity, not just `play`. The `<Animation />` declares behavior, methods execute it.
 
 ---
 

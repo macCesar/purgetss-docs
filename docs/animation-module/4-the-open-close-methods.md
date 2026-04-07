@@ -131,4 +131,4 @@ The key classes:
 - **`close:duration-0 open:duration-100`** — open animates at 100ms, close is instant
 - **`duration-75`** — fast overlay fade
 
-Two lines of code to show, two lines to hide. All behavior is declared in the XML.
+Show and hide are two lines each. The animation behavior lives in the XML.

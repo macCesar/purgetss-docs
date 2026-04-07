@@ -72,7 +72,7 @@ function doPulse3() {
 }
 ```
 
-One line per call. The badge scales to 130%, reverses back to 100%, repeated N times. The `scale` and `duration` are declared in the `<Animation />`, the `count` is the only parameter. See also [the `pulse` method](additional-methods#the-pulse-method) for details.
+The badge scales to 130%, reverses back to 100%, repeated N times. The `scale` and `duration` come from the `<Animation />` object; `count` is the only parameter per call. See also [the `pulse` method](additional-methods#the-pulse-method) for details.
 
 ## `open` and `close` Modifiers
 

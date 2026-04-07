@@ -9,7 +9,7 @@ These methods add sequential animations, position helpers, and feedback effects 
 
 ## The `sequence` method
 
-Animates views **one after another**. Unlike `play(array)` which runs all animations in parallel, `sequence` waits for each view to complete before starting the next.
+Animates views one after another. Unlike `play(array)` which runs all animations in parallel, `sequence` waits for each view to complete before starting the next.
 
 ```javascript
 $.myAnimation.sequence(views, callback)
@@ -96,7 +96,7 @@ function doReset() {
 }
 ```
 
-One line to reveal, one line to reset. `sequence` toggles open/close, so use `close()` to force the state back before revealing again.
+`sequence` toggles open/close internally, so use `close()` to force the state back before revealing again.
 
 ## The `swap` method
 
@@ -181,7 +181,7 @@ function onCardTap({ source }) {
 
 ## The `pulse` method
 
-A scale-up-and-back animation for notifications, badges, or attention-grabbing effects. Uses `autoreverse` + `repeat` natively.
+Scales a view up and back down, useful for notifications or badges. Uses `autoreverse` + `repeat` natively.
 
 ```javascript
 $.myAnimation.pulse(view, count)
@@ -243,11 +243,11 @@ Alloy.Events.on('newNotification', () => {
 })
 ```
 
-One line. The scale, duration, and easing are all declared in the `<Animation />`. The `count` parameter is the only thing you control per call.
+The scale, duration, and easing come from the `<Animation />` object. The `count` parameter is the only thing you pass per call.
 
 ## The `shake` method
 
-A bidirectional horizontal shake for error or feedback. Oscillates left-right around the original position using `autoreverse` + `repeat`.
+Shakes a view left and right around its original position using `autoreverse` + `repeat`. Good for form validation errors.
 
 ```javascript
 $.myAnimation.shake(view, intensity)
@@ -522,11 +522,11 @@ function shuffle() {
 }
 ```
 
-One line per sort order. All views animate simultaneously to their new positions.
+All views animate simultaneously to their new positions.
 
 ## The `transition` method
 
-Animates multiple views simultaneously to layout positions defined by `Matrix2D.translate().rotate().scale()`. Designed for switching between layout presets — fan-out, carousel, stack, cascade, etc.
+Animates multiple views simultaneously to layout positions defined by `Matrix2D.translate().rotate().scale()`. Use it to switch between layout presets like fan-out, carousel, stack, or cascade.
 
 ```javascript
 $.myAnimation.transition(views, layouts)
@@ -682,7 +682,7 @@ function doShowcase() { $.galleryAnim.transition(photos, showcase) }
 $.galleryAnim.draggable(photos)
 ```
 
-`keep-z-index` preserves the layout order during drag. Presets are reusable data — define once, apply to any group of views.
+`keep-z-index` preserves the layout order during drag. Presets are plain arrays, so the same layout works with any group of views.
 
 ### Mac Catalyst note
 
@@ -692,7 +692,7 @@ On Mac Catalyst, parent containers of transitioned views should use **fixed dime
 
 ## Property inheritance from the Animation object
 
-All methods in the Animation module can inherit properties from the `<Animation>` object's classes. This means you can configure animation behavior declaratively in XML and have it apply consistently across all method calls.
+All methods in the Animation module inherit properties from the `<Animation>` object's classes. You configure animation behavior in XML and it applies to every method call.
 
 ### How it works
 

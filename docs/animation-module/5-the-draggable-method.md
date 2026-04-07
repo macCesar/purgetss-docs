@@ -345,7 +345,7 @@ $.draggableAnimation.detectCollisions(views, onHover, onDrop)
 
 ### How collision detection works
 
-Collision is based on **center-point hit testing**: the center of the dragged view is checked against the `rect` bounds of each registered view.
+Collision is based on center-point hit testing: the center of the dragged view is checked against the `rect` bounds of each registered view.
 
 **`dragCB(source, target)`** is called during drag:
 - `target` is the view under the drag center, or `null` when leaving all targets
@@ -485,4 +485,4 @@ function onClose() {
 }
 ```
 
-Three method calls set up a fully interactive grid with drag, collision detection, and animated swaps. The `lastTarget` tracking ensures only the current hover target is highlighted, and the `if (target)` guard prevents errors when dropping outside any card.
+Three calls: `draggable`, `detectCollisions`, and `swap` inside the drop callback. The `lastTarget` tracking ensures only the current hover target is highlighted, and the `if (target)` guard prevents errors when dropping outside any card.
