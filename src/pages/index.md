@@ -36,7 +36,7 @@ If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writi
 
 ## What's New in v7.4.0
 
-**Animation module expansion.** 10 new methods bring the module to 15 total:
+**Animation module expansion.** 9 new methods bring the module to 15 total:
 
 ### New methods
 - **`transition(views, layouts)`** — multi-view layout transitions using GPU-accelerated `Matrix2D.translate().rotate().scale()`. Compatible with TiDesigner presets
