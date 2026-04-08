@@ -22,6 +22,14 @@ const config = {
   projectName: 'PurgeTSS Documentation', // Usually your repo name.
   staticDirectories: ['public', 'static'],
 
+  scripts: [
+    {
+      async: true,
+      src: 'https://context7.com/widget.js',
+      'data-library': '/maccesar/purgetss-docs-for-context7',
+    },
+  ],
+
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
