@@ -24,7 +24,7 @@ This is the documentation website for **PurgeTSS**, a Tailwind-like utility fram
 - **Installation & Setup**: Basic setup instructions
 - **Commands**: CLI command documentation
 - **Customization**: Configuration files, custom rules, arbitrary values, platform modifiers
-- **Animation Module**: Comprehensive animation system documentation (play, apply, open/close, draggable methods)
+- **The UI Module**: Animation system (play, apply, open/close, draggable methods), Appearance management, and utility functions
 - **Grid System**: Two-dimensional layout system
 - **Glossary**: Extensive property reference organized by type (boolean, color, compound, configurable, constant properties)
 

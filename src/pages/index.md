@@ -18,50 +18,6 @@ It includes utility classes, icon font support, an Animation module, a simple gr
 If you build UI-heavy screens, PurgeTSS helps you move faster without hand-writing long TSS files.
 :::
 
-## What's New in v7.5.0
-
-### Added
-- **`extend` support for Window, View, and ImageView** — customize component defaults from `theme.extend` in `config.cjs`
-- **Shorthand `apply`** — `{ apply: '...' }` is automatically normalized to `{ default: { apply: '...' } }`
-- **Apply directive property deduplication** — applied values win over static defaults instead of duplicating
-- **Automatic platform resolution in apply directives** — classes inside `ios:`/`android:` blocks find their platform-specific version automatically
-- **Updated Font Awesome to 7.2.0**
-
-### Fixed
-- `extend.Window` was silently ignored — both `theme.Window` and `theme.extend.Window` work now
-- Duplicate `font` properties in apply directives
-- Array-type properties (`extendEdges`, `mediaTypes`, etc.) now correctly wrapped in `[ ]` notation
-
----
-
-## What's New in v7.4.0
-
-**Animation module expansion.** 9 new methods bring the module to 15 total:
-
-### New methods
-- **`transition(views, layouts)`** — multi-view layout transitions using GPU-accelerated `Matrix2D.translate().rotate().scale()`. Compatible with TiDesigner presets
-- **`pulse(view, count)`** — scale-up-and-back pulse using native `autoreverse` + `repeat`. Good for notification badges
-- **`sequence(views, cb)`** — animate views one after another (not parallel like `play`)
-- **`swap(view1, view2)`** — animate two views exchanging positions
-- **`shake(view, intensity)`** — bidirectional horizontal shake for error/validation feedback
-- **`snapTo(view, targets)`** — snap a view to the nearest target by center distance
-- **`reorder(views, newOrder)`** — animate views to new positions by index mapping
-- **`undraggable(views)`** — remove draggable behavior and clean up all listeners
-- **`detectCollisions(views, dragCB, dropCB)`** — collision detection with hover and drop callbacks
-
-### New utility classes
-- `snap-back`, `snap-center`, `snap-magnet` — control drop behavior on draggable views
-- `keep-z-index` — preserve z-order during drag (for `transition` presets)
-
-### Improvements
-- Delta-based drag for views with `rotate`/`scale` transforms
-- Position normalization — `swap`, `reorder`, and `snapTo` work without explicit `top`/`left`
-- Property inheritance — `swap`, `reorder`, `snapTo`, and `shake` inherit `duration`, `delay`, and `curve` from the `<Animation>` object
-
-See the [Animation Module documentation](docs/animation-module/introduction) for full details.
-
----
-
 What it does:
 
 - 23,300+ utility classes for colors, spacing, typography, layout, and more.
@@ -85,14 +41,65 @@ What it does:
   - [Arbitrary Values](docs/customization/arbitrary-values)
   - [Platform and Device Modifiers](docs/customization/platform-and-device-modifiers)
   - [Icon Fonts Libraries](docs/customization/icon-fonts-libraries)
-- Animation Module
-  - [Introduction](docs/animation-module/introduction)
-  - [The `play` Method](docs/animation-module/the-play-method)
-  - [The `apply` Method](docs/animation-module/the-apply-method)
-  - [The `open` and `close` Methods](docs/animation-module/the-open-and-close-methods)
-  - [The `draggable` Method](docs/animation-module/the-draggable-method)
-  - [Complex UI Elements](docs/animation-module/complex-ui-elements)
-  - [Additional Methods](docs/animation-module/additional-methods)
-  - [Available Utilities](docs/animation-module/available-utilities)
-  - [Implementation Rules](docs/animation-module/implementation-rules)
+- The UI Module
+  - [Introduction](docs/purgetss-ui/introduction)
+  - [The `play` Method](docs/purgetss-ui/the-play-method)
+  - [The `apply` Method](docs/purgetss-ui/the-apply-method)
+  - [The `open` and `close` Methods](docs/purgetss-ui/the-open-and-close-methods)
+  - [The `draggable` Method](docs/purgetss-ui/the-draggable-method)
+  - [Complex UI Elements](docs/purgetss-ui/complex-ui-elements)
+  - [Additional Methods](docs/purgetss-ui/additional-methods)
+  - [Available Utilities](docs/purgetss-ui/available-utilities)
+  - [Implementation Rules](docs/purgetss-ui/implementation-rules)
+  - [Appearance](docs/purgetss-ui/appearance)
+- Recommendations
+  - [Window Defaults](docs/recommendations/window-defaults)
+  - [Semantic Colors](docs/recommendations/semantic-colors)
+  - [Appearance Setup](docs/recommendations/appearance-setup)
 - [Grid System](docs/grid-system)
+
+---
+
+## Changelog
+
+### v7.5.3
+
+- **Appearance module** — new `Appearance` export for Light/Dark/System mode switching with persistence. Methods: `init()`, `set(mode)`, `get()`, `toggle()`. See [Appearance Setup](docs/recommendations/appearance-setup)
+- **Default font family classes** — `font-sans`, `font-serif`, and `font-mono` generated automatically with platform-appropriate values
+- **XML validation** — detects illegal `--` inside XML comments during pre-validation
+
+### v7.5.0
+
+- **`extend` support for Window, View, and ImageView** — customize component defaults from `theme.extend` in `config.cjs`
+- **Shorthand `apply`** — `{ apply: '...' }` is automatically normalized, so the `default:` wrapper is optional
+- **Property deduplication** — applied values win over static defaults instead of duplicating
+- **Automatic platform resolution** — classes inside `ios:`/`android:` blocks find their platform-specific version automatically
+- **Font Awesome 7.2.0**
+- Fixed: `extend.Window` silently ignored, duplicate `font` properties, array-type properties missing `[ ]` notation
+
+### v7.4.0
+
+**Animation module expansion.** 9 new methods bring the module to 15 total:
+
+- `transition`, `pulse`, `sequence`, `swap`, `shake`, `snapTo`, `reorder`, `undraggable`, `detectCollisions`
+- New utility classes: `snap-back`, `snap-center`, `snap-magnet`, `keep-z-index`
+- Delta-based drag for transformed views, position normalization, property inheritance from the Animation object
+
+See the [UI Module documentation](docs/purgetss-ui/introduction) for full details.
+
+### v7.3.0
+
+- **BREAKING: `tailwind.tss` → `utilities.tss`** — renamed to reflect PurgeTSS's identity as a standalone toolkit
+- **XML syntax validation** — pre-validation for Alloy XML files with line numbers and fix suggestions
+- **Classic Titanium compatibility** — `deviceInfo()` works without Alloy dependencies
+
+### v7.2.7
+
+- **Security fixes** — command injection in `glob`, prototype pollution in `js-yaml`
+- **Dependency cleanup** — reduces installation size by ~45MB, removed unused packages
+- **Titanium SDK 13.1.0.GA** — new utility classes for `navBarColor`, `forceBottomPosition`, `multipleWindows`
+
+### v7.2.6
+
+- Updated Font Awesome to version 7.1.0
+- Simplified flag property names in utilities.tss

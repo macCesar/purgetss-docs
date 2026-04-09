@@ -7,9 +7,9 @@
     "message": "Customization",
     "description": "The label for category Customization in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Animation Module": {
-    "message": "Animation Module",
-    "description": "The label for category Animation Module in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.The UI Module": {
+    "message": "The UI Module",
+    "description": "The label for category The UI Module in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Glossary": {
     "message": "Glossary",

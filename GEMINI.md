@@ -13,7 +13,7 @@ This project is the documentation website for **PurgeTSS**, a Tailwind-like util
 ## Architecture & Structure
 The project uses a multi-instance documentation setup:
 
-- **`docs/`**: Main documentation (Installation, Commands, Animation Module, Grid System, Customization).
+- **`docs/`**: Main documentation (Installation, Commands, The UI Module, Grid System, Customization, Recommendations).
 - **`glossary/`**: A separate documentation instance managed via plugin, containing extensive property references (Boolean, Color, Compound, etc.).
 - **`src/`**: Custom React code.
   - `pages/`: Custom landing pages or tools.
@@ -42,7 +42,7 @@ The project uses a multi-instance documentation setup:
 - **Sidebar**: Controlled via `sidebars.js` for main docs, or `_category_.json` files within subdirectories.
 
 ### Naming Conventions
-- **Files**: Kebab-case (e.g., `grid-system.md`, `animation-module.md`).
+- **Files**: Kebab-case (e.g., `grid-system.md`, `purgetss-ui.md`).
 - **Commits**: Semantic/Conventional Commits are **mandatory** (e.g., `feat: add new animation guide`, `fix: typo in glossary`, `docs: update installation steps`).
 
 ### Testing & Verification
