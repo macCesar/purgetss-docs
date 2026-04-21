@@ -1,7 +1,7 @@
 # PurgeTSS Documentation - Gemini Context
 
 ## Project Overview
-This project is the documentation website for **PurgeTSS**, a Tailwind-like utility framework for Titanium mobile app development. It is built using **Docusaurus 3** (recently upgraded) and **React 19**.
+This project is the documentation website for **PurgeTSS**, a utility-first framework for Titanium mobile app development. It is built using **Docusaurus 3** (recently upgraded) and **React 19**.
 
 ## Technology Stack
 - **Framework**: Docusaurus 3 (Static Site Generator)

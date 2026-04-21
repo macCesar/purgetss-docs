@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the documentation website for **PurgeTSS**, a Tailwind-like utility framework for Titanium mobile app development. The site is built using Docusaurus 3 and contains comprehensive documentation for PurgeTSS features including utility classes, animation modules, grid systems, and customization options.
+This is the documentation website for **PurgeTSS**, a utility-first framework for Titanium mobile app development. The site is built using Docusaurus 3 and contains comprehensive documentation for PurgeTSS features including utility classes, animation modules, grid systems, and customization options.
 
 ## Architecture
 

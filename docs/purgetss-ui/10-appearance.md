@@ -120,5 +120,5 @@ Use the semantic classes in your views:
 When `Appearance.set('dark')` is called, Titanium resolves the semantic color names to their dark variants automatically.
 
 :::tip Complete setup guide
-For a step-by-step guide covering Window defaults, semantic colors, and Appearance together, see [Appearance Setup](/docs/recommendations/appearance-setup).
+For a step-by-step guide covering Window defaults, semantic colors, and Appearance together, see [Appearance Setup](/docs/best-practices/appearance-setup).
 :::
