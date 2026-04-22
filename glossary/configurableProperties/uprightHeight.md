@@ -2,6 +2,8 @@
 // Property: uprightHeight
 // Description: If the blob references an image, this provides the height in pixels after factoring in EXIF orientation.
 // Component(s): Ti.Blob
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.upright-h-0': { uprightHeight: 0 }
 '.upright-h-1': { uprightHeight: 4 }
 '.upright-h-2': { uprightHeight: 8 }

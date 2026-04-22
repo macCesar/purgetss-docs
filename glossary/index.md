@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Welcome to the PurgeTSS glossary. Here you'll find a complete list of terms, properties, and concepts used throughout our documentation, organized into categories for easy reference.
 
+:::info Units — read this first
+Numeric values shown in the property pages below are **unitless**. Titanium interprets them using `ti.ui.defaultunit` in `tiapp.xml` — the Alloy template ships with `dp` (density-independent pixels), **not raw pixels**. See [Values and Units](/docs/best-practices/values-and-units) for the full explanation.
+:::
+
 ## Categories
 
 ### [Boolean Properties](./booleanProperties/index.md)

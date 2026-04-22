@@ -2,6 +2,8 @@
 // Property: maxRowHeight
 // Description: Maximum row height for table view rows.
 // Component(s): Ti.UI.TableView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.max-row-h-0': { maxRowHeight: 0 }
 '.max-row-h-1': { maxRowHeight: 4 }
 '.max-row-h-2': { maxRowHeight: 8 }

@@ -2,6 +2,8 @@
 // Property: minRowHeight
 // Description: Minimum row height for table view rows.
 // Component(s): Ti.UI.TableView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.min-row-h-0': { minRowHeight: 0 }
 '.min-row-h-1': { minRowHeight: 4 }
 '.min-row-h-2': { minRowHeight: 8 }

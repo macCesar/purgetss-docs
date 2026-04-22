@@ -2,6 +2,8 @@
 // Property: sectionHeaderTopPadding
 // Description: Padding above each section header.
 // Component(s): Ti.UI.ListView, Ti.UI.TableView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.section-header-top-padding-0': { sectionHeaderTopPadding: 0 }
 '.section-header-top-padding-1': { sectionHeaderTopPadding: 4 }
 '.section-header-top-padding-2': { sectionHeaderTopPadding: 8 }

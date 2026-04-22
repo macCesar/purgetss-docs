@@ -2,6 +2,8 @@
 // Property: paragraphSpacingAfter
 // Description: The space after the end of the paragraph.
 // Component(s): ParagraphAttribute
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.paragraph-spacing-after-0': { paragraphSpacingAfter: 0 }
 '.paragraph-spacing-after-1': { paragraphSpacingAfter: 4 }
 '.paragraph-spacing-after-2': { paragraphSpacingAfter: 8 }

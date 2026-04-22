@@ -2,6 +2,8 @@
 // Property: rightTrackTopCap
 // Description: Size of the top end cap for the rightTrackImage, disabledRightTrackImage, highlightedRightTrackImage and selectedRightTrackImage properties.
 // Component(s): Ti.UI.Slider
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.right-track-top-cap-0': { rightTrackTopCap: 0 }
 '.right-track-top-cap-1': { rightTrackTopCap: 4 }
 '.right-track-top-cap-2': { rightTrackTopCap: 8 }

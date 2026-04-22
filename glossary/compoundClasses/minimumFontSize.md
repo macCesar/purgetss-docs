@@ -1,6 +1,8 @@
 ```css
 // Property(ies): minimumFontSize
 // Component(s): Ti.UI.label, Ti.UI.TextField
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.minimum-text-xs': { minimumFontSize: 12 }
 '.minimum-text-sm': { minimumFontSize: 14 }
 '.minimum-text-base': { minimumFontSize: 16 }

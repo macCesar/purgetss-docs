@@ -2,6 +2,8 @@
 // Property: leftButtonPadding
 // Description: Padding between the left button and the edge of the field.
 // Component(s): Ti.UI.TextField
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.left-button-padding-0': { leftButtonPadding: 0 }
 '.left-button-padding-1': { leftButtonPadding: 4 }
 '.left-button-padding-2': { leftButtonPadding: 8 }

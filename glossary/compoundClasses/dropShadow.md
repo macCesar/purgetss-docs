@@ -1,6 +1,8 @@
 ```css
 // Property(ies): shadowOffset, shadowRadius, shadowColor
 // Component(s): Ti.UI.Button, Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.drop-shadow-xs': { shadowOffset: { x: 0, y: 0 }, shadowRadius: 1, shadowColor: '#80000000' }
 '.drop-shadow-sm': { shadowOffset: { x: 0, y: 1 }, shadowRadius: 2, shadowColor: '#80000000' }
 '.drop-shadow': { shadowOffset: { x: 0, y: 2 }, shadowRadius: 4, shadowColor: '#80000000' }

@@ -2,6 +2,8 @@
 // Property: yOffset
 // Description: Y offset from the default position, in pixels.
 // Component(s): Ti.UI.Notification
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.y-offset-0': { yOffset: 0 }
 '.y-offset-1': { yOffset: 4 }
 '.y-offset-2': { yOffset: 8 }

@@ -2,6 +2,8 @@
 // Property: leftWidth
 // Description: Get or set the width of the left drawer
 // Component(s): Ti.UI.Android.DrawerLayout
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.left-w-0': { leftWidth: 0 }
 '.left-w-1': { leftWidth: 4 }
 '.left-w-2': { leftWidth: 8 }

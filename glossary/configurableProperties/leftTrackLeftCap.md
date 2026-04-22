@@ -2,6 +2,8 @@
 // Property: leftTrackLeftCap
 // Description: Size of the left end cap for the leftTrackImage, disabledLeftTrackImage, highlightedLeftTrackImage and selectedLeftTrackImage properties.
 // Component(s): Ti.UI.Slider
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.left-track-cap-0': { leftTrackLeftCap: 0 }
 '.left-track-cap-1': { leftTrackLeftCap: 4 }
 '.left-track-cap-2': { leftTrackLeftCap: 8 }

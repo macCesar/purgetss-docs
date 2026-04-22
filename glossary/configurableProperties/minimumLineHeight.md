@@ -2,6 +2,8 @@
 // Property: minimumLineHeight
 // Description: The minimum height of receiver.
 // Component(s): ParagraphAttribute
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.minimum-line-h-0': { minimumLineHeight: 0 }
 '.minimum-line-h-1': { minimumLineHeight: 4 }
 '.minimum-line-h-2': { minimumLineHeight: 8 }

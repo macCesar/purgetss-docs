@@ -1,6 +1,8 @@
 ```css
 // Property: lineSpacing
 // Component(s): ParagraphAttribute, Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.line-spacing-0': { lineSpacing: 0 }
 '.line-spacing-1': { lineSpacing: 4 }
 '.line-spacing-2': { lineSpacing: 8 }

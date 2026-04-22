@@ -2,6 +2,8 @@
 // Property: separatorHeight
 // Description: height of the ListView separator.
 // Component(s): Ti.UI.ListView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.separator-h-0': { separatorHeight: 0 }
 '.separator-h-1': { separatorHeight: 4 }
 '.separator-h-2': { separatorHeight: 8 }

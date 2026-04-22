@@ -2,6 +2,8 @@
 // Property: keyboardToolbarHeight
 // Description: Height of the keyboard toolbar if keyboardToolbar is an array.
 // Component(s): Ti.UI.TextArea, Ti.UI.TextField
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.keyboard-toolbar-h-0': { keyboardToolbarHeight: 0 }
 '.keyboard-toolbar-h-1': { keyboardToolbarHeight: 4 }
 '.keyboard-toolbar-h-2': { keyboardToolbarHeight: 8 }

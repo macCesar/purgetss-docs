@@ -2,6 +2,8 @@
 // Property: contentWidth
 // Description: Width of the scrollable region.
 // Component(s): Ti.UI.ScrollView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.content-w-0': { contentWidth: 0 }
 '.content-w-1': { contentWidth: 4 }
 '.content-w-2': { contentWidth: 8 }

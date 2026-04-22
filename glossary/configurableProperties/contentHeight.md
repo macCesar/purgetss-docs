@@ -1,6 +1,8 @@
 ```css
 // Property: contentHeight
 // Component(s): Ti.UI.ScrollView, Ti.UI.iOS.PreviewContext
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.content-h-0': { contentHeight: 0 }
 '.content-h-1': { contentHeight: 4 }
 '.content-h-2': { contentHeight: 8 }

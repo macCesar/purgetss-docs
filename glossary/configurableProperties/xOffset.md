@@ -2,6 +2,8 @@
 // Property: xOffset
 // Description: X offset from the default position, in pixels.
 // Component(s): Ti.UI.Notification
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.x-offset-0': { xOffset: 0 }
 '.x-offset-1': { xOffset: 4 }
 '.x-offset-2': { xOffset: 8 }

@@ -2,6 +2,8 @@
 // Property: statusBarHeight
 // Description: The total height of the status bar including safe area padding.
 // Component(s): Ti.UI
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.status-bar-h-0': { statusBarHeight: 0 }
 '.status-bar-h-1': { statusBarHeight: 4 }
 '.status-bar-h-2': { statusBarHeight: 8 }

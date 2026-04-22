@@ -2,6 +2,8 @@
 // Property: letterSpacing
 // Description: Letter spacing of the text as a float value.
 // Component(s): Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.letter-spacing-0': { letterSpacing: 0 }
 '.letter-spacing-1': { letterSpacing: 4 }
 '.letter-spacing-2': { letterSpacing: 8 }

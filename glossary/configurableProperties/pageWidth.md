@@ -2,6 +2,8 @@
 // Property: pageWidth
 // Description: Width in points (72 points per inch) of the document page.
 // Component(s): Ti.App.iOS.SearchableItemAttributeSet
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.page-w-0': { pageWidth: 0 }
 '.page-w-1': { pageWidth: 4 }
 '.page-w-2': { pageWidth: 8 }

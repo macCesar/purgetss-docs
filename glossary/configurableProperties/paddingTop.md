@@ -2,6 +2,8 @@
 // Property: paddingTop
 // Description: Inner padding between the top edge of the Card and children of the CardView.
 // Component(s): Ti.UI.Android.CardView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.padding-top-0': { paddingTop: 0 }
 '.padding-top-1': { paddingTop: 4 }
 '.padding-top-2': { paddingTop: 8 }

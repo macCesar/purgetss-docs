@@ -2,6 +2,8 @@
 // Property: backgroundPaddingRight
 // Description: Number of pixels to extend the background image past the label on the right.
 // Component(s): Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.bg-padding-right-0': { backgroundPaddingRight: 0 }
 '.bg-padding-right-1': { backgroundPaddingRight: 4 }
 '.bg-padding-right-2': { backgroundPaddingRight: 8 }

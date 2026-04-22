@@ -2,6 +2,8 @@
 // Property: targetImageWidth
 // Description: Maximum width of the saved image. Depending on your phone and your value this might not be exactly the value you specify. Check Ti.Media.cameraOutputSizes first.
 // Component(s): CameraOptionsType
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.target-image-w-0': { targetImageWidth: 0 }
 '.target-image-w-1': { targetImageWidth: 4 }
 '.target-image-w-2': { targetImageWidth: 8 }

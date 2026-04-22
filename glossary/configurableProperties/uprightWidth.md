@@ -2,6 +2,8 @@
 // Property: uprightWidth
 // Description: If the blob references an image, this provides the width in pixels after factoring in EXIF orientation.
 // Component(s): Ti.Blob
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.upright-w-0': { uprightWidth: 0 }
 '.upright-w-1': { uprightWidth: 4 }
 '.upright-w-2': { uprightWidth: 8 }

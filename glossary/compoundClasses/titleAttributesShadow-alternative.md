@@ -1,6 +1,8 @@
 ```css
 // Property(ies): titleAttributes: shadow, color, blurRadius, offset - iOS Only
 // Component(s): Ti.UI.TabGroup, Ti.UI.Window
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.title-attributes-shadow-xs': { titleAttributes: { shadow: { color: '#80000000', blurRadius: 1, offset: { width: 0, height: 0 } } } }
 '.title-attributes-shadow-sm': { titleAttributes: { shadow: { color: '#80000000', blurRadius: 2, offset: { width: 0, height: 1 } } } }
 '.title-attributes-shadow': { titleAttributes: { shadow: { color: '#80000000', blurRadius: 4, offset: { width: 0, height: 2 } } } }

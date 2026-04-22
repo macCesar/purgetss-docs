@@ -1,6 +1,8 @@
 ```css
 // Property(ies): iOS: viewShadowOffset, viewShadowRadius, viewShadowColor, Android: elevation
 // Component(s): iOS: Ti.UI.View, Android: Ti.UI.Android.CardView, Ti.UI.Animation, Ti.UI.View
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.shadow-xs': { viewShadowOffset: { x: 0, y: 0 }, viewShadowRadius: 1, viewShadowColor: '#80000000', elevation: 4 }
 '.shadow-sm': { viewShadowOffset: { x: 0, y: 1 }, viewShadowRadius: 2, viewShadowColor: '#80000000', elevation: 8 }
 '.shadow': { viewShadowOffset: { x: 0, y: 2 }, viewShadowRadius: 4, viewShadowColor: '#80000000', elevation: 16 }

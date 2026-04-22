@@ -2,6 +2,8 @@
 // Property: pagingControlHeight
 // Description: Height of the paging control, in pixels.
 // Component(s): Ti.UI.ScrollableView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.paging-control-h-0': { pagingControlHeight: 0 }
 '.paging-control-h-1': { pagingControlHeight: 4 }
 '.paging-control-h-2': { pagingControlHeight: 8 }

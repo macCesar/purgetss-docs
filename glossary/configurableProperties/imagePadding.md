@@ -2,6 +2,8 @@
 // Property: imagePadding
 // Description: The spacing between the image and title.
 // Component(s): Ti.UI.iOS.ButtonConfiguration
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.image-padding-0': { imagePadding: 0 }
 '.image-padding-1': { imagePadding: 4 }
 '.image-padding-2': { imagePadding: 8 }

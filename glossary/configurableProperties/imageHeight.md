@@ -2,6 +2,8 @@
 // Property: imageHeight
 // Description: Height of the image. Use height for the height of the extended toolbar.
 // Component(s): Ti.UI.Android.CollapseToolbar
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.image-h-0': { imageHeight: 0 }
 '.image-h-1': { imageHeight: 4 }
 '.image-h-2': { imageHeight: 8 }

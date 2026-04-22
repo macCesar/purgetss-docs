@@ -2,6 +2,8 @@
 // Property: pageHeight
 // Description: Height in points (72 points per inch) of the document page.
 // Component(s): Ti.App.iOS.SearchableItemAttributeSet
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.page-h-0': { pageHeight: 0 }
 '.page-h-1': { pageHeight: 4 }
 '.page-h-2': { pageHeight: 8 }

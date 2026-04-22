@@ -2,6 +2,8 @@
 // Property: rowHeight
 // Description: Default row height for table view rows.
 // Component(s): Ti.UI.TableView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.row-h-0': { rowHeight: 0 }
 '.row-h-1': { rowHeight: 4 }
 '.row-h-2': { rowHeight: 8 }

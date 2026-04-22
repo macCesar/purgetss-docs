@@ -2,6 +2,8 @@
 // Property: maxElevation
 // Description: Maximum Elevation for CardView.
 // Component(s): Ti.UI.Android.CardView
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.max-elevation-0': { maxElevation: 0 }
 '.max-elevation-1': { maxElevation: 4 }
 '.max-elevation-2': { maxElevation: 8 }

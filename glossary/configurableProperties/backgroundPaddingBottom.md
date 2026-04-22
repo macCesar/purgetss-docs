@@ -2,6 +2,8 @@
 // Property: backgroundPaddingBottom
 // Description: Number of pixels to extend the background image past the label on the bottom.
 // Component(s): Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.bg-padding-bottom-0': { backgroundPaddingBottom: 0 }
 '.bg-padding-bottom-1': { backgroundPaddingBottom: 4 }
 '.bg-padding-bottom-2': { backgroundPaddingBottom: 8 }

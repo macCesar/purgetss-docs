@@ -1,6 +1,8 @@
 ```css
 // Property: padding
 // Component(s): Ti.UI.Android.CardView, Ti.UI.ScrollableView, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.iOS.ButtonConfiguration
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.padding-0': { padding: 0 }
 '.padding-1': { padding: 4 }
 '.padding-2': { padding: 8 }

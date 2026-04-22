@@ -2,6 +2,8 @@
 // Property: rightButtonPadding
 // Description: Padding between the right button and the edge of the field.
 // Component(s): Ti.UI.TextField
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.right-button-padding-0': { rightButtonPadding: 0 }
 '.right-button-padding-1': { rightButtonPadding: 4 }
 '.right-button-padding-2': { rightButtonPadding: 8 }

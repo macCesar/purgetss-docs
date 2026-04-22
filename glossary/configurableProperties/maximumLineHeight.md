@@ -2,6 +2,8 @@
 // Property: maximumLineHeight
 // Description: The maximum line height of receiver.
 // Component(s): ParagraphAttribute
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.maximum-line-h-0': { maximumLineHeight: 0 }
 '.maximum-line-h-1': { maximumLineHeight: 4 }
 '.maximum-line-h-2': { maximumLineHeight: 8 }

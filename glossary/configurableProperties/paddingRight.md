@@ -1,6 +1,8 @@
 ```css
 // Property: paddingRight
 // Component(s): Ti.UI.Android.CardView, Ti.UI.TabGroup
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.padding-right-0': { paddingRight: 0 }
 '.padding-right-1': { paddingRight: 4 }
 '.padding-right-2': { paddingRight: 8 }

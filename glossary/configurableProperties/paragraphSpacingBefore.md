@@ -2,6 +2,8 @@
 // Property: paragraphSpacingBefore
 // Description: The distance between the top of paragraph and the beginning of its text content.
 // Component(s): ParagraphAttribute
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.paragraph-spacing-before-0': { paragraphSpacingBefore: 0 }
 '.paragraph-spacing-before-1': { paragraphSpacingBefore: 4 }
 '.paragraph-spacing-before-2': { paragraphSpacingBefore: 8 }

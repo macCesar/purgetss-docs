@@ -1,6 +1,8 @@
 ```css
 // Property: shadowRadius
 // Component(s): Ti.UI.Button, Ti.UI.Label
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.shadow-radius-0': { shadowRadius: 0 }
 '.shadow-radius-1': { shadowRadius: 4 }
 '.shadow-radius-2': { shadowRadius: 8 }

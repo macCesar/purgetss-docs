@@ -2,6 +2,8 @@
 // Property: rightWidth
 // Description: Get or set the width of the right drawer
 // Component(s): Ti.UI.Android.DrawerLayout
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.right-w-0': { rightWidth: 0 }
 '.right-w-1': { rightWidth: 4 }
 '.right-w-2': { rightWidth: 8 }

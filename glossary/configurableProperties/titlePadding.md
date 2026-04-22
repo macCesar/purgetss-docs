@@ -2,6 +2,8 @@
 // Property: titlePadding
 // Description: The spacing between the title and subtitle.
 // Component(s): Ti.UI.iOS.ButtonConfiguration
+// Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
+// Docs: /docs/best-practices/values-and-units
 '.title-padding-0': { titlePadding: 0 }
 '.title-padding-1': { titlePadding: 4 }
 '.title-padding-2': { titlePadding: 8 }
