@@ -14,7 +14,7 @@ slug: multi-density-images
 Works on **Alloy** and **Classic** projects. The layout is auto-detected.
 :::
 
-This guide covers the `purgetss/images/` convention, the 4× master convention, re-processing single files, and how it fits alongside `build`.
+This guide covers the `purgetss/images/` convention, the 4× master convention, re-processing single files, and how the command fits into a normal build workflow.
 
 For a terse reference of every flag, see the [`images` command reference](../commands#images-command).
 
@@ -24,7 +24,7 @@ Android's UI toolkit resolves images by **density**: a Pixel 7 (xxhdpi ≈ 3×) 
 
 iOS uses the same idea with filename suffixes: `icon.png`, `icon@2x.png`, `icon@3x.png`. iPhone 15 Pro picks `@3x`, older iPads pick `@2x`.
 
-Shipping every variant keeps your UI sharp on every device. `purgetss images` does it in one pass from a single source per image.
+Shipping every variant keeps your UI sharp on every device. `purgetss images` handles that in one pass from a single source per image.
 
 ## Quick start
 
@@ -75,7 +75,7 @@ purgetss/images/
 
 Supported input formats: `.svg`, `.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`.
 
-**Subdirectories are preserved in the output.** A file at `purgetss/images/buttons/primary.png` ends up at `app/assets/android/images/res-*/buttons/primary.png` and `app/assets/iphone/images/buttons/primary.png`. Organize however makes sense for your project.
+**Subdirectories are preserved in the output.** A file at `purgetss/images/buttons/primary.png` ends up at `app/assets/android/images/res-*/buttons/primary.png` and `app/assets/iphone/images/buttons/primary.png`. Organize the source folder however it makes sense for your project.
 
 :::tip Use SVG whenever you can
 SVG scales losslessly to every density. A single `icon.svg` rasterizes perfectly to every `res-*dpi` folder without pixel loss. PNG/JPG sources must be downscaled and lose a bit of sharpness at smaller densities.
@@ -83,7 +83,7 @@ SVG scales losslessly to every density. A single `icon.svg` rasterizes perfectly
 
 ## Source sizes — the 4× convention
 
-PurgeTSS (and Titanium Alloy generally) treats every source image as a **4× master** (`res-xxxhdpi` / `@xxxhdpi` on Android, equivalent to `@4x` on iPhone if iOS supported it). All smaller densities are **downscaled** from that source.
+PurgeTSS, like Titanium Alloy in practice, treats every source image as a **4× master** (`res-xxxhdpi` on Android, roughly equivalent to `@4x` on iPhone if iOS supported it). All smaller densities are downscaled from that source.
 
 That means:
 
@@ -115,7 +115,7 @@ images: {
 }
 ```
 
-Change whatever you want to override globally; CLI flags still win for one-off runs.
+Change only what you want to keep as a project default. CLI flags still win for one-off runs.
 
 ## Overwrite confirmation
 
@@ -143,7 +143,7 @@ The prompt is skipped automatically when:
 
 ## Re-processing a single file or subfolder
 
-Common workflow: you tweaked one image in Affinity or Figma and only want to regenerate that one, not the whole folder.
+A common workflow is tweaking one image in Affinity or Figma and only wanting to regenerate that file, not the whole folder.
 
 Pass its path directly:
 
@@ -151,7 +151,7 @@ Pass its path directly:
 > purgetss images buttons/primary.png
 ```
 
-Short paths auto-resolve against `purgetss/images/`, so you don't need to type `purgetss/images/buttons/primary.png`. The command tries two interpretations:
+Short paths auto-resolve against `purgetss/images/`, so you do not need to type `purgetss/images/buttons/primary.png`. The command tries two interpretations:
 
 1. `purgetss/images/buttons/primary.png` (matches the convention folder).
 2. `./buttons/primary.png` (fallback, relative to the project root).
@@ -175,7 +175,7 @@ If your source images live elsewhere (e.g. next to your design files in `docs/sc
 > purgetss images /Users/cesar/Design/banner.svg
 ```
 
-When the source is outside `purgetss/images/`, subdirectory preservation uses the directory of the source file as the root instead.
+When the source is outside `purgetss/images/`, subdirectory preservation uses the source file's directory as the root instead.
 
 ## Platform filter
 
@@ -188,8 +188,8 @@ By default, every run generates both Android densities and iPhone scales. Scope 
 
 Useful when:
 
-- You're iterating on an iOS-only screen and don't need to regenerate Android assets every time.
-- You want to tune JPEG quality differently for the two platforms (run the command twice with different flags).
+- You are iterating on an iOS-only screen and do not need to regenerate Android assets every time.
+- You want to tune JPEG quality differently for the two platforms by running the command twice with different flags.
 
 The two flags are mutually exclusive. Pass neither to get both.
 
@@ -206,7 +206,7 @@ Valid targets: `webp`, `jpeg`, `png`, `avif`, `gif`, `tiff`.
 
 ### Why WebP?
 
-WebP produces ~25-35% smaller files than JPEG at similar visual quality, and Titanium supports it natively on both platforms. For a large UI asset library, switching to WebP can shave several MB off your APK/IPA.
+WebP usually produces files that are about 25-35% smaller than JPEG at similar visual quality, and Titanium supports it natively on both platforms. On a large UI asset library, that can shave several MB off your APK or IPA.
 
 ```bash
 > purgetss images --format webp --quality 85
@@ -216,7 +216,7 @@ Keep `--format null` (the default) when you need to stay in the same format as t
 
 ## Full pipeline alongside `build`
 
-The typical sequence when iterating on an app:
+The typical sequence when iterating on an app looks like this:
 
 ```bash
 # 1. Edit your source images in Affinity/Figma, drop into purgetss/images/
@@ -234,13 +234,13 @@ If you only tweaked CSS classes (no image changes), you don't need to re-run `pu
 
 ## Cleaning up
 
-`purgetss images` never deletes files. It only creates them. If you remove an image from `purgetss/images/`, the previously-generated copies in `app/assets/android/images/res-*/` and `app/assets/iphone/images/` stay in place. Remove them manually (or via git) when you clean up.
+`purgetss images` never deletes files. It only creates them. If you remove an image from `purgetss/images/`, the generated copies in `app/assets/android/images/res-*/` and `app/assets/iphone/images/` stay in place. Remove them manually, or with git, when you clean up.
 
 ## Troubleshooting
 
 ### The output is blurry on high-DPI devices
 
-Your source is likely smaller than the 4× master convention. A larger source means sharper output across all densities. Aim for at least 4× the intended display size, or use SVG sources when possible.
+Your source is probably smaller than the 4× master convention. A larger source gives you sharper output across all densities. Aim for at least 4× the intended display size, or use SVG sources when possible.
 
 ### JPG output has a white background instead of transparency
 
@@ -253,7 +253,7 @@ JPEG doesn't support alpha channels. If your source is PNG with transparency and
 
 ### My subdirectories aren't preserved in the output
 
-Verify your source path is inside `purgetss/images/`. When passing sources from outside the convention (e.g. `./docs/screenshots`), the directory of the source file is used as the root, so a file at `./docs/screenshots/hero.png` outputs to `images/hero.png` (flat), not `images/screenshots/hero.png`.
+Verify that your source path is inside `purgetss/images/`. When you pass sources from outside the convention, such as `./docs/screenshots`, the directory of the source file is used as the root. A file at `./docs/screenshots/hero.png` therefore outputs to `images/hero.png`, not `images/screenshots/hero.png`.
 
 Move the file into `purgetss/images/screenshots/` if you want subdirectory preservation.
 

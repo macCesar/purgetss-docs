@@ -5,7 +5,7 @@ slug: installation
 
 # Installation
 
-Install PurgeTSS globally on your machine using [NPM](https://www.npmjs.com/).
+Install PurgeTSS globally on your machine with [NPM](https://www.npmjs.com/).
 
 ```bash
 > [sudo] npm install -g purgetss
@@ -22,20 +22,20 @@ PurgeTSS requires Node 20.0.0 or higher.
 :::info
 Run `purgetss` once in your project to generate the required files and folders.
 
-After that, every build parses your XML files and writes a clean `app.tss` with only the classes used in your project.
+After that, every build parses your XML files and writes a clean `app.tss` with only the classes your project actually uses.
 :::
 
-When you run `purgetss` for the first time in your project, it does the following:
+When you run `purgetss` for the first time in a project, it does the following:
 
 
 ### 1. Auto-run hook
 
-PurgeTSS adds a task in `alloy.jmk` to run `purgetss` every time you compile your app. Works well with `liveview`.
+PurgeTSS adds a task in `alloy.jmk` so it runs every time you compile the app. It plays well with `liveview`.
 
 
 ### 2. purgetss folder
 
-PurgeTSS creates a `purgetss` folder at the root of your project:
+PurgeTSS creates a `purgetss` folder at the root of the project:
 
 ```bash title="./purgetss"
 purgetss
@@ -48,7 +48,7 @@ purgetss
 
 - `config.cjs` file
 
-  This is where you can customize or create new classes with your preferred spacing, colors, margin values, and more. For details, see the [**Customization section**](customization/the-config-file).
+  This is where you customize defaults or add your own classes. For details, see the [**Customization section**](customization/the-config-file).
 
 - `styles` folder
 
@@ -60,7 +60,7 @@ purgetss
 
   - `definitions.css` file
 
-    A CSS file combining all classes from `utilities.tss`, `_app.tss`, any `.tss` files in your project, and `fonts.tss`. Used by the ["IntelliSense for CSS class names in HTML"](#vscode-extension) VS Code extension for autocomplete.
+    A CSS file that combines classes from `utilities.tss`, `_app.tss`, any `.tss` files in your project, and `fonts.tss`. It is used by the ["IntelliSense for CSS class names in HTML"](#vscode-extension) VS Code extension for autocomplete.
 
 - `fonts` folder
 
@@ -72,9 +72,9 @@ purgetss
 
 On the first run, your original `app.tss` is backed up to `_app.tss`.
 
-From this point forward, you can add, delete, or update your custom classes in `_app.tss`.
+From that point on, you add, delete, or update custom classes in `_app.tss`.
 
-Alternatively, include custom values in `config.cjs`. For details, see the [**Configuration section**](customization/the-config-file).
+You can also move custom values into `config.cjs`. For details, see the [**Configuration section**](customization/the-config-file).
 :::
 
 ## Example files
@@ -127,7 +127,7 @@ After running `purgetss`, `app.tss` contains only the classes used in your XML f
 
 Your original `app.tss` is backed up as `_app.tss`. Use that file to add, delete, or update your custom styles.
 
-Every time `purgetss` runs, it copies the content of `_app.tss` to `app.tss`.
+Every time `purgetss` runs, it copies the content of `_app.tss` into `app.tss`.
 
 :::
 
@@ -208,7 +208,7 @@ Examples:
 
 ## XML validation
 
-Before purging, PurgeTSS pre-checks every XML file in your project. One case worth calling out: double dashes (`--`) are not allowed inside XML comments. That's the XML spec itself, not a PurgeTSS rule, but most workflows never trip on it until something actually parses the file.
+Before purging, PurgeTSS pre-checks every XML file in your project. One case worth calling out: double dashes (`--`) are not allowed inside XML comments. That comes from the XML spec itself, not from PurgeTSS, but many people only run into it once a tool actually parses the file.
 
 ```xml
 <!-- Options: --flag or --value -->
