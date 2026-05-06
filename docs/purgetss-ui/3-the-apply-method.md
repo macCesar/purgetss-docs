@@ -3,7 +3,7 @@ sidebar_position: 3
 slug: the-apply-method
 ---
 
-# The `apply` Method
+# The `apply` method
 
 Use `apply` when you want to set properties immediately without animation.
 
@@ -13,7 +13,7 @@ $.myAnimation.apply($.myView)
 
 ### Apply example
 
-`apply` sets properties instantly. In this example, the `ScrollableView` is rotated 90 degrees and its content is counter-rotated -90 degrees to mimic a **TikTok-style** layout.
+`apply` sets properties instantly. In this example, the `ScrollableView` is rotated 90 degrees and its content is counter-rotated -90 degrees to mimic a TikTok-style layout.
 
 ```xml title="index.xml"
 <Alloy>
@@ -50,7 +50,7 @@ $.index.open()
 ![TikTok Like Animations](../images/tiktok-like.gif)
 </div>
 
-*Low framerate gif.*
+*Low framerate GIF.*
 
 ## Callback event object
 
@@ -64,4 +64,4 @@ $.myAnimation.apply($.myView, (e) => {
 })
 ```
 
-When passing an array of views, `index` and `total` work the same as with `play`. See [Callback event object](the-play-method#callback-event-object) for the full property reference.
+When you pass an array of views, `index` and `total` work the same as with `play`. See [Callback event object](the-play-method#callback-event-object) for the property reference.

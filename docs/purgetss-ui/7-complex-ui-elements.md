@@ -13,7 +13,7 @@ To run it, install the FontAwesome fonts in your project:
 > purgetss icon-library -v=fa
 ```
 
-Then copy the following code:
+Then use this sample:
 
 ```xml title="index.xml"
 <Alloy>
@@ -173,4 +173,4 @@ function doAction(event) {
 ![Complex UI with Animations](../images/complex-UI.gif)
 </div>
 
-*Low framerate gif.*
+*Low framerate GIF.*
