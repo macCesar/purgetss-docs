@@ -12,6 +12,7 @@ const config = {
   url: 'https://purgetss.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
