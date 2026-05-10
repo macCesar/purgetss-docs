@@ -331,6 +331,12 @@ Sizing
 
 - `--width <n>`: pin Android `mdpi` (= iPhone `@1x`) to `<n>` pixels wide. Larger scales derive as ×1.5, ×2, ×3, ×4 from that base; height stays proportional to the source's aspect ratio. Accepts integers in `[1, 8192]`. Use it for SVG sources from vector editors with disproportionate viewBoxes, such as Affinity or Illustrator. Without it, every scale derives from the source's natural pixel size as a 4× master, which can produce unexpected output when the viewBox does not match the intended display size.
 
+Transformations
+
+- `--opacity <n>`: multiply the alpha channel of every generated density by `n/100`. Integer in `[0, 100]`. Useful for placeholder or default ImageView images that render at reduced opacity (loading states, watermarks). Applied so each density inherits the same proportional transparency.
+- `--padding <n>`: shrink the rendered image inside each density canvas by `n%` symmetric borders. Integer in `[0, 40]`. The output canvas size stays the same as without padding — what changes is the rendered logo size inside it (transparent borders fill the rest). Combines with `--opacity` for placeholders that need reduced opacity AND breathing room around an unpadded source logo.
+- `--output <relpath>`: override basename + subfolder relative to the images output root. The full multi-density pattern is preserved — only the basename and subpath change. Constraints: no extension (decided by `--format` or source ext), no absolute paths, no `..` segments, single-file source only.
+
 Project and output
 
 - `--dry-run`: preview without writing any files.
@@ -350,6 +356,9 @@ Diagnostics
 > purgetss images --android                              # only Android densities
 > purgetss images --format webp --quality 90             # convert all outputs to WebP
 > purgetss images logo.svg --width 256                   # pin SVG output to 256 px @1x/mdpi
+> purgetss images logo.svg --opacity 50 --format png     # semi-transparent placeholder, all densities
+> purgetss images purgetss/brand/logo.svg --opacity 30 --output 'logos/loading' --format png
+> purgetss images purgetss/brand/logo.png --opacity 30 --padding 15 --output 'logos/default' --format png
 > purgetss images --dry-run                              # preview
 ```
 
