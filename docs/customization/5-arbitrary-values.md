@@ -22,7 +22,7 @@ Five patterns are detected:
 | Pattern                       | Wrong        | Right        | Reason                                                    |
 | ----------------------------- | ------------ | ------------ | --------------------------------------------------------- |
 | Inverted negative sign        | `top-(-10)`  | `-top-(10)`  | The `-` prefix goes before the rule, not inside the value |
-| Tailwind-style brackets       | `top-[10px]` | `top-(10px)` | PurgeTSS uses parentheses for arbitrary values            |
+| Square brackets               | `top-[10px]` | `top-(10px)` | PurgeTSS uses parentheses for arbitrary values            |
 | Empty parentheses             | `wh-()`      | `wh-(10)`    | Add a value                                               |
 | Whitespace inside parentheses | `wh-( 200 )` | `wh-(200)`   | No spaces between `(` and the value                       |
 | Redundant `px` unit           | `top-(10px)` | `top-(10)`   | PurgeTSS treats unit-less arbitrary values as pixels      |
