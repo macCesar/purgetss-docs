@@ -51,7 +51,8 @@ purgetss/brand/
 ├── logo-mono.svg         optional - monochrome layer + notifications
 ├── logo-dark.svg         optional - iOS 18+ dark variant
 ├── logo-splash.svg       optional - Android 12+ splash icon override
-└── logo-tinted.svg       optional - iOS 18+ tinted variant
+├── logo-tinted.svg       optional - iOS 18+ tinted variant
+└── logo-feature.svg      optional - Google Play Feature Graphic override
 ```
 
 Only `logo.svg` (or `logo.png`) is required. Everything else is optional:
@@ -62,6 +63,7 @@ Only `logo.svg` (or `logo.png`) is required. Everything else is optional:
 - `logo-mono`: silhouette used for the Android adaptive monochrome layer (themed icons on Android 13+) and for notification icons. When omitted, `brand` whitens the main logo automatically. Provide your own when the colored logo has detail that would collapse under automatic whitening. A painter's palette with colored dots is a good example: the monochrome version should have cutouts instead.
 - `logo-dark`: alternate logo for iOS 18+ dark mode. When omitted, the dark variant comes from the main logo with a transparent background (Apple's recommended approach). Provide your own when dark-mode brand guidelines use a different lockup or color treatment.
 - `logo-tinted`: alternate logo for iOS 18+ tinted mode. When omitted, the tinted variant comes from a grayscale of the main logo. Provide your own when you want a simpler silhouette that tints better than a grayscale of the colored version.
+- `logo-feature`: alternate logo for the Google Play Feature Graphic (1024×500 banner). When omitted, the main logo is centered inside the banner with the configured vertical padding. Provide your own when you want a different composition for the Play Store listing — for example, a logo-plus-tagline lockup or a wider artwork that takes advantage of the rectangular canvas instead of being constrained to the centered square.
 
 :::tip Prefer SVG for the master
 SVG scales cleanly to every density Sharp needs to emit. A single `logo.svg` can be rasterized at every `res-*dpi` output. PNG masters should be at least 1024×1024 to avoid upscaling artifacts.
@@ -99,7 +101,8 @@ brand: {
   padding: {
     ios: '4%',
     androidLegacy: '10%',
-    androidAdaptive: '19%'
+    androidAdaptive: '19%',
+    featureGraphic: '12%'
   },
   android: {
     splash: false,
@@ -131,7 +134,8 @@ brand: {
     androidSplash: './my-logos/splash.svg', // overrides auto-discovered logo-splash.svg
     monochrome: './my-logos/mono.svg',      // overrides auto-discovered logo-mono.svg
     iosDark: './my-logos/dark.svg',         // overrides auto-discovered logo-dark.svg
-    iosTinted: './my-logos/tinted.svg'      // overrides auto-discovered logo-tinted.svg
+    iosTinted: './my-logos/tinted.svg',     // overrides auto-discovered logo-tinted.svg
+    featureGraphic: './my-logos/feature.svg' // overrides auto-discovered logo-feature.svg
   }
 }
 ```
@@ -163,6 +167,9 @@ All `logos.*` keys are optional path overrides. If you omit them, PurgeTSS auto-
   iOS dark variant source. Override for `purgetss/brand/logo-dark.svg`.
 - `logos.iosTinted`
   iOS tinted variant source. Override for `purgetss/brand/logo-tinted.svg`.
+- `logos.featureGraphic`
+  Google Play Feature Graphic source. Override for `purgetss/brand/logo-feature.svg`.
+  Useful when the Play Store banner should use a different composition than the main app icon (e.g. a logo + tagline lockup that fills the wider 1024×500 canvas).
 
 ### `brand.padding`
 
@@ -178,6 +185,9 @@ All padding values accept either numbers or percentage strings like `'19%'`.
   Default: `19%`.
   Controls the visual inset for adaptive Android foreground assets such as `ic_launcher_foreground.png`.
   This is the setting to adjust first when the installed icon looks cropped inside launcher masks.
+- `padding.featureGraphic`
+  Default: `12%`.
+  Vertical padding (top + bottom) for `MarketplaceArtworkFeature.png` (1024×500 Google Play banner). The logo is rendered as a square block of side `500 - 2 × pad` centered horizontally and vertically. Lower this for a more impactful banner; raise it if the logo looks cramped against the top or bottom edge on smaller Play Store crops.
 
 ### `brand.android`
 
@@ -258,6 +268,7 @@ The output is automatically routed to the right directory for your project layou
 ├── DefaultIcon-Tinted.png          <- 1024×1024, iOS 18+ tinted (grayscale on black)
 ├── iTunesConnect.png               <- 1024×1024, App Store submission
 ├── MarketplaceArtwork.png          <- 512×512, Google Play submission
+├── MarketplaceArtworkFeature.png   <- 1024×500, Google Play Feature Graphic
 └── app/
     └── assets/android/
         ├── default.png             <- legacy Titanium Android splash fallback
@@ -275,6 +286,7 @@ The output is automatically routed to the right directory for your project layou
 ```text title="Classic layout"
 <project>/
 ├── DefaultIcon.png  DefaultIcon-ios.png  ...     <- same root-level files as Alloy
+├── MarketplaceArtworkFeature.png   <- 1024×500, Google Play Feature Graphic
 ├── Resources/
 │   └── android/default.png         <- legacy Titanium Android splash fallback
 └── platform/

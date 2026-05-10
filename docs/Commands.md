@@ -70,7 +70,8 @@ module.exports = {
     padding: {
       ios: '4%',
       androidLegacy: '10%',
-      androidAdaptive: '19%'
+      androidAdaptive: '19%',
+      featureGraphic: '12%'
     },
     android: {
       splash: false,
@@ -235,6 +236,7 @@ Visual customization
 - `--android-adaptive-padding <n>`: adaptive icon safe-zone % (default `19`).
 - `--android-legacy-padding <n>`: legacy `ic_launcher.png` padding % (default `10`).
 - `--ios-padding <n>`: iOS aesthetic padding % (range `2-8`, default `4`).
+- `--feature-graphic-padding <n>`: vertical padding % for `MarketplaceArtworkFeature.png` (default `12`, range `0-40`).
 
 Optional asset types
 
@@ -249,6 +251,7 @@ Logo variants and overrides
 - `--dark-bg-color <hex>`: opaque dark bg for `DefaultIcon-Dark.png` (default: transparent per Apple HIG).
 - `--splash-logo <path>`: override `purgetss/brand/logo-splash.{svg,png}` for Android 12+ splash artwork.
 - `--tinted-logo <path>`: override `purgetss/brand/logo-tinted.{svg,png}`.
+- `--feature-logo <path>`: override `purgetss/brand/logo-feature.{svg,png}` for the Google Play Feature Graphic (1024×500).
 
 - `--no-dark`: skip `DefaultIcon-Dark.png`.
 - `--no-tinted`: skip `DefaultIcon-Tinted.png`.
@@ -274,6 +277,8 @@ Diagnostics
 > purgetss brand --bg-color "#0B1326"                    # override bg color
 > purgetss brand --icon-logo ./docs/app-icon.svg         # dedicated square Android launcher mark
 > purgetss brand --splash --splash-logo ./docs/splash.svg # custom Android 12+ splash artwork
+> purgetss brand --feature-logo ./docs/feature.svg       # custom Google Play Feature Graphic logo
+> purgetss brand --feature-graphic-padding 8             # tighter Feature Graphic padding (more impact)
 > purgetss brand --notification --splash                 # add notification + splash
 > purgetss brand --no-tinted                             # skip iOS 18+ tinted variant
 > purgetss brand --dry-run                               # preview without writing
