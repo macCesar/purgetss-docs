@@ -132,9 +132,9 @@ Every time `purgetss` runs, it copies the content of `_app.tss` into `app.tss`.
 :::
 
 ```css title="app.tss after purging"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* _app.tss styles */
 '.bg-primary': {

@@ -42,9 +42,9 @@ You can set arbitrary color values with `hex`, `rgb`, or `rgba` values, either i
 ```
 
 ```css title="Generated classes"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'Window': { backgroundColor: '#FFFFFF' }
@@ -127,9 +127,9 @@ You can set arbitrary values for most size and dimension properties with `rem`, 
 ```
 
 ```css title="Generated classes"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'Window': { backgroundColor: '#FFFFFF' }
@@ -307,9 +307,9 @@ Use any unit supported by the property you are generating. Use `hex` or `rgba` f
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
@@ -392,9 +392,9 @@ Try this example on an iPad or tablet.
 ```
 
 ```css title="app.tss"
-// PurgeTSS v7.1.0
+// PurgeTSS v7.10.2
 // Created by César Estrada
-// https://github.com/macCesar/purgeTSS
+// https://purgetss.com
 
 // Ti Elements
 'ImageView[platform=ios]': { hires: true }
@@ -481,9 +481,9 @@ Try this example on an iPad or tablet.
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }

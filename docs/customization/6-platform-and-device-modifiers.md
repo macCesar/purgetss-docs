@@ -28,9 +28,9 @@ You can set different background colors and font sizes per platform or device, a
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.2.7 */
-/* Created by César Estrada */
-/* https://github.com/macCesar/purgeTSS */
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }

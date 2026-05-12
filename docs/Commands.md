@@ -544,10 +544,9 @@ To use this file:
 ```
 
 ```css title="app.tss"
-/* PurgeTSS v7.2.7
- * Created by César Estrada
- * https://github.com/macCesar/purgeTSS
-*/
+// PurgeTSS v7.10.2
+// Created by César Estrada
+// https://purgetss.com
 
 /* Ti Elements */
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
@@ -626,9 +625,8 @@ purgetss
 After running `> purgetss build-fonts` you will have the following classes:
 
 ```css title="./purgetss/styles/fonts.tss"
-/* Fonts TSS file generated with PurgeTSS
- * https://github.com/macCesar/purgeTSS
-*/
+// Fonts TSS file generated with PurgeTSS
+// https://purgetss.com/docs/commands#build-fonts-command
 
 '.bevan-italic': { font: { fontFamily: 'Bevan-Italic' } }
 '.bevan-regular': { font: { fontFamily: 'Bevan-Regular' } }
@@ -715,8 +713,8 @@ After running `purgetss build-fonts`, `fonts.tss` will include the `fontFamily` 
 :::
 
 ```css title="./purgetss/styles/fonts.tss"
-/* Fonts TSS file generated with PurgeTSS */
-/* https://github.com/macCesar/purgeTSS */
+// Fonts TSS file generated with PurgeTSS
+// https://purgetss.com/docs/commands#build-fonts-command
 
 '.map-icons': { font: { fontFamily: 'map-icons' } }
 '.microns': { font: { fontFamily: 'microns' } }
