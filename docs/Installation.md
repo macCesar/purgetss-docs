@@ -64,7 +64,7 @@ purgetss
 
 - `fonts` folder
 
-  Place icon, serif, sans-serif, or monospace font files here. See the [build-fonts command](commands#build-fonts-command) for instructions.
+  Place icon, serif, sans-serif, or monospace font files here. See the [Custom fonts page](customization/custom-fonts) for instructions.
 
 :::caution Important
 

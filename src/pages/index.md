@@ -43,6 +43,7 @@ What it does:
   - [The `opacity` Modifier](docs/customization/the-opacity-modifier)
   - [Arbitrary Values](docs/customization/arbitrary-values)
   - [Platform and Device Modifiers](docs/customization/platform-and-device-modifiers)
+  - [Custom Fonts](docs/customization/custom-fonts)
   - [Icon Fonts Libraries](docs/customization/icon-fonts-libraries)
 - The UI Module
   - [Introduction](docs/purgetss-ui/introduction)
