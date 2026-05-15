@@ -90,7 +90,9 @@ module.exports = {
   images: {
     quality: 85,             // JPEG/WebP/AVIF quality (0-100)
     format: null,            // null = keep original; 'webp' | 'jpeg' | 'png' to convert every image
-    confirmOverwrites: true  // prompt before overwriting files (set false to skip)
+    autoSync: true,          // false = SVG pipeline computes dims but doesn't write to images.files
+    confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+    files: []                // per-file overrides: [{ filename: 'images/<sub>/<name>.<ext>', width, height? }]
   },
   theme: {
     extend: {}
@@ -305,6 +307,8 @@ Generates multi-density variants of your UI images from one high-resolution sour
 
 :::tip Full guide
 This is a quick reference. See [Multi-density images](app-assets/multi-density-images) for the full guide: 4× source convention, single-file regeneration, format conversion, and troubleshooting.
+
+For SVGs referenced from views or controllers, see [SVG-aware compile-time pipeline](app-assets/svg-pipeline). It runs with every `purgetss` command and rasterizes only the SVGs your views use.
 :::
 
 ```bash
