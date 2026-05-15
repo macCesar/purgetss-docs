@@ -105,6 +105,11 @@ const config = {
             label: 'TiKit UI',
           }, // or position: 'right'
           {
+            to: 'changelog',
+            position: 'left',
+            label: 'Changelog',
+          },
+          {
             href: 'https://github.com/macCesar/purgetss/',
             label: 'GitHub',
             position: 'right',
