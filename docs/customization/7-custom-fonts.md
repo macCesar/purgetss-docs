@@ -55,6 +55,10 @@ What it does:
 1. Creates `./purgetss/styles/fonts.tss` with one `fontFamily` class per file.
 2. Copies the font files into `./app/assets/fonts/`, renamed to their PostScript names so they work on both iOS and Android.
 
+:::info How this differs from the official icon fonts
+Unlike the [official icon fonts](icon-fonts-libraries), which PurgeTSS resolves automatically from its own bundled files and need no `.tss` in your project, custom fonts **do** generate `./purgetss/styles/fonts.tss`. That file is then folded into the generated `app/styles/app.tss` when you run `purgetss` (or compile your app) — that is where the final classes used by Alloy live.
+:::
+
 After running `purgetss build-fonts` with the Bevan and Dancing Script example above:
 
 ```css title="./purgetss/styles/fonts.tss"

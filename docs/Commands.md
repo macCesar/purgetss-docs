@@ -423,6 +423,8 @@ MaterialSymbolsSharp-Regular.ttf
 
 After copying the fonts, you can use them in Buttons and Labels. For Font Awesome, set the font family to `fa` (Solid icons) and use a class like `fa-home`.
 
+You do not need to copy any `.tss` file for this to work: PurgeTSS resolves the official icon classes at compile time and writes them to the generated `app/styles/app.tss` (not `purgetss/styles/utilities.tss`). See [Icon font libraries](customization/icon-fonts-libraries) for the full reference.
+
 ### Available font classes
 
 - [fontawesome.tss](https://github.com/macCesar/purgeTSS/blob/main/dist/fontawesome.tss)
