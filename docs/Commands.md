@@ -265,7 +265,7 @@ Legacy cleanup
 
 Diagnostics
 
-- `--notes`: print full `tiapp.xml` snippets + padding tuning guide.
+- `--notes`: print platform launch/theme snippets + padding tuning guide.
 - `--debug`: print extra diagnostics.
 
 :::info Confirmation prompt
@@ -299,6 +299,8 @@ The recommended workflow is convention-first:
 - let auto-discovery pick them up
 - use `config.cjs` only when you need a persistent override
 - use CLI flags only for one-off runs
+
+`brand.colors.background` is baked into the generated assets, but PurgeTSS does not automatically edit the iOS LaunchScreen or Android theme. Run `purgetss brand --notes` to print platform snippets with the current color, and see [Matching the launch background](app-assets/app-icons-and-branding#matching-the-launch-background) for the full setup.
 
 
 ## `images` command
