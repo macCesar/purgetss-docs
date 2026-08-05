@@ -9,6 +9,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "rsync -avz --delete --exclude=cgi-bin --exclude=.well-known --exclude=.DS_Store build/ cmlink:sitios/purgetss/",
     "deploy:fresh": "docusaurus build && npm run deploy",
+    "clean:md": "node ./scripts/clean-md.mjs",
+    "docs:check": "node ./scripts/check-docs-version.mjs",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
