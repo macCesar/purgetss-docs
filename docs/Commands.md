@@ -265,7 +265,7 @@ Legacy cleanup
 
 Diagnostics
 
-- `--notes`: print platform launch/theme snippets + padding tuning guide.
+- `--notes`: print the complete platform launch/theme setup + padding tuning guide.
 - `--debug`: print extra diagnostics.
 
 :::info Confirmation prompt
@@ -300,7 +300,7 @@ The recommended workflow is convention-first:
 - use `config.cjs` only when you need a persistent override
 - use CLI flags only for one-off runs
 
-`brand.colors.background` is baked into the generated assets, but PurgeTSS does not automatically edit the iOS LaunchScreen or Android theme. Run `purgetss brand --notes` to print platform snippets with the current color, and see [Matching the launch background](app-assets/app-icons-and-branding#matching-the-launch-background) for the full setup.
+`brand.colors.background` is baked into the generated assets, but PurgeTSS does not automatically edit the iOS LaunchScreen or Android configuration. Run `purgetss brand --notes` to print the iOS snippet plus a complete launcher-only Android theme and Activity override with the current color. The Android snippet points its three launch-related theme attributes to one `splashscreen_background` resource, so the launch color is changed in a single line. See [Matching the launch background](app-assets/app-icons-and-branding#matching-the-launch-background) for the full setup and merge rules.
 
 
 ## `images` command
