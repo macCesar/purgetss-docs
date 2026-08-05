@@ -1,3 +1,8 @@
+---
+description: PurgeTSS is a utility-first styling toolkit for Titanium and Alloy apps, with 23,300+ utility classes, icon fonts, an Animation module and a grid system.
+keywords: [purgetss, titanium, alloy, titanium sdk, tss, utility-first, mobile app styling]
+---
+
 <p align="center">
 	<img src="https://codigomovil.mx/images/logotipo-purgetss-gris.svg" height="230" width="230" alt="PurgeCSS logo"/>
 </p>

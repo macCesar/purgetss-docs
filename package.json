@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "rsync -avz --delete --exclude=cgi-bin --exclude=.well-known build/ cmlink:sitios/purgetss/",
+    "deploy": "rsync -avz --delete --exclude=cgi-bin --exclude=.well-known --exclude=.DS_Store build/ cmlink:sitios/purgetss/",
     "deploy:fresh": "docusaurus build && npm run deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",

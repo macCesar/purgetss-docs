@@ -31,6 +31,32 @@ const config = {
     },
   ],
 
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'PurgeTSS',
+        applicationCategory: 'DeveloperApplication',
+        // The CLI runs on the developer's machine, not on the devices the
+        // resulting apps are built for.
+        operatingSystem: 'macOS, Windows, Linux',
+        description:
+          'A command-line toolkit for developers building cross-platform mobile apps with Titanium SDK. It provides utility classes for Alloy views and controllers, purges the unused ones so the generated app.tss stays lean, and automates icon fonts, color palettes, animations, grids and app assets.',
+        url: 'https://purgetss.com',
+        downloadUrl: 'https://www.npmjs.com/package/purgetss',
+        codeRepository: 'https://github.com/macCesar/purgetss',
+        softwareRequirements: 'Node.js, Titanium SDK',
+        license: 'https://opensource.org/licenses/MIT',
+        author: { '@type': 'Person', name: 'César Estrada' },
+        publisher: { '@type': 'Organization', name: 'Código Móvil' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      }),
+    },
+  ],
+
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -54,6 +80,8 @@ const config = {
         blog: false, // Deshabilita la funcionalidad del blog
         sitemap: {
           changefreq: 'weekly',
+          // Internal search results page: no content of its own for crawlers.
+          ignorePatterns: ['/search'],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
