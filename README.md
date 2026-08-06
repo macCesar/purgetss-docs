@@ -39,3 +39,12 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Documentation Sync
+
+This repo is the source of the documentation and owns the scripts that fan it out to the PurgeTSS CLI repo and the Context7 mirror.
+
+```
+$ npm run clean:md      # rewrite Docusaurus slugs to real file paths and publish the copies
+$ npm run docs:check    # verify the CLI repo copy is in sync (pass its path as an argument)
+```
