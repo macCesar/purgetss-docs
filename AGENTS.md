@@ -35,3 +35,15 @@
 ## Documentation-Specific Notes
 - Use `docs/images/` or `static/assets/images/` for images; reference with relative paths.
 - Keep navigation changes aligned with `sidebars.js` and `_category_.json`.
+
+## Estado del proyecto
+
+- `project/requirements.md` — qué debe cumplir el repo y cómo se verifica
+- `project/context.md` — arquitectura, el pipeline de sync y sus trampas
+- `project/decisions.md` — qué se decidió y por qué
+- `project/status.md` — dónde va el trabajo ahora mismo
+
+Lee `status.md` al retomar. No lo importes al arranque: cambia constantemente
+e invalida el prefijo cacheado que va detrás. (Va en `project/` y no en
+`docs/project/` porque todo `docs/` se publica en purgetss.com y se copia a
+los dos mirrors — ver `decisions.md`.)

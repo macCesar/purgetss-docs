@@ -119,3 +119,15 @@ npm run swizzle
 - The glossary contains over 23,300 utility class definitions
 - Site URL: https://purgetss.com
 - GitHub repository: https://github.com/macCesar/purgetss/
+
+## Estado del proyecto
+
+- `project/requirements.md` — qué debe cumplir el repo y cómo se verifica
+- `project/context.md` — arquitectura, el pipeline de sync y sus trampas
+- `project/decisions.md` — qué se decidió y por qué
+- `project/status.md` — dónde va el trabajo ahora mismo
+
+Lee `status.md` al retomar. No lo importes al arranque: cambia constantemente
+e invalida el prefijo cacheado que va detrás. (Va en `project/` y no en
+`docs/project/` porque todo `docs/` se publica en purgetss.com y se copia a
+los dos mirrors — ver `decisions.md`.)
