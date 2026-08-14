@@ -276,16 +276,16 @@ Visual customization
 
 - `--bg-color <hex>`: background inherited by every piece that doesn't set its own.
 - `--padding <n>`: shortcut that sets both Android launcher paddings to the same value for one run.
-- `--android-adaptive-padding <n>`: adaptive icon safe-zone % (default `19`).
+- `--android-adaptive-padding <n>`: adaptive icon safe-zone % (default `18`).
 - `--android-legacy-padding <n>`: legacy `ic_launcher.png` padding % (default `10`).
 - `--ios-padding <n>`: padding % for the four square iOS/marketplace pieces (range `2-8`, default `4`).
 - `--feature-graphic-padding <n>`: vertical padding % for `MarketplaceArtworkFeature.png` (default `12`, range `0-40`).
 - `--launch-logo-padding <n>`: padding % for `LaunchLogo.png` (default `12`).
 - `--splash-padding <n>`: shortcut that sets both splash paddings to the same value for one run.
-- `--android-splash-padding <n>`: padding % for `default.png` and the 11 `res-*` splashes (default `20`).
-- `--ios-splash-padding <n>`: padding % for the 16 iPhone launch images (default `20`).
+- `--android-splash-padding <n>`: padding % for `default.png` and the 11 `res-*` splashes (default `26`).
+- `--ios-splash-padding <n>`: padding % for the 16 iPhone launch images (default `26`).
 
-Splash padding is a share of the canvas's **shorter** side, so one number keeps the logo at the same visual weight in portrait and in landscape: `20%` leaves it at 60% of the shorter side.
+Splash padding is a share of the canvas's **shorter** side, so one number keeps the logo at the same visual weight in portrait and in landscape: the `26%` default leaves it at 48% of the shorter side.
 
 Optional asset types
 
