@@ -98,6 +98,7 @@ Or in `purgetss/config.cjs`, where each piece takes its own `logo`:
 brand: {
   background: '#FFFFFF',   // inherited by every piece that doesn't set its own
   confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+  optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
   // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
   // these keys are for numbers, colors and activation. Padding is never inherited.
@@ -130,6 +131,7 @@ On the first run, `purgetss brand` adds a `brand:` block to your existing `purge
 brand: {
   background: '#FFFFFF',   // inherited by every piece that doesn't set its own
   confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+  optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
   // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
   // these keys are for numbers, colors and activation. Padding is never inherited.
@@ -332,6 +334,66 @@ They are regenerated anyway, because the alternative is worse: the template ship
 
 To skip the ones you know you don't need, use [`--only`](#regenerating-a-single-piece-with---only). To delete them outright, see [Cleanup legacy branding artifacts](#cleanup-legacy-branding-artifacts).
 
+## Shrinking the generated files
+
+`brand` writes truecolor PNGs. Logos are flat artwork with few distinct colors, which is exactly the case where a 256-color palette is indistinguishable from truecolor at a fraction of the size — the same trick TinyPNG and pngquant use.
+
+It is off by default because it is lossy. Turn it on per run or for the project:
+
+```bash
+> purgetss brand --optimize
+```
+
+```javascript title="./purgetss/config.cjs"
+brand: {
+  background: '#FFFFFF',   // inherited by every piece that doesn't set its own
+  confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+  optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
+
+  // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
+  // these keys are for numbers, colors and activation. Padding is never inherited.
+  icon:             { padding: '4%' },    // DefaultIcon.png + DefaultIcon-ios.png
+  dark:             { background: null }, // DefaultIcon-Dark.png
+  tinted:           {},                   // DefaultIcon-Tinted.png
+  iosSplash:        { padding: '26%' },   // assets/iphone/Default*.png × 16
+  launchLogo:       { padding: '12%' },   // LaunchLogo.png (1024×1024)
+  marketplace:      {},                   // iTunesConnect.png + MarketplaceArtwork.png
+  featureGraphic:   { padding: '12%' },   // MarketplaceArtworkFeature.png (1024×500)
+  adaptive:         { padding: '18%' },   // ic_launcher_{foreground,background,monochrome}.png × 5 + ic_launcher.xml
+  legacyIcon:       { padding: '10%' },   // ic_launcher.png × 5
+  appicon:          {},                   // appicon.png (128×128)
+  androidSplash:    { padding: '26%' },   // assets/android/default.png + images/res-*/default.png × 11
+
+  // Opt-in: inert until you edit the Android theme / FCM meta-data by hand.
+  splashIcon:       { enabled: false },   // drawable-*/splash_icon.png × 5
+  notificationIcon: { enabled: false },   // drawable-*/ic_stat_notify.png × 5
+  ninePatch:        { enabled: false }    // background.9.png (not implemented yet)
+}
+```
+
+`--no-optimize` skips the pass on a single run even when the config asks for it.
+
+On the reference project, the full set of 56 PNGs goes from **1.6 MB to 476 KB — 71% smaller**. Measured on the visible pixels of the generated icons, the difference against the truecolor version averages 0.08–0.19 out of 255, with no channel exceeding 16/255: indistinguishable in practice on flat artwork. Transparency survives — `DefaultIcon-Dark.png` keeps its alpha channel and the same 67% transparent pixels.
+
+### What "lossy" means here, in numbers
+
+The loss is real: the generated icons carry between 950 and 4,300 distinct visible colors — not because the logo has that many, but because every curved edge and every letter of small text produces hundreds of intermediate tones through antialiasing. Quantization reduces all of that to at most 256.
+
+Those intermediate tones are gradations between two or three base colors, which is exactly what a palette approximates well, and sharp dithers the result. Measured on the visible pixels:
+
+| Source | Colors | Average difference | Channels over 16/255 |
+| --- | --- | --- | --- |
+| Flat logo (the usual case) | 950–4,300 | 0.08–0.19 / 255 | 0% |
+| Three-stop gradient (stress test) | 1,215 | 0.74 / 255 | 0.01% |
+
+Even a full-circle gradient does not band measurably. Still, quantization is lossy by definition, so if your mark leans on wide, smooth gradients, compare a generated file before turning it on for the whole project. A file is only ever rewritten when the palette version comes out smaller.
+
+:::caution
+This is tuned for logo artwork. It is not meant for photographic sources.
+:::
+
+What the platforms already do, for context: iOS re-encodes every PNG in the bundle with `pngcrush -iphone` when it packages the app, but that is lossless, so this saving is not something the SDK would have done for you. On Android, nothing in Titanium touches these files.
+
 ## Regenerating a single piece with `--only`
 
 A full run rewrites every branding file. That is what you want the first time, and it is exactly what you don't want when only one piece changed and the others were tweaked by hand.
@@ -391,6 +453,7 @@ If you want that artwork to differ from the launcher icon, provide `logo-splash-
 brand: {
   background: '#FFFFFF',   // inherited by every piece that doesn't set its own
   confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+  optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
   // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
   // these keys are for numbers, colors and activation. Padding is never inherited.
@@ -736,6 +799,7 @@ Or set it in the config:
 brand: {
   background: '#FFFFFF',   // inherited by every piece that doesn't set its own
   confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+  optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
   // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
   // these keys are for numbers, colors and activation. Padding is never inherited.
