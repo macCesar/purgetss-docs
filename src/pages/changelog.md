@@ -2,6 +2,10 @@
 
 All notable changes to PurgeTSS. For the canonical, full-detail log see [the project CHANGELOG on GitHub](https://github.com/macCesar/purgetss/blob/main/CHANGELOG.md).
 
+## v7.13.1
+
+- Four vulnerable transitive dependencies patched. They shipped inside v7.13.0: `postcss` ≤8.5.22 → 8.5.26 (high — XSS via an unescaped `</style>` in the stringify output, plus three path-traversal advisories around `sourceMappingURL`), `nanoid` 3.3.11 → 3.3.18 (high — non-secure generators can loop indefinitely on a negative size), `brace-expansion` 2.1.0 → 2.1.4 and 5.0.5 → 5.0.9 (high — a large numeric range defeats the documented `max` DoS protection), and `uuid` → 11.1.1 (moderate — missing buffer bounds check in v3/v5/v6 when `buf` is provided). All patch bumps within the same major, so `package.json` is untouched and only the lockfile moves. `npm audit` reports zero vulnerabilities afterwards.
+
 ## v7.13.0
 
 - **`purgetss brand` now covers every image the Titanium template ships.** A run on a fresh Alloy project used to leave 28 files still wearing the grey Alloy logo: the 16 `assets/iphone/Default*.png` launch images, the 11 `assets/android/images/res-*/default.png` splashes, and `assets/android/appicon.png`. Three new generators close that gap, and the per-qualifier Android splashes moved from the opt-in `--legacy-splash` flag — now removed — into the default set. The rule is explicit: if the template ships the file, `brand` updates it. See [App icons and branding](docs/app-assets/app-icons-and-branding).

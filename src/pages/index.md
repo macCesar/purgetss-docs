@@ -72,6 +72,10 @@ What it does:
 
 ## Changelog
 
+### v7.13.1
+
+- Four vulnerable transitive dependencies patched, all of which shipped inside v7.13.0: `postcss`, `nanoid`, `brace-expansion` and `uuid`. Patch bumps within the same major — `package.json` is untouched and only the lockfile moves. `npm audit` reports zero vulnerabilities afterwards.
+
 ### v7.13.0
 
 - **`purgetss brand` now covers every image the Titanium template ships.** A run on a fresh Alloy project used to leave 28 files wearing the grey Alloy logo — the 16 iPhone launch images, the 11 per-qualifier Android splashes, and `appicon.png`. The rule is now explicit: if the template ships the file, `brand` updates it.
@@ -87,10 +91,4 @@ What it does:
 - Font Awesome Free updated to 7.3.1 — 23 new icon classes (`.fa-lotus`, `.fa-codeberg`, `.fa-copilot`, `.fa-substack`, `.fa-tesla`, …), none removed.
 - `sharp` updated to 0.35.3 and `glob` to 13.0.6.
 
-### v7.12.0
-
-- **Android launch background snippets in `purgetss brand --notes`.** The notes covered the iOS launch image and the Android launcher icon, but never the color Android draws before Titanium creates the first Window — so a run that set a brand background still flashed the default theme color at launch. `--notes` now prints `android:windowSplashScreenBackground` (Android 12+ system splash) and `android:windowBackground` (native window) to merge into the existing app theme.
-- `--notes` wording no longer names only `tiapp.xml`: the command edits neither `tiapp.xml` nor the Android theme resources, so it now reads "platform launch/theme snippets".
-- `completions-v3.json` reports SDK 13.4.0.GA — metadata label only, the properties map is unchanged.
-
-→ See the [full changelog](changelog) for older releases (v7.11.2 and earlier).
+→ See the [full changelog](changelog) for older releases (v7.12.0 and earlier).
