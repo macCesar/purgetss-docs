@@ -68,6 +68,7 @@ module.exports = {
   brand: {
     background: '#FFFFFF',   // inherited by every piece that doesn't set its own
     confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+    optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
     // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
     // these keys are for numbers, colors and activation. Padding is never inherited.
@@ -236,6 +237,7 @@ module.exports = {
   brand: {
     background: '#FFFFFF',   // inherited by every piece that doesn't set its own
     confirmOverwrites: true, // prompt before overwriting files (set false to skip)
+    optimize: false,         // true = quantize the generated PNGs to a palette (lossy, ~71% smaller)
 
     // One block per piece. Artwork comes from purgetss/brand/logo-<piece>.{svg,png};
     // these keys are for numbers, colors and activation. Padding is never inherited.
@@ -315,6 +317,11 @@ Two more sources are not pieces:
 
 - `--monochrome-logo <path>`: the silhouette shared by the adaptive monochrome layer and the notification icons (`purgetss/brand/logo-mono.{svg,png}`).
 - the positional `<logo>` argument: the main logo, source for every piece that has no override.
+
+Output size:
+
+- `--optimize`: re-encode every generated PNG with a quantized palette. Lossy, ~71% smaller on a full brand set. Also settable as `brand.optimize` in `config.cjs`.
+- `--no-optimize`: skip that pass even when `brand.optimize` is `true`.
 
 Appearance:
 
@@ -565,6 +572,12 @@ For the full workflow with examples (Google Fonts, custom icon libraries, `--mod
 ## `shades` command
 
 The `shades` command generates shades and tints for a given color and writes the palette to `config.cjs`.
+
+:::info Your config.cjs keeps its comments
+`shades` and `semantic` rewrite only the `theme:` section of `config.cjs`; every other byte of the file — comments included — is left exactly as you wrote it. Before v7.13.0 both commands serialized the whole config object and wrote it back, which reformatted the file and dropped every comment in it, `purge:`, `brand:` and `images:` included.
+
+Comments *inside* `theme:` are still replaced, since that is the section being rewritten.
+:::
 
 ```bash
 > purgetss shades [hexcode] [name]
