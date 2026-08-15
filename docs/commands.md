@@ -230,7 +230,7 @@ Groups for `--only`: `ios` (icon, dark, tinted, ios-splash), `store` (marketplac
 
 ### Using custom logo paths
 
-By default, PurgeTSS auto-discovers logos from `purgetss/brand/` — `logo.{svg,png}` for the main artwork, `logo-<piece>.{svg,png}` for a specific piece. To use custom paths, set `logo` on the piece in `config.cjs`:
+By default, PurgeTSS auto-discovers logos from `purgetss/brand/`: `logo.{svg,png}` for the main artwork, `logo-<piece>.{svg,png}` for a specific piece. To use custom paths, set `logo` on the piece in `config.cjs`:
 
 ```javascript title="./purgetss/config.cjs"
 module.exports = {
@@ -330,7 +330,7 @@ Appearance:
 - `--no-tinted`: skip `DefaultIcon-Tinted.png`.
 
 :::caution Breaking changes in v7.13.0
-`--splash` → `--splash-icon`, `--notification` → `--notification-icon`, `--splash-logo` → `--splash-icon-logo`, `--feature-logo` → `--feature-graphic-logo`. `--icon-logo` now feeds the `icon` piece — the Android launcher source is `--adaptive-logo`. `--legacy-splash` is gone: the per-qualifier Android splashes are part of `android-splash` and always generated. No flag aliases were kept. The `brand:` config block also changed shape, but that one updates itself — see [Older configs update themselves](app-assets/app-icons-and-branding#older-configs-update-themselves).
+`--splash` → `--splash-icon`, `--notification` → `--notification-icon`, `--splash-logo` → `--splash-icon-logo`, `--feature-logo` → `--feature-graphic-logo`. `--icon-logo` now feeds the `icon` piece; the Android launcher source is `--adaptive-logo`. `--legacy-splash` is gone: the per-qualifier Android splashes are part of `android-splash` and always generated. No flag aliases were kept. The `brand:` config block also changed shape, but that one updates itself. See [Older configs update themselves](app-assets/app-icons-and-branding#older-configs-update-themselves).
 :::
 
 Legacy cleanup
@@ -419,8 +419,8 @@ Sizing
 Transformations
 
 - `--opacity <n>`: multiply the alpha channel of every generated density by `n/100`. Integer in `[0, 100]`. Useful for placeholder or default ImageView images that render at reduced opacity (loading states, watermarks). Applied so each density inherits the same proportional transparency.
-- `--padding <n>`: shrink the rendered image inside each density canvas by `n%` symmetric borders. Integer in `[0, 40]`. The output canvas size stays the same as without padding — what changes is the rendered logo size inside it (transparent borders fill the rest). Combines with `--opacity` for placeholders that need reduced opacity AND breathing room around an unpadded source logo.
-- `--output <relpath>`: override basename + subfolder relative to the images output root. The full multi-density pattern is preserved — only the basename and subpath change. Constraints: no extension (decided by `--format` or source ext), no absolute paths, no `..` segments, single-file source only.
+- `--padding <n>`: shrink the rendered image inside each density canvas by `n%` symmetric borders. Integer in `[0, 40]`. The output canvas keeps the size it would have without padding; what changes is the rendered logo inside it, with transparent borders filling the rest. Combines with `--opacity` for placeholders that need reduced opacity AND breathing room around an unpadded source logo.
+- `--output <relpath>`: override basename + subfolder relative to the images output root. The full multi-density pattern is preserved. Only the basename and subpath change. Constraints: no extension (decided by `--format` or source ext), no absolute paths, no `..` segments, single-file source only.
 
 Project and output
 
@@ -574,7 +574,7 @@ For the full workflow with examples (Google Fonts, custom icon libraries, `--mod
 The `shades` command generates shades and tints for a given color and writes the palette to `config.cjs`.
 
 :::info Your config.cjs keeps its comments
-`shades` and `semantic` rewrite only the `theme:` section of `config.cjs`; every other byte of the file — comments included — is left exactly as you wrote it. Before v7.13.0 both commands serialized the whole config object and wrote it back, which reformatted the file and dropped every comment in it, `purge:`, `brand:` and `images:` included.
+`shades` and `semantic` rewrite only the `theme:` section of `config.cjs`; every other byte of the file, comments included, is left exactly as you wrote it. Before v7.13.0 both commands serialized the whole config object and wrote it back, which reformatted the file and dropped every comment in it, `purge:`, `brand:` and `images:` included.
 
 Comments *inside* `theme:` are still replaced, since that is the section being rewritten.
 :::
