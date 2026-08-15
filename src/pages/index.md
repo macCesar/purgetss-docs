@@ -74,21 +74,21 @@ What it does:
 
 ### v7.13.1
 
-- Four vulnerable transitive dependencies patched, all of which shipped inside v7.13.0: `postcss`, `nanoid`, `brace-expansion` and `uuid`. Patch bumps within the same major — `package.json` is untouched and only the lockfile moves. `npm audit` reports zero vulnerabilities afterwards.
+- Four vulnerable transitive dependencies patched, all of which shipped inside v7.13.0: `postcss`, `nanoid`, `brace-expansion` and `uuid`. Patch bumps within the same major, so `package.json` is untouched and only the lockfile moves. `npm audit` reports zero vulnerabilities afterwards.
 
 ### v7.13.0
 
-- **`purgetss brand` now covers every image the Titanium template ships.** A run on a fresh Alloy project used to leave 28 files wearing the grey Alloy logo — the 16 iPhone launch images, the 11 per-qualifier Android splashes, and `appicon.png`. The rule is now explicit: if the template ships the file, `brand` updates it.
-- **The `brand:` config is organized by piece.** Each of the 14 pieces takes the same four keys where they apply — `logo`, `padding`, `background`, `enabled` — and an older block is rewritten to that structure on the next run, carrying over every value you had customized. Unknown keys abort the run instead of being ignored.
+- **`purgetss brand` now covers every image the Titanium template ships.** A run on a fresh Alloy project used to leave 28 files wearing the grey Alloy logo: the 16 iPhone launch images, the 11 per-qualifier Android splashes, and `appicon.png`. The rule is now explicit: if the template ships the file, `brand` updates it.
+- **The `brand:` config is organized by piece.** Each of the 14 pieces takes the same four keys where they apply (`logo`, `padding`, `background`, `enabled`), and an older block is rewritten to that structure on the next run, carrying over every value you had customized. Unknown keys abort the run instead of being ignored.
 - **Breaking: one name per thing** across config, flags, `--only` and the `purgetss/brand/` files. `--splash` → `--splash-icon`, `--notification` → `--notification-icon`, `--feature-logo` → `--feature-graphic-logo`, `--legacy-splash` removed. No aliases were kept.
 - **New `--only <pieces>` filter** to regenerate one piece or a group, and **`logo-launch.*`** to put your logotype on the iOS launch screen through `LaunchLogo.png`.
-- **New `brand.optimize` / `--optimize`**: quantizes the generated PNGs to a palette. Off by default because it is lossy — 1.6 MB to 476 KB on the reference set, indistinguishable on flat artwork.
+- **New `brand.optimize` / `--optimize`**: quantizes the generated PNGs to a palette. Off by default because it is lossy: 1.6 MB to 476 KB on the reference set, indistinguishable on flat artwork.
 - `shades` and `semantic` no longer strip every comment from `config.cjs`; they rewrite only the `theme:` section.
 
 ### v7.12.1
 
 - `purgetss brand --notes` now targets Titanium's launcher Activity instead of only the app theme. Titanium applies `Theme.Titanium` directly to the generated launcher Activity, so adding splash items only to the `<application>` theme could still leave Android 12+ using the SDK's default background. The notes now print a complete `splashscreen.xml` plus a launcher-only `Theme.SplashScreen` derived from `Theme.Titanium`, with the launch color defined in one place.
-- Font Awesome Free updated to 7.3.1 — 23 new icon classes (`.fa-lotus`, `.fa-codeberg`, `.fa-copilot`, `.fa-substack`, `.fa-tesla`, …), none removed.
+- Font Awesome Free updated to 7.3.1: 23 new icon classes (`.fa-lotus`, `.fa-codeberg`, `.fa-copilot`, `.fa-substack`, `.fa-tesla`, …), none removed.
 - `sharp` updated to 0.35.3 and `glob` to 13.0.6.
 
 → See the [full changelog](changelog) for older releases (v7.12.0 and earlier).
