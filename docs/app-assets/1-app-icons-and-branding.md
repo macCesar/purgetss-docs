@@ -6,7 +6,7 @@ slug: app-icons-and-branding
 # App icons and branding
 
 :::info The `brand` command at a glance
-`purgetss brand` replaces every image the Titanium template ships — launcher icons, adaptive icons, iOS 18+ Dark/Tinted variants, marketplace artwork, and both the iOS and Android splash sets — from one main SVG or PNG logo, with optional per-piece overrides when you need them.
+From one main SVG or PNG logo, `purgetss brand` replaces every image the Titanium template ships: launcher icons, adaptive icons, iOS 18+ Dark/Tinted variants, marketplace artwork, and both the iOS and Android splash sets. Per-piece overrides are there when you need them.
 
 The rule is simple: **if the template ships the file, `brand` updates it.** You should never have to know which API still reads which file to avoid shipping an app with the grey Alloy logo somewhere in it.
 
@@ -19,7 +19,7 @@ For a terse reference of every flag, see the [`brand` command reference](../comm
 
 ## Quick start
 
-Drop a logo file into `purgetss/brand/`, then run the command. That is the core workflow.
+Drop a logo file into `purgetss/brand/`, then run the command.
 
 ```bash
 > mkdir -p purgetss/brand # if the folder doesn't exist yet
@@ -44,7 +44,7 @@ Pass `--dry-run` to preview without writing any files:
 
 `init` creates `purgetss/brand/` (alongside `fonts/` and `images/`) so the folder is already there the first time you look for it, even before you've dropped in a logo.
 
-PurgeTSS auto-discovers logo files under this folder, the same way `purgetss/fonts/` works for fonts. The naming rule is `logo-<piece>`, using the same piece names the CLI and the config use — drop a file in and you're done:
+PurgeTSS auto-discovers logo files under this folder, the same way `purgetss/fonts/` works for fonts. The naming rule is `logo-<piece>`, with the same piece names the CLI and the config use. Drop a file in and you're done:
 
 ```text title="./purgetss/brand/"
 purgetss/brand/
@@ -65,9 +65,9 @@ purgetss/brand/
 └── logo-notification-icon.svg optional - notification icons
 ```
 
-Only `logo.svg` (or `logo.png`) is required. Every other file is an override for one piece, and dropping it in is all it takes — there is no syntax to remember, and opening the folder shows you at a glance what has been customized.
+Only `logo.svg` (or `logo.png`) is required. Every other file is an override for one piece, and dropping it in is all it takes. There is no syntax to remember, and opening the folder shows what has been customized.
 
-Every one of them has a CLI equivalent, `--<piece>-logo <path>`, and a config equivalent, `brand.<piece>.logo` — for artwork that lives outside `purgetss/brand/`.
+Every one of them has a CLI equivalent, `--<piece>-logo <path>`, and a config equivalent, `brand.<piece>.logo`, for artwork that lives outside `purgetss/brand/`.
 
 The ones worth knowing about:
 
@@ -78,7 +78,7 @@ The ones worth knowing about:
 - `logo-tinted`: alternate logo for iOS 18+ tinted mode. When omitted, the tinted variant comes from a grayscale of the main logo. Provide your own when you want a simpler silhouette that tints better than a grayscale of the colored version.
 - `logo-launch`: the only file that also *activates* a piece. Drop it in and `brand` writes `LaunchLogo.png`, so the iOS launch screen shows your logotype instead of the app icon. See [The iOS launch screen and LaunchLogo.png](#the-ios-launch-screen-and-launchlogopng).
 - `logo-splash-icon`: alternate artwork for Android 12+ `splash_icon.png`. Use this when the splash should use a different composition than the launcher icon. PurgeTSS generates the file, but Titanium still needs a custom Android splash theme if you want the system splash to use it instead of `ic_launcher`.
-- `logo-feature-graphic`: alternate logo for the Google Play Feature Graphic (1024×500 banner). When omitted, the main logo is centered inside the banner with the configured vertical padding. Provide your own when you want a different composition for the Play Store listing — for example, a logo-plus-tagline lockup or a wider artwork that takes advantage of the rectangular canvas instead of being constrained to the centered square.
+- `logo-feature-graphic`: alternate logo for the Google Play Feature Graphic (1024×500 banner). When omitted, the main logo is centered inside the banner with the configured vertical padding. Provide your own when you want a different composition for the Play Store listing: a logo-plus-tagline lockup, say, or wider artwork that uses the rectangular canvas instead of staying inside the centered square.
 
 :::tip Prefer SVG for the master
 SVG scales cleanly to every density Sharp needs to emit. A single `logo.svg` can be rasterized at every `res-*dpi` output. PNG masters should be at least 1024×1024 to avoid upscaling artifacts.
@@ -159,7 +159,7 @@ Change only what you want to keep as a project default. CLI flags still win for 
 ### How the work is divided between files and config
 
 - **Files decide the artwork.** Dropping `logo-dark.svg` next to `logo.svg` is enough; open the folder and you can see what has been customized. This is the main path.
-- **Config decides numbers, colors and activation** — none of which can be expressed with a filename.
+- **Config decides numbers, colors and activation**, none of which can be expressed with a filename.
 - `logo:` inside a piece is there for artwork that lives outside `purgetss/brand/`.
 
 ## Brand config reference
@@ -204,11 +204,11 @@ Only three pieces are opt-in, and for one reason: they produce nothing useful un
 
 ### `background` is inherited, `padding` is not
 
-Set `brand.background` once and every piece picks it up. Padding works the other way on purpose: the defaults answer to different constraints. The adaptive `18%` answers to the Android launcher mask, while the iOS `4%` is an aesthetic choice with no mask behind it. A single inherited number would let `8%` quietly break the launcher mask — so padding is set per piece or not at all.
+Set `brand.background` once and every piece picks it up. Padding works the other way on purpose: the defaults answer to different constraints. The adaptive `18%` answers to the Android launcher mask, while the iOS `4%` is an aesthetic choice with no mask behind it. A single inherited number would let `8%` quietly break the launcher mask, so padding is set per piece or not at all.
 
 ### Older configs update themselves
 
-PurgeTSS keeps `config.cjs` current the same way it renamed `config.js` to `config.cjs`: on the file, once. When the `brand:` block uses a shape from an earlier version, the next run rewrites it to the per-piece structure and carries over everything that had been customized — paddings, colors, logo paths, enabled flags — listing each value it moved:
+PurgeTSS keeps `config.cjs` current the same way it renamed `config.js` to `config.cjs`: on the file, once. When the `brand:` block uses a shape from an earlier version, the next run rewrites it to the per-piece structure and carries over everything that had been customized (paddings, colors, logo paths, enabled flags), then lists each value it moved:
 
 ```text
 ::PurgeTSS:: Updated the brand: structure in ./purgetss/config.cjs.
@@ -219,9 +219,9 @@ PurgeTSS keeps `config.cjs` current the same way it renamed `config.js` to `conf
     • brand.colors.background → brand.background
 ```
 
-This happens on `purgetss brand`, and on any command that goes through the config — `build`, `watch`, `purge`, `shades`. Values that already matched a default are not written, so a block that was never customized comes out clean rather than cluttered with redundant keys.
+This happens on `purgetss brand`, and on any command that goes through the config: `build`, `watch`, `purge`, `shades`. Values that already matched a default are not written, so a block that was never customized comes out clean rather than cluttered with redundant keys.
 
-Both earlier shapes are recognized: the original flat keys (`brand.padding` as a number, `brand.iosPadding`, `brand.bgColor`, `brand.darkBgColor`, top-level `brand.notification` / `brand.splash`) and the grouped sections from v7.7.0 (`logos` / `padding` / `android` / `ios` / `colors`). One key is dropped rather than moved — `brand.android.legacySplash`, because the per-qualifier splashes belong to `androidSplash` now and are always generated. The run says so when it happens.
+Both earlier shapes are recognized: the original flat keys (`brand.padding` as a number, `brand.iosPadding`, `brand.bgColor`, `brand.darkBgColor`, top-level `brand.notification` / `brand.splash`) and the grouped sections from v7.7.0 (`logos` / `padding` / `android` / `ios` / `colors`). One key is dropped rather than moved: `brand.android.legacySplash`, because the per-qualifier splashes belong to `androidSplash` now and are always generated. The run says so when it happens.
 
 The command itself understands exactly one structure. Nothing translates on the fly, so the day this migration is removed, nothing else changes.
 
@@ -242,7 +242,7 @@ Unknown key(s) in the brand: section of purgetss/config.cjs:
   Check the spelling. Nothing was written.
 ```
 
-A typo is deliberately not treated as an old structure: rewriting the block would drop it silently. And ignoring a misspelled `paddig` would be worse than stopping — the whole icon set would render at the wrong size and look perfectly plausible.
+A typo is deliberately not treated as an old structure: rewriting the block would drop it silently. And ignoring a misspelled `paddig` would be worse than stopping: the whole icon set would render at the wrong size and look perfectly plausible.
 
 ## Overwrite confirmation
 
@@ -328,7 +328,7 @@ The Android outputs are related, but they are not interchangeable:
 
 ### Why files that "no longer matter" are regenerated
 
-Several of these are read by nothing in a modern build. With `<enable-launch-screen-storyboard>` enabled — the default since Titanium 8 — iOS draws the storyboard and never opens the 16 `Default*.png`. `appicon.png` only comes into play when the Android manifest declares no `android:icon`.
+Several of these are read by nothing in a modern build. With `<enable-launch-screen-storyboard>` enabled, the default since Titanium 8, iOS draws the storyboard and never opens the 16 `Default*.png`. `appicon.png` only comes into play when the Android manifest declares no `android:icon`.
 
 They are regenerated anyway, because the alternative is worse: the template ships them with the grey Alloy logo, and deciding which ones to skip would mean asking you to keep track of which Titanium and OS version reads which file. If it is in the project tree, it carries your logo.
 
@@ -336,7 +336,7 @@ To skip the ones you know you don't need, use [`--only`](#regenerating-a-single-
 
 ## Shrinking the generated files
 
-`brand` writes truecolor PNGs. Logos are flat artwork with few distinct colors, which is exactly the case where a 256-color palette is indistinguishable from truecolor at a fraction of the size — the same trick TinyPNG and pngquant use.
+`brand` writes truecolor PNGs. Logos are flat artwork with few distinct colors, which is exactly the case where a 256-color palette is indistinguishable from truecolor at a fraction of the size. It is the same trick TinyPNG and pngquant use.
 
 It is off by default because it is lossy. Turn it on per run or for the project:
 
@@ -373,11 +373,11 @@ brand: {
 
 `--no-optimize` skips the pass on a single run even when the config asks for it.
 
-On the reference project, the full set of 56 PNGs goes from **1.6 MB to 476 KB — 71% smaller**. Measured on the visible pixels of the generated icons, the difference against the truecolor version averages 0.08–0.19 out of 255, with no channel exceeding 16/255: indistinguishable in practice on flat artwork. Transparency survives — `DefaultIcon-Dark.png` keeps its alpha channel and the same 67% transparent pixels.
+On the reference project, the full set of 56 PNGs goes from **1.6 MB to 476 KB, 71% smaller**. Measured on the visible pixels of the generated icons, the difference against the truecolor version averages 0.08–0.19 out of 255, with no channel exceeding 16/255: indistinguishable in practice on flat artwork. Transparency survives too. `DefaultIcon-Dark.png` keeps its alpha channel and the same 67% transparent pixels.
 
 ### What "lossy" means here, in numbers
 
-The loss is real: the generated icons carry between 950 and 4,300 distinct visible colors — not because the logo has that many, but because every curved edge and every letter of small text produces hundreds of intermediate tones through antialiasing. Quantization reduces all of that to at most 256.
+The loss is real: the generated icons carry between 950 and 4,300 distinct visible colors, not because the logo has that many, but because every curved edge and every letter of small text produces hundreds of intermediate tones through antialiasing. Quantization reduces all of that to at most 256.
 
 Those intermediate tones are gradations between two or three base colors, which is exactly what a palette approximates well, and sharp dithers the result. Measured on the visible pixels:
 
@@ -417,7 +417,7 @@ Groups are shorthand for the obvious sets:
 
 Details worth knowing:
 
-- Naming a piece generates it even when its opt-in flag is absent — `--only notification-icon` is enough on its own.
+- Naming a piece generates it even when its opt-in flag is absent: `--only notification-icon` is enough on its own.
 - A name that doesn't exist aborts the run before anything is written, printing the valid pieces and groups.
 - `--dry-run` honors the same filter, so you can check the plan first.
 - The order you type doesn't matter; generation always follows the pipeline order.
@@ -481,7 +481,7 @@ Important detail: generating `splash_icon.png` does not automatically switch Tit
 Keep the theme already assigned to `<application>`. Define a launcher-only theme that inherits from `Theme.Titanium`, then assign it to Titanium's generated launcher Activity. The complete setup is in [Matching the launch background](#matching-the-launch-background).
 
 :::caution Android masks this icon into a circle
-The Android 12+ splash icon is drawn inside a circular mask. A wide wordmark that fills the canvas loses its corners. Use a square mark for `logo-splash-icon` — the same advice that applies to launcher icons.
+The Android 12+ splash icon is drawn inside a circular mask. A wide wordmark that fills the canvas loses its corners. Use a square mark for `logo-splash-icon`, the same advice that applies to launcher icons.
 :::
 
 Also, if you still see a brief flash during splash exit even with correct assets, do not assume the PNGs are wrong. That artifact can come from Titanium's splash theme or the system splash transition itself.
@@ -490,7 +490,7 @@ Also, if you still see a brief flash during splash exit even with correct assets
 
 Below Android 12 there is no system splash: the launch screen comes from the image Titanium maps into `drawable-*/background.png`, and that image comes from the project's own splash artwork.
 
-`brand` regenerates the whole set on every run — it is the `android-splash` piece, on by default:
+`brand` regenerates the whole set on every run. It is the `android-splash` piece, on by default:
 
 - `app/assets/android/default.png` (`Resources/android/default.png` in Classic)
 - `app/assets/android/images/res-*/default.png` — the 11 per-qualifier images the Alloy template ships
@@ -498,14 +498,14 @@ Below Android 12 there is no system splash: the launch screen comes from the ima
 Earlier versions regenerated only the first file and hid the other 11 behind a `--legacy-splash` flag, which is why a freshly branded project could still flash the grey Alloy logo on an older phone. That flag is gone: its output is part of `android-splash` and always generated.
 
 :::note A solid windowBackground wins
-If the launch theme sets `android:windowBackground` to a plain color — which is what [Matching the launch background](#matching-the-launch-background) recommends — that color takes precedence over this artwork on Android &lt;12. Drop the `windowBackground` item if you want the image to show instead.
+If the launch theme sets `android:windowBackground` to a plain color, which is what [Matching the launch background](#matching-the-launch-background) recommends, that color takes precedence over this artwork on Android &lt;12. Drop the `windowBackground` item if you want the image to show instead.
 :::
 
 ## The iOS launch screen and LaunchLogo.png
 
 Titanium builds `LaunchLogo.imageset` itself on every iOS build, resizing one source into the five sizes it needs. It looks for `LaunchLogo.png` first and falls back to `DefaultIcon.png`.
 
-So there is nothing for PurgeTSS to generate there — but there is something to choose. With only `DefaultIcon.png` around, the launch screen shows your app icon, safe-zone padding and all. Dropping a `logo-launch.svg` (or `.png`) into `purgetss/brand/` makes `brand` write a `LaunchLogo.png`, and the launch screen shows the full logotype instead:
+So there is nothing for PurgeTSS to generate there, but there is something to choose. With only `DefaultIcon.png` around, the launch screen shows your app icon, safe-zone padding and all. Dropping a `logo-launch.svg` (or `.png`) into `purgetss/brand/` makes `brand` write a `LaunchLogo.png`, and the launch screen shows the full logotype instead:
 
 ```bash
 > cp docs/my-wordmark.svg purgetss/brand/logo-launch.svg
@@ -514,7 +514,7 @@ So there is nothing for PurgeTSS to generate there — but there is something to
 
 The file is written at exactly 1024×1024. That is not a style choice: the SDK validates the size and discards the file with a warning when it does not match.
 
-The piece activates by convention — the presence of `logo-launch.*` — rather than through a flag, because `--<piece>-logo` already means "the source for this piece" everywhere else in the command. To generate it from a path without adding the file:
+The piece activates by convention, the presence of `logo-launch.*`, rather than through a flag, because `--<piece>-logo` already means "the source for this piece" everywhere else in the command. To generate it from a path without adding the file:
 
 ```bash
 > purgetss brand --launch-logo docs/my-wordmark.svg
@@ -528,7 +528,7 @@ The output keeps its alpha, so the storyboard's `<default-background-color>` sho
 
 The Alloy and Classic templates ship 16 `Default*.png` launch images under `assets/iphone/`, from the 320×480 original iPhone size up to 2688×1242. `brand` regenerates all of them, scaling the logo against the shorter side of each canvas so portrait and landscape carry the same visual weight.
 
-With `<enable-launch-screen-storyboard>` enabled — the default — iOS never reads these files. They are regenerated because they are in your project, they ship with the Alloy logo, and no one should have to audit their `tiapp.xml` to know whether that matters. If you are sure your project doesn't need them, [`--cleanup-legacy`](#cleanup-legacy-branding-artifacts) deletes them instead.
+With `<enable-launch-screen-storyboard>` enabled, the default, iOS never reads these files. They are regenerated because they are in your project, they ship with the Alloy logo, and no one should have to audit their `tiapp.xml` to know whether that matters. If you are sure your project doesn't need them, [`--cleanup-legacy`](#cleanup-legacy-branding-artifacts) deletes them instead.
 
 ## iOS 18+ Dark and Tinted variants
 
@@ -567,7 +567,7 @@ The `--bg-color` flag (or `brand.background` in config) controls the background 
 > purgetss brand --bg-color "#0B1326"
 ```
 
-Any piece can opt out with its own `background` — that is what `dark: { background: null }` does in the default config, keeping `DefaultIcon-Dark.png` transparent per Apple HIG.
+Any piece can opt out with its own `background`. That is what `dark: { background: null }` does in the default config, which keeps `DefaultIcon-Dark.png` transparent per Apple HIG.
 
 If you never pass the flag, background stays `#FFFFFF`. `iTunesConnect.png` and `MarketplaceArtwork.png` keep their alpha channel to match Titanium's default; `MarketplaceArtworkFeature.png` is always flattened for Google Play.
 
@@ -662,7 +662,7 @@ If the launcher Activity already has its own custom `android:theme`, do not repl
 
 :::note Android versions below 12
 
-A solid `android:windowBackground` takes precedence over `default.png`, the `res-*/default.png` set, `background.png`, or `background.9.png` during the legacy launch path. `brand` regenerates that artwork with your logo on every run, so if you want it to show, use a drawable or layer-list for `windowBackground` instead of a plain color — or drop the `windowBackground` item altogether.
+A solid `android:windowBackground` takes precedence over `default.png`, the `res-*/default.png` set, `background.png`, or `background.9.png` during the legacy launch path. `brand` regenerates that artwork with your logo on every run, so if you want it to show, use a drawable or layer-list for `windowBackground` instead of a plain color, or drop the `windowBackground` item altogether.
 :::
 
 Run `purgetss brand --notes` after generating the assets to print the complete resource file and manifest override with the project's current `brand.background` value. PurgeTSS only prints the guidance and never edits either platform configuration automatically.
@@ -689,9 +689,9 @@ There is deliberately **no global padding value that cascades down**. The defaul
 
 Two things are worth knowing about what happens to your `logo.svg` or `logo.png` before any padding is applied.
 
-**The container is what counts, not the artwork's bounding box.** An SVG is read at its `viewBox`, a raster at its full canvas — neither is trimmed to where the pixels actually are. So whatever margin a designer baked into the file **adds** to the padding configured per piece. A round logo exported inside a 2048×2048 PNG with 25% of its own air, generated at `adaptive: { padding: '18%' }`, ends up covering about 32% of the icon canvas, not 64%. If a mark comes out smaller than the numbers suggest, that is almost always why: crop the source or lower the padding.
+**The container is what counts, not the artwork's bounding box.** An SVG is read at its `viewBox`, a raster at its full canvas, and neither is trimmed to where the pixels actually are. So whatever margin a designer baked into the file **adds** to the padding configured per piece. A round logo exported inside a 2048×2048 PNG with 25% of its own air, generated at `adaptive: { padding: '18%' }`, ends up covering about 32% of the icon canvas, not 64%. If a mark comes out smaller than the numbers suggest, that is almost always why: crop the source or lower the padding.
 
-**The masters are sized to the run.** The source is rasterized once into two intermediate masters, and every piece scales down from them — so their resolution is the ceiling on output sharpness. Rather than a fixed size, `brand` measures the largest number of pixels any selected piece will ask for and builds the masters at exactly that. A default run reports it:
+**The masters are sized to the run.** The source is rasterized once into two intermediate masters, and every piece scales down from them, so their resolution is the ceiling on output sharpness. Rather than a fixed size, `brand` measures the largest number of pixels any selected piece will ask for and builds the masters at exactly that. A default run reports it:
 
 ```text
   • Masters at 942 px — the largest any selected piece asks for
@@ -703,7 +703,7 @@ The one case this cannot fix is a raster source that is simply too small: a 512-
 
 ### Splash padding
 
-The 28 splash images — `default.png`, the 11 `res-*`, and the 16 iPhone launch images — share one rule: the logo is fitted into a square whose side is a share of the canvas's **shorter** side.
+The 28 splash images (`default.png`, the 11 `res-*`, and the 16 iPhone launch images) share one rule: the logo is fitted into a square whose side is a share of the canvas's **shorter** side.
 
 Measuring against the shorter side is what lets a single number work across canvases as different as 1440×2560 and 800×480: at 800×480 the limit comes from the height, at 240×400 from the width, and the logo keeps the same visual weight in portrait and in landscape.
 
@@ -780,7 +780,7 @@ Three cleanup rules target files `brand` now regenerates by default: the `res-lo
 Keeping 28 path(s) this run just regenerated with your artwork.
 ```
 
-To actually delete them, exclude the piece that writes them — for example `purgetss brand --only android --cleanup-legacy` regenerates the Android icons while letting cleanup remove the iPhone launch images.
+To actually delete them, exclude the piece that writes them. For example, `purgetss brand --only android --cleanup-legacy` regenerates the Android icons while letting cleanup remove the iPhone launch images.
 :::
 
 ## Troubleshooting
