@@ -88,17 +88,17 @@ The config file has four main sections: `purge`, `brand`, `images`, and `theme`.
 For `brand`, the structure is one block per piece of artwork, each accepting the same four keys where they apply:
 
 - `logo`: path to this piece's artwork, when it lives outside `purgetss/brand/`
-- `padding`: inset per side, as a number or a percentage string like `'19%'` — never inherited
-- `background`: hex color, or `null` for transparent — inherited from `brand.background`
+- `padding`: inset per side, as a number or a percentage string like `'19%'`. Never inherited
+- `background`: hex color, or `null` for transparent. Inherited from `brand.background`
 - `enabled`: `false` turns a default piece off, `true` turns an opt-in piece on
 
 Plus `brand.background`, `brand.confirmOverwrites`, `brand.logo` (the main logo) and `brand.monochromeLogo`.
 
-A `brand:` block written for an older PurgeTSS is rewritten to this structure on the next run, carrying over every value that had been customized. A key that belongs to no structure at all — a typo — aborts the run with the list of valid ones instead. For the property-by-property reference, see [App icons and branding](/docs/app-assets/app-icons-and-branding#brand-config-reference).
+A `brand:` block written for an older PurgeTSS is rewritten to this structure on the next run, carrying over every value that had been customized. A key that belongs to no structure at all, a typo for instance, aborts the run with the list of valid ones instead. For the property-by-property reference, see [App icons and branding](/docs/app-assets/app-icons-and-branding#brand-config-reference).
 
 ### Overriding logo paths
 
-By default, PurgeTSS auto-discovers logo files from `purgetss/brand/` — `logo.{svg,png}` for the main artwork and `logo-<piece>.{svg,png}` for a specific piece. If you want to use custom paths, set `logo` on the piece:
+By default, PurgeTSS auto-discovers logo files from `purgetss/brand/`: `logo.{svg,png}` for the main artwork and `logo-<piece>.{svg,png}` for a specific piece. If you want to use custom paths, set `logo` on the piece:
 
 ```javascript title="Example: Custom logo paths"
 module.exports = {
