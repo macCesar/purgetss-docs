@@ -176,7 +176,7 @@ After `purgetss build-fonts`, the generated `fonts.tss` includes the family clas
 
 Two optional flags adjust what `build-fonts` generates:
 
-- `-m, --module`: generates a CommonJS module in `./app/lib/purgetss.fonts.js` on Alloy or `./Resources/lib/purgetss.fonts.js` on Classic. It exposes each icon's Unicode string to JavaScript.
+- `-m, --module`: generates a CommonJS module in `./app/lib/purgetss.fonts.js` on Alloy or `./Resources/lib/purgetss.fonts.js` on Classic. Its `families` object exposes the PostScript name of every processed TTF/OTF; when icon CSS is present, `icons` also exposes the Unicode map.
 - `-f, --font-class-from-filename`: uses the font's filename as the font class name and icon prefix instead of the font family name. Useful when you want shorter prefixes. Replaces the old `-p` flag.
 
 ### Using `--module`
@@ -188,7 +188,7 @@ $ purgetss build-fonts --module
 $ purgetss bf -m
 ```
 
-To avoid prefix conflicts between libraries, each icon keeps its prefix as a nested object:
+The module is generated even when the source contains only ordinary text fonts. Every TTF/OTF contributes a key to `families`, so application code never needs to repeat or rediscover its embedded PostScript name. When CSS icon maps are present, each icon library also keeps its prefix as a nested object:
 
 ```javascript title="app/lib/purgetss.fonts.js (Alloy) or Resources/lib/purgetss.fonts.js (Classic)"
 const icons = {
@@ -212,6 +212,12 @@ const icons = {
 exports.icons = icons;
 
 const families = {
+  'bevanItalic': 'Bevan-Italic',
+  'bevanRegular': 'Bevan-Regular',
+  'dancingScriptBold': 'DancingScript-Bold',
+  'dancingScriptMedium': 'DancingScript-Medium',
+  'dancingScriptRegular': 'DancingScript-Regular',
+  'dancingScriptSemiBold': 'DancingScript-SemiBold',
   // map-icons/map-icons.css
   'mapIcon': 'map-icons',
   // microns/microns.css
@@ -219,6 +225,30 @@ const families = {
 };
 exports.families = families;
 ```
+
+In a Classic app, the generated file lives at `Resources/lib/purgetss.fonts.js`. Titanium resolves local CommonJS paths from `Resources/`, so omit `Resources/` and `.js` when loading it:
+
+```javascript title="Resources/app.js"
+const customFonts = require('lib/purgetss.fonts')
+
+const heading = Ti.UI.createLabel({
+  text: 'Custom typography',
+  font: {
+    fontFamily: customFonts.families.dancingScriptSemiBold,
+    fontSize: 28
+  }
+})
+
+const airport = Ti.UI.createLabel({
+  text: customFonts.icons.mapIcon.airport,
+  font: {
+    fontFamily: customFonts.families.mapIcon,
+    fontSize: 24
+  }
+})
+```
+
+This follows Titanium's official [CommonJS module path resolution](https://titaniumsdk.com/guide/Titanium_SDK/Titanium_SDK_Guide/Best_Practices_and_Recommendations/CommonJS_Modules_in_Titanium.html#javascript-module-path-resolution).
 
 ### Using `--font-class-from-filename`
 
