@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: the-apply-method
 ---
 
@@ -65,3 +65,27 @@ $.myAnimation.apply($.myView, (e) => {
 ```
 
 When you pass an array of views, `index` and `total` work the same as with `play`. See [Callback event object](the-play-method#callback-event-object) for the property reference.
+
+## Titanium Classic
+
+`apply()` calls `applyProperties()` with the resolved animation object. It toggles the same internal state used by `play`, but it does not start a native animation.
+
+```js title="Resources/app.js"
+const { createAnimation } = require('lib/purgetss.ui')
+
+const reset = createAnimation({
+  id: 'reset',
+  opacity: 1,
+  rotate: 0,
+  scale: 1,
+  animationProperties: {
+    complete: { borderColor: '#22c55e' }
+  }
+})
+
+reset.apply(card, (event) => {
+  Ti.API.info(`${event.targetId} ${event.type}`) // card applied
+})
+```
+
+The callback is synchronous with the property application and receives `type: 'applied'` and `action: 'apply'`. See the [Classic state model](titanium-classic#states-and-child-animations).

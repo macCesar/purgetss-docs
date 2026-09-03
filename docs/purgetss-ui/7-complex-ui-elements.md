@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 slug: complex-ui-elements
 ---
 
@@ -169,8 +169,54 @@ function doAction(event) {
 }
 ```
 
+If this window can close, add an `onClose` handler and call `$.draggableAnimation.undraggable($.myCard)` so the global orientation listener is removed.
+
 <div align="center">
 ![Complex UI with Animations](../images/complex-UI.gif)
 </div>
 
 *Low framerate GIF.*
+
+## Titanium Classic
+
+Compose these behaviors with native views and separate animation objects. Classic has no XML IDs or controller proxy, so keep direct references to each view.
+
+```js title="Resources/app.js"
+const { createAnimation } = require('lib/purgetss.ui')
+
+const sidebarMotion = createAnimation({
+  duration: 150,
+  animationProperties: {
+    open: { width: 288 },
+    close: { width: 96 }
+  }
+})
+const cardMotion = createAnimation({
+  duration: 150,
+  animationProperties: {
+    open: { height: 298 },
+    close: { height: 96 }
+  }
+})
+const dragMotion = createAnimation({
+  bounds: { top: 16, right: 16, bottom: 80, left: 16 }
+})
+
+function toggleSidebar() { sidebarMotion.play(sidebar) }
+function toggleCard() { cardMotion.play(card) }
+function initializeInteractions() { dragMotion.draggable(card) }
+function disposeInteractions() {
+  dragMotion.undraggable(card)
+  sidebarButton.removeEventListener('click', toggleSidebar)
+  cardButton.removeEventListener('click', toggleCard)
+  window.removeEventListener('open', initializeInteractions)
+  window.removeEventListener('close', disposeInteractions)
+}
+
+sidebarButton.addEventListener('click', toggleSidebar)
+cardButton.addEventListener('click', toggleCard)
+window.addEventListener('open', initializeInteractions)
+window.addEventListener('close', disposeInteractions)
+```
+
+Create `window`, `sidebar`, `sidebarButton`, `card`, and `cardButton` with the corresponding `Ti.UI.create*()` factories before attaching these handlers. The [Classic guide](titanium-classic) shows the full setup and the property mapping used above.
