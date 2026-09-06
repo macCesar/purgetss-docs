@@ -1,6 +1,6 @@
 # Estado
 
-**2026-09-05** · Fase: v1.1.13 liberada, desplegada y espejada; falta commitear el mirror · Rama `main`
+**2026-09-05** · Fase: v1.1.13 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
 **Sesión por:** Claude Code · Opus 5 (`claude-opus-5`)
 
 ## Dónde va todo
@@ -11,7 +11,9 @@ Se liberó **v1.1.13** del sitio: tres commits (`a5547b3`, `1109941`, `7de6488`)
 
 El sitio se desplegó con `npm run deploy:fresh` y quedó verificado en vivo (ver abajo). `deploy:fresh` es por rsync y no lo dispara nada de git, así que es un paso aparte del release.
 
-`npm run clean:md` regeneró los dos mirrors con el contenido de v1.1.13. `../purgetss-docs-context7` tiene los dos archivos modificados **sin commitear**: ése es el único paso que falta. La copia de `../purgeTSS/.dev/docs` está en el `.gitignore` de ese repo, así que ahí no hay nada que commitear.
+`npm run clean:md` regeneró los dos mirrors con el contenido de v1.1.13. `../purgetss-docs-context7` quedó commiteado y pusheado en `54474d5`. La copia de `../purgeTSS/.dev/docs` está en el `.gitignore` de ese repo, así que ahí no hay nada que commitear.
+
+Los tres destinos que describe `context.md` quedaron al día con v1.1.13.
 
 ## Verificado
 
@@ -22,14 +24,15 @@ Todo esto se corrió hoy, después del push:
 - La portada del repo tiene exactamente `### v7.16.2`, `### v7.16.1` y `### v7.16.0`, iguales a las tres primeras del changelog completo (R7).
 - El ejemplo de colores anidados de `docs/customization/1-configuring-guide.md` sigue con `#0ea5e9` / `#0c4a6e` / `#f97316` — la trampa que documenta `context.md`.
 - El sitio en vivo, después del deploy (R3): `curl -sL https://purgetss.com/docs/app-assets/multi-density-images | grep -c "Unknown key"` → `3`; `curl -sL https://purgetss.com/docs/customization/the-config-file | grep -c "autoSync"` → `1`; los encabezados `<h3>` de versión de la portada son exactamente `v7.16.2`, `v7.16.1`, `v7.16.0`. `last-modified` del servidor coincide con la hora del rsync.
-- El mirror después de `clean:md`: `git status` en `../purgetss-docs-context7` muestra los dos archivos esperados y ningún otro, con el mismo diffstat que la fuente.
+- El mirror después de `clean:md`: `git status` en `../purgetss-docs-context7` mostró los dos archivos esperados y ningún otro, con el mismo diffstat que la fuente.
+- El mirror después del push: `git fetch` y `origin/main` en `54474d5`, árbol limpio.
 - `../purgeTSS/package.json` declara `7.16.2`; su árbol tiene la validación de `images:` sin commitear.
 
 No verificado: nada del comportamiento del CLI se probó desde aquí. Lo que dice la documentación nueva sale del `CHANGELOG.md` de `../purgeTSS`, no de haber corrido `purgetss images`.
 
 ## Pendiente
 
-- Commitear y pushear `../purgetss-docs-context7` (dos archivos modificados, diff ya revisado).
+Nada en este repo.
 
 ## Bloqueado
 
