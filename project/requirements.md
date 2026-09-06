@@ -45,3 +45,11 @@ git show vX.Y.Z:package.json | grep '"version"'
 `"private": true` en `package.json`. El repo es público en GitHub y tiene tags y releases, pero no hay ni debe haber workflow que publique.
 
 **Verificación:** `ls .github/workflows` no existe, y `package.json` conserva `"private": true`.
+
+## R7 — La portada muestra únicamente los tres releases publicados más recientes
+
+La sección Changelog de `src/pages/index.md` conserva `Unreleased` y exactamente las tres versiones publicadas más recientes de PurgeTSS. Cuando entra una versión nueva, sale de la portada la más antigua de esas tres.
+
+Esta regla no aplica a `src/pages/changelog.md`: el changelog completo conserva todo el historial publicado. La portada termina con un enlace a esa página para consultar versiones anteriores.
+
+**Verificación:** contar los encabezados `### vX.Y.Z` de la sección Changelog en `src/pages/index.md`; deben ser exactamente tres y coincidir con las tres primeras versiones `## vX.Y.Z` de `src/pages/changelog.md`.

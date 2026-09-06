@@ -2,6 +2,14 @@
 
 Append-only. Lo más reciente arriba.
 
+## 2026-09-03 — Tres releases en la portada; historial completo en el changelog
+
+La sección Changelog de `src/pages/index.md` es un resumen y debe mostrar exactamente los tres releases publicados más recientes, además del encabezado `Unreleased`. Al agregar un release nuevo se elimina de la portada el cuarto, aunque siga existiendo en el historial.
+
+`src/pages/changelog.md` cumple otra función: conserva todas las versiones documentadas. No se recorta a tres. La portada enlaza a esa página para quien necesite consultar releases anteriores.
+
+La publicación de v1.1.11 dejó versiones antiguas adicionales en la portada porque `docs:check` sólo verificaba la presencia de la versión actual y no el tamaño de la ventana. En adelante, la revisión del release debe comparar explícitamente los tres encabezados de versión de la portada contra los tres primeros del changelog completo.
+
 ## 2026-08-14 — Las notas de proyecto van en `project/`, no en `docs/project/`
 
 La convención de `session-log` pide `docs/project/`. Aquí no se puede, por dos razones verificadas:
