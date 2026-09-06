@@ -37,8 +37,19 @@ Los scripts vivían en el repo del CLI y alcanzaban hacia acá por ruta absoluta
 
 ## Mapa de la documentación existente
 
-- `README.md` — la plantilla original de Docusaurus. **No describe este proyecto**: no menciona el pipeline de sync, los dos consumidores ni el deploy por rsync. Pendiente de reescribir.
+- `README.md` — ya describe este proyecto: los dos destinos, el pipeline de sync, las dos numeraciones de versión y por qué `docs:check` es compuerta de release. Reemplazó a la plantilla original de Docusaurus.
 - `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` — contexto para asistentes. Los tres describen la estructura del repo; ninguno tenía imports antes de instalar esta convención.
 - `docs/` — 28 páginas, el contenido del sitio: comandos, customization, app-assets, purgetss-ui, best-practices, grid-system, installation.
 - `glossary/` — instancia separada de Docusaurus con la referencia de propiedades por tipo (boolean, color, compound, configurable, constant).
 - `src/pages/` — `index.md` (portada, con changelog condensado de las 3 versiones más recientes), `changelog.md` (changelog completo de PurgeTSS), `tikit.md`.
+
+## Quién ha trabajado aquí
+
+Una fila por tramo de trabajo, no por sesión. Sirve para saber qué herramienta guarda la transcripción de un tramo, por si hay que volver a él.
+
+| Cuándo | Asistente · modelo | Qué produjo |
+| --- | --- | --- |
+| 2022-04 – 2026-07 | Sin asistente registrado | El sitio Docusaurus y el grueso de la documentación |
+| 2026-08 – 2026-09 | Claude Code · Opus 5 (`claude-opus-5`) | Reescritura de prosa, documentación de brand/images/Classic, el pipeline de `scripts/`, esta convención de notas |
+
+La segunda fila se apoya en el trailer `Co-Authored-By: Claude Opus 5` de los commits del 2026-08-14 en adelante. Los tramos anteriores no dejaron rastro de herramienta en el historial, así que la primera fila dice lo que se puede afirmar y nada más.
