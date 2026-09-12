@@ -121,9 +121,10 @@ module.exports = {
     appicon:          { padding: '10%' },   // appicon.png (128×128)
     androidSplash:    { padding: '26%' },   // assets/android/default.png + images/res-*/default.png × 11
 
-    // Opt-in: inert until you edit the Android theme / FCM meta-data by hand.
+    // Opt-in: splash_icon stays inert until the Android theme points at it.
+    // notificationicon is read by firebase.cloudmessaging, by that exact name.
     splashIcon:       { enabled: false },   // drawable-*/splash_icon.png × 5
-    notificationIcon: { enabled: false },   // drawable-*/ic_stat_notify.png × 5
+    notificationIcon: { enabled: false },   // drawable-*/notificationicon.png × 5
     ninePatch:        { enabled: false }    // background.9.png (not implemented yet)
   },
   images: {
@@ -205,6 +206,8 @@ Adds linting and editor support to an existing project.
 
 This option installs ESLint, Tailwind CSS, and setup files for Visual Studio Code (VSCode).
 
+The ESLint template is `eslint.config.mjs`, a flat config for ESLint 9. It declares the globals Alloy and the Titanium runtime inject — `Ti`, `Titanium`, `Alloy`, `Backbone`, `$`, `$model`, `_`, `L`, `Widget`, the `OS_*`, `ENV_*` and `DIST_*` compile-time constants, and `task` for `alloy.jmk` hooks — and lints `app/**/*.js` only. Generated code is ignored: `Resources/`, `build/`, `purgetss/`, and the six libraries PurgeTSS copies into `app/lib/`, listed by name so your own libraries in that folder keep being linted. `no-unused-vars` is a warning rather than an error, because Alloy wires event handlers from the XML view and a controller function with no caller in the JS may still be in use.
+
 Recommended VSCode extensions:
 
 - [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml): XML formatting.
@@ -225,9 +228,9 @@ Running `purgetss create "Name of the Project" [--dependencies --vendor=fa,mi,ms
 - `purgetss b` - builds `./purgetss/styles/utilities.tss`.
 - `[--vendor=fa,mi,ms,f7]` - copies the selected fonts and the CommonJS module into `./app/lib/`.
 - `[--dependencies]` - installs:
-  - `npm i -D tailwindcss && npx tailwindcss init` - Tailwind CSS.
-  - `npm i -D eslint eslint-config-axway eslint-plugin-alloy` - ESLint and Titanium plugins.
-  - `.editorconfig`, `eslint.config.js`, `tailwind.config.js`, `.vscode/extensions.json`, `.vscode/settings.json` - config files.
+  - `npm i -D tailwindcss@3 && npx tailwindcss init` - Tailwind CSS.
+  - `npm i -D eslint @eslint/js` - ESLint 9.
+  - `.editorconfig`, `eslint.config.mjs`, `tailwind.config.js`, `.vscode/extensions.json`, `.vscode/settings.json` - config files.
 - `code .`, `subl .`, or `open .` - opens the project in VS Code, Sublime Text, or Finder.
 
 
@@ -261,7 +264,7 @@ It also includes the full `brand:` config reference.
 | `appicon`           | `appicon`          | `appicon.png` (128×128)                                                       | yes                         |
 | `android-splash`    | `androidSplash`    | `assets/android/default.png` + `images/res-*/default.png` × 11                | yes                         |
 | `splash-icon`       | `splashIcon`       | `drawable-*/splash_icon.png` × 5                                              | `--splash-icon`             |
-| `notification-icon` | `notificationIcon` | `drawable-*/ic_stat_notify.png` × 5                                           | `--notification-icon`       |
+| `notification-icon` | `notificationIcon` | `drawable-*/notificationicon.png` × 5                                         | `--notification-icon`       |
 | `nine-patch`        | `ninePatch`        | `background.9.png` (not implemented yet)                                      | `--nine-patch`              |
 
 Groups for `--only`: `ios` (icon, dark, tinted, ios-splash), `store` (marketplace, feature-graphic), `android` (adaptive, legacy-icon, appicon, android-splash).
@@ -295,9 +298,10 @@ module.exports = {
     appicon:          { padding: '10%' },   // appicon.png (128×128)
     androidSplash:    { padding: '26%' },   // assets/android/default.png + images/res-*/default.png × 11
 
-    // Opt-in: inert until you edit the Android theme / FCM meta-data by hand.
+    // Opt-in: splash_icon stays inert until the Android theme points at it.
+    // notificationicon is read by firebase.cloudmessaging, by that exact name.
     splashIcon:       { enabled: false },   // drawable-*/splash_icon.png × 5
-    notificationIcon: { enabled: false },   // drawable-*/ic_stat_notify.png × 5
+    notificationIcon: { enabled: false },   // drawable-*/notificationicon.png × 5
     ninePatch:        { enabled: false }    // background.9.png (not implemented yet)
   }
 }
@@ -342,7 +346,7 @@ Corner radius is measured against the shorter side of the already-resized artwor
 
 Optional asset types
 
-- `--notification-icon`: also emit `ic_stat_notify.png × 5`.
+- `--notification-icon`: also emit `notificationicon.png × 5`.
 - `--splash-icon`: also emit `splash_icon.png × 5`.
 - `--nine-patch`: declared but not implemented yet; prints a warning and writes nothing.
 
@@ -362,7 +366,7 @@ Every piece has a `--<piece>-logo` flag, each overriding the matching `purgetss/
 - `--appicon-logo <path>`: `appicon.png`.
 - `--android-splash-logo <path>`: Android &lt;12 splash artwork.
 - `--splash-icon-logo <path>`: Android 12+ `splash_icon.png`.
-- `--notification-icon-logo <path>`: `ic_stat_notify.png`.
+- `--notification-icon-logo <path>`: `notificationicon.png`.
 
 Two more sources are not pieces:
 
