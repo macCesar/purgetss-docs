@@ -51,5 +51,6 @@ Una fila por tramo de trabajo, no por sesión. Sirve para saber qué herramienta
 | --- | --- | --- |
 | 2022-04 – 2026-07 | Sin asistente registrado | El sitio Docusaurus y el grueso de la documentación |
 | 2026-08 – 2026-09 | Claude Code · Opus 5 (`claude-opus-5`) | Reescritura de prosa, documentación de brand/images/Classic, el pipeline de `scripts/`, esta convención de notas |
+| 2026-09-26 | Claude Code · Opus 5.5 (`claude-opus-5-5`) | Corrección de 15 páginas contra el CLI a partir de la auditoría del skill de TiTools, la sección de modificadores apilados y la documentación de PurgeTSS v7.18.0 (v1.1.14) |
 
 La segunda fila se apoya en el trailer `Co-Authored-By: Claude Opus 5` de los commits del 2026-08-14 en adelante. Los tramos anteriores no dejaron rastro de herramienta en el historial, así que la primera fila dice lo que se puede afirmar y nada más.

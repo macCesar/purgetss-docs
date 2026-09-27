@@ -1,55 +1,29 @@
 # Estado
 
-**2026-09-05** · Fase: v1.1.13 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
-**Sesión por:** Claude Code · Opus 5 (`claude-opus-5`)
+**2026-09-26** · Fase: v1.1.14 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
+**Sesión por:** Claude Code · Opus 5.5 (`claude-opus-5-5`)
 
 ## Dónde va todo
 
-Se liberó **v1.1.13** del sitio: tres commits (`a5547b3`, `1109941`, `7de6488`), tag `v1.1.13` y release en GitHub. Documenta la sección `images:` de `purgetss/config.cjs` — de dónde salen los tamaños (los archivos de `purgetss/images/` son masters 4×), el rechazo de llaves desconocidas con su salida de error, y el alcance real de `quality` (webp/jpeg/avif/tiff; PNG y GIF la ignoran). El bloque de la guía de configuración, al que le faltaban `autoSync` y `files`, quedó completo. Se registró además la regla de la ventana de tres releases de la portada como R7 en `requirements.md` y como decisión fechada.
+Se liberó **v1.1.14** del sitio: cinco commits de contenido (`8d671fc`, `bf373eb`, `4d80d76`, `18c8d25`, `fd1499f`), el commit de release `1523500`, tag `v1.1.14` y release en GitHub. Documenta PurgeTSS **v7.18.0**, publicada el mismo día.
 
-**Lo que documenta v1.1.13 ya existe.** PurgeTSS **v7.17.0** salió el mismo día y está publicada en npm (`npm view purgetss version` → `7.17.0`), con `src/core/images/images-config.js` y los comentarios del bloque generado dentro. Un usuario que copie el ejemplo del error de la documentación ahora lo ve. La nota final del release de GitHub de v1.1.13, escrita cuando el CLI aún no salía, quedó desactualizada; no se editó.
+El contenido sale de una auditoría del skill `purgetss` de TiTools contra el CLI. Se corrigieron 15 páginas donde la doc contradecía al código: el alias `materialsymbols`, lo que corre `update`, el hook actual de `watch`, cuatro flags que no estaban documentados, la salida real del error de claves de `brand:`, el aplanado del arte de tiendas, las salidas `.png` de los SVG, el límite de `--width`, el orden de la opacidad, los números de padding, los atributos que escanea el pipeline SVG, las clases `items-*` del grid, el anidamiento de colores semánticos, `appc run` → `ti build`, `translate-*`, las comillas de `plugins`, las listas de propiedades configurables, el renombrado de fuentes con `-f`, los rangos de `rotate`/`scale`/`zoom` y el fallback de hover. Se agregó la sección "Combining a platform and a device" y se regeneraron cinco archivos de `glossary/`.
 
-El sitio se desplegó con `npm run deploy:fresh` y quedó verificado en vivo (ver abajo). `deploy:fresh` es por rsync y no lo dispara nada de git, así que es un paso aparte del release.
-
-`npm run clean:md` regeneró los dos mirrors con el contenido de v1.1.13. `../purgetss-docs-context7` quedó commiteado y pusheado en `54474d5`. La copia de `../purgeTSS/.dev/docs` está en el `.gitignore` de ese repo, así que ahí no hay nada que commitear.
-
-Los tres destinos que describe `context.md` quedaron al día con v1.1.13.
-
-## Verificado
-
-Todo esto se corrió hoy, después del push:
-
-- `npm run build` → `[SUCCESS] Generated static files in "build"` (R2).
-- `npm run docs:check` → `Docs are up to date with v7.16.2` (R1).
-- La portada del repo tiene exactamente `### v7.16.2`, `### v7.16.1` y `### v7.16.0`, iguales a las tres primeras del changelog completo (R7).
-- El ejemplo de colores anidados de `docs/customization/1-configuring-guide.md` sigue con `#0ea5e9` / `#0c4a6e` / `#f97316` — la trampa que documenta `context.md`.
-- El sitio en vivo, después del deploy (R3): `curl -sL https://purgetss.com/docs/app-assets/multi-density-images | grep -c "Unknown key"` → `3`; `curl -sL https://purgetss.com/docs/customization/the-config-file | grep -c "autoSync"` → `1`; los encabezados `<h3>` de versión de la portada son exactamente `v7.16.2`, `v7.16.1`, `v7.16.0`. `last-modified` del servidor coincide con la hora del rsync.
-- El mirror después de `clean:md`: `git status` en `../purgetss-docs-context7` mostró los dos archivos esperados y ningún otro, con el mismo diffstat que la fuente.
-- El mirror después del push: `git fetch` y `origin/main` en `54474d5`, árbol limpio.
-- `../purgeTSS/package.json` declaraba `7.16.2` cuando se escribió esta nota. Verificado después, desde la sesión del CLI: v7.17.0 está commiteada, tagueada, publicada por `publish.yml` (run 34004815426, en verde) y `npm view purgetss version` devuelve `7.17.0`. Las dos ediciones de `docs/` de esa sesión entraron en `a5547b3` y salieron en v1.1.13.
-
-No verificado: nada del comportamiento del CLI se probó desde aquí. Lo que dice la documentación nueva sale del `CHANGELOG.md` de `../purgeTSS`, no de haber corrido `purgetss images`.
+La mención de `ic_stat_notify` en `docs/app-assets/1-app-icons-and-branding.md` es deliberada: es la nota de migración que explica el nombre anterior.
 
 ## Pendiente
 
-Nada en este repo.
+- El skill `purgetss` de TiTools describe el comportamiento anterior a v7.18.0; hay que actualizarlo allá, junto con sus índices de clases. No se tocó desde aquí.
+- Opcional, a decisión de César: una página sobre adoptar PurgeTSS en una app Alloy existente con `.tss` escritos a mano (la trampa de prioridad de `app.tss`). TiTools tiene una guía en `skills/purgetss/references/adopting-purgetss.md` que puede servir de base.
 
-## Bloqueado
+## Verificado
 
-Nada. El único bloqueo registrado —que la documentación de la validación de `images:` describía una versión de PurgeTSS sin publicar— se resolvió con la salida de v7.17.0 el 2026-09-05.
+Todo esto se corrió hoy:
 
-## Fuera del árbol
-
-`PROMPT-PURGETSS-UI-CLASSIC.md` en la raíz es el prompt de la sesión anterior, material de conversación. Quedó sin commitear a propósito.
-
-## Cómo verificar el sitio en vivo, sin repetir el error de esta sesión
-
-Las URLs de la documentación llevan `/docs/` adelante: `https://purgetss.com/docs/app-assets/multi-density-images`, no `https://purgetss.com/app-assets/...`, que responde 301 y hace que cualquier `grep` sobre la respuesta dé cero como si el contenido no estuviera.
-
-Y para contar las versiones de la portada hay que buscar los encabezados renderizados, no el número suelto:
-
-```bash
-curl -sL https://purgetss.com/ | grep -oE '<h3[^>]*>v7\.[0-9]+\.[0-9]+' | sed 's/.*>//'
-```
-
-`grep -oE 'v7\.[0-9]+\.[0-9]+'` a secas también captura la prosa del enlace al changelog completo — "(v7.15.0 and earlier)" — y hace parecer que la portada tiene cuatro versiones cuando tiene tres.
+- `npm run docs:check` → `Docs are up to date with v7.18.0` (R1).
+- `npm run build` → `[SUCCESS] Generated static files in "build"`, con las anclas nuevas del changelog validadas por `onBrokenAnchors: 'throw'` (R2).
+- En vivo, después de `npm run deploy:fresh` (R3): `platform-and-device-modifiers` contiene "Combining a platform and a device"; los `<h3>` de versión de la portada son exactamente `v7.18.0`, `v7.17.1`, `v7.17.0`; `multi-density-images` contiene "between 1 and 1024".
+- La portada tiene exactamente tres versiones y coinciden con las tres primeras de `src/pages/changelog.md` (R7).
+- `npm run clean:md` modificó en `../purgetss-docs-context7` exactamente las 15 páginas editadas más `changelog.md`, `index.md` y `README.md`. Quedó commiteado y pusheado en `c5c2055`, con `main...origin/main` sin divergencia.
+- `package.json` dice `1.1.14`, igual que el tag (R5), y conserva `"private": true`; no existe `.github/workflows` (R6).
+- No se verificó a mano que el Markdown del mirror renderice en GitHub más allá de revisar que el frontmatter desapareciera y que los enlaces apunten a archivos (R4).
