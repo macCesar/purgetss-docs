@@ -41,7 +41,6 @@ This applies to every utility class that sets a dimension:
 - Typography: `text-*` (font size), `letter-spacing-*`, `line-spacing-*`
 - Shadows: `drop-shadow-*`, `shadow-radius-*`
 - Elevation: `elevation-*`, `max-elevation-*`
-- Transforms: `translate-*`, `move-by-*`
 - Offsets: `x-offset-*`, `y-offset-*`
 
 ## Valid values for `ti.ui.defaultunit`

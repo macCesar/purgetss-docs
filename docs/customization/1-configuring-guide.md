@@ -250,8 +250,8 @@ module.exports = {
     purge: {
       options: {
         plugins: [
-          opacity,
-          borderRadius
+          'opacity',
+          'borderRadius'
         ]
       }
     },
@@ -659,7 +659,9 @@ You can customize any of the following properties by adding them to the `theme` 
 - backgroundGradient
 - backgroundSelectedColor
 - backgroundSelectedGradient
+- badgeBackgroundColor
 - badgeColor
+- badgeTextColor
 - barColor
 - borderColor
 - color
@@ -675,8 +677,10 @@ You can customize any of the following properties by adding them to the `theme` 
 - indicatorColor
 - keyboardToolbarColor
 - lightColor
+- navBarColor
 - navigationIconColor
 - navTintColor
+- onThumbColor
 - onTintColor
 - pageIndicatorColor
 - pagingControlColor
@@ -684,6 +688,7 @@ You can customize any of the following properties by adding them to the `theme` 
 - resultsBackgroundColor
 - resultsSeparatorColor
 - selectedBackgroundColor
+- selectedBorderColor
 - selectedButtonColor
 - selectedColor
 - selectedSubtitleColor
@@ -691,10 +696,12 @@ You can customize any of the following properties by adding them to the `theme` 
 - separatorColor
 - shadowColor
 - statusBarBackgroundColor
+- statusBarColor
 - subtitleColor
 - subtitleTextColor
 - tabsBackgroundColor
 - tabsBackgroundSelectedColor
+- thumbColor
 - thumbTintColor
 - tint
 - tintColor
@@ -728,6 +735,8 @@ You can customize any of the following properties by adding them to the `theme` 
 - fontSize
 - height
 - horizontalMargin
+- imageHeight
+- imagePadding
 - indentionLevel
 - keyboardToolbarHeight
 - left
@@ -735,6 +744,7 @@ You can customize any of the following properties by adding them to the `theme` 
 - leftTrackLeftCap
 - leftTrackTopCap
 - leftWidth
+- letterSpacing
 - lineHeightMultiple
 - lines
 - lineSpacing
@@ -771,14 +781,17 @@ You can customize any of the following properties by adding them to the `theme` 
 - rowCount
 - rowHeight
 - scale
-- scalesPageToFit
 - scaleX
 - scaleY
 - sectionHeaderTopPadding
 - separatorHeight
 - shadowRadius
 - shiftMode
+- statusBarHeight
+- targetImageHeight
+- targetImageWidth
 - timeout
+- titlePadding
 - top
 - uprightHeight
 - uprightWidth

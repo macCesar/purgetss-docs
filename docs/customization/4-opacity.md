@@ -24,7 +24,7 @@ Add opacity to any color class by appending a value from 0 to 100 after a slash 
 
 /* Styles with color opacity modifiers */
 '.bg-sky-500/50': { backgroundColor: '#800ea5e9' }
-'.text-purple-900/75': { color: '#bf581c87' }
+'.text-purple-900/75': { color: '#bf581c87', textColor: '#bf581c87' }
 ```
 
 ## In the `apply` directive
