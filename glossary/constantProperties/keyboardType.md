@@ -12,7 +12,4 @@
 '.keyboard-type-websearch': { keyboardType: Ti.UI.KEYBOARD_TYPE_WEBSEARCH }
 '.keyboard-type-twitter': { keyboardType: Ti.UI.KEYBOARD_TYPE_TWITTER }
 '.keyboard-type-url': { keyboardType: Ti.UI.KEYBOARD_TYPE_URL }
-'.keyboard-type-appearance': { keyboardType: Ti.UI.KEYBOARD_APPEARANCE_DEFAULT }
-'.keyboard-type-appearance-dark': { keyboardType: Ti.UI.KEYBOARD_APPEARANCE_DARK }
-'.keyboard-type-appearance-light': { keyboardType: Ti.UI.KEYBOARD_APPEARANCE_LIGHT }
 ```

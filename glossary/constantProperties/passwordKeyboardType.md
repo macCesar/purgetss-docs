@@ -2,9 +2,6 @@
 // Property: passwordKeyboardType
 // Description: Keyboard type to display when this text field inside the dialog is focused.
 // Component(s): Ti.UI.AlertDialog
-'.password-keyboard-type-appearance': { passwordKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_DEFAULT }
-'.password-keyboard-type-appearance-dark': { passwordKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_DARK }
-'.password-keyboard-type-appearance-light': { passwordKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_LIGHT }
 '.password-keyboard-type-decimal-pad': { passwordKeyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD }
 '.password-keyboard-type-ascii': { passwordKeyboardType: Ti.UI.KEYBOARD_TYPE_ASCII }
 '.password-keyboard-type': { passwordKeyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT }

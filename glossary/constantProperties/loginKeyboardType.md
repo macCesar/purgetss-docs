@@ -2,9 +2,6 @@
 // Property: loginKeyboardType
 // Description: Keyboard type to display when this text field inside the dialog is focused.
 // Component(s): Ti.UI.AlertDialog
-'.login-keyboard-type-appearance': { loginKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_DEFAULT }
-'.login-keyboard-type-appearance-dark': { loginKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_DARK }
-'.login-keyboard-type-appearance-light': { loginKeyboardType: Ti.UI.KEYBOARD_APPEARANCE_LIGHT }
 '.login-keyboard-type-decimal-pad': { loginKeyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD }
 '.login-keyboard-type-ascii': { loginKeyboardType: Ti.UI.KEYBOARD_TYPE_ASCII }
 '.login-keyboard-type': { loginKeyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT }
