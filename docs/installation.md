@@ -190,7 +190,7 @@ Every time `purgetss` runs, it copies the content of `_app.tss` into `app.tss`.
 ![iOS Screen - Example](images/sample-fixed.png)
 </div>
 
-More examples in the [Utilities TSS Sample App](https://github.com/macCesar/utilities.tss-sample-app).
+More examples in the [Utilities TSS Sample App](https://github.com/macCesar/purgetss-sample-app).
 
 :::warning `Label`, `Button`, and `Switch` with opposite margins
 In Titanium, `Label`, `Button`, and `Switch` can stretch when opposite margins pin both sides of the same axis and the dimension is still implicit.
