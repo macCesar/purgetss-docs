@@ -22,6 +22,12 @@ La versión propia del sitio sigue en **1.1.14**, con `private: true`. Este trab
 
 No queda trabajo pendiente para esta actualización. El skill de TiTools y la guía opcional de adopción descritos abajo siguen siendo seguimientos separados; no se editaron aquí. El registro de septiembre se conserva como histórico, con sus verificaciones y pendientes de entonces.
 
+## Corrección del reporte enlazado — 2026-11-11
+
+César confirmó que el reporte debe seguir público, íntegro y en inglés, con los identificadores Real project A/B/C del README. El CLI publicó la traducción y anonimización en `23fff5e04ee77175c4673d96ade6efcd438507e1`; también sustituyó las rutas personales del reporte por ejemplos y anonimizó las notas de proyecto relacionadas. Performance y changelog ahora enlazan esa revisión fija, sin modificar el tag histórico `v7.19.0`. Las revisiones anteriores conservan su contenido original.
+
+`npm run clean:md` sincronizó ambos mirrors; una comparación confirmó que sólo cambiaron las dos URL del reporte. `npm run build`, comprobación de enlaces en el HTML generado y `git diff --check` pasaron. Tras `npm run deploy`, ambas páginas respondieron HTTP 200 y coincidieron con el build hasta `</body>`, con los enlaces nuevos y sin la URL anterior. No se ejecutaron pruebas del CLI por este cambio documental.
+
 ## Registro histórico — 2026-09-26
 
 **2026-09-26** · Fase: v1.1.14 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
