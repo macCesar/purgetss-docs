@@ -1,5 +1,6 @@
 ```css
 // Property: navTintColor
+// Description: Ti.UI.TabGroup: The tintColor to apply to the navigation bar (typically for the More tab).  Ti.UI.Window: The tintColor to apply to the navigation bar.
 // Component(s): Ti.UI.TabGroup, Ti.UI.Window, Ti.UI.iOS.SplitWindow
 '.nav-tint-transparent': { navTintColor: 'transparent' }
 '.nav-tint-black': { navTintColor: '#000000' }

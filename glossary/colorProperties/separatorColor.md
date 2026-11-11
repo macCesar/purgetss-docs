@@ -1,5 +1,6 @@
 ```css
 // Property: separatorColor
+// Description: Ti.UI.ListView: Separator line color between items, as a color name or hex triplet.  Ti.UI.TableView: Separator line color between rows, as a color name or hex triplet.
 // Component(s): Ti.UI.ListView, Ti.UI.TableView
 '.separator-transparent': { separatorColor: 'transparent' }
 '.separator-black': { separatorColor: '#000000' }

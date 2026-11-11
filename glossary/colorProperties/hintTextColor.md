@@ -1,5 +1,6 @@
 ```css
 // Property: hintTextColor
+// Description: Ti.UI.Android.SearchView: Color of hint text that displays when field is empty.  Ti.UI.SearchBar: Hint text color to display when the field is empty.
 // Component(s): Ti.UI.Android.SearchView, Ti.UI.SearchBar, Ti.UI.TextArea, Ti.UI.TextField
 '.hint-text-transparent': { hintTextColor: 'transparent' }
 '.hint-text-black': { hintTextColor: '#000000' }

@@ -1,5 +1,6 @@
 ```css
 // Property: selectedColor
+// Description: Ti.UI.Button: Button text color used to indicate the selected state, as a color name or hex triplet.  Ti.UI.ListItem: Color to use for the item title when the item is selected, as a color name or hex triplet.  Ti.UI.TableViewRow: Color of the row text when the row is selected, as a color name or hex triplet.
 // Component(s): Ti.UI.Button, Ti.UI.ListItem, Ti.UI.TableViewRow
 '.selected-transparent': { selectedColor: 'transparent' }
 '.selected-black': { selectedColor: '#000000' }

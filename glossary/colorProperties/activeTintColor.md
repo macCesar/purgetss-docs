@@ -1,5 +1,6 @@
 ```css
 // Property: activeTintColor
+// Description: Ti.UI.Tab: Defines the color of the tab icon when it is active.  Ti.UI.TabGroup: The activeTintColor to apply to tabs.  Ti.UI.TabbedBar: Icon tint color of the selected tab
 // Component(s): Ti.UI.Tab, Ti.UI.TabGroup, Ti.UI.TabbedBar
 '.active-tint-transparent': { activeTintColor: 'transparent' }
 '.active-tint-black': { activeTintColor: '#000000' }

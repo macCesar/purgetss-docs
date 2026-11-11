@@ -1,5 +1,6 @@
 ```css
 // Property: transition
+// Description: Ti.Android.R: Transition resources. See R.transition in the Android Developer Reference.  Ti.UI.Animation: Transition type to use during a transition animation.  openWindowParams: Transition style of this non-modal window.
 // Component(s): Ti.UI.Animation
 '.transition-animation-style-curl-down[platform=ios]': { transition: Ti.UI.iOS.AnimationStyle.CURL_DOWN }
 '.transition-animation-style-curl-up[platform=ios]': { transition: Ti.UI.iOS.AnimationStyle.CURL_UP }

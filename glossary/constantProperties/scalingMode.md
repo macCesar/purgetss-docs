@@ -1,5 +1,6 @@
 ```css
 // Property: scalingMode
+// Description: Ti.Media: Scaling mode of the preview image.  Ti.Media.VideoPlayer: Determines how the content scales to fit the view.  Ti.UI.ImageView: Determines how the image is scaled within the view.
 // Component(s): Ti.Media, Ti.Media.VideoPlayer, Ti.UI.ImageView
 '.scaling-mode-image-aspect-fit': { scalingMode: Ti.Media.IMAGE_SCALING_ASPECT_FIT }
 '.scaling-mode-image-aspect-fill': { scalingMode: Ti.Media.IMAGE_SCALING_ASPECT_FILL }

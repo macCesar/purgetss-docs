@@ -1,5 +1,6 @@
 ```css
 // Property: selectedBackgroundColor
+// Description: Ti.UI.ListItem: Background color of the view, as a color name or hex triplet when item is selected. Deprecated since 10.0.0. This property has been deprecated in favor of Titanium.UI.ListItem.backgroundSelectedColor.  Ti.UI.OptionBar: Background color of the selected button  Ti.UI.TabbedBar: Background color of the selected tab indicator.  Ti.UI.TableViewRow: Background color to render when the row is selected, as a color name or hex triplet. Deprecated since 10.0.0. This property has been deprecated in favor of Titanium.UI.TableViewRow.backgroundSelectedColor.
 // Component(s): Ti.UI.ListItem, Ti.UI.OptionBar, Ti.UI.TabbedBar, Ti.UI.TableViewRow
 '.selected-bg-transparent': { selectedBackgroundColor: 'transparent' }
 '.selected-bg-black': { selectedBackgroundColor: '#000000' }

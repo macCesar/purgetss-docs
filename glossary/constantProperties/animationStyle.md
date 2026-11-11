@@ -1,5 +1,6 @@
 ```css
 // Property: animationStyle
+// Description: ListViewAnimationProperties: Type of animation to use for cell insertions and deletions.  TableViewAnimationProperties: Type of animation to use for row insertions and deletions.  closeWindowParams: Transition type to use during a transition animation.
 // Component(s): ListViewAnimationProperties, TableViewAnimationProperties, closeWindowParams
 '.animation-style-row-bottom[platform=ios]': { animationStyle: Ti.UI.iOS.RowAnimationStyle.BOTTOM }
 '.animation-style-row-fade[platform=ios]': { animationStyle: Ti.UI.iOS.RowAnimationStyle.FADE }

@@ -1,5 +1,6 @@
 ```css
 // Property: position
+// Description: EncodeNumberDict: Index in the dest buffer of the first byte of encoded data.  DecodeNumberDict: Index in the source buffer of the first byte of data to decode.  ListViewAnimationProperties: Specifies what position to scroll the selected cell to.  TableViewAnimationProperties: Specifies what position to scroll the selected row to.  ViewPositionOptions: Position in the children array of the view element to replace.
 // Component(s): EncodeNumberDict, DecodeNumberDict, DecodeStringDict, ListViewAnimationProperties, TableViewAnimationProperties, ViewPositionOptions
 '.position-list-view-scroll-bottom[platform=ios]': { position: Ti.UI.iOS.ListViewScrollPosition.BOTTOM }
 '.position-list-view-scroll-middle[platform=ios]': { position: Ti.UI.iOS.ListViewScrollPosition.MIDDLE }

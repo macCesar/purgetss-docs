@@ -1,5 +1,6 @@
 ```css
 // Property: category
+// Description: Ti.Android.Notification: Sets the notification's category.  UserNotificationDictionary: Category identifier of the notification.  NotificationParams: String identifier of category of actions to be displayed for an interactive notification.
 // Component(s): Ti.Android.Notification, UserNotificationDictionary, NotificationParams
 '.category-alternative[platform=android]': { category: Ti.Android.CATEGORY_ALTERNATIVE }
 '.category-browsable[platform=android]': { category: Ti.Android.CATEGORY_BROWSABLE }

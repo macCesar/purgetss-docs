@@ -1,5 +1,6 @@
 ```css
 // Property: colors
+// Description: UtilInspectOptions: If true, the output is styled with ANSI color codes. Colors are customizable.  Gradient: An array of colors, as a color name or hex triplet.
 // Component(s): UtilInspectOptions, Gradient
 '.colors-transparent': { colors: 'transparent' }
 '.colors-black': { colors: '#000000' }

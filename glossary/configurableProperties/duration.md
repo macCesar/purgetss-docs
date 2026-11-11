@@ -1,5 +1,6 @@
 ```css
 // Property: duration
+// Description: Ti.App.iOS.SearchableItemAttributeSet: Duration in seconds of the content of the item (if appropriate).  Ti.Media.AudioPlayer: Estimated duration in milliseconds of the file being played.  CameraRecordingCallback: Length in milliseconds  Ti.Media.Sound: Duration of the audio resource.  Ti.Media.VideoPlayer: The duration of the current movie in milliseconds, or 0.0 if not known.  AnimatedWithDurationOptions: The duration in milliseconds for animation  Ti.UI.Animation: Duration of the animation, in milliseconds.  Ti.UI.ImageView: Amount of time in milliseconds to animate one cycle.  Ti.UI.Notification: Determines how long the notification stays on screen.  Ti.UI.iOS.TransitionAnimation: Length of the transition in milliseconds.
 // Component(s): Ti.App.iOS.SearchableItemAttributeSet, Ti.Media.AudioPlayer, CameraRecordingCallback, Ti.Media.Sound, Ti.Media.VideoPlayer, AnimatedWithDurationOptions, Ti.UI.Animation, Ti.UI.ImageView, Ti.UI.Notification, Ti.UI.iOS.TransitionAnimation
 '.duration-0': { duration: 0 }
 '.duration-25': { duration: 25 }

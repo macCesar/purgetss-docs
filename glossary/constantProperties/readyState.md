@@ -1,5 +1,6 @@
 ```css
 // Property: readyState
+// Description: Ti.Network.HTTPClient: The current ready state of this HTTP request.  ReadyStatePayload: The state for which onreadystatechange was invoked. Set to one of Titanium.Network.HTTPClient ready-state constants
 // Component(s): Ti.Network.HTTPClient, ReadyStatePayload
 '.ready-state-network-httpclient-unsent': { readyState: Ti.Network.HTTPClient.UNSENT }
 '.ready-state-network-httpclient-opened': { readyState: Ti.Network.HTTPClient.OPENED }

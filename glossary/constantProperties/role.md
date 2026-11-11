@@ -1,5 +1,6 @@
 ```css
 // Property: role
+// Description: Ti.App.iOS.SearchableItemAttributeSet: Used to indicate the role of the document creator.  Ti.Calendar.Attendee: The role of the attendee.
 // Component(s): Ti.App.iOS.SearchableItemAttributeSet, Ti.Calendar.Attendee
 '.role-calendar-attendee-unknown': { role: Ti.Calendar.ATTENDEE_ROLE_UNKNOWN }
 '.role-calendar-attendee-optional': { role: Ti.Calendar.ATTENDEE_ROLE_OPTIONAL }

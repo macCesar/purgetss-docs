@@ -1,5 +1,6 @@
 ```css
 // Property: contentHeight
+// Description: Ti.UI.ScrollView: Height of the scrollable region.  Ti.UI.iOS.PreviewContext: The height of the preview.
 // Component(s): Ti.UI.ScrollView, Ti.UI.iOS.PreviewContext
 // Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
 // Docs: /docs/best-practices/values-and-units

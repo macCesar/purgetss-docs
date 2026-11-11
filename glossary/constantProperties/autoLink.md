@@ -1,5 +1,6 @@
 ```css
 // Property: autoLink
+// Description: Ti.UI.Label: Automatically convert certain text items in the label to clickable links.  Ti.UI.TextArea: Automatically convert text to clickable links.
 // Component(s): Ti.UI.Label, Ti.UI.TextArea, Ti.UI.TextField
 '.auto-link-map-addresses': { autoLink: Ti.UI.AUTOLINK_MAP_ADDRESSES }
 '.auto-link-all': { autoLink: Ti.UI.AUTOLINK_ALL }

@@ -1,5 +1,6 @@
 ```css
 // Property: playbackState
+// Description: Ti.Media.MusicPlayer: Playback state.  Ti.Media.VideoPlayer: Current playback state of the video player.
 // Component(s): Ti.Media.MusicPlayer, Ti.Media.VideoPlayer
 '.playback-state-music-player-interrupted': { playbackState: Ti.Media.MUSIC_PLAYER_STATE_INTERRUPTED }
 '.playback-state-music-player-paused': { playbackState: Ti.Media.MUSIC_PLAYER_STATE_PAUSED }

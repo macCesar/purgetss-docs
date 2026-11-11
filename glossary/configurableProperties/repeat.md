@@ -1,5 +1,6 @@
 ```css
 // Property: repeat
+// Description: NotificationParams: Interval to repeat the notification. One of weekly, daily, yearly, monthly.  Ti.UI.Animation: Number of times the animation should be performed.
 // Component(s): NotificationParams, Ti.UI.Animation
 '.repeat-0': { repeat: 0 }
 '.repeat-1': { repeat: 1 }

@@ -1,5 +1,6 @@
 ```css
 // Property: autofillType
+// Description: Ti.UI.TextArea: Sets the autofill type for the text area.  Ti.UI.TextField: Sets the autofill type for the text field.
 // Component(s): Ti.UI.TextArea, Ti.UI.TextField
 '.autofill-type-username': { autofillType: Ti.UI.AUTOFILL_TYPE_USERNAME }
 '.autofill-type-password': { autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD }

@@ -1,5 +1,6 @@
 ```css
 // Property: timeout
+// Description: Ti.Network.HTTPClient: Timeout in milliseconds when the connection should be aborted.  Ti.Network.Socket.TCP: Timeout, in milliseconds, for connect and all write operations.  AcceptDict: Timeout, in milliseconds, for all write operations.  Ti.UI.WebView: The timeout interval for the request, in seconds.
 // Component(s): Ti.Network.HTTPClient, Ti.Network.Socket.TCP, AcceptDict, Ti.UI.WebView
 '.timeout-0': { timeout: 0 }
 '.timeout-25': { timeout: 25 }

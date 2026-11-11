@@ -1,5 +1,6 @@
 ```css
 // Property: shadowRadius
+// Description: Ti.UI.Button: Shadow radius of the title.  Ti.UI.Label: Shadow radius of the text.
 // Component(s): Ti.UI.Button, Ti.UI.Label
 // Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
 // Docs: /docs/best-practices/values-and-units

@@ -1,5 +1,6 @@
 ```css
 // Property: scale
+// Description: Matrix2DCreationDict: Scale the matrix by the specified scaling factor. The same scaling factor is used for both horizontal and vertical scaling.  Matrix3DCreationDict: Scale the matrix by the specified scaling factor.
 // Component(s): Matrix2DCreationDict, Matrix3DCreationDict
 '.scale-0': { scale: 0 }
 '.scale-1': { scale: 0.01 }

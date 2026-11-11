@@ -1,5 +1,6 @@
 ```css
 // Property: frequency
+// Description: Ti.Calendar.RecurrenceRule: Frequency of the recurrence rule.  Ti.UI.iOS.AnchorAttachmentBehavior: Frequency of oscillation for the behavior.
 // Component(s): Ti.Calendar.RecurrenceRule, Ti.UI.iOS.AnchorAttachmentBehavior, Ti.UI.iOS.ViewAttachmentBehavior
 '.frequency-calendar-recurrence-daily': { frequency: Ti.Calendar.RECURRENCEFREQUENCY_DAILY }
 '.frequency-calendar-recurrence-weekly': { frequency: Ti.Calendar.RECURRENCEFREQUENCY_WEEKLY }

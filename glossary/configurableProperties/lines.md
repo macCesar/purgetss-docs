@@ -1,5 +1,6 @@
 ```css
 // Property: lines
+// Description: Ti.UI.Label: Makes the label be exactly this many lines tall.  Ti.UI.TextArea: Number of lines tall the text area height will be, if set.
 // Component(s): Ti.UI.Label, Ti.UI.TextArea
 '.lines-1': { lines: 1 }
 '.lines-2': { lines: 2 }

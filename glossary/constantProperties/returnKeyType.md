@@ -1,5 +1,6 @@
 ```css
 // Property: returnKeyType
+// Description: Ti.UI.AlertDialog: Specifies the text to display on the keyboard Return key when this field is focused.  Ti.UI.TextArea: Specifies the text to display on the keyboard Return key when this text area is focused.
 // Component(s): Ti.UI.AlertDialog, Ti.UI.TextArea, Ti.UI.TextField
 '.return-key-type-continue': { returnKeyType: Ti.UI.RETURNKEY_CONTINUE }
 '.return-key-type-returnkey': { returnKeyType: Ti.UI.RETURNKEY_DEFAULT }

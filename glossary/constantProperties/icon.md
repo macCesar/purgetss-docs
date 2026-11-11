@@ -1,5 +1,6 @@
 ```css
 // Property: icon
+// Description: Ti.Android.ActionBar: Sets the application icon displayed in the &quot;home&quot; area of the action bar.  Ti.Android.MenuItem: Icon to display for the this menu item.  Ti.Android.Notification: Notification icon, specified as an Android resource ID, or a local URL to a density-specific image.  Ti.Android.QuickSettingsService: Changes the Tile's icon.  Ti.UI.ShortcutItem: Shortcut icon.  Ti.UI.Tab: Icon URL for this tab.  ShortcutParams: The icon to be displayed on the application shortcut. You can either use one of the constants like Titanium.UI.iOS.SHORTCUT_ICON_TYPE_COMPOSE, a local image specified by the image path or a reference to a Titanium.Contacts.Person.
 // Component(s): Ti.Android.ActionBar, Ti.Android.MenuItem, Ti.Android.Notification, Ti.Android.QuickSettingsService, Ti.UI.ShortcutItem, Ti.UI.Tab, ShortcutParams
 '.icon-shortcut-type-compose[platform=ios]': { icon: Ti.UI.iOS.SHORTCUT_ICON_TYPE_COMPOSE }
 '.icon-shortcut-type-play[platform=ios]': { icon: Ti.UI.iOS.SHORTCUT_ICON_TYPE_PLAY }

@@ -7,13 +7,15 @@ slug: installation
 
 Install PurgeTSS globally on your machine with [NPM](https://www.npmjs.com/).
 
+PurgeTSS 7.20.0 includes utility classes and property descriptions from Titanium SDK 14.0.0.GA. Use a Titanium SDK version that supports the properties you select; this update does not make SDK 14 mandatory for existing projects.
+
 ```bash
 > [sudo] npm install -g purgetss
 ```
 
 :::caution Supported Node.js versions
 
-PurgeTSS 7.19.0 requires Node 20.12 or later in the 20.x branch, 22.13 or later in the 22.x branch, or 23.5 and later. The exact supported range is `^20.12.0 || ^22.13.0 || >=23.5.0`, matching the CLI dependencies.
+PurgeTSS 7.20.0 requires Node 20.12 or later in the 20.x branch, 22.13 or later in the 22.x branch, or 23.5 and later. The exact supported range is `^20.12.0 || ^22.13.0 || >=23.5.0`, matching the CLI dependencies.
 
 :::
 

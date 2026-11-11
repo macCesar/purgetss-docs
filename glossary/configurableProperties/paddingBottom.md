@@ -1,5 +1,6 @@
 ```css
 // Property: paddingBottom
+// Description: Ti.UI.Android.CardView: Inner padding between the bottom edge of the Card and children of the CardView.  Ti.UI.TabGroup: Bottom padding of bottom navigation
 // Component(s): Ti.UI.Android.CardView, Ti.UI.TabGroup
 // Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
 // Docs: /docs/best-practices/values-and-units

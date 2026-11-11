@@ -1,5 +1,6 @@
 ```css
 // Property: lineSpacing
+// Description: ParagraphAttribute: The distance in points between the bottom of one line fragment and the top of the next.  Ti.UI.Label: Line spacing of the text, as a dictionary with the properties add and multiply.
 // Component(s): ParagraphAttribute, Ti.UI.Label
 // Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
 // Docs: /docs/best-practices/values-and-units

@@ -1,5 +1,6 @@
 ```css
 // Property: flags
+// Description: Ti.Android.Intent: Intent flags.  Ti.Android.Notification: Set of flags for the notification.  wakeLockOptions: Wake lock level and flag. See PowerManager.newWakeLock in the Android API Reference  Ti.Android.PendingIntent: Flags used for creating the Pending Intent.  Ti.UI.Android.CollapseToolbar: Scroll flags. Check Android documentation for more details.  Ti.UI.TabGroup: Additional flags to set on the TabGroup.
 // Component(s): Ti.Android.Intent, Ti.Android.Notification, wakeLockOptions, Ti.Android.PendingIntent, Ti.UI.Android.CollapseToolbar, Ti.UI.TabGroup
 '.flags-activity-brought-to-front[platform=android]': { flags: Ti.Android.FLAG_ACTIVITY_BROUGHT_TO_FRONT }
 '.flags-activity-clear-top[platform=android]': { flags: Ti.Android.FLAG_ACTIVITY_CLEAR_TOP }

@@ -1,5 +1,6 @@
 ```css
 // Property: charset
+// Description: EncodeStringDict: Character encoding to use when encoding this string to bytes.  DecodeStringDict: Character set to use when encoding this string to bytes.
 // Component(s): EncodeStringDict, DecodeStringDict
 '.charset-codec-ascii': { charset: Ti.Codec.CHARSET_ASCII }
 '.charset-codec-iso-latin-1': { charset: Ti.Codec.CHARSET_ISO_LATIN_1 }

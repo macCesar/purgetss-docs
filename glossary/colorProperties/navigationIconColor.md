@@ -1,5 +1,6 @@
 ```css
 // Property: navigationIconColor
+// Description: Ti.UI.Android.CollapseToolbar: Color of the back arrow.  Ti.UI.Toolbar: Tint color of the navigation icon (e.g. home arrow)
 // Component(s): Ti.UI.Android.CollapseToolbar, Ti.UI.Toolbar
 '.navigation-icon-transparent': { navigationIconColor: 'transparent' }
 '.navigation-icon-black': { navigationIconColor: '#000000' }

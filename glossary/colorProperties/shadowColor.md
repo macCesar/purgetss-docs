@@ -1,5 +1,6 @@
 ```css
 // Property: shadowColor
+// Description: Ti.UI.Button: Shadow color of the title, as a color name or hex triplet.  Ti.UI.Label: Shadow color of the text, as a color name or hex triplet.
 // Component(s): Ti.UI.Button, Ti.UI.Label
 '.shadow-transparent': { shadowColor: 'transparent' }
 '.shadow-black': { shadowColor: '#000000' }

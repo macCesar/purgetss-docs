@@ -1,5 +1,6 @@
 ```css
 // Property: maxLines
+// Description: Ti.UI.Label: Makes the label at most this many lines tall.  Ti.UI.TextArea: Maximum line count of text field input.
 // Component(s): Ti.UI.Label, Ti.UI.TextArea
 '.max-lines-1': { maxLines: 1 }
 '.max-lines-2': { maxLines: 2 }

@@ -1,5 +1,6 @@
 ```css
 // Property: arrowDirection
+// Description: CameraOptionsType: Controls the type of arrow and position of the popover.  MenuPopupShowParams: Indicates the arrow direction of the menu popup.  Ti.UI.iPad.Popover: Indicates the arrow direction of the popover.
 // Component(s): CameraOptionsType, PhotoGalleryOptionsType, MenuPopupShowParams, Ti.UI.iPad.Popover
 '.arrow-direction-popover-any': { arrowDirection: Ti.UI.iPad.POPOVER_ARROW_DIRECTION_ANY }
 '.arrow-direction-popover-down': { arrowDirection: Ti.UI.iPad.POPOVER_ARROW_DIRECTION_DOWN }

@@ -1,5 +1,6 @@
 ```css
 // Property: mode
+// Description: fs.Stats: A bit-field describing the file type and mode. Always returns 0 on Titanium.  fs.appendFile.options: file permissions/mode  fs.mkdir.options: Not supported on Windows.  CreateStreamArgs: Mode to open the stream in.  Ti.UI.MaskedImage: Blend mode to use to combine layers.
 // Component(s): fs.Stats, fs.appendFile.options, fs.mkdir.options, fs.writeFile.options, CreateStreamArgs, Ti.UI.MaskedImage
 '.mode-stream-read': { mode: Ti.Stream.MODE_READ }
 '.mode-stream-write': { mode: Ti.Stream.MODE_WRITE }

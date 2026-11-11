@@ -1,5 +1,6 @@
 ```css
 // Property: status
+// Description: Ti.Calendar.Attendee: The status of the attendee.  Ti.Calendar.Event: Status of this event.  Ti.Network.HTTPClient: Response HTTP status code.
 // Component(s): Ti.Calendar.Attendee, Ti.Calendar.Event, Ti.Network.HTTPClient
 '.status-calendar-attendee-unknown': { status: Ti.Calendar.ATTENDEE_STATUS_UNKNOWN }
 '.status-calendar-attendee-pending': { status: Ti.Calendar.ATTENDEE_STATUS_PENDING }

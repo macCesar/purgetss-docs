@@ -1,6 +1,7 @@
 ```css
 // Property: padding
-// Component(s): Ti.UI.Android.CardView, Ti.UI.ScrollableView, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.iOS.ButtonConfiguration
+// Description: Ti.UI.Android.CardView: Inner padding between the edges of the Card and children of the CardView.  Ti.UI.Label: Padding between the label's edges and its text.  Ti.UI.ScrollableView: The padding applied to the scrollable view.  Ti.UI.TextArea: Sets the left and right padding of this TextArea. The text will always be vertically centered.  Ti.UI.TextField: Sets the padding of this text field.  Ti.UI.iOS.ButtonConfiguration: The padding around the button's content.
+// Component(s): Ti.UI.Android.CardView, Ti.UI.Label, Ti.UI.ScrollableView, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.iOS.ButtonConfiguration
 // Unit: numeric values are unitless. Titanium interprets them using ti.ui.defaultunit in tiapp.xml (Alloy template default: dp, not pixels).
 // Docs: /docs/best-practices/values-and-units
 '.padding-0': { padding: 0 }

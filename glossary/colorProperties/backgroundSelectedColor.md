@@ -1,5 +1,6 @@
 ```css
 // Property: backgroundSelectedColor
+// Description: Ti.UI.View: Selected background color of the view, as a color name or hex triplet.  Ti.UI.ListItem: Background color of the view, as a color name or hex triplet when item is selected.  Ti.UI.TableViewRow: Background color to render when the row is selected, as a color name or hex triplet.  Ti.UI.iOS.ButtonConfiguration: Background color to use while the button is highlighted (pressed).
 // Component(s): Ti.UI.View, Ti.Media.VideoPlayer, Ti.UI.Android.CardView, Ti.UI.Android.DrawerLayout, Ti.UI.Android.SearchView, Ti.UI.Button, Ti.UI.ButtonBar, Ti.UI.ImageView, Ti.UI.Label, Ti.UI.ListItem, Ti.UI.MaskedImage, Ti.UI.NavigationWindow, Ti.UI.OptionBar, Ti.UI.PickerRow, Ti.UI.ProgressBar, Ti.UI.ScrollView, Ti.UI.ScrollableView, Ti.UI.SearchBar, Ti.UI.Slider, Ti.UI.Switch, Ti.UI.Tab, Ti.UI.TabbedBar, Ti.UI.TableViewRow, Ti.UI.TextArea, Ti.UI.TextField, Ti.UI.WebView, Ti.UI.Window, Ti.UI.iOS.BlurView, Ti.UI.iOS.ButtonConfiguration, Ti.UI.iOS.CoverFlowView, Ti.UI.iOS.LivePhotoView, Ti.UI.iOS.SplitWindow, Ti.UI.iOS.Stepper
 '.bg-selected-transparent': { backgroundSelectedColor: 'transparent' }
 '.bg-selected-black': { backgroundSelectedColor: '#000000' }

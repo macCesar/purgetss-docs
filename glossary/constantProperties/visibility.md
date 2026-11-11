@@ -1,5 +1,6 @@
 ```css
 // Property: visibility
+// Description: Ti.Android.Notification: Allows user to conceal private information of the notification on the lock screen.  Ti.Calendar.Event: Visibility of this event.
 // Component(s): Ti.Android.Notification, Ti.Calendar.Event
 '.visibility-private[platform=android]': { visibility: Ti.Android.VISIBILITY_PRIVATE }
 '.visibility-public[platform=android]': { visibility: Ti.Android.VISIBILITY_PUBLIC }

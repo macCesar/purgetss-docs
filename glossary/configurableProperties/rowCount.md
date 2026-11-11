@@ -1,5 +1,6 @@
 ```css
 // Property: rowCount
+// Description: Ti.Database.ResultSet: The number of rows in this result set.  Ti.UI.DashboardView: The number of rows of items in the view.  Ti.UI.PickerColumn: Number of rows in this column.  Ti.UI.TableViewSection: Number of rows in this section.
 // Component(s): Ti.Database.ResultSet, Ti.UI.DashboardView, Ti.UI.PickerColumn, Ti.UI.TableViewSection
 '.row-count-1': { rowCount: 1 }
 '.row-count-2': { rowCount: 2 }

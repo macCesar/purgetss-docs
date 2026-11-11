@@ -1,5 +1,6 @@
 ```css
 // Property: repeatMode
+// Description: Ti.Media.MusicPlayer: Repeat setting.  Ti.Media.VideoPlayer: Determines how the movie player repeats when reaching the end of playback.
 // Component(s): Ti.Media.MusicPlayer, Ti.Media.VideoPlayer
 '.repeat-mode-music-player-all': { repeatMode: Ti.Media.MUSIC_PLAYER_REPEAT_ALL }
 '.repeat-mode-music-player': { repeatMode: Ti.Media.MUSIC_PLAYER_REPEAT_DEFAULT }

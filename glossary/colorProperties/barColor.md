@@ -1,5 +1,6 @@
 ```css
 // Property: barColor
+// Description: Ti.UI.Android.CollapseToolbar: Background color of the extended toolbar when no image is shown.  Ti.UI.EmailDialog: Bar color of the email dialog window, as a color name or hex triplet.  Ti.UI.SearchBar: Bar color of the search bar view, as a color name or hex triplet.  Ti.UI.TabGroup: Default navigation bar color (typically for the More tab), as a color name or hex triplet.  Ti.UI.Toolbar: Background color for the toolbar, as a color name or hex triplet.  Ti.UI.Window: Background color for the nav bar, as a color name or hex triplet.
 // Component(s): Ti.UI.Android.CollapseToolbar, Ti.UI.EmailDialog, Ti.UI.SearchBar, Ti.UI.TabGroup, Ti.UI.Toolbar, Ti.UI.Window, windowToolbarParam, Ti.UI.iOS.SplitWindow
 '.bar-transparent': { barColor: 'transparent' }
 '.bar-black': { barColor: '#000000' }
