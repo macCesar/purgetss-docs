@@ -1,7 +1,31 @@
+# Estado actual — PurgeTSS 7.20.0
+
+**2026-11-11 · Fase:** documentación compilada y desplegada en purgetss.com; mirrors sincronizados y subidos. Rama `main`.
+**Sesión por:** Codex · familia GPT-6 (identificador exacto no expuesto).
+
+El sitio documenta PurgeTSS 7.20.0 y los Completions del SDK 14.0.0.GA: 63 entradas de propiedades nuevas y 356 descripciones recuperadas frente al tag 7.19.0. El glosario importado contiene 135 páginas actualizadas y 18 nuevas. La portada conserva las tres últimas versiones (7.20.0, 7.19.0, 7.18.0); 7.17.1 sigue en el changelog completo. El sitio mantiene su versión propia 1.1.14; este lanzamiento publica contenido, sin otro paquete npm ni tag del sitio.
+
+- `73aa24c`: importación del glosario al iniciar `clean:md`, pruebas y documentación del flujo.
+- `36c8fbf`: glosario del SDK 14, portada, changelog e instalación para 7.20.0. Ambos commits están en `origin/main`.
+- `4df9bfc` en el mirror Context7: documentos convertidos y README sincronizados y subidos. El glosario se importa al sitio; no se añadió al alcance de Context7.
+- Pasaron `npm run clean:md`, `npm run docs:check`, las dos pruebas aisladas del script y `npm run build`. Se desplegó ese build con `npm run deploy` (rsync, salida 0).
+- Verificación HTTP 200 y coincidencia con el HTML compilado hasta `</body>` en `/`, `/changelog/`, `/docs/installation/`, `/glossary/booleanProperties/snapping/`, `/glossary/colorProperties/linkColor/` y `/glossary/booleanProperties/allowBackground/`. El servidor sigue añadiendo contenido después del cierre del body, como en la verificación anterior.
+- Los 675 archivos importados (669 Markdown y seis JSON) coinciden byte a byte con `../purgeTSS/dist/glossary/`, excluyendo `.DS_Store`. Los originales escritos a mano conservaron sus ejemplos y detalles; las eliminaciones de los resúmenes se limitan a la cuarta versión, conservada en el historial completo.
+
+No queda trabajo pendiente para el lanzamiento del sitio. Los registros anteriores se conservan abajo como historial; sus estados describen esas publicaciones anteriores.
+
+---
+
 # Estado
 
 **2026-11-11** · Fase: documentación de PurgeTSS 7.19.0 desplegada y espejada · Rama `main`
 **Sesión por:** Codex · familia GPT-6 (el identificador exacto no está expuesto).
+
+## Sincronización del glosario — 2026-11-11
+
+`clean:md` ahora importa primero `../purgeTSS/dist/glossary/` a `glossary/`, añadiendo y sobrescribiendo archivos generados sin borrar contenido exclusivo del sitio y excluyendo `.DS_Store`. Si falta la fuente, termina antes de modificar destinos e indica generar con `npm run build:tailwind` en el CLI. La conversión de docs/páginas y el alcance de los mirrors permanecen iguales; el glosario todavía no se exporta a Context7.
+
+Ejecutado sobre los datos actualizados del SDK: 135 Markdown modificados y 18 nuevos; los 675 archivos importados (669 Markdown y seis metadatos JSON) coinciden byte a byte con la fuente. Las dos pruebas aisladas de `node --test tests/clean-md.test.mjs` cubren importación/conversión y fuente ausente; fallaban antes y pasan después. `npm run clean:md`, `npm run build`, sintaxis y `git diff --check` pasaron. Lint de los dos MJS usa la configuración del CLI con excepciones para `process.exit` y `fs.cpSync`, patrones ya existentes en este script. README/contexto aclaran el origen del glosario y el orden de comandos conservando el contenido vigente. Sin commits ni pushes en este seguimiento.
 
 ## Actualización de PurgeTSS 7.19.0
 
