@@ -28,6 +28,8 @@ César confirmó que el reporte debe seguir público, íntegro y en inglés, con
 
 `npm run clean:md` sincronizó ambos mirrors; una comparación confirmó que sólo cambiaron las dos URL del reporte. `npm run build`, comprobación de enlaces en el HTML generado y `git diff --check` pasaron. Tras `npm run deploy`, ambas páginas respondieron HTTP 200 y coincidieron con el build hasta `</body>`, con los enlaces nuevos y sin la URL anterior. No se ejecutaron pruebas del CLI por este cambio documental.
 
+**Preferencia de URL — 2026-11-11:** César prefirió un enlace legible al hash completo. Performance y changelog ahora usan `https://github.com/macCesar/purgeTSS/blob/main/docs/project/optimization.md`, que abre el reporte en inglés y anonimizado. Se conserva el tag histórico. Sólo cambiaron esas dos URL; `clean:md` sincronizó los mirrors, el build y `git diff --check` pasaron, y tras el despliegue ambas páginas respondieron HTTP 200, coincidieron con el build y mostraron la URL limpia.
+
 ## Registro histórico — 2026-09-26
 
 **2026-09-26** · Fase: v1.1.14 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
