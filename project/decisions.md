@@ -2,6 +2,12 @@
 
 Append-only. Lo más reciente arriba.
 
+## 2026-11-11 — Una guía para perfiles, firmas y tiempos de generación
+
+La explicación completa de PurgeTSS 7.19.0 vive en `docs/performance.md`; comandos, instalación y configuración enlazan a sus secciones. Distingue procesar/generar contenido de escribir bytes, y separa la regla de `app.tss` del resto de los derivados. Los mensajes describen el resultado de la escritura y el motivo de reconstrucción sin atribuir todo a una edición del config.
+
+Las cifras publicadas conservan las condiciones de las mediciones originales, la primera ejecución más lenta al establecer la firma y el enlace al informe del CLI. La actualización del sitio no implica haber repetido esos benchmarks. El versionado propio del sitio permanece separado del CLI; esta actualización de contenido no crea automáticamente un release v1.x.
+
 ## 2026-09-03 — Tres releases en la portada; historial completo en el changelog
 
 La sección Changelog de `src/pages/index.md` es un resumen y debe mostrar exactamente los tres releases publicados más recientes, además del encabezado `Unreleased`. Al agregar un release nuevo se elimina de la portada el cuarto, aunque siga existiendo en el historial.

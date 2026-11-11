@@ -1,5 +1,29 @@
 # Estado
 
+**2026-11-11** · Fase: documentación de PurgeTSS 7.19.0 desplegada y espejada · Rama `main`
+**Sesión por:** Codex · familia GPT-6 (el identificador exacto no está expuesto).
+
+## Actualización de PurgeTSS 7.19.0
+
+El contenido quedó en `9d4e338`: guía nueva en [Execution profiles and performance](https://purgetss.com/docs/performance), opciones globales en comandos, requisitos exactos de Node, firmas de configuración, mensajes de creación/actualización/sin cambios y resultados medidos con su coste inicial. El changelog completo incorpora la entrada de 7.19.0 del CLI. La portada conserva exactamente 7.19.0, 7.18.0 y 7.17.1; 7.17.0 salió sólo del resumen y sigue íntegra en el historial.
+
+El sitio se compiló con `npm run build` y se desplegó con `npm run deploy`, reutilizando ese build recién verificado. `npm run clean:md` sincronizó 65 archivos y limpió 33 Markdown hacia `../purgeTSS/.dev/docs` y `../purgetss-docs-context7`. El mirror público quedó commiteado y pusheado en `ca7859e`.
+
+La versión propia del sitio sigue en **1.1.14**, con `private: true`. Este trabajo actualiza el contenido para el CLI 7.19.0; no creó otro tag/release del sitio ni publicó un paquete npm. GitHub Pages sigue desactivado; el despliegue del sitio es el `rsync` existente a `purgetss.com`.
+
+## Verificado en este seguimiento
+
+- `npm run docs:check` detectó primero el desfase y después terminó con `Docs are up to date with v7.19.0`.
+- `npm run build` terminó correctamente con los enlaces y anclas validados. No se ejecutó una suite del CLI por un cambio de contenido.
+- Se comprobaron en vivo las seis rutas afectadas: `/`, `/docs/performance`, `/docs/installation`, `/docs/commands`, `/docs/customization/the-config-file` y `/changelog`. Respondieron HTTP 200 y el documento hasta `</body>` coincidió con el build local; el hosting añade su propio script después de ese cierre. Se verificaron también los textos nuevos y los tres encabezados de versión de la portada.
+- Los ejemplos existentes de comandos, instalación y configuración permanecen idénticos. El historial anterior desde 7.18.0 no perdió contenido; el ejemplo anidado de la paleta `brand` conserva `#0ea5e9`, `#0c4a6e` y `#f97316`.
+- En ambos mirrors coinciden los seis archivos de contenido nuevos/modificados; los frontmatter, admoniciones y títulos de fences se transformaron, y los enlaces nuevos apuntan a archivos reales. `README.md` del mirror se regeneró desde la portada.
+- `git diff --check` pasó en la fuente y el mirror. Evidencia de producción: `/Users/cesar/Developer/validation-evidence/purgeTSS/docs-7.19.0-live.json`.
+
+No queda trabajo pendiente para esta actualización. El skill de TiTools y la guía opcional de adopción descritos abajo siguen siendo seguimientos separados; no se editaron aquí. El registro de septiembre se conserva como histórico, con sus verificaciones y pendientes de entonces.
+
+## Registro histórico — 2026-09-26
+
 **2026-09-26** · Fase: v1.1.14 liberada, desplegada y espejada; los tres destinos al día · Rama `main`
 **Sesión por:** Claude Code · Opus 5.5 (`claude-opus-5-5`)
 
