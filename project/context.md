@@ -4,7 +4,7 @@
 
 El sitio de documentación oficial de PurgeTSS: https://purgetss.com. Docusaurus 3 + React 19. El paquete se llama `purgetss-site` y es `"private": true` — **nunca se publica en npm**.
 
-**Este repo es la fuente de la verdad de la documentación.** No se edita la documentación en el repo del CLI ni en el mirror de Context7; se edita aquí y se abanica desde aquí.
+**Este repo es la fuente de la verdad de la documentación escrita a mano.** El glosario se genera en `../purgeTSS/dist/glossary/` y `clean:md` lo importa aquí antes de procesar los documentos. No se edita la documentación en el repo del CLI ni en el mirror de Context7; se edita aquí y se abanica desde aquí.
 
 ## Los tres destinos
 
@@ -20,7 +20,7 @@ Un cambio en la documentación va a tres lugares distintos, por tres caminos dis
 
 ## El pipeline de sync (`scripts/`)
 
-- **`clean-md.mjs`** — copia `docs/` completo más los `.md` de `src/pages/` a los dos destinos, y de paso los traduce de Docusaurus a Markdown que GitHub entienda: quita el frontmatter, convierte `:::tip` / `:::caution` en blockquotes con emoji, saca los `title="archivo.js"` de los fences, y **reescribe los enlaces de slug a rutas de archivo reales** (`customization/the-config-file` → `./customization/1-configuring-guide.md`). También regenera el `README.md` de Context7 desde `index.md`.
+- **`clean-md.mjs`** — primero importa `../purgeTSS/dist/glossary/` a `glossary/` (sobrescribe y añade archivos, conserva los exclusivos del destino y excluye `.DS_Store`). Si falta la fuente, termina antes de modificar destinos e indica ejecutar `npm run build:tailwind` en el CLI. Después copia `docs/` completo más los `.md` de `src/pages/` a los dos destinos, y de paso los traduce de Docusaurus a Markdown que GitHub entienda: quita el frontmatter, convierte `:::tip` / `:::caution` en blockquotes con emoji, saca los `title="archivo.js"` de los fences, y **reescribe los enlaces de slug a rutas de archivo reales** (`customization/the-config-file` → `./customization/1-configuring-guide.md`). También regenera el `README.md` de Context7 desde `index.md`.
 - **`check-docs-version.mjs`** — expuesto como `npm run docs:check`. Compara las versiones liberadas en el `CHANGELOG.md` de `../purgeTSS` contra las documentadas en `src/pages/changelog.md` y `src/pages/index.md`. Sale con código 1 cuando hay desfase; su propio comentario dice que existe para ser compuerta de un release.
 
 Los scripts vivían en el repo del CLI y alcanzaban hacia acá por ruta absoluta. Se movieron aquí en `3c2aeee` para que el pipeline esté en la fuente y no en un consumidor. Ver `decisions.md`.

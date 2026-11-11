@@ -2,7 +2,7 @@
 
 The source of the official PurgeTSS documentation, published at **https://purgetss.com**. Built with [Docusaurus 3](https://docusaurus.io/) and React 19.
 
-This repo is the source of truth for the documentation. It is authored here and fanned out from here — the copies in the PurgeTSS CLI repo and in the Context7 mirror are generated, never edited by hand.
+This repo is the source of truth for handwritten documentation. It is authored here and fanned out from here — the copies in the PurgeTSS CLI repo and in the Context7 mirror are generated, never edited by hand. The glossary originates in `../purgeTSS/dist/glossary/` and is imported into this site by `clean:md`.
 
 The package is `private`; it is never published to npm.
 
@@ -44,7 +44,7 @@ Deployment is an `rsync --delete` to `cmlink:sitios/purgetss/`. **It does not go
 Two consumers receive a copy of the documentation, converted from Docusaurus syntax to Markdown that GitHub renders — frontmatter stripped, `:::admonitions` turned into blockquotes, `title=` removed from code fences, and slug links rewritten to real file paths.
 
 ```bash
-npm run clean:md      # generate and copy to both consumers
+npm run clean:md      # import generated glossary, then convert and copy docs/pages
 npm run docs:check    # is the documentation behind the released PurgeTSS?
 ```
 
@@ -52,6 +52,10 @@ npm run docs:check    # is the documentation behind the released PurgeTSS?
 | --- | --- |
 | `../purgeTSS/.dev/docs` | Local working copy for the CLI repo. Listed in its `.gitignore`, so it is never committed there. |
 | `../purgetss-docs-context7` | Public mirror feeding Context7. Committed and pushed by hand in that repo. |
+
+Before `clean:md`, run `npm run build:tailwind` (or `npm run build`) in `../purgeTSS` after changing Completions or class generators. `clean:md` first copies `../purgeTSS/dist/glossary/` into this repository's `glossary/`, overwriting generated entries and adding new ones, while preserving destination-only files and excluding `.DS_Store`. A missing source glossary stops the command before any destination is modified and prints the generation command.
+
+The glossary import preserves Docusaurus content. The subsequent Markdown conversion still processes only `docs/` and `src/pages/*.md` for the two consumers; it does not export the glossary to those mirrors. Run `npm run build` here after synchronization to compile the site with the updated glossary.
 
 `docs:check` compares the versions released in the CLI's `CHANGELOG.md` against the ones documented in `src/pages/changelog.md` and `src/pages/index.md`. It exits non-zero on a mismatch so it can gate a release — run it *before* releasing, not after.
 
@@ -62,8 +66,9 @@ PurgeTSS publishes a version
   → npm run docs:check       flags what the docs are missing
   → update src/pages/changelog.md and src/pages/index.md
   → release                  bump, tag, GitHub release
-  → npm run deploy:fresh     publish the site
-  → npm run clean:md         fan out to both mirrors
+  → npm run build:tailwind  in ../purgeTSS, generate classes and glossary
+  → npm run clean:md         import glossary and fan out docs/pages to both mirrors
+  → npm run deploy:fresh     publish the site with the imported glossary
   → commit and push ../purgetss-docs-context7
 ```
 

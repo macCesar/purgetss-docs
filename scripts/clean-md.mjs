@@ -3,9 +3,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { checkDocsVersion, reportDocsVersion } from './check-docs-version.mjs'
 
-// This repo is the source of truth for the documentation. The docs are authored
-// here, published with `npm run deploy`, and fanned out from here to the two
-// consumers below — so the only absolute paths are the destinations.
+// Handwritten docs originate here; the generated glossary comes from PurgeTSS.
+// Import the glossary for the site, then convert docs/pages for both consumers.
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const SOURCE_ROOT = path.join(currentDir, '..')
 const DOCS_SRC = path.join(SOURCE_ROOT, 'docs')
@@ -14,6 +13,8 @@ const PAGES_SRC = path.join(SOURCE_ROOT, 'src/pages')
 const PURGETSS_ROOT = '/Users/cesar/Developer/openSource/purgeTSS'
 const CONTEXT7_ROOT = '/Users/cesar/Developer/openSource/purgetss-docs-context7'
 const OUTPUT_DIR = path.join(PURGETSS_ROOT, '.dev/docs')
+const GLOSSARY_SRC = path.join(PURGETSS_ROOT, 'dist/glossary')
+const GLOSSARY_DEST = path.join(SOURCE_ROOT, 'glossary')
 
 function cleanFrontmatter(content) {
   return content.replace(/^---[\s\S]*?---\n+/, '')
@@ -156,6 +157,18 @@ if (!fs.existsSync(PURGETSS_ROOT)) {
   console.error(`PurgeTSS repo not found: ${PURGETSS_ROOT}`)
   process.exit(1)
 }
+
+if (!fs.existsSync(GLOSSARY_SRC) || !fs.statSync(GLOSSARY_SRC).isDirectory()) {
+  console.error(`Generated glossary not found: ${GLOSSARY_SRC}. Run npm run build:tailwind in ${PURGETSS_ROOT} first.`)
+  process.exit(1)
+}
+
+// Merge generated entries without removing site content, matching rsync -av.
+fs.cpSync(GLOSSARY_SRC, GLOSSARY_DEST, {
+  recursive: true,
+  filter: source => path.basename(source) !== '.DS_Store'
+})
+console.log(`Glossary imported: ${GLOSSARY_SRC} -> ${GLOSSARY_DEST}`)
 
 // Fresh copy: only remove the generated docs/ dir, preserve README.md and CHANGELOG.md
 if (fs.existsSync(OUTPUT_DIR)) {
