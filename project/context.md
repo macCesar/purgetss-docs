@@ -20,10 +20,18 @@ Un cambio en la documentación va a tres lugares distintos, por tres caminos dis
 
 ## El pipeline de sync (`scripts/`)
 
-- **`clean-md.mjs`** — primero importa `../purgeTSS/dist/glossary/` a `glossary/` (sobrescribe y añade archivos, conserva los exclusivos del destino y excluye `.DS_Store`). Si falta la fuente, termina antes de modificar destinos e indica ejecutar `npm run build:tailwind` en el CLI. Después copia `docs/` completo más los `.md` de `src/pages/` a los dos destinos, y de paso los traduce de Docusaurus a Markdown que GitHub entienda: quita el frontmatter, convierte `:::tip` / `:::caution` en blockquotes con emoji, saca los `title="archivo.js"` de los fences, y **reescribe los enlaces de slug a rutas de archivo reales** (`customization/the-config-file` → `./customization/1-configuring-guide.md`). También regenera el `README.md` de Context7 desde `index.md`.
+- **`clean-md.mjs`** — primero importa `../purgeTSS/dist/glossary/` a `glossary/` (sobrescribe y añade archivos, retira páginas generadas obsoletas con formato inequívoco y conserva las páginas manuscritas/anotadas, índices y metadatos; excluye `.DS_Store`). Si falta la fuente, termina antes de modificar destinos e indica ejecutar `npm run build:tailwind` en el CLI. Después copia `docs/` completo más los `.md` de `src/pages/` a los dos destinos, y de paso los traduce de Docusaurus a Markdown que GitHub entienda: quita el frontmatter, convierte `:::tip` / `:::caution` en blockquotes con emoji, saca los `title="archivo.js"` de los fences, y **reescribe los enlaces de slug a rutas de archivo reales** (`customization/the-config-file` → `./customization/1-configuring-guide.md`). También regenera el `README.md` de Context7 desde `index.md`.
 - **`check-docs-version.mjs`** — expuesto como `npm run docs:check`. Compara las versiones liberadas en el `CHANGELOG.md` de `../purgeTSS` contra las documentadas en `src/pages/changelog.md` y `src/pages/index.md`. Sale con código 1 cuando hay desfase; su propio comentario dice que existe para ser compuerta de un release.
 
 Los scripts vivían en el repo del CLI y alcanzaban hacia acá por ruta absoluta. Se movieron aquí en `3c2aeee` para que el pipeline esté en la fuente y no en un consumidor. Ver `decisions.md`.
+
+## Cómo se procesa una versión del CLI
+
+Las guías de `docs/` se actualizan manualmente después de revisar el changelog, el código modificado y los archivos nuevos del CLI. No hay un proceso en segundo plano que redacte las guías. El glosario sí se importa de los generados del CLI; `clean:md` distribuye las guías ya escritas y convierte su sintaxis para los mirrors.
+
+La versión procesada, la fecha, el alcance revisado y la validación se registran al principio de `project/status.md`. Se puede preparar la documentación para una versión que César va a liberar sin esperar sus commits: el estado de la documentación y la publicación del paquete npm son hechos distintos. El versionado propio del sitio sigue siendo independiente.
+
+`docs:check` compara encabezados, no la cobertura de cada guía. Si la documentación ya encabeza con la versión en preparación y el changelog del CLI todavía no la incluye, usa como referencia el release más reciente compartido. Así ignora omisiones históricas intencionales y sigue detectando releases nuevos sin documentar. No sustituye la revisión manual ni comprueba la publicación en npm.
 
 ## Trampas
 
@@ -42,6 +50,8 @@ Los scripts vivían en el repo del CLI y alcanzaban hacia acá por ruta absoluta
 - `docs/` — 30 páginas, el contenido del sitio: comandos, customization, app-assets, purgetss-ui, best-practices, grid-system, installation y perfiles/rendimiento.
 - `docs/performance.md` — guía de PurgeTSS 7.19.0 para perfiles JSON, firmas, timestamps, mensajes de archivos, LiveView y resultados medidos; consultar antes de cambiar esas explicaciones o sus enlaces desde comandos/configuración.
 - `glossary/` — instancia separada de Docusaurus con la referencia de propiedades por tipo (boolean, color, compound, configurable, constant).
+- `docs/customization/7-custom-fonts.md` — `build-fonts`, CSS moderno/antiguo y prioridad por selector entre fuentes del usuario, Font Awesome Pro/Beta del proyecto y catálogos incluidos, tanto en purga directa como en `apply`.
+- `docs/customization/8-icon-fonts-libraries.md` — familias incluidas, mantenimiento de OTF de Free, cabeceras automáticas y actualización manual de fuentes/codepoints de Material. Las cabeceras de Pro/Beta siguen teniendo un 7 fijo; sus familias ya se resuelven por metadatos.
 - `src/pages/` — `index.md` (portada, con changelog condensado de las 3 versiones más recientes), `changelog.md` (changelog completo de PurgeTSS), `tikit.md`.
 
 ## Quién ha trabajado aquí
@@ -50,7 +60,7 @@ Una fila por tramo de trabajo, no por sesión. Sirve para saber qué herramienta
 
 | Cuándo | Asistente · modelo | Qué produjo |
 | --- | --- | --- |
-| 2026-11-11 | Codex · familia GPT-6 (identificador exacto no expuesto) | Documentación de PurgeTSS 7.19.0, guía de perfiles/rendimiento, requisitos de Node, firmas y mensajes de archivos; compilación, despliegue verificado y sincronización de mirrors |
+| 2026-11-11 | Codex · familia GPT-6 (identificador exacto no expuesto) | Documentación de PurgeTSS 7.19.0–7.20.1: perfiles/rendimiento, SDK 14, glosario sin readonly, ratios SplitWindow, tipografías/cabeceras y prioridad de iconos; correcciones del sync y control de versiones; compilaciones, despliegues verificados, sincronización de mirrors y cierre con commits semánticos |
 | 2022-04 – 2026-07 | Sin asistente registrado | El sitio Docusaurus y el grueso de la documentación |
 | 2026-08 – 2026-09 | Claude Code · Opus 5 (`claude-opus-5`) | Reescritura de prosa, documentación de brand/images/Classic, el pipeline de `scripts/`, esta convención de notas |
 | 2026-09-26 | Claude Code · Opus 5.5 (`claude-opus-5-5`) | Corrección de 15 páginas contra el CLI a partir de la auditoría del skill de TiTools, la sección de modificadores apilados y la documentación de PurgeTSS v7.18.0 (v1.1.14) |

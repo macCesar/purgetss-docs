@@ -2,6 +2,18 @@
 
 Append-only. Lo más reciente arriba.
 
+## 2026-11-11 — Registrar la versión procesada sin depender de los commits del CLI
+
+César pidió preparar los docs oficiales para 7.20.1 mientras hacía los commits del CLI. El registro principal indica la versión procesada, no una etiqueta genérica de «cambios sin commit». La revisión puede hacerse sobre archivos modificados y nuevos; no requiere un commit previo. Documentar una versión en preparación no confirma que el paquete ya esté publicado en npm.
+
+Durante esa preparación, la portada puede mostrar la versión solicitada y las dos publicadas inmediatamente anteriores, manteniendo tres entradas y el historial completo en el changelog. `docs:check` se ancla en el release más reciente compartido cuando el encabezado nuevo todavía no está en el changelog del CLI; no debe reclamar parches históricos omitidos deliberadamente. La cobertura de las guías sigue siendo una revisión manual.
+
+## 2026-11-11 — Retirar únicamente páginas generadas obsoletas del glosario
+
+El sync anterior conservaba todas las páginas exclusivas del destino y dejaba referencias a propiedades readonly retiradas del generador. Ahora elimina sólo páginas de las cuatro categorías de propiedades cuyo contenido sea inequívocamente generado: un único fence CSS con `// Property:` que coincide con el nombre del archivo, sin anotaciones adicionales. Las páginas manuscritas/anotadas, índices y metadatos se conservan. La fuente se valida antes de modificar destinos.
+
+Las 45 bajas de esta actualización corresponden a propiedades readonly, contrastadas con el SDK en la revisión original. Las cuatro páginas modificadas siguen siendo escribibles; no se eliminan. Los 630 archivos del glosario actual coinciden con la fuente generada. No se usa una eliminación general del destino para resolver este caso.
+
 ## 2026-11-11 — Una guía para perfiles, firmas y tiempos de generación
 
 La explicación completa de PurgeTSS 7.19.0 vive en `docs/performance.md`; comandos, instalación y configuración enlazan a sus secciones. Distingue procesar/generar contenido de escribir bytes, y separa la regla de `app.tss` del resto de los derivados. Los mensajes describen el resultado de la escritura y el motivo de reconstrucción sin atribuir todo a una edición del config.

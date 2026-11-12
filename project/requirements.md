@@ -6,6 +6,8 @@ Qué tiene que cumplir este repo, y cómo se verifica cada cosa. El detalle de *
 
 `src/pages/changelog.md` y `src/pages/index.md` deben cubrir la versión que el `package.json` de `../purgeTSS` declara como actual.
 
+Cuando César solicita preparar la documentación para el siguiente release, puede revisarse el working tree del CLI antes de sus commits y de la publicación npm. Se registra la versión procesada y su estado en `project/status.md`; esto no acredita que el paquete ya esté publicado. El chequeo de encabezados no sustituye revisar las guías afectadas.
+
 **Verificación:** `npm run docs:check` imprime `Docs are up to date with vX.Y.Z` y sale con 0.
 
 ## R2 — El sitio compila sin enlaces ni anclas rotas
@@ -51,5 +53,7 @@ git show vX.Y.Z:package.json | grep '"version"'
 La sección Changelog de `src/pages/index.md` conserva `Unreleased` y exactamente las tres versiones publicadas más recientes de PurgeTSS. Cuando entra una versión nueva, sale de la portada la más antigua de esas tres.
 
 Esta regla no aplica a `src/pages/changelog.md`: el changelog completo conserva todo el historial publicado. La portada termina con un enlace a esa página para consultar versiones anteriores.
+
+Durante la preparación de un release solicitada por César, la ventana puede incluir esa versión y las dos publicadas anteriores. Sigue teniendo exactamente tres entradas y no elimina ninguna versión del changelog completo.
 
 **Verificación:** contar los encabezados `### vX.Y.Z` de la sección Changelog en `src/pages/index.md`; deben ser exactamente tres y coincidir con las tres primeras versiones `## vX.Y.Z` de `src/pages/changelog.md`.
