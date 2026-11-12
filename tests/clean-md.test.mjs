@@ -54,3 +54,24 @@ test('missing generated glossary fails before modifying any destination', t => {
   assert.equal(fs.readFileSync(path.join(f.cli, '.dev/docs/previous.md'), 'utf8'), 'Previous output\n')
   assert.equal(fs.existsSync(path.join(f.mirror, 'docs')), false)
 })
+
+test('removes obsolete generated property pages without deleting site-only guidance', t => {
+  const f = fixture(t)
+  const generated = path.join(f.cli, 'dist/glossary')
+  const category = 'booleanProperties'
+  fs.mkdirSync(path.join(generated, category), { recursive: true })
+  fs.mkdirSync(path.join(f.site, 'glossary', category), { recursive: true })
+  const page = name => '```css\n// Property: ' + name + '\n// Component(s): Ti.App.iOS.SceneProxy\n\'.' + name + '\': { ' + name + ': true }\n```\n'
+  fs.writeFileSync(path.join(generated, category, 'editable.md'), page('editable'))
+  fs.writeFileSync(path.join(f.site, 'glossary', category, 'isActive.md'), page('isActive'))
+  fs.writeFileSync(path.join(f.site, 'glossary', category, 'guide.md'), '# Site-only guide\n')
+  fs.writeFileSync(path.join(f.site, 'glossary', category, 'annotated.md'), page('annotated') + '\nKeep this handwritten explanation.\n')
+  assert.equal(f.run().status, 0)
+  assert.equal(fs.existsSync(path.join(f.site, 'glossary', category, 'isActive.md')), false)
+  assert.equal(fs.existsSync(path.join(f.site, 'glossary', category, 'editable.md')), true)
+  assert.equal(fs.readFileSync(path.join(f.site, 'glossary', category, 'guide.md'), 'utf8'), '# Site-only guide\n')
+  assert.match(fs.readFileSync(path.join(f.site, 'glossary', category, 'annotated.md'), 'utf8'), /handwritten explanation/)
+  fs.unlinkSync(path.join(generated, category, 'editable.md'))
+  assert.equal(f.run().status, 0)
+  assert.equal(fs.existsSync(path.join(f.site, 'glossary', category, 'editable.md')), false)
+})

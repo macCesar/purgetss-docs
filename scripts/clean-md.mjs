@@ -143,6 +143,27 @@ function walkAndClean(dir, maps, baseDir) {
   return count
 }
 
+// Only raw generated property pages are owned by the import. Keep annotated
+// pages, indexes, metadata and other site-only guidance when absent upstream.
+function removeObsoletePropertyPages(source, destination) {
+  let removed = 0
+  for (const category of ['booleanProperties', 'colorProperties', 'configurableProperties', 'constantProperties']) {
+    const folder = path.join(destination, category)
+    if (!fs.existsSync(folder)) continue
+    for (const entry of fs.readdirSync(folder, { withFileTypes: true })) {
+      if (!entry.isFile() || !entry.name.endsWith('.md') || fs.existsSync(path.join(source, category, entry.name))) continue
+      const file = path.join(folder, entry.name)
+      const content = fs.readFileSync(file, 'utf8')
+      const generated = /^```css\r?\n\/\/ Property: ([\w-]+)\r?\n([\s\S]*?)\r?\n```\r?\n?$/.exec(content)
+      if (generated && generated[1] === path.basename(entry.name, '.md') && !generated[2].includes('```')) {
+        fs.rmSync(file)
+        removed++
+      }
+    }
+  }
+  return removed
+}
+
 // Validate sources exist
 for (const src of [DOCS_SRC, PAGES_SRC]) {
   if (!fs.existsSync(src)) {
@@ -163,12 +184,13 @@ if (!fs.existsSync(GLOSSARY_SRC) || !fs.statSync(GLOSSARY_SRC).isDirectory()) {
   process.exit(1)
 }
 
-// Merge generated entries without removing site content, matching rsync -av.
+// Import current entries and retire obsolete raw property pages; preserve handwritten content.
 fs.cpSync(GLOSSARY_SRC, GLOSSARY_DEST, {
   recursive: true,
   filter: source => path.basename(source) !== '.DS_Store'
 })
-console.log(`Glossary imported: ${GLOSSARY_SRC} -> ${GLOSSARY_DEST}`)
+const removedGlossaryPages = removeObsoletePropertyPages(GLOSSARY_SRC, GLOSSARY_DEST)
+console.log(`Glossary imported: ${GLOSSARY_SRC} -> ${GLOSSARY_DEST}; ${removedGlossaryPages} obsolete generated property pages removed`)
 
 // Fresh copy: only remove the generated docs/ dir, preserve README.md and CHANGELOG.md
 if (fs.existsSync(OUTPUT_DIR)) {
