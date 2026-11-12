@@ -44,7 +44,9 @@ export function checkDocsVersion(purgetssRoot = DEFAULT_PURGETSS_ROOT) {
   // CHANGELOG.md is ordered newest first, so anything above the version the docs
   // lead with is a release published after the docs were last updated. Older gaps
   // are intentional — minor patches were never documented — and stay quiet.
-  const leadIndex = released.indexOf(documented[0])
+  // During release preparation the leading docs version may precede its CLI
+  // changelog entry. Anchor at the newest shared release to ignore older gaps.
+  const leadIndex = released.findIndex(version => documented.includes(version))
   const missing = leadIndex === -1
     ? released.filter(version => !documented.includes(version))
     : released.slice(0, leadIndex).filter(version => !documented.includes(version))
