@@ -50,6 +50,8 @@ La versión procesada, la fecha, el alcance revisado y la validación se registr
 - `docs/` — 30 páginas, el contenido del sitio: comandos, customization, app-assets, purgetss-ui, best-practices, grid-system, installation y perfiles/rendimiento.
 - `docs/performance.md` — guía de PurgeTSS 7.19.0 para perfiles JSON, firmas, timestamps, mensajes de archivos, LiveView y resultados medidos; consultar antes de cambiar esas explicaciones o sus enlaces desde comandos/configuración.
 - `glossary/` — instancia separada de Docusaurus con la referencia de propiedades por tipo (boolean, color, compound, configurable, constant).
+- `docs/customization/5-arbitrary-values.md` — sintaxis y ejemplos de valores arbitrarios; documenta la restauración RGB/RGBA en 7.20.2 y el intervalo afectado por la regresión (7.8.0–7.20.1). Consultar antes de cambiar ejemplos con paréntesis anidados o colores de gradiente.
+- `docs/customization/3-the-apply-directive.md` — composición de utilidades, prioridades y condiciones; incluye colores RGB/RGBA y conservación de comas/comillas durante la deduplicación de propiedades desde 7.20.2.
 - `docs/customization/7-custom-fonts.md` — `build-fonts`, CSS moderno/antiguo y prioridad por selector entre fuentes del usuario, Font Awesome Pro/Beta del proyecto y catálogos incluidos, tanto en purga directa como en `apply`.
 - `docs/customization/8-icon-fonts-libraries.md` — familias incluidas, mantenimiento de OTF de Free, cabeceras automáticas y actualización manual de fuentes/codepoints de Material. Las cabeceras de Pro/Beta siguen teniendo un 7 fijo; sus familias ya se resuelven por metadatos.
 - `src/pages/` — `index.md` (portada, con changelog condensado de las 3 versiones más recientes), `changelog.md` (changelog completo de PurgeTSS), `tikit.md`.
@@ -60,7 +62,7 @@ Una fila por tramo de trabajo, no por sesión. Sirve para saber qué herramienta
 
 | Cuándo | Asistente · modelo | Qué produjo |
 | --- | --- | --- |
-| 2026-11-11 | Codex · familia GPT-6 (identificador exacto no expuesto) | Documentación de PurgeTSS 7.19.0–7.20.1: perfiles/rendimiento, SDK 14, glosario sin readonly, ratios SplitWindow, tipografías/cabeceras y prioridad de iconos; correcciones del sync y control de versiones; compilaciones, despliegues verificados, sincronización de mirrors y cierre con commits semánticos |
+| 2026-11-11 | Codex · familia GPT-6 (identificador exacto no expuesto) | Documentación de PurgeTSS 7.19.0–7.20.2: perfiles/rendimiento, SDK 14, glosario sin readonly, ratios SplitWindow, tipografías/cabeceras, prioridad de iconos y restauración RGB/RGBA con deduplicación de propiedades en `apply`; correcciones del sync y control de versiones; compilaciones, despliegues verificados, sincronización de mirrors y cierre con commits semánticos |
 | 2022-04 – 2026-07 | Sin asistente registrado | El sitio Docusaurus y el grueso de la documentación |
 | 2026-08 – 2026-09 | Claude Code · Opus 5 (`claude-opus-5`) | Reescritura de prosa, documentación de brand/images/Classic, el pipeline de `scripts/`, esta convención de notas |
 | 2026-09-26 | Claude Code · Opus 5.5 (`claude-opus-5-5`) | Corrección de 15 páginas contra el CLI a partir de la auditoría del skill de TiTools, la sección de modificadores apilados y la documentación de PurgeTSS v7.18.0 (v1.1.14) |

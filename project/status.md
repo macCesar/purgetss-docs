@@ -1,3 +1,29 @@
+# Última versión procesada: PurgeTSS 7.20.2 — 2026-11-11
+
+**Estado:** documentación actualizada, compilada y publicada en purgetss.com; ambos mirrors sincronizados. El contenido del sitio está en `origin/main` mediante `d8beb0f` (`docs: document PurgeTSS 7.20.2 arbitrary color fixes`). Context7 también está al día en GitHub, en `3cdfa4d`. Sin tag ni cambio de versión propia del sitio (1.1.14).
+
+**Sesión por:** Codex · familia GPT-6 (identificador exacto no expuesto). **Rama:** `main`. **Fase:** publicada; cierre de sesión y entrega Git autorizados por César.
+
+Revisado el fix `6a09363` y el release `2079fff` del CLI. La regresión introducida en 7.8.0 rechazaba paréntesis anidados en colores RGB/RGBA; 7.20.2 los acepta si están balanceados y mantiene el rechazo de valores malformados y negativos invertidos. La deduplicación de propiedades de `apply` conserva comas, cadenas entre comillas y comillas escapadas.
+
+- `docs/customization/5-arbitrary-values.md`: nota de compatibilidad 7.8.0–7.20.1, ejemplos RGB/RGBA y salida, límites de sintaxis y nota de hexadecimales para gradientes. Se corrigió el ejemplo `rgba` de tres componentes a `rgb`, conservando el ejemplo completo y los demás ejemplos existentes.
+- `docs/customization/3-the-apply-directive.md`: ejemplo RGB/RGBA y explicación de la conservación de comas/comillas al sustituir propiedades.
+- Changelog completo con 7.20.2; portada con exactamente 7.20.2, 7.20.1 y 7.20.0. El historial desde 7.20.1 permanece byte a byte intacto. La única retirada deliberada de contenido es el resumen de 7.19.0 de la portada, conservado en el changelog completo y su guía de rendimiento.
+
+**Validación:** pasan las cinco pruebas específicas del CLI (`node --test tests/unit/shared/arbitrary-colors.test.js tests/e2e/arbitrary-colors.test.js`), `docs:check`, `clean:md` y `build` de Docusaurus. La revisión estática confirma la ventana de tres versiones y ambas guías convertidas idénticas entre mirrors, sin frontmatter. `git diff --check` pasa. No se modificó código ni se ejecutó una suite general.
+
+**Publicación:** `npm run deploy` terminó con salida 0. Portada, changelog, arbitrary-values y the-apply-directive respondieron HTTP 200 con 7.20.2 y coincidieron con el build hasta `</body>`. Se conserva la observación anterior sobre contenido añadido por el hosting después del body. El CLI no tiene cambios de esta revisión. Referencias consultadas de la habilidad PurgeTSS: `arbitrary-values.md` y `apply-directive.md`.
+
+## Cierre Git y notas de sesión
+
+El árbol del sitio tenía cinco archivos modificados al iniciar este cierre: las dos guías, portada, changelog y este estado. Los cuatro archivos públicos se agruparon en `d8beb0f`; el push a `origin/main` terminó correctamente. Las notas se agrupan por separado en `docs(project): close PurgeTSS 7.20.2 documentation session`, incluyendo este estado y el mapa actualizado de las dos guías en `project/context.md`. Los requisitos y decisiones existentes siguen vigentes.
+
+Context7 ya estaba limpio y sincronizado con `origin/main` al revisarlo: `ebc5c49` conserva los cinco documentos generados y `3cdfa4d` su cierre de sesión en `.claude/project/status.md`. `git ls-remote` confirmó `3cdfa4da152e9e78ab7431cd6e347beba979ded5` en GitHub; no se duplicaron commits ni se reescribió el mirror. Su registro contiene el refresh exitoso de Context7; este cierre verificó Git, sin comprobar de nuevo la indexación asíncrona.
+
+Se revisaron el diff y sus eliminaciones, el índice de los commits y las referencias de `AGENTS.md`, `CLAUDE.md` y `GEMINI.md`: ninguno importa `status.md`. Se conserva la validación de contenido/build/publicación realizada durante esta misma sesión; no se repitieron pruebas ni builds sólo para crear commits. No quedan cambios funcionales pendientes ni bloqueos identificados. La próxima actualización comienza en este repo y se distribuye con `clean:md`.
+
+---
+
 # Cierre de sesión — PurgeTSS 7.20.1 procesada · 2026-11-11
 
 **Estado:** cambios acumulados de `purgetss-docs` organizados en commits semánticos por solicitud de César. La documentación oficial ya estaba compilada y publicada, con ambos mirrors sincronizados. Este cierre no hace push, tag, release ni publicación npm y no cambia la versión propia del sitio (1.1.14).
